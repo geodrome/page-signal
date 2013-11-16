@@ -1,0 +1,1132 @@
+
+
+<cms:fetchRequest request="com.caucho.server.hmux.HmuxRequest@6d418d" vars="pt:page_title|ph:page_header|stid:subtopicid|aid:articleid|topic:topic|tocid:toc_subtopicintid|subtopicintid:oldsubtopicintid">
+
+
+
+
+
+
+
+
+
+
+</cms:fetchRequest>
+
+
+
+
+
+
+
+<html>
+    <head>
+        
+
+		<SCRIPT language="javascript">
+	function startTimer() {
+	}
+</SCRIPT>
+
+
+
+	
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write("\<script src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'>\<\/script>" );
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1856013-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+        
+	
+            
+        <MAP NAME="flash_spot">
+            <AREA SHAPE="RECT" COORDS="0,0,166,116" HREF="/ny1/content/index.jsp?stid=31&aid=67605" ALT="News at Eleven"  OnMouseOut="window.status=''; return true" OnMouseOver="window.status=''; return true">
+            <AREA SHAPE="RECT" COORDS="0,122,166,176" HREF="/ny1/TheCall/index.jsp"  ALT="The Call"  OnMouseOut="window.status=''; return true" OnMouseOver="window.status=''; return true">
+            <AREA SHAPE="RECT" COORDS="0,181,166,210" HREF="http://www.nyc.gov" target="_blank" ALT="NYC Info Page" OnMouseOut="window.status=''; return true" OnMouseOver="window.status=''; return true">
+        </MAP>
+        
+        <title> NY1: Top Stories</title>
+        
+        <SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+        function browserInfo() {
+            this.code = 'unknown';
+            this.version = 0;
+            this.platform = 'Win';
+            var ua = navigator.userAgent;
+            var i = ua.indexOf('WebTV');
+            if (i >= 0) {
+                this.code = 'WebTV';
+                i += 6;
+            } else {
+                i = ua.indexOf('MSIE');
+                if (i >= 0) {
+                    this.code = 'MSIE';
+                    i += 5;
+                } else {
+                    i = ua.indexOf('Opera');
+                    if (i >= 0) {
+                        this.code = 'OP';
+                        i = ua.indexOf(') ') + 2;
+                    } else {
+                        i = ua.indexOf('Mozilla/');
+                        if (i >= 0) {
+                            this.code = 'NS';
+                            i += 8;
+                        }
+                    }
+                }
+            }
+            this.version = parseFloat(ua.substring(i, i+4));
+            if (ua.indexOf('Mac') >= 0) {this.platform = 'Mac';}
+            if (ua.indexOf('OS/2') >= 0) {this.platform = 'OS/2';}
+            if (ua.indexOf('X11') >= 0) {this.platform = 'UNIX';}
+            var v = this.version;
+            var p = this.platform;
+            var NS = (this.code == 'NS');
+            var IE = (this.code == 'MSIE');
+            var WTV = (this.code == 'WebTV');
+            var OP = (this.code == 'OP');
+            var OP32up = (OP && (v >= 3.2));
+            var IE4up = (IE && (v >= 4));
+            var NS3up = (NS && (v >= 3));
+            this.canCache = NS3up || IE4up || OP32up || WTV;
+            this.canOnMouseOut = this.canCache;
+            this.canOnError = NS3up || IE4up || OP32up;
+            this.canJSVoid = !((NS && !NS3up) || (IE && !IE4up) || (OP && (v < 3.5)));
+            this.lineByLine = (v < 4);
+            this.mustMoveAfterLoad = NS3up || (IE4up && (p != 'Mac')) || WTV;
+            if (NS3up || IE4up || WTV) {
+                this.reloadMethod = 'replace';
+            } else {
+                this.reloadMethod =  (NS && (v == 2.01) && (p != 'Win')) ? 'timeout' : 'href';
+            }
+            this.canFloat = NS || (IE && !((p == 'Mac') && (v >= 4) && (v < 5)));
+            this.hasDHTML = ((NS || IE) && (v >= 4)) && !(IE && (p == 'Mac') && (v < 4.5));
+            this.needLM = NS || (IE && (p == 'Mac') && (v >= 4.5));
+            this.DHTMLRange = IE ? '.all' : '';
+            this.DHTMLStyleObj = IE ? '.style' : '';
+            this.DHTMLDivHeight = IE ? '.offsetHeight' : '.clip.height';
+        }
+
+        </SCRIPT>
+<!-- 2006/10/26 sharkie@outlook.net: akamai ads processing (ajax) -->
+<script src="/ny1/navigation/support/cookie.js" type="text/javascript">//js</script>
+<script src="/ny1/navigation/support/zxml.js" type="text/javascript">//js</script>
+<script src="/ny1/navigation/support/saveAd2.js" type="text/javascript">//js</script>
+<script src="/ny1/navigation/support/timeTemp.js" type="text/javascript">//js</script>
+<link href="/ny1/navigation/support/timeTemp.css" media="screen" rel="Stylesheet" type="text/css" />
+
+        <style type="text/css">
+        body {  background-color: #FFFFFF; }
+        td {  font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 13px; color: #000000; }
+        .fontbold { font-weight: bold; font-family: Geneva, Arial, Helvetica, sans-serif; }
+        .fontmedbold { font-weight: 600; font-family: Geneva, Arial, Helvetica, sans-serif; }
+        .fontlargebold { font-weight: bold; font-family: Geneva, Arial, Helvetica, sans-serif; }
+
+        .fontlogo { font-size: 22px; font-weight: bold; font-family: Geneva, Arial, Helvetica, sans-serif; color: #eeeeee; }
+
+        .fontdescription { font-size: 12px; font-family: Geneva, Arial, Helvetica, sans-serif; }
+        .fontnavon { font-weight: bold; font-family: Geneva, Arial, Helvetica, sans-serif; color: #00cc00; }
+        .fontnavoff { font-weight: bold; font-family: Geneva, Arial, Helvetica, sans-serif; color: #CCCCCC; }
+
+        .fontheader{ font-size: 30px; font-weight: bold; font-family: Geneva, Arial, Helvetica, sans-serif; color: #333333; }
+        .fontsmallbar{ font-size: 10px; font-family: Geneva, Arial, Helvetica, sans-serif; color: #ffffff; }
+
+        .fontstorytitle{ font-size: 18px; font-weight: bold; font-family: Geneva,Arial,Helvetica,Swiss,SunSans-Regular, sans-serif; color: #000000; }
+        .fonttoc_title{ font-size: 12px; font-weight: bold; font-family: Geneva,Arial,Helvetica,Swiss,SunSans-Regular, sans-serif; color: #336600; }
+
+        span { font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #000000; }
+        .fontstorysummary{ font-size: 12px; font-weight: normal; font-family: Geneva,Arial,Helvetica,Swiss,SunSans-Regular, sans-serif; color: #000000; }
+        .fonttoc_title{ font-size: 12px; font-weight: bold; font-family: Geneva,Arial,Helvetica,Swiss,SunSans-Regular, sans-serif; color: #336600; }
+        .fonttouttitle{ font-size: 14px; font-weight: bold; font-family: Geneva,Arial,Helvetica,Geneva,Swiss,SunSans-Regular, sans-serif; color: #003366; }
+        .fonttoutsummary{ font-size: 12px; font-weight: normal; font-family: Geneva,Arial,Helvetica,,Swiss,SunSans-Regular, sans-serif; color: #000000; }
+        .fonttime { font-size: 12px;  font-weight: 600; font-family: Geneva, Arial, Helvetica, sans-serif; color: #eeeeee; }
+
+        .fontnavlinks{ font-weight: bold; font-family: Geneva, Arial, Helvetica, sans-serif; color: #CCCCCC; }
+        </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+	<body bgcolor="#ffffff" topmargin="7" leftmargin="8" margin="0" link="#003366" alink="#003366" vlink="#660099"  onLoad="getInitTime();getTemp();">
+        
+
+        
+        <div id="timeTemp_div"><span id="time_span">&nbsp;</span><span id="temp_span">&nbsp;</span></div>
+
+        <script language="javascript">
+        function mOvr(src,clrOver) {
+	//alert('in mOvr');
+        if (!src.contains(event.fromElement)) {
+        src.bgColor = clrOver;
+        }
+        }
+        function mOut(src,clrIn) {
+	//alert('in mOut');
+        if (!src.contains(event.toElement)) {
+        src.bgColor = clrIn;
+        }
+        }
+        function mClk(src) {
+	//alert('in mClk');
+        if(event.srcElement.tagName=='TD' || event.srcElement.tagName=='div') {
+        src.children.tags('A')[0].click();
+        }
+        }
+
+        </script>
+	
+        
+        <!-- start main table -->
+	<table width="810" border="0" cellspacing="0" cellpadding="0">
+            <!-- TOP ROW OF CONSTRAINING TABLE -->
+            <tr>
+		<td colspan="3" height="66" valign="top">
+                    <table border="0" cellpadding="0" cellspacing="0" width="625">
+                        <tr>
+                            <!-- START BANNER AD -->
+                            <td width="465" align="left" valign="top">
+
+                               <!-- START AD (Pos==1 sid==1) -->
+                                
+                                
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- hide from non-JavaScript browsers
+var axel = Math.random() + "";
+var num = axel * 1000000000000000000;
+document.writeln('<a href="http://ad.doubleclick.net/jump/N1942.ny1.com/B2420871.2;sz=468x60;ord='+ num +'?"><img src="http://ad.doubleclick.net/ad/N1942.ny1.com/B2420871.2;sz=468x60;ord='+ num +'?" border="0" width="468" height="60" alt="Click Here"></a>');
+// end hide from browsers -->
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/jump/N1942.ny1.com/B2420871.2;sz=468x60;ord=[timestamp]?">
+<img src="http://ad.doubleclick.net/ad/N1942.ny1.com/B2420871.2;sz=468x60;ord=[timestamp]?" border="0" width="468" height="60" alt="Click Here"></a>
+</noscript>
+<script type="text/javascript">saveAd(2742);</script>
+
+                                <!-- End AD (Pos==1 sid==1) -->
+
+		    	</td>
+        	    			<!-- END BANNER AD -->
+				            <td width="40" align="center" valign="top"><a href="/ny1/AboutNY1/advertising.jsp"><img src="/ny1/images/general/ad_info.gif" width="21" height="60" border="0"></a></td>
+
+
+<!-- DEBUG: top_graphic_img= |gear_tile.gif| -->
+<td width="120" align="right" valign="top">
+
+     <a href="http://securehost.arealink.com/newyork1/"><img src="/ny1/images/banner_sections/gear_tile.gif" height="60" width="120" align="right" border="0" hspace="0" vspace="0"></a>
+
+</td>
+
+
+                    	</tr>
+		            </table>
+                </td>
+
+
+                <td rowspan="64" valign="top" width="160" style="font-size:1px;">&nbsp;
+
+                <!-- START AD (Pos==2 sid==1) -->
+                
+                
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- hide from non-JavaScript browsers
+var axel = Math.random() + "";
+var num = axel * 1000000000000000000;
+document.writeln('<a href="http://ad.doubleclick.net/jump/N1942.ny1.com/B2420871.3;sz=160x600;ord='+num+'?"><img src="http://ad.doubleclick.net/ad/N1942.ny1.com/B2420871.3;sz=160x600;ord='+num+'?" border="0" width="160" height="600" alt="Click Here"></a>');
+// end hide from browsers -->
+</script>
+<noscript>
+<a href="http://ad.doubleclick.net/jump/N1942.ny1.com/B2420871.3;sz=160x600;ord=[timestamp]?">
+<img src="http://ad.doubleclick.net/ad/N1942.ny1.com/B2420871.3;sz=160x600;ord=[timestamp]?" border="0" width="160" height="600" alt="Click Here"></A>
+</noscript>
+<script type="text/javascript">saveAd(2743);</script>
+
+                <!-- End AD (Pos==2 sid==1) -->
+
+                <div style="padding:5px" />
+                <!-- START AD (Pos==3 sid==1) -->
+                
+                
+
+<!-- begin ZEDO for channel:  INT537 , publisher: INT537 , Ad Dimension: Wide Skyscraper - 160 x 600 -->
+<script language="JavaScript">
+var zflag_nid="162"; var zflag_cid="1709/1"; var zflag_sid="741"; var zflag_width="160"; var zflag_height="600"; var zflag_sz="7";
+</script>
+<script language="JavaScript" src="http://c1.zedo.com/jsc/c1/fo.js"></script>
+<!-- end ZEDO  for channel:  INT537 , publisher: INT537 , Ad Dimension: Wide Skyscraper - 160 x 600 -->
+<script type="text/javascript">saveAd(2738);</script>
+
+                <!-- End AD (Pos==3 sid==1) -->
+
+                </td>
+
+
+	        </tr>
+	        <tr>
+		        <td colspan="3" width="625" bgcolor="#003366">
+				    <!-- HEADER TABLE -->
+					<table border="0" cellpadding="0" cellspacing="0" width="625" bgcolor="#003366">
+                        <tr>
+                            <td rowspan="2" width="103" height="82" bgcolor="#003366"><img src="/ny1/images/homepage/time_temp.gif"></td>
+                            <td colspan="7" width="517" valign="top"><a href="http://www.twcnyc.com"><img src="/ny1/images/homepage/header_title.gif" width="363" height="62" border="0"></a><a href="/ny1/content/index.jsp?stid=37&aid=25466"><img src="/ny1/images/banner_sections/roadrunner_section.gif" width="153" height="62" border="0"></a></td>
+			            </tr>
+			            <tr>
+				            <Form method="GET" action="/ny1/Search/Results/index.jsp">
+			                <td width="100" align="right" valign="middle" height="22"><input type="text" size="14" name="search" value="Search NY1" style="width: 80px;height:18px;font-size:9px;" onclick="this.value='';"></td>
+                            <td width="51" height="22" valign="middle" align="left"><input type="image" src="/ny1/images/homepage/search_go.gif" width="18" height="16" border="0" align="left" hspace="5"></a></td>
+            				<INPUT type="hidden" name="search_nav_highlight" value="1">
+			            	<INPUT type="hidden" name="side_search" value="0">
+            				<INPUT type="hidden" name="frontpage" value="1">
+			            	</form>
+				            <FORM ACTION="http://208.198.20.42/cgi-bin/newscast1.pl" METHOD="POST" ENCTYPE="x-www-f-encoded">
+                            <td width="67" align="right" valign="top" height="22"><A href="/ny1/VideoAudio/index.jsp"><img src="/ny1/images/homepage/video_audio.gif" width="60" height="22" hspace="3" border="0"></a></td>
+                            <td width="67" align="left" valign="top" height="22"><A href="/ny1/ContactUs/index.jsp"><img src="/ny1/images/homepage/contact.gif" width="60" height="22" hpsace="3" border="0"></a></td>
+                            <td width="112" valign="middle" height="22" align="center"><font face="arial,helvetica" size="1">
+                                <select name="position_1" style="height:18px;font-size:9px;vertical-align:middle;">
+                                    <OPTION value = "#" SELECTED>Choose Video</option>
+                                    <option value="liveaudio">&#149;Live Audio</option>
+                                    <option value="ny1minute">NY1 Minute</option>
+			                        <option value="weather">Weather</option>
+                                    <option value="topstory">Top Story</option>
+                                    <option value="sports">Sports</option>
+                                    <option value="fortune">Fortune Bus.</option>
+                                    <option value="inthepapers">In The Papers</option>
+                                    <option value="politics">Politics</option>
+                                    <option value="education">Education</option>
+                                    <option value="transit">Transit</option>
+                                    <option value="health">Health</option>
+                                    <option value="home">Home</option>
+
+                                    <option value="zagat">Zagat</option>
+			                   </select></font>
+                            </td>
+						    <Input type="hidden" name="bandwidth" value="">
+                            <td width="62" valign="top" align="left" height="22">
+                                <Input type="image" name="dialup" src="/ny1/images/homepage/56k_icon.gif"	width="52" height="22" border="0">
+                            </td>
+			                <td width="62" valign="top" align="left" height="22">
+                                <Input type="image" name="roadrunner" src="/ny1/images/homepage/roadrunner_icon.gif" width="52" height="22" border="0">
+                            </td>
+			                </form>
+			            </tr>
+                    </table>
+			        <!-- END HEADER TABLE -->
+		        </td>
+	        </tr>
+		    <!-- END TOP ROW OF CONSTRAINING TABLE -->
+			<!-- LEFT COLUMN OF CONSTRAINING TABLE -->
+			<tr>
+    			<!-- BEGIN LEFT NAVIGATION TABLE -->
+				<td rowspan="2" width="106" bgcolor="#003366" valign="top">
+                    <table width="106" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td rowspan="64" width="3" bgcolor="#000033"><img src="/ny1/images/homepage/shim.gif" height="1" width="3"></td>
+                            <td colspan="3" width="103" align="right"><img src="/ny1/images/new_nav/top_nav_curve.gif" width="103" height="18" border="0"></td>
+                        </tr>
+				        <tr>
+					        <td  rowspan="64" width="3"><img src="/ny1/images/homepage/shim.gif" height="1" width="3"></td>
+				   	        <td width="97" height="15" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+					            <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/index.jsp"><font color="#ffffff">TOP STORIES</font></a></font>
+                            </td>
+        					<td  rowspan="64" width="3" bgcolor="#336699"><img src="/ny1/images/homepage/shim.gif" height="1" width="3"></td>
+        				</tr>
+		        		<tr>
+				            <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+					            <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/Weather/index.jsp"><font color="#ffffff">WEATHER</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+					            <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/Search/index.jsp"><font color="#ffffff">FULL SEARCH</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/NewsBeats/index.jsp"><font color="#ffffff">NEWS BEATS</font></a>
+                            </td>
+	        			</tr>
+                        <tr>
+                            <td width="97"  height="15" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <font face="arial,helvetica,sanserif" size="1" color="#ffffff"><a href="/ny1/NewsBeats/politics.jsp"><font color="#ffffff">Politics</font></a> / <a href="/ny1/NewsBeats/itch.jsp"><font color="#FFFFFF">NY1 ItCH</font></a>
+                            </td>
+                        </tr>
+        				<tr>
+		    		        <td width="97" height="11" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <font face="arial,helvetica,sanserif" size="1" color="#ffffff"><a href="/ny1/Decision2008/index.jsp"><font color="#ffffff">Decision 2008</font></a>
+                            </td>
+	        			</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <font face="arial,helvetica,sanserif" size="1" color="#ffffff"><a href="/ny1/NewsBeats/education.jsp"><font color="#ffffff">Education</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			     		        <a href="/ny1/NewsBeats/transit.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Transit</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/NewsBeats/law_enforcement.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Law Enforcement</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/NewsBeats/fortune.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Fortune Business</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/Boroughs/index.jsp"><font color="#ffffff">BOROUGHS</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="15" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <font face="arial,helvetica,sanserif" size="1" color="#ffffff"><a href="/ny1/Boroughs/manhattan.jsp"><font color="#ffffff">Manhattan</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Boroughs/brooklyn.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Brooklyn</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Boroughs/queens.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Queens</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Boroughs/bronx.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">The Bronx</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Boroughs/staten_island.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Staten Island</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="20" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')"; valign="bottom">
+			                    <a href="/ny1/Boroughs/staten_island_news.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Your S.I. News Now</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Boroughs/new_jersey_news.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Your N.J. News Now</font></a>
+                            </td>
+        				</tr>
+<!--sharkie@outlook.net: added The Call beat-->
+        				<tr>
+		    		        <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/TheCall/index.jsp"><font color="#ffffff">THE CALL</font></a>
+                            </td>
+				        </tr>
+<!-- end of The Call beat -->
+                                        <tr>
+                                        <td width="97"  height="15" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                            <font face="arial,helvetica,sanserif" size="1" color="#ffffff"><a href="/ny1/OnTheAir/the_call_blog.jsp"><font color="#ffffff">"Last Call" Blog</font></a>
+                            </td>
+                        </tr>
+                                        <tr>
+                                        <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/Polls/index.jsp"><font color="#ffffff">SNAP POLLS</font></a>
+                            </td>
+                                        </tr>
+	        			<tr>
+			    	        <td width="97"  height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+				                <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/OnTheAir/ny1_for_you.jsp"><font color="#ffffff">NY1 FOR YOU</font></a>
+                            </td>
+           				</tr>
+        				<tr>
+		    		        <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+					            <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/WTC_Coverage/index.jsp"><font color="#ffffff">WTC SECTION</font></a>
+                            </td>
+           				</tr>
+        				<tr>
+		    		        <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/Living/index.jsp"><font color="#ffffff">NY1 LIVING</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height=11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/arts.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Arts</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="15" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <font face="arial,helvetica,sanserif" size="1" color="#ffffff"><a href="/ny1/Living/entertainment.jsp"><font color="#ffffff">Entertainment</font></a>
+                            </td>
+        				</tr>
+
+
+
+
+
+
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <font face="arial,helvetica,sanserif" size="1" color="#ffffff"><a href="/ny1/Living/health.jsp"><font color="#ffffff">Health</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/home.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Home</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/personal_finance.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Money Matters</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/movie_reviews.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Movie Reviews</font></a>
+                            </td>
+        				</tr>
+
+
+
+
+
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/on_stage.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">On Stage</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height=11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/parenting.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Parenting</font></a>
+                            </td>
+         				</tr>
+<!--sharkie@outlook.net removed pets-->
+
+        				<tr>
+		    		        <td width="97"  height="11" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/technology.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Technology</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/theater_reviews.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Theater Reviews</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/travel.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Travel</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/tv_reviews.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">TV Reviews</font></a>
+                            </td>
+        				</tr>
+                        <tr>
+                            <td width="97"  height="11" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <a href="/ny1/Living/video_reviews.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Video/DVD Reviews</font></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="97"  height="11" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <a href="/ny1/OnTheAir/websites_mentioned.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Video Game Guide</font></a>
+                            </td>
+                        </tr>
+        				<tr>
+		    		        <td width="97"  height="11" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/george_whipple.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Whipple's World</font></a>
+                            </td>
+						</tr>
+        				<tr>
+		    		        <td width="97"  height="16" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/Living/zagat_reviews.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Zagat Reviews</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		        	        <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+				                <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/OnTheAir/index.jsp"><font color="#ffffff">FEATURES</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="15" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/OnTheAir/in_the_papers.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">In The Papers</font></a>
+                            </td>
+	        			</tr>
+                        <tr>
+                            <td width="97"  height="15" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <a href="/ny1/OnTheAir/one_on_one.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">One on 1</font></a>
+                            </td>
+                        </tr>
+                        <tr>
+				            <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <a href="/ny1/OnTheAir/nyer_of_the_week.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">NYer of the Week</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <a href="/ny1/OnTheAir/day_in_history.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">This Day in History</font></a>
+                            </td>
+        				</tr>
+                        
+				        <tr>
+					        <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+					            <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/Sports/index.jsp"><font color="#ffffff">SPORTS</font></a>
+                            </td>
+						</tr>
+        				<tr>
+		    		        <td width="97"  height="15" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <font face="arial,helvetica,sanserif" size="1" color="#ffffff"><a href="/ny1/Sports/scholar_athlete.jsp"><font color="#ffffff">Scholar/Athlete</font></a>
+                            </td>
+                        </tr>
+				        <tr>
+				            <td width="97" height="40" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+					            <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/SpecialReports/index.jsp"><font color="#ffffff">SPECIAL<br>REPORTS</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="40" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/WeekendFeatures/index.jsp"><font color="#ffffff">WEEKEND<br>FEATURES</font></a>
+                            </td>
+        				</tr>
+				        <tr>
+				            <td width="97"  height="36" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/CommunityCalendar/index.jsp"><font color="#ffffff">COMMUNITY CALENDAR</font></a>
+                            </td>
+                        </tr>
+				        <tr>
+				            <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+					            <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/AboutNY1/index.jsp"><font color="#ffffff">ABOUT NY1</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="15" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+			                    <a href="/ny1/OnTheAir/program_guide.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Program Guide</font></a>
+                            </td>
+                        </tr>
+				        <tr>
+				            <td width="97"  height="11" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <font face="arial,helvetica,sanserif" size="1" color="#ffffff"><a href="/ny1/OnTheAir/ny1_shows.jsp"><font color="#ffffff">NY1 Shows</font></a>
+                            </td>
+				        </tr>
+				        <tr>
+				            <td width="97"  height="11" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+					            <font face="arial,helvetica,sanserif" size="1" color="#ffffff"><a href="/ny1/AboutNY1/staff_profiles.jsp"><font color="#ffffff">Staff Profiles</font></a>
+                            </td>
+        				</tr>
+				        <tr>
+				            <td width="97"  height="11" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+					            <font face="arial,helvetica,sanserif" size="1" color="#ffffff"><a href="http://securehost.arealink.com/newyork1/home.asp?siteid=90029"><font color="#ffffff">NY1 Store</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <a href="/ny1/AboutNY1/ny1_info.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">NY1 Info & History</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <a href="/ny1/content/index.jsp?stid=204&aid=73302"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">15th Anniversary</font></a>
+                            </td>
+        				</tr>
+        				<tr>
+		    		        <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <a href="/ny1/AboutNY1/advertising.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">Advertise on NY1</font></a>
+                            </td>
+                        </tr>
+				        <tr>
+				            <td width="97"  height="11" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <a href="/ny1/AboutNY1/ny1_employment.jsp"><font face="arial,helvetica,sanserif" size="1" color="#ffffff">NY1 Employment</font></a>
+                            </td>
+				        </tr>
+                        <tr>
+                            <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="http://www.ny1noticias.com"><font color="#ffffff">NY1 NOTICIAS</font></a></font>
+                            </td>
+                        </tr>
+                        <tr>
+    				        <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+                                <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/NY1ToGo/index.jsp"><font color="#ffffff">NY1 TO GO</font></a></font>
+					        </td>
+				        </tr>
+				        <tr>
+				            <td width="97" height="24" valign="bottom" onmouseover="mOvr(this,'#336699')"; onmouseout="mOut(this,'#003366')";>
+					            <font face="arial,helvetica,sanserif" size="2" color="#ffffff"><a href="/ny1/AboutNY1/nyc_info.jsp"><font color="#ffffff">NYC CITY INFO</font></a></font>
+					        </td>
+        				</tr>
+		        		<tr>
+				            <td width="97"  height="11"><img src="/ny1/images/homepage/shim.gif" height="1" width="97"></td>
+				        </tr>
+                        <tr>
+                            <td width="106" colspan="4" height="2" bgcolor="#000033"><img src="/ny1/images/homepage/shim.gif" border="0" width="106" height="2"></td>
+                        </tr>
+	        			<tr>
+			    	        <td colspan="4" width="106" height="44" align="center"><a href="http://www.outlook.net"><img src="/ny1/images/new_nav/outlook.gif" width="100" height="44" border="0"></a></td>
+				        </tr>
+				        <tr>
+				            <td colspan="4" width="106" height="34" align="center"><img src="/ny1/images/homepage/blank.gif" border="0" width="103" height="34" align="center"></td>
+				        </tr>
+                    </table>
+                </td>
+			    <!-- END LEFT NAVIGATION TABLE -->
+				<!-- END LEFT COLUMN OF CONSTRAINING TABLE -->
+			    <!--- MIDDLE/SPACER COLUMN OF CONSTRAINING TABLE --->
+				<td valign="top" align="right" bgcolor="#003366" width="3" rowspan="2">&nbsp;</td>
+		        <!--- END MIDDLE/SPACER COLUMN OF CONSTRAINING TABLE --->
+				<!--- BEGIN SHADOW GRAPHIC AND WEATHER BAR --->
+				<td valign="top" width="516" height="15">
+        			<table width="511" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td colspan="4" width="511" valign="top"><img src="/ny1/images/homepage/shadowstrip.gif" width="516" height="15" border="0"></td>
+		    	        </tr>
+		    	        <tr>
+		    	            <td colspan="4" width="506" valign="top" align="center"><!--<img src="/ny1/images/general/pix1.gif" width="5" height="1" border="0">--><img src="/ny1/images/navigation/weather_bar.gif" width="489" height="3" border="0"></td>
+		    	        </tr>
+		    	        <tr>
+			    
+			    
+
+                            
+                            
+		    	            <td align="left" valign="middle"><img src="/ny1/images/general/pix1.gif" width="5" height="1" border="0"></td>
+		    	            <td align="left" valign="middle"><nobr><font face="geneva,arial,sans-serif" size="1" color="#003366">&nbsp;&nbsp;Jan 15, 2008</font></nobr></td>
+		    	            <td align="center" valign="middle"><nobr><font face="geneva,arial,sans-serif" size="1" color="#003366"><b><a href="/ny1/OnTheAir/program_guide.jsp">On NY1 Now: "Inside City Hall"</a></b></font></nobr></td>
+                            <td align="right" valign="center"><nobr><font face="geneva,arial,sans-serif" size="1" color="#003366"><a href="/ny1/Weather/index.jsp">Weather: Late Day Snow Showers.High 42</a> &nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;</font></nobr></td>
+            			</tr>
+		            	<tr>
+		    	            <td colspan="4" width="506" valign="top" align="center" height="3"><!--<img src="/ny1/images/general/pix1.gif" width="5" height="1" border="0">--><img src="/ny1/images/navigation/weather_bar.gif" width="489" height="3" border="0"></td>
+		    	        </tr>
+			            <tr>
+				            <td align="left" valign="middle" colspan="4" height="6"><img src="/ny1/images/general/pix1.gif" width="5" height="6" border="0"></td>
+			            </tr>
+                    </table>
+		        </td>
+		        <!--- END SHADOW GRAPHIC --->
+	        </tr>
+	        <tr>
+		        <!-- BEGIN CONTENT CELL OF CONSTRAINING TABLE -->
+				<!-- BEGIN CONTENT CELL OF CONSTRAINING TABLE -->
+				<td width="516" valign="top" align="top">
+			        <TABLE cellpadding="0" cellspacing="0" border="0">
+				        <tr>
+        					<!-- START Body -->
+			                <td width="328" valign="top" align="left">
+                                <table border="0" cellpadding="1" width="316">
+                                    <tr>
+                                        <!-- START Body -->
+                                        <td width="428" valign="top" align="left">
+<!--debug: body_template = |/ny1/content/body.jsp|-->
+<!--debug: topic = ||-->
+<!--debug: subtopicintid = |1|-->
+                            				
+
+
+
+
+
+
+
+<!--  TEMP  article int id: [77456]  -->
+<!-- TEMP   subtopic int id: [1] -->
+
+
+
+
+
+<!--DEBUG: adddate=||-->
+                
+	    
+<!--DEBUG3: adddate=||-->
+<table border="0" cellpadding="2" width="316">
+    <tr>
+        <td colspan="2">
+        
+        
+	
+        
+	
+        
+
+	  
+	  
+            <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="6" color="#cc0033">
+            <b></b>
+            </font>
+          
+	
+	
+        </td>
+    </tr>
+    <tr>
+        
+        
+                <td colspan="2"><img src="/ny1/images/beats/blank_stories.gif" width="316" height="18" border="0"></td>
+           
+        
+    </tr>
+    
+    <!--<tr height="95">-->
+    <tr>
+        
+        
+        
+        
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+<!--DEBUG4: adddate=||-->
+        
+        <td width="140" align="left" valign="top" height="105"><img src="/ny1/content/images/live/132/263594.jpg" width=140 height=105 border="0"></td>
+        <td width="178" align="left" valign="top"><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" size="4" color="black"><b>Driver Arrested After Truck Carrying Asbestos Flips Over In Queens</b><br>
+        
+        
+            <map name="videomap">
+                <area shape="rect" coords="0,0 30,14" href="http://real.ny1.com:8080/ramgen/real4/00216E2D_080114_50040lo.rm">
+                <area shape="rect" coords="31,0 59,14" href="http://real.ny1.com:8080/ramgen/real4/00216E2D_080114_50040hi.rm">
+            </map>
+            <img src="/ny1/images/homepage/video_icon_02.gif" usemap="#videomap" height=15 border="0">
+        
+        </td>
+    </tr>
+    <tr>
+    
+        <!-- top stories content-->
+<!--DEBUG5: adddate=||-->
+        <td colspan="2" width="318">
+            <font face="Geneva,Arial,Helvetica" size="-1" color="#000000">
+            
+            </font><br><br>
+            
+            
+            
+            A driver from Pennsylvania is under arrest after the truck he was driving, which was carrying asbestos, flipped over in Queens yesterday afternoon.
+<br>
+<br>The truck hit a divider just before 2 p.m. on the Clearview Expressway as it was exiting the Long Island Expressway, causing it to overturn. The ramps to the Clearview were closed for more than 12 hours as workers cleaned up the toxic debris.
+<br> 
+<br>Police say the driver took off, but he was later arrested. Artur Gaska, 39, faces charges of leaving the scene of an accident.
+<br>
+<br>No one was hurt in the crash. Authorities don't believe the asbestos poses a threat. 
+<br>
+            
+            </font>
+        </td>
+    </tr>
+
+	<tr>
+	  <td colspan="2" align="left">
+	  <br>
+	  <a href="#" onClick="window.open('/ny1/NY1ToGo/Story/index.jsp?stid=1&aid=77456','printme','');">
+	  <img src="/ny1/images/printfriendlybutton.gif" border="0"></a>
+	  </td>
+	</tr>
+
+
+
+<tr>
+  <td colspan="2">
+<!-- Ad (Pos==6 sid==1) -->
+
+
+
+
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- hide from non-JavaScript browsers
+var axel = Math.random() + "";
+var num = axel * 1000000000000000000;
+document.writeln('<IFRAME SRC="http://ad.doubleclick.net/adi/N2581.ny1/B2640977;sz=300x250;ExternalMediaCode=W15GK;ord='+ num +'?" WIDTH=300 HEIGHT=250 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR="#000000">');
+document.writeln('<SCR'+'IPT language="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/N2581.ny1/B2640977;abr=!ie;sz=300x250;ExternalMediaCode=W15GK;ord='+ num +'?"></SCR'+'IPT></IFRAME>');
+// end hide from browsers -->
+</script>
+<noscript>
+<A HREF="http://ad.doubleclick.net/jump/N2581.ny1/B2640977;abr=!ie4;abr=!ie5;sz=300x250;ExternalMediaCode=W15GK;ord=?">
+<IMG SRC="http://ad.doubleclick.net/ad/N2581.ny1/B2640977;abr=!ie4;abr=!ie5;sz=300x250;ExternalMediaCode=W15GK;ord=?" BORDER=0 WIDTH=300 HEIGHT=250 ALT="Click Here">
+</A>
+</noscript>
+<script type="text/javascript">saveAd(2739);</script>
+
+
+
+<!-- End Ad (Pos==6 sid==1) -->
+<div style="padding:5px" />
+<!-- Ad (Pos==7 sid==1) -->
+
+
+
+<a href="http://www.cuny.edu/online" onclick="saveClick(2716);"><img src="/ny1/content/images/live/131/260958.jpg" alt="CUNY Online" border="0"></a>
+<script type="text/javascript">saveAd(2716);</script>
+
+<!-- End Ad (Pos==7 sid==1) -->
+  </td>
+</tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+                                        </td>
+
+                    					<!-- END Body -->
+                                        
+		                                <!-- START Vertical Separator Bar -->
+                                        <td width="11" valign="top" align="center"><img src="/ny1/images/homepage/vertical_bar.gif" width="6" height="447" border="0"></td>
+					                	<!-- END Vertical Separator Bar -->
+										<!-- START TOC / Tout Bar -->
+										<td width="173" valign="top" align="left">
+                                            
+                                            <table border="0" cellpadding="1" cellspacing="0">
+
+					      
+					       
+					      
+					       
+
+                                                
+                                                <tr>
+                                                    <td>
+                                                        <img src="/ny1/images/beats/other_stories.gif" width="162" height="16" border="0">
+                                                    </td>
+	                                            </tr>
+	                                            <tr>
+		                                            <td><img src="/ny1/images/general/pix1.gif" width="1" height="4" border="0"></td>
+	                                            </tr>
+                                                
+                                                
+                                                
+
+
+                                                
+                                                
+                                                   
+                                                <tr>
+                                                    <td>
+                                                        
+                                                                <font color="#cc0033" face="geneva,arial,helvetica" size="-1">
+                                                        <font size="-1" face="geneva,arial,helvetica" color="#000000">
+                                                        January 15, 2008</font>
+                                                                <b><A href="/ny1/content/index.jsp?stid=1&aid=77515">Police Make Arrest In Seven-Month-Old Missing Woman Case</a></b><br></font>
+                                                        
+                                                    </td>
+                                                        </tr>
+                                                  
+                                                <tr>
+                                                    <td>
+                                                        
+                                                                <font color="#cc0033" face="geneva,arial,helvetica" size="-1">
+                                                        <font size="-1" face="geneva,arial,helvetica" color="#000000">
+                                                        January 15, 2008</font>
+                                                                <b><A href="/ny1/content/index.jsp?stid=1&aid=77510">Worker Rescued From Trench At Construction Site In Brooklyn</a></b><br></font>
+                                                        
+                                                    </td>
+                                                        </tr>
+                                                  
+                                                <tr>
+                                                    <td>
+                                                        
+                                                                <font color="#cc0033" face="geneva,arial,helvetica" size="-1">
+                                                        <font size="-1" face="geneva,arial,helvetica" color="#000000">
+                                                        January 15, 2008</font>
+                                                                <b><A href="/ny1/content/index.jsp?stid=1&aid=77496">Investigators Return To Site Of Deadly Crane Accident </a></b><br></font>
+                                                        
+                                                    </td>
+                                                        </tr>
+                                                  
+                                                <tr>
+                                                    <td>
+                                                        
+                                                                <font color="#cc0033" face="geneva,arial,helvetica" size="-1">
+                                                        <font size="-1" face="geneva,arial,helvetica" color="#000000">
+                                                        January 15, 2008</font>
+                                                                <b><A href="/ny1/content/index.jsp?stid=1&aid=77504">GOP Candidates Vie For Michigan; Dems Debate In Vegas </a></b><br></font>
+                                                        
+                                                    </td>
+                                                        </tr>
+                                                  
+                                                <tr>
+                                                    <td>
+                                                        
+                                                                <font color="#cc0033" face="geneva,arial,helvetica" size="-1">
+                                                        <font size="-1" face="geneva,arial,helvetica" color="#000000">
+                                                        January 15, 2008</font>
+                                                                <b><A href="/ny1/content/index.jsp?stid=1&aid=77500">Community Tries To Save Bronx Affordable Housing</a></b><br></font>
+                                                        
+                                                    </td>
+                                                        </tr>
+                                                  
+                                                <tr>
+                                                    <td>
+                                                        
+                                                                <font color="#cc0033" face="geneva,arial,helvetica" size="-1">
+                                                        <font size="-1" face="geneva,arial,helvetica" color="#000000">
+                                                        January 15, 2008</font>
+                                                                <b><A href="/ny1/content/index.jsp?stid=1&aid=77523">Two Cops Honored For Nabbing Man Suspected Of Robbing Elderly</a></b><br></font>
+                                                        
+                                                    </td>
+                                                        </tr>
+                                                  
+                                                <tr>
+                                                    <td>
+                                                        
+                                                                <font color="#cc0033" face="geneva,arial,helvetica" size="-1">
+                                                        <font size="-1" face="geneva,arial,helvetica" color="#000000">
+                                                        January 15, 2008</font>
+                                                                <b><A href="/ny1/content/index.jsp?stid=1&aid=77508">Nixzmary Brown Trial Set To Begin Tomorrow</a></b><br></font>
+                                                        
+                                                    </td>
+                                                        </tr>
+                                                  
+                                                <tr>
+                                                    <td>
+                                                        
+                                                                <font color="#cc0033" face="geneva,arial,helvetica" size="-1">
+                                                        <font size="-1" face="geneva,arial,helvetica" color="#000000">
+                                                        January 15, 2008</font>
+                                                                <b><A href="/ny1/content/index.jsp?stid=1&aid=77530">Food Vendors Protest Proposed Legislation To Encourage Fruit Carts</a></b><br></font>
+                                                        
+                                                    </td>
+                                                        </tr>
+                                                  
+                                                <tr>
+                                                    <td>
+                                                        
+                                                                <font color="#cc0033" face="geneva,arial,helvetica" size="-1">
+                                                        <font size="-1" face="geneva,arial,helvetica" color="#000000">
+                                                        January 15, 2008</font>
+                                                                <b><A href="/ny1/content/index.jsp?stid=1&aid=77524">Waterfalls To Be Installed As Part Of East River Art Project</a></b><br></font>
+                                                        
+                                                    </td>
+                                                        </tr>
+                                                  
+                                                
+
+						
+	                                        </table>
+                                            
+					                        <BR>
+                                            
+					                        <table border="0" cellpadding="4" cellspacing="0" width="160" align="left">
+
+
+
+
+                                                <tr>
+                                                  <td colspan="2">
+<!-- START AD (Pos==4 sid==1) -->
+
+
+<!-- End AD (Pos==4 sid==1) -->
+                                                  </td>
+                                                </tr>
+
+                                                    
+                                                <tr>
+	                                                <td colspan="2"><img src="/ny1/images/homepage/hr.gif"></td>
+                                                </tr>
+      		                                    <tr>
+		 				       		                <td valign="top"><img src="/ny1/content/images/live/91/181212.gif" width=78 height=89 border="0" align="right" hspace="3" vspace="3"><font face="arial,helvetica" size="3" color="#990033"><b>Win Tickets</b><br></font><font face="arial,helvetica" size="1" color="black">Enter here for your chance to win tickets to see <a href="http://ny1.com/ny/contests/contest.html">Blue Man Group live in Las Vegas</a> at the Venetian Resort Hotel Casino.</font></td>
+                                                </tr>
+                                                
+                                                <tr>
+	                                                <td colspan="2"><img src="/ny1/images/homepage/hr.gif"></td>
+                                                </tr>
+      		                                    <tr>
+		 				       		                <td valign="top"><img src="/ny1/content/images/live/37/72135.jpg" width=78 height=89 border="0" align="right" hspace="3" vspace="3"><font face="arial,helvetica" size="3" color="#990033"><b>NY1 On The Go</b><br></font><font face="arial,helvetica" size="1" color="black">Take NY1 News with you on your browser-equipped handheld or cellphone by accessing our <a href="http://www.ny1.com/ny1/NY1ToGo/index.jsp">NY1 To Go</a> site at <a href="http://ny1.com/text">www.ny1.com/text</a>. </font></td>
+                                                </tr>
+                                                
+                                                <tr>
+	                                                <td colspan="2"><img src="/ny1/images/homepage/hr.gif"></td>
+                                                </tr>
+      		                                    <tr>
+		 				       		                <td valign="top"><img src="/ny1/content/images/live/46/90392.jpg" width=78 height=89 border="0" align="right" hspace="3" vspace="3"><font face="arial,helvetica" size="3" color="#990033"><b>NY1 En Español </b><br></font><font face="arial,helvetica" size="1" color="black">For all your New York City news in Spanish, watch NY1 Noticias on Time Warner Digital Cable channels 95 or 801, and Cablevision channel 194 – plus see a news summary page at <a href="http://www.ny1noticias.com">NY1noticias.com</a>. </font></td>
+                                                </tr>
+                                                
+
+
+                                                <tr>
+                                                  <td colspan="2">
+<!-- START AD (Pos==5 sid==1) -->
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- hide from non-JavaScript browsers
+var axel = Math.random() + "";
+var num = axel * 1000000000000000000;
+document.writeln('<scr'+'ipt src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=sb&c=17&pli=260762&pi=0&w=166&h=100&ord='+ num +'"></scr'+'ipt>');
+// end hide from browsers -->
+</script>
+<noscript>
+<a href="http://bs.serving-sys.com/BurstingPipe/BannerRedirect.asp?FlightID=260762&Page=&PluID=0&Pos=3141" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/BannerSource.asp?FlightID=260762&Page=&PluID=0&Pos=3141" border="0" width="166" height="100"></a>
+</noscript>
+<script type="text/javascript">saveAd(2722);</script>
+
+<!-- End AD (Pos==5 sid==1) -->
+                                                  </td>
+                                                </tr>
+
+                                            </table>
+						                </td>
+										<!-- END TOC / Tout Bar -->
+                                        
+                                    </tr>
+			                    </table>
+			                </td>
+		                    <!--- END CONTENT CELL OF CONSTRAINING TABLE --->
+	                    </tr>
+
+	                    <tr>
+		                    <td align="left">
+			                    <img src="/ny1/images/navigation/weather_bar.gif" hspace="5">
+			                    <font face="geneva,arial,sans-serif" size="1" color="#000000"><br>
+			                        &nbsp;&nbsp;Reproduction in whole or in part without permission is prohibited.<br>
+						&nbsp;&nbsp;Copyright &copy 2008 NY1 News. All rights reserved.<br />
+			                    </font>
+		                    </td>
+	                    </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+
+</html>
+

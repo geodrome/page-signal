@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>The Calgary Sun</title>
+         
+
+		<script type="text/javascript"><!-- // <![CDATA[
+		var archiveurl=document.location.href;
+        var archiveurla=archiveurl.indexOf('archive.html');
+		
+		function OmnitureVariables(){
+			this.mainsection = 'calgarysun';
+			this.sectionLevel2 = 'sports';
+			this.sectionLevel3 = 'sports_hockey';
+			this.sectionLevel4 = 'sports_hockey_flames';
+			this.sectionLevel5 = 'sports_hockey_flames_headlines';
+			this.sectionLevel6 = '';
+			this.language = 'en';
+			this.division = 'smc';	
+			this.networkid = 'can';
+            this.SwitchCgi = true;
+			this.trackExternalLinks= 'true';
+			this.pageType = '';
+			this.srcsite = 'portal';
+			this.s_account = 'cnocalgarysuncomprod,cnocanoeglobalprod';
+			this.linkInternalFilters = 'javascript:,calgarysun.com, calsun.canoe.ca';
+			this.linkExternalFilters = '';			
+			this.linkTrackVars = 'server';
+			this.linkTrackEvents = 'None';			
+ 			this.linkLeaveQueryString = 'false';					
+			this.prop22 = 'sports';	          
+		    this.server = this.networkid + '.' + this.language + '.' + this.division + '.' + this.mainsection;
+			
+			this.type = '';
+            //check to see if the page is a home page or an article page 
+              var theurl=document.location.href;
+              var mainurla=theurl.indexOf('home.html');
+              var mainurlb=theurl.charAt(theurl.length -1);
+              var mainurlc=theurl.indexOf('home.php');
+                  if ((mainurla!=-1) || (mainurlb=='/') || (mainurlc!=-1)){
+                      var pagen='home';
+                     }
+                     else {
+                      var pagen='article';
+                     }
+            //check to see if the page is an archive page 	
+		    
+			
+			      if (archiveurla!=-1) {
+			         this.articlename = 'sports' + ' archive';
+  			         }
+			      else {
+			         this.articlename = 'Red-hot frontrunners';
+			         }
+             //setting the page name
+			 
+               if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 !='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+this.sectionLevel5+':'+this.sectionLevel6+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+this.sectionLevel5+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 =='') && (this.sectionLevel4 =='') &&  (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                       if (this.sectionLevel2 =='homepage') {
+							this.pageName= this.mainsection+':'+pagen;
+						  }
+							else {	  
+                                  this.pageName= this.mainsection+':'+this.sectionLevel2+':'+pagen;
+								 }
+                 }
+                 else {
+				      if (this.pageType!='errorPage') {
+                          this.pageName= this.mainsection+':'+pagen;
+                          }
+						  else {
+						  this.pageName='';
+				          }
+				 }
+			this.prop1 ='';
+			this.prop2 ='';
+				if (this.sectionLevel2=='homepage') {
+			this.prop3 = '';
+					}
+				else {
+			this.prop3 = this.sectionLevel2;
+				}
+				if (this.sectionLevel3!='') {
+			this.prop4 = this.sectionLevel3;
+				}
+				else {
+			this.prop4 = '';
+				}
+				if (this.sectionLevel4!='') {
+			this.prop5 = this.sectionLevel4;
+				}
+				else {
+			this.prop5 = '';
+				}
+				if (this.sectionLevel5!='') {
+			this.prop6 = this.sectionLevel5;
+				}
+				else {
+			this.prop6 = '';
+				}
+        	this.prop7 ='smc';
+			this.prop11 = theurl.slice(7);
+		     
+		
+		//check to see if a page is an article if so, pass its headline to prop12
+		
+			if ((pagen=='article') && (this.pageType!='errorPage')) {
+			this.prop12   = this.mainsection+':'+this.articlename;
+				}
+				else {
+			this.prop12   = '';
+				}
+				
+			if (this.type=='print') {
+			 this.prop18  = theurl.slice(7);
+			   }
+			   else {
+			 this.prop18  ='';  
+			   }	
+				
+			this.prop20 = 'sun';
+			this.prop23 = 'en';
+				if (this.sectionLevel6!='') {
+			this.prop36 = this.sectionLevel6;
+				}
+				else {
+			this.prop36 = '';
+				}
+	
+               if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 !='')){
+            this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5+'|'+this.sectionLevel6;
+            this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+ this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5+'|'+this.sectionLevel6;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+ this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') &&  (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+ this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3;
+                 }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 =='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                     if (this.sectionLevel2 =='homepage') {
+		   this.hier1= this.mainsection;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection;
+					  }
+			  	     else {
+		   this.hier1= this.mainsection+'|'+this.sectionLevel2;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2;
+                       }
+                 }
+                 else {
+           this.hier1= this.mainsection;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection;
+                  }
+		   this.hier3= this.prop22+'|'+this.language+'|'+this.division;	
+		}
+		var MyOmnitureVariables  = new OmnitureVariables();
+		// ]]> --></script>
+		
+		
+		<script type="text/javascript"><!-- // <![CDATA[
+		function DfpVariables(){
+			this.mainsection = 'calgarysun';
+			this.sectionLevel2 = 'sports';
+			this.sectionLevel3 = 'sports_hockey';
+			this.sectionLevel4 = 'sports_hockey_flames';
+			this.sectionLevel5 = 'sports_hockey_flames_headlines';
+			this.language = 'en';
+			this.division = 'smc';	
+			this.networkid = 'can';
+ 			this.affiliate = '';          	
+			this.tile = 1;
+			this.rand_num = Math.floor(Math.random()*8999999999)+1000000000;
+			this.prov = '';
+			
+			this.SwitchLang = this.language;
+			this.de_site = 'sun_media';
+			this.de_vchannel = 'calgarysun';
+			this.de_category = this.sectionLevel3;
+			this.de_subcategory = '';	
+			this.de_subchannel = this.sectionLevel2;
+			this.de_hchannel = 'news';
+	       
+		    this.theurl=document.location.href;
+            this.mainurl1=this.theurl.indexOf('home.html');
+            this.mainurl2=this.theurl.charAt(this.theurl.length -1);
+            this.mainurl3=this.theurl.indexOf('home.php');
+             
+			// code to check if a page is a home page of level 3 and below. hp=1 means homepage is true
+			if ((this.sectionLevel4=='') && ((this.mainurl1!=-1) || (this.mainurl2=='/') || (this.mainurl3!=-1))){
+				this.hp='1';
+			} else {
+				this.hp='0';
+			}
+		}
+		var MyGenericTagVar  = new DfpVariables();
+		// ]]> --></script>
+		
+	    <script type="text/javascript" src="/generix/js/generix.js"></script>		
+		<script type="text/javascript" src="/generix/js/GenFonction.js"></script>	
+		<script type="text/javascript" src="/generix/dfp/papers/calgarysun/TagDfpSection.js"></script>
+		<script type="text/javascript" src="/generix/dfp/TagDfpEngine.js"></script>
+		
+		
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="title" content="The Calgary Sun online - News, Sports and Entertainment">
+<meta name="description" content="Calgary's definitive guide to entertainment and events. Includes movie reviews, shopping and recreation guides. An all inclusive look at Calgary's finest. Need to know what's playing or where to eat? What to buy or where to shop? fyicalgary.com has the answers. ">
+<meta name="keywords" content="calgary sun, shopping, business, careers, homes, home buying, lifestyle, wedding fair, news, war on terror, outdoors, the edge, skiing, snowboarding, mike drew, rv living, photos, showbiz, entertainment, bars clubs, cds, music, events, movie show times, movie reviews, calgary restaurants, sports, calgary flames, hitmen, stampeders">
+<meta name="language" content="english">
+<meta name="author" content="calgarysun">
+<meta name="copyright" content="calgarysun 2005">
+<meta name="revisit-after" content="1 days">
+<meta name="reply-to" content="&#99;&#111;&#109;&#109;&#101;&#110;&#116;&#115;&#64;&#99;&#97;&#108;&#103;&#97;&#114;&#121;&#115;&#117;&#110;&#46;&#99;&#111;&#109;">
+<meta name="document-class" content="Published">
+<meta name="document-classification" content="Entertainment - Information">
+<meta name="document-rights" content="Public">
+<meta name="document-type" content="Public">
+<meta name="document-rating" content="Safe for Kids">
+<meta name="document-state" content="Dynamic">
+<meta name="PAGE" CONTENT="63">
+<meta name="ABS" content="Subscribe &nbsp; Classifieds &nbsp; Contests &nbsp; Homes &nbsp; search calgarysun.com INDEX &nbsp; HOME &nbsp; CAREERS &nbsp; CLASSIFIEDS &nbsp; COMMENT &nbsp; CONTESTS &nbsp; HOMES &nbsp; LIFESTYLE &nbsp; NEWS &nbsp;OUTDOORS &nbsp; Backswing">
+<meta name="WORDS" content="planetsun calgary">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+	<link rel="stylesheet" href="http://calsun.canoe.ca/Sports/Hockey/Flames/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="http://www.calgarysun.com/styles/jquery-calendar.css" type="text/css" media="all" />
+	<link rel="stylesheet" type="text/css" media="all" href="http://en.canoe.ca/Canoe/Video/suns.css" />
+
+	<script language="JavaScript" type="text/javascript" src="http://www.calgarysun.com/js/standard_old.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://www.calgarysun.com/js/jquery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://www.calgarysun.com/js/jquery-calendar.js"></script>
+</head>
+
+<body id="calgarySun">
+<div id="mainContainer">
+	<div id="sideBorders">
+		<div id="sideBordersTop">
+			<div id="topBarContainer">
+				<div id="globalNav">
+					<ul id="logos">
+						<li><a href="http://www.canoe.ca" id="logo">Canoe Home</a></li>
+						<!--<li><a href="http://cnews.canoe.ca" id="subLogo">CNEWS Home</a></li>-->
+					</ul>
+				
+					<div id="dropDown">
+						<form action="javascript:void(0);" name="guidecanoe">
+							<script type="text/javascript" language="javascript" src="http://www.canoe.ca/Canoe/Includes/options.js"></script>
+						</form>
+					</div>
+				
+					<div id="search">
+						<form method="post" name="seek" action="javascript:qParam(document.seek)">
+						<img src="http://www.canoe.ca/NewHomeImages/search.gif" width="45" height="21" alt="Search" />
+				
+						<input type="text" name="query" size="25" style="width: 190px;height:15px;" />
+						<input type="radio" name="ou" value="C" />
+						<img src="http://www.canoe.ca/CanoeGlobalnav/canoe_search.gif" height="21" width="26" alt="Canoe" />
+						
+						<input type="radio" name="ou" value="G" checked="checked" />
+						<img src="http://www.canoe.ca/CanoeGlobalnav/google_search.gif" height="21" width="29" alt="Google" />
+				
+						<input type="image" name="submit" src="http://www.canoe.ca/NewHomeImages/go2.gif" alt="Search" style="margin-left:3px;"/>
+						
+						<input type="hidden" name="lang" value="en" />
+				
+						<input type="hidden" name="range" value="0-19" />
+						<input type="hidden" name="operator" value="and" />
+						<input type="hidden" name="p" value="0" />
+						<input type="hidden" name="s" value="20" />
+						<input type="hidden" name="q" value="" />
+						<input type="hidden" name="ad" value="w5n2" />
+				
+						<input type="hidden" name="client" value="netgraphe" />
+						<input type="hidden" name="ie" value="latin1" />
+						<input type="hidden" name="oe" value="latin1" />
+				
+						<input type="hidden" name="output" value="xml_no_dtd" />
+						<input type="hidden" name="ip" value="" />
+						<input type="hidden" name="userid" value="netgraphe" />
+						<input type="hidden" name="start" value="0" />
+						<input type="hidden" name="num" value="20" />
+				
+						<input type="hidden" name="lr" value="" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="logoBar">
+				<a href="http://www.calgarysun.com" id="canoeLogo">Calgary Sun</a>
+				<div id="superBanner">
+					<script type="text/javascript">
+	fctAdTag("superbanner",MyGenericTagVar,1);
+</script>
+
+
+<!-- <SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=calgarysun&SubChannel=othersections&position=superbanner&HChannel=news">
+</SCRIPT>
+ -->
+				</div>
+			</div>
+			<ul id="mainNav" class="clearIt">
+				<li class="home last"><a href="http://www.calgarysun.com">Home</a></li
+				><li><a href="http://calsun.canoe.ca/News/">News</a></li
+				><li class="active"><a href="http://calsun.canoe.ca/Videos/">Video</a></li
+				><li><a href="http://calsun.canoe.ca/Sports/">Sports</a></li
+				><li><a href="http://calsun.canoe.ca/Business/">Business</a></li
+				><li><a href="http://calsun.canoe.ca/Showbiz/">Showbiz</a></li
+				><li><a href="http://www.calgarysun.com/movies/index.shtml">Movie Listings</a></li
+				><li><a href="http://jam.canoe.ca/Music/AlbumReviews/">CD Reviews</a></li
+				><li><a href="http://calsun.canoe.ca/Comment/">Comment/Columns</a></li
+				><li><a href="http://calsun.canoe.ca/Lifestyle/">Lifestyle</a></li
+				><li><a href="http://www.calgarysun.com/obits.shtml">Obituaries</a></li
+				><li><a href="http://autonet.ca/">Autonet</a></li
+				><li><a href="http://www.calgarysun.com/homes/index.shtml">Homes &amp; Condos</a></li
+				><li class="last"><a href="">Jobboom.com</a></li>
+			</ul>
+				<div id="maindiv">
+					<!-- BEGIN HEADER -->
+					<div id="canoenav">
+						<!---#include virtual="/Includes/global_nav.html"--->
+					</div>
+					<div id="flamesHead">
+						<div id="flamesHeadUpper"><a href="http://calsun.canoe.ca/Sports/Hockey/Flames/"><img src="/Sports/Hockey/Flames/images/bg_header.jpg" border="0" /></a></div>
+						<div id="flamesHeadLower">
+						<ul id="flamesBanner" class="clearIt">
+							<li id="flamesBanner1"><a href="http://www.calgarysun.com/flames/static/schedule.html">Schedule</a></li>
+							<li id="flamesBanner2"><a href="http://scoreboards.canoe.ca/default.asp?c=canoe&page=nhl/teams/INDSTAT123.htm" target="_blank">Statistics</a></li>
+							<li id="flamesBanner3"><a href="http://www.calgarysun.com/flames/static/roster.html">Roster</a></li>
+							<li id="flamesBanner4"><a href="http://www.calgarysun.com/flames/static/management.html">Management</a></li>
+							<li id="flamesBanner5"><a href="http://www.calgarysun.com/flames/static/history.html">History</a></li>
+							<li id="flamesBanner6"><a href="http://www.calgarysun.com/flames/static/saddledome.html">Saddledome</a></li>
+						</ul>
+						<!--<a href="schedule.html"><img name="flames_banner_schedule" src="images/flames_banner_schedule.jpg" width="118" height="27" border="0" alt=""></a><a href="stats.html"><img name="flames_banner_stats" src="images/flames_banner_stats.jpg" width="132" height="27" border="0" alt=""></a><a href="roster.html"><img name="flames_banner_roster" src="images/flames_banner_roster.jpg" width="112" height="27" border="0" alt=""></a><a href="management.html"><img name="flames_banner_management" src="images/flames_banner_management.jpg" width="168" height="27" border="0" alt=""></a><a href="history.html"><img name="flames_banner_history" src="images/flames_banner_history.jpg" width="119" height="27" border="0" alt=""></a><a href="saddledome.html"><img name="flames_banner_saddledome" src="images/flames_banner_saddledome.jpg" width="148" height="27" border="0" alt=""></a>--></div>
+					</div>
+					<!-- END HEADER -->
+					<!-- START UPPER CONTENT -->
+					<div class="clearIt">
+						<div id="flamesContentStory">
+							<!-- BEGIN STORY -->
+							<div id="flamesStory">
+								<div class="flameBotDiv">
+									<h1 style="font-size:14px;">Red-hot frontrunners</h1>
+									<A HREF="mailto:randy.sportak@calgarysun.com">RANDY SPORTAK</A><br />									
+																		<p> Five is the number of wins in a row for the Calgary Flames. Three is their seeding in the Western Conference as they awake this morning.
+</p><p> One is the spot they hold in the Northwest Division.
+</p><p> Pretty good way to celebrate Ukrainian Christmas.
+</p><p> "It's big. At the same time, we can't pat ourselves on the back," said centre Daymond Langkow amidst the euphoria that followed Saturday night's 6-4 win in Los Angeles.
+</p><p> "It's tight. Every game is going to be important, especially divisional games."
+</p><p> With so much of the season remaining, the Flames are by no means free and clear.
+</p><p> That lofty perch may be short-lived, since Vancouver sits only a point back while Minnesota is three back and Colorado lags four off the pace. All three teams have two games in hand on the Flames.
+</p><p> Still, what the Flames have done since the start of December -- 12-1-4 in the last 17 games -- bodes well for the rest of the way.
+</p><p> Actually, it's an amazing achievement thinking back exactly a month ago and even pretty heady even when you consider the situation a few days after Christmas.
+</p><p> A week into December, the Flames were sitting perilously close to the bottom of the Western Conference.
+</p><p> It was then they salvaged the season with the six-game road swing.
+</p><p> Even heading into their three-game homestand that started Dec. 29 against the Anaheim Ducks, life was uneasy, with it seeming that run would be the highlight of the year because they had lost three straight -- two in overtime -- after the trip.
+</p><p> Funny how quickly things changed for the Flames, who enjoyed a well-earned recovery day yesterday.
+</p><p> "Beginning of December, we were a long way out. We were trying to claw back into the playoff race," said Jarome Iginla, whose surge has him receiving Hart Trophy consideration from coast to coast.
+</p><p> "This feels good to get into that position, to be in the battle now.
+</p><p> "We're winning a lot of different style games. You want it to be perfect.
+</p><p> "You want to hold them down low and have a great defensive game every time. It doesn't work that way.
+</p><p> "We've had those games, and we've had these games where no one gave up on our bench. We just want to keep this going and keep climbing and keep improving."
+</p><p> On the surface, that victory over Los Angeles is hardly noteworthy. After all, we're talking about a Kings team that's reeling and sitting at the bottom of the standings.
+</p><p> However, the Flames skated in their third game in four nights -- and sixth in 10, with two trips to the West Coast sandwiching three games at home -- yet still had the moxie to complete yet another third-period comeback.
+</p><p> That's just one of the good points for the team this season. Prior to yesterday's action, they were No. 2 in the Western Conference in goals per game -- thanks to the fact Iginla's been all-world in rocketing to No. 2 in both goals and points.
+</p><p> They're powerplay (3-for-5 against the Kings) and penalty kill have been better of late. Much better.
+</p><p> Remember, there were plenty of critics waiting for an implosion when Mike Keenan took the post as head coach.
+</p><p> That said, there are still situations that must be corrected.
+</p><p> The goals-against total is too high, goaltender Miikka Kiprusoff being both relied upon too much at times and struggling at others (could that be a product of him wearing down?), and the secondary scoring -- hello Matthew Lombardi, Alex Tanguay, Craig Conroy and Owen Nolan -- is too inconsistent.
+</p><p> Then again, other than the Detroit Red Wings, name an NHL squad without some problems.
+</p><p> The rest of the month won't tell the whole tale of what the 2007-08 Flames really are.
+</p><p> However, it's worth noting at this point last season was when we started seeing chinks in the armour. The test this campaign will be to prove the red-hot five weeks aren't a fluke and keep it going.
+</p><p> The schedule over the rest of January isn't heavy -- eight more games, five at home -- with opposition that can't be classified as top-tier.
+</p><p> That means the Flames have a good chance of remaining where they are in the standings, provided they remember what it took to dig out of their hole.
+</p><p> "Accountability, playing hard, playing for each other," said defenceman Anders Eriksson. "We've got that mentality (of) whatever it takes to get two points."
+</p>								</div>
+							</div>
+							<!-- /END STORY  -->
+							<div id="flamesStoryAd">
+								<!-- AdSpace site=sun_media&VChannel=calgarysun&SubChannel=dating&position=button_7&HChannel=news -->
+								<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=calgarysun&SubChannel=dating&position=button_7&HChannel=news"></SCRIPT>
+								<!-- /AdSpace -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>				
+				<table width="100%" border="0" cellspacing="2" cellpadding="2" bgcolor="ffffff">
+	<tr>
+		<td align="center">
+			<!--<a href="mailto:mailbag@edmsun.com">Send a Letter to the Editor</a><br>-->
+			<a href="http://www.canoe.ca">CANOE</a> home | We welcome your <a href="http://www.canoe.ca/cgi-bin/reg/NR-cust_service.pl?MODE=CUSTOMER_SERVICE&LOOK=CALSUN">feedback.</a><br>
+			<a href="http://www.canoe.ca/Canoe/copyright.html" target="_blank">Copyright</a> &#169; 2008, <a href="http://www.canoe.com">Canoe Inc.</a> All rights reserved.	
+		</td>
+	</tr>
+</table>
+ <script type="text/javascript" src="http://www.canoe.ca/generix/omniture/TagOmnitureEngine.js"></script>
+			
+				<div id="scheduleblotwindow">&nbsp;</div>
+	
+	<script src="http://www.google-analytics.com/urchin.js"
+	type="text/javascript">
+	</script>
+	<script type="text/javascript">
+	_uacct = "UA-1130609-1";
+	_udn="none";
+	ulink=1;
+	urchinTracker();
+	</script>
+</body>
+</html>

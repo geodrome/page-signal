@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lan();
+	var mn = ts.substr(2,3);
+	switch(mn) {
+		case 'JAN': mn='01'; break;
+		case 'FEB': mn='02'; break;
+		case 'MAR': mn='03'; break;
+		case 'APR': mn='04'; break;
+		case 'MAY': mn='05'; break;
+		case 'JUN': mn='06'; break;
+		case 'JUL': mn='07'; break;
+		case 'AUG': mn='08'; break;
+		case 'SEP': mn='09'; break;
+		case 'OCT': mn='10'; break;
+		case 'NOV': mn='11'; break;
+		case 'DEV': mn='12'; break;
+	}
+	var now = '20'+ts.substr(5,2)+mn+ts.substr(0,2)+ts.substr(7,4);
+	var today = now.toString().substr(0,8)+'0000'-0;
+</script>
+
+<!-- HEADER --><div id="tourHeaderSub">
+		 <div id="tour728Ad"><!-- ADSPACE: ros/top.728x90 --><div id="ad-408510" align="center" style="padding: 0; margin: 0; border: 0;"><script type="text/javascript"> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+cnnad_createAd("408510","http://ads.pgatour.com/html.ng/site=pgatour&pgatour_pos=728x90_top&pgatour_rollup=ros&params.styles=fs","90","728");
+
+
+
+
+
+
+
+
+
+
+
+</script></div></div>
+		<div id="tourHeadContainer">
+		<div id="tourLogo"><span class="AlphaTrans"><a href="/"><img src="/.element/img/3.0/global/pgatour_logo.png" width="82" height="104" /></a></span></div>
+		<div id="tourLoginSearch">
+				<div id="tourLogin">
+			<script type="text/javascript">
+				// to chance link location edit these variables
+				var signinLink = '<a id="signinLink" href="/member_services/login.html">';
+				var signoutLink = '<a id="signoutLink" href="http://audience.pgatour.com/services/pgatour/logout.do?xurl=' + escape(location.href) + '">';
+				var registerLink = '<a id="registerLink" href="/member_services/registration.html">';
+				var updateLink= '<a id="updateLink" href="/member_services/update.html">';
+				// normal script vars
+				var htmlLogin = '';
+				var authid = Cookie.get('authid'); // authid is member services cookie
+				if (authid != null && authid != "") {
+					// user is signed on
+					var firstName = Cookie.get('firstName');
+					if (firstName != null && firstName != '') {
+						htmlLogin += signoutLink + firstName +' - Sign Out</a>|';
+					} else {
+						htmlLogin += signoutLink + 'Sign Out</a>|';
+					}
+					htmlLogin += updateLink + 'Update Account</a>';
+				} else {
+					// user is not signed in
+					htmlLogin += signinLink + 'Sign On</a>|';
+					htmlLogin += registerLink + 'Register</a>';
+				}
+				document.write(htmlLogin);
+			</script>
+		</div><!-- /tourLogin -->
+				<!-- SEARCH -->
+				<form style="tourSearhFrom" action="http://search.pgatour.com/pages/search.jsp" method="get" onsubmit="return validateSearchForm(this);">
+	<input name="query" value="" type="text" class="tourSearchQuery" />
+	<input type="submit" class="tourSearchButton" value="SEARCH" />
+</form><!-- /SEARCH -->		
+		</div>
+<div id="tourTopNavContainer">
+<!-- NAVIGATION --><div id="tourTopNav">
+<div id="tourMainNav">
+	<div class="tourSectLinks">
+	<a id="tourSectLink1" class="tourSectLinksItem Navactive" href="/" alt="PGA Tour"><img src="/.element/img/3.0/global/r/nav_tour_on.gif" /></a>
+	<a id="tourSectLink2" class="tourSectLinksItem" href="/s/" alt="Champions Tour"><img src="/.element/img/3.0/global/r/nav_champ_off.gif" /></a>
+	<a id="tourSectLink3" class="tourSectLinksItem" href="/h/" alt="Nationwide Tour"><img src="/.element/img/3.0/global/r/nav_nation_off.gif" /></a>
+	</div>
+	<div class="tourTopNavOtherLinks">
+		<a class="tourTopNavOtherLinksItem" href="/tourlife/instruction/" alt="Instruction">Instruction</a>
+		<a class="tourTopNavOtherLinksItem" href="/tourlife/travel/" alt="Travel">Travel</a>
+		<a class="tourTopNavOtherLinksItem" href="/multimedia/wireless/" alt="Mobile">Mobile</a>
+		<a class="tourTopNavOtherLinksItem" href="http://shop.PGATOUR.com/" alt="Shop">Shop</a>
+		<a class="tourTopNavOtherLinksItem" href="/company/" alt="Press Room">Press Room</a>
+		<a class="tourTopNavOtherLinksItem tourTopNavLast" href="http://www.pga.com" alt="PGA Tour">PGA.com</a>
+	</div>
+</div>
+<div class="tourTopNavBotCont">
+<div class="tourTopNavBottom">
+	<div class="tourSectBotLinks">
+		<div id="tourSectSubLink1" class="tourSectSubLinks1 show">
+			<a id="tourSectBotLinksItem1" class="tourSectBotLinksItem" href="/r/leaderboard/" alt="PGA Tour Live Scoring"><img src="/.element/img/3.0/global/link_arrow.gif" />LIVE SCORING</a>
+			<a id="tourSectBotLinksItem2" class="tourSectBotLinksItem" href="/r/schedule/" alt="PGA Tour Tournaments">SCHEDULE</a>
+			<a id="tourSectBotLinksItem3" class="tourSectBotLinksItem" href="/r/players/" alt="PGA Tour Players">PLAYERS</a>
+			<a id="tourSectBotLinksItem5" class="tourSectBotLinksItem" href="/video/" alt="Video">VIDEO</a>	
+			<a id="tourSectBotLinksItem4" class="tourSectBotLinksItem" href="/news/" alt="PGA Tour News">NEWS</a>
+			<a id="tourSectBotLinksItem5" class="tourSectBotLinksItem" href="/r/stats/" alt="PGA TOUR Stats">STATISTICS</a>		
+			<a id="tourSectBotLinksItem6" class="tourSectBotLinksItem" href="http://fantasy.pgatour.com/" alt="Fantasy">FANTASY</a>
+			<a id="tourSectBotLinksItem7" class="tourSectBotLinksItem" href="/fedexcup/" alt="FEDEXCUP"><span class="fecPur">FED</span><span class="fecOrg">EX</span><span class="fecGrn">CUP</span></a>
+			<a id="tourSectBotLinksItem8" class="tourSectBotLinksItem" href="/tournaments/r011/" alt="THE PLAYERS Championship"><img src="/.element/img/3.0/global/players_navimg.gif" class="tourSpecialNavImg" /></a>
+	</div>
+	
+	<div id="tourSectSubLink2" class="tourSectSubLinks1 hide">
+		<div class="tourSectSubChamp">
+			<a id="tourSectBotLinksItem1" class="tourSectBotLinksItem" href="/s/leaderboard/" alt="Champions Tour Live Scoring"><img src="/.element/img/3.0/global/s/link_arrow.gif" />LIVE SCORING</a>
+			<a id="tourSectBotLinksItem2" class="tourSectBotLinksItem" href="/s/schedule/" alt="Champions Tour Tournaments">SCHEDULE</a>
+			<a id="tourSectBotLinksItem3" class="tourSectBotLinksItem" href="/s/players/" alt="Champions Tour Players">PLAYERS</a>
+			<a id="tourSectBotLinksItem5" class="tourSectBotLinksItem" href="/video/?/video/champions-tour" alt="Video">VIDEO</a>	
+			<a id="tourSectBotLinksItem4" class="tourSectBotLinksItem" href="/news/" alt="Champions Tour News">NEWS</a>
+			<a id="tourSectBotLinksItem5" class="tourSectBotLinksItem" href="/s/stats/" alt="Champions Tour Stats">STATISTICS</a>
+			<a id="tourSectBotLinksItem7" class="tourSectBotLinksItem" href="/charlesschwabcup/" alt="Charles Schwab Cup">CHARLES SCHWAB CUP <img src="/.element/img/3.0/global/sm_schwab.gif" class="tourSpecialNavImg" /></a>
+		</div>
+	</div>
+		
+	<div id="tourSectSubLink3" class="tourSectSubLinks1 hide">
+		<div class="tourSectSubNation">
+			<a id="tourSectBotLinksItem1" class="tourSectBotLinksItem" href="/h/leaderboard/" alt="Nationwide Tour Live Scoring"><img src="/.element/img/3.0/global/h/link_arrow.gif" /> LIVE SCORING</a>
+			<a id="tourSectBotLinksItem2" class="tourSectBotLinksItem" href="/h/schedule/" alt="Nationwide Tour Tournaments">SCHEDULE</a>
+			<a id="tourSectBotLinksItem3" class="tourSectBotLinksItem" href="/h/players/" alt="Nationwide Tour Players">PLAYERS</a>
+			<a id="tourSectBotLinksItem4" class="tourSectBotLinksItem" href="/video/?/video/nationwide-tour" alt="Video">VIDEO</a>	
+			<a id="tourSectBotLinksItem5" class="tourSectBotLinksItem" href="/news/" alt="Nationwide Tour News">NEWS</a>
+			<a id="tourSectBotLinksItem6" class="tourSectBotLinksItem" href="/h/stats/" alt="Nationwide Tour Stats">STATISTICS</a>
+			<a id="tourSectBotLinksItem7" class="tourSectBotLinksItem" href="/h/stats/" alt="THE 25">THE 25</a>
+		</div>
+	</div>
+	<div id="tourTopNavFeedback"><a href="/member_services/feedback.html">Feedback [+]</a></div>
+</div>
+</div>
+</div>
+<div class="tourClear"></div>
+</div><!-- /NAVIGATION -->		
+</div>
+</div>
+<div class="tourClear"></div>	
+	</div><!-- /HEADER -->	<!-- FINISH 'ceiling_r' BRANDING --><div class="tourClear"></div><div class="tourLeftContent"><div id="tourStory" class="tourStoryContent"><div class="tourHr"></div><!-- UNPAID HEADER -->
+<div id="tourTournSubHead">
+		<div class="tourTournSubName">Sony Open in Hawaii</div>
+			<div class="tourTournNameDates">Thursday Jan 10 &ndash; Sunday Jan 13, 2008</div>
+			<div class="tourTournHeadLinks">Waialae CC &middot; Honolulu, HI</div>
+			<div class="tourTournLogo"><img src="/.element/img/3.0/sect/tournaments/r006/tourn_logo.gif" /></div>
+		<div id="tourTournSubFooter">
+			<ul class="tourTournFootInfo">
+				<li>Purse: $5.3 million</li>
+				<li>Winning Share: $936,000</li>
+			</ul>
+		</div>
+	</div>
+<!-- PAID HEADER -->
+<!-- #include virtual="/.element/ssi/sect/3.0/tournaments/r006/.header/paid_header.html"--><!-- START 'header' BRANDING: /.element/ssi/story/3.0/DEFAULT/header.html -->  <!-- FINISH 'header' BRANDING --><div id="tourStoryHeadline"><h1>Choi chalks up yet another victory for family and country</h1><!-- START 'headlineAd' BRANDING: /.element/ssi/story/3.0/tournaments/r006/headlineAd.html --><div class="tour234HeadAd" style="height:65px;"><!-- ADSPACE: news/pgatour/sony_open_in_hawaii/spon.234x60 --><div id="ad-444913" align="center" style="padding: 0; margin: 0; border: 0;"><script type="text/javascript"> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+cnnad_createAd("444913","http://ads.pgatour.com/html.ng/site=pgatour&pgatour_pos=234x60_spon&pgatour_rollup=news&pgatour_section=pgatour&pgatour_subsection=sony_open_in_hawaii&params.styles=fs","60","234");
+
+
+
+
+
+
+
+
+
+
+
+</script></div></div><!-- FINISH 'headlineAd' BRANDING --></div><div class="tourH1Content"></div><div class="tourStoryBlob" id="tourStoryBlob"><div class="tourStoryFontSize"><div class="tourStoryFontSizeText">text size</div><div class="tourStoryFontPlus" onclick="changeTextSize(1, 'tourStory')"><img src="/.element/img/3.0/story/plus.jpg" width="12" height="9" alt="Increase Text Size" /></div><div class="tourStoryFontMinus" onclick="changeTextSize(-1, 'tourStory')"><img src="/.element/img/3.0/story/minus.jpg" width="12" height="9" alt="Decrease Text Size" /></div></div><div class="tourStoryQuickLinksTop">
+	<a onClick="return(ET());" onMouseOver="return(ETMouseOver());" onMouseOut="return(ETMouseOut());" href="#"><img src="/.element/img/3.0/story/email.gif" border="0" width="21" height="10" alt="Email This Story" /></a>
+	<a onclick="window.print();" href="#"><img src="/.element/img/3.0/story/print.gif" border="0" width="14" height="12" alt="Print This Story"/></a>
+	<a href="/info/rss.html"><img src="/.element/img/3.0/story/rss_blue.gif" border="0" width="12" height="12" alt="RSS" /></a>
+</div>   <div class="tourStoryInfo">Jan. 14, 2008<script type="text/javascript">var dateUpdated = 1200293760757;tourGetDateUpdated(dateUpdated);</script><br/>  By <a href="/writers/helen_ross">Helen Ross, PGATOUR.com Chief of Correspondents</a></div><p>HONOLULU -- K.J. Choi had found the woman he wanted to marry. Trouble was, Hyunjung Kim's parents weren't at all sure they wanted a professional golfer as a son-in-law. </p><!--startclickprintexclude--> <div class="tourStory1stCont" style="display: inline; width: 183px; clear: left; float: left; margin-right: 10px;">      <div class="tourStory1stImgCont"><!--tourStory1stImgCont --><div><!-- img div --><!--===========IMAGE============--><img src="http://i.cdn.turner.com/pgatour/2008/tournaments/r006/01/14/choi011308/choicelebrates011308-183x256.jpg" alt="K.J. Choi" width="183" height="256" border="0"><!--===========/IMAGE===========--></div><!-- img div --></div><!--/tourStory1stImgCont --><div class="tourStory1stImgCaption"><!--===========CAPTION==========-->K.J. Choi enjoyed a lot of special support Sunday at Waialae. (Ferrey/WireImage)<!--===========/CAPTION=========--></div> <!--tablemaker-->
+<div class="tourStoryTable">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr><td class="tourStoryTableTitle">Inside the Numbers</td></tr>
+					<tr><td class="tourStoryTableSubtitle">K.J. Choi's Final Stats</td></tr>
+				<tr>
+			<td>
+				<table width="100%">
+				<tr>
+	<td class="tourStoryTableHeader" style="text-align:left">Category</td class="tourStoryTableHeader">
+	<td class="tourStoryTableHeader" style="text-align:left">Total</td class="tourStoryTableHeader">
+	<td class="tourStoryTableHeader" style="text-align:left">Rank</td class="tourStoryTableHeader">
+</tr>
+<tr class="tourStoryTableRow">
+	<td style="text-align:left">Eagles</td>
+	<td style="text-align:left">0</td>
+	<td style="text-align:left">N/A </td>
+</tr>
+<tr class="tourStoryTableRowAlt">
+	<td style="text-align:left">Birdies</td>
+	<td style="text-align:left">17</td>
+	<td style="text-align:left">T5 </td>
+</tr>
+<tr class="tourStoryTableRow">
+	<td style="text-align:left">Pars</td>
+	<td style="text-align:left">50</td>
+	<td style="text-align:left">T11 </td>
+</tr>
+<tr class="tourStoryTableRowAlt">
+	<td style="text-align:left">Bogeys</td>
+	<td style="text-align:left">4</td>
+	<td style="text-align:left">T67 </td>
+</tr>
+<tr class="tourStoryTableRow">
+	<td style="text-align:left">Double Bogeys</td>
+	<td style="text-align:left">0</td>
+	<td style="text-align:left">N/A </td>
+</tr>
+<tr class="tourStoryTableRowAlt">
+	<td style="text-align:left">Other</td>
+	<td style="text-align:left">0</td>
+	<td style="text-align:left">N/A </td>
+</tr>
+<tr class="tourStoryTableRow">
+	<td style="text-align:left">Driving Accuracy</td>
+	<td style="text-align:left">58.2%</td>
+	<td style="text-align:left">20 </td>
+</tr>
+<tr class="tourStoryTableRowAlt">
+	<td style="text-align:left">Driving Distance</td>
+	<td style="text-align:left">306.9 yds.</td>
+	<td style="text-align:left">T9 </td>
+</tr>
+<tr class="tourStoryTableRow">
+	<td style="text-align:left">Greens in Regulation</td>
+	<td style="text-align:left">74.6%</td>
+	<td style="text-align:left">T4 </td>
+</tr>
+<tr class="tourStoryTableRowAlt">
+	<td style="text-align:left">Putts per Round</td>
+	<td style="text-align:left">28.0</td>
+	<td style="text-align:left">T17 </td>
+</tr>
+<tr class="tourStoryTableRow">
+	<td style="text-align:left">Putts per GIR</td>
+	<td style="text-align:left">1.755</td>
+	<td style="text-align:left">T26 </td>
+</tr>
+<tr class="tourStoryTableRowAlt">
+	<td style="text-align:left">Sand Saves</td>
+	<td style="text-align:left">100.0%</td>
+	<td style="text-align:left">T1</td>
+</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+ </div>		
+<!--/tablemaker-->
+
+</div><!--endclickprintexclude--><p>Who knew if Choi would be able to earn a steady paycheck and provide for their daughter? They saw risk where Choi saw the potential reward, and it was up to him to convince them that he could be a good husband. </p><p>Choi's first victory at the 1995 Fantom Open certainly helped erase some of the doubts. But truth be told, his future in-laws may have been more swayed by the determination and drive they saw in the young South Korean. </p><p>&quot;When they looked at my eyes, they saw that I had the passion, the urge to succeed,&quot; said Choi, who has gone on to win more than $17 million. &quot;I think once they read that in my eyes, that's when they approved.&quot; </p><p>And that urge to succeed served Choi well on this windswept Sunday at the Sony Open in Hawaii when he earned his seventh PGA TOUR victory. He didn't make a birdie until the final hole, but he was able to hold on for the three-stroke victory. </p><p>&quot;I can't remember having such a difficult round,&quot; Choi said through his interpreter, Michael Yim. &quot;I told myself, try not to lose focus. I really think the Lord helped me, making me feel comfortable. </p><p>&quot;With strong winds out there today, it was very hard to make decisions, and actually every shot out there was difficult, was risky, because you never knew where the ball would go.&quot; </p><p>A three-putt bogey on the 13th hole -- where he missed an 11-inch putt -- served as Choi's wake-up call. <a href="/players/02/36/21/">Rory Sabbatini</a> tried to make things interesting when he closed within two at the 16th hole, but Choi stubbornly refused to flinch. </p><p>The victory came on the 105th anniversary of the day the first Korean immigrants entered the United States. The SS Gaelic brought 56 men, 21 women and 25 children to Honolulu that day, and many descendants were in Choi's gallery Sunday. </p><p>&quot;For me to win this tournament on this special day really means a lot,&quot; Choi said. &quot;I think that's why with all the support, all the fan support out there, it made it that much more special.&quot; </p><p>Also in Choi's gallery were 11 friends from Wando, the South Korean island on which he grew up. They made their reservations to come to Hawaii and watch him play two months ago -- and the decision turned out to be prescient. The plane trip took eight hours Friday night, but they were on the first tee for the final two rounds, many wearing yellow shirts with Choi's name on them. </p><p>One of the friends owned Wando's only driving range -- a tiny 70-yard layout where Choi hit thousands of balls. Another drove the aspiring pro three hours -- one way -- so he could play golf on the mainland since there were no courses on Wando, where his parents farmed rice and seaweed. </p><p>Choi got his start by reading books by <a href="/players/00/18/69/">Jack Nicklaus</a>, whose Memorial Tournament the South Korean captured last season in a Cinderfella story. Sunday's victory marked the fourth straight year Choi had won a tournament -- putting him in elite company with <a href="/players/00/87/93/">Tiger Woods</a>, <a href="/players/00/65/67/">Vijay Singh</a> and <a href="/players/00/18/10/">Phil Mickelson</a>. </p><p>&quot;I have an evening flight tonight so I'm going to try to ... get a short party going on,&quot; Choi said almost shyly, thinking about his friends. &quot;Today is a very happy day, and I just own the Lord up there. Without him, I don't think I could have done it.&quot; </p><p>Choi is an extremely humble and generous man who donated $90,000 -- one tenth of his earnings -- to the Korean Presbyterian Church he attended when he won the 2005 Chrysler Classic of Greensboro. He came to Hawaii ranked ninth in the world, but his ego barely registers. </p><p>&quot;I feel like if I'm one of the top players, then there's no room for improvement,&quot; he explains. &quot;I always think that you have to respect the other players, as well, because when you have someone that you feel like you have to surpass, that sets a new motivation, a new goal.&quot; </p><!--startclickprintexclude-->  <div class="IEContainer" style="display: inline; width: 170px; clear: left; float: left; margin-right: 10px;">  <div style="margin-bottom:6px;"> <div class="tourStoryPicks">
+<div class="tourPodHeader tourStoryPodHeader"></div>
+<div class="tourStoryPicksContentContainer">
+<div class="tourStoryPicksContent">
+<a href="javascript:tourOpen('http://www.pgatour.com/video/?/video/pga-tour/highlights/2008/01/13/highs_08sony_rnd4.pgatour');"><span class="tourStoryPicksBold">Video:</span> Rd. 4 highlights</a> <img alt="Video" src="/.element/img/3.0/global/icons/vid_blk.gif"><br>
+<a href="javascript:tourOpen('http://www.pgatour.com/video/?/video/pga-tour/sod/2008/01/13/sod_08sony_rnd4_18th_eag_azinger.pgatour');"><span class="tourStoryPicksBold">Video:</span> Shot of the day</a> <img alt="Video" src="/.element/img/3.0/global/icons/vid_blk.gif"><br>
+<a href="http://www.pgatour.com/tournaments/r006/results.html"><span class="tourStoryPicksBold">Stats:</span> Final results and money</a> <img alt="Stats" src="/.element/img/3.0/global/icons/stat_blk.gif"><br>
+<a href="javascript:tourOpen('http://www.pgatour.com/photos/');"><span class="tourStoryPicksBold">Photos:</span> Sunday's best</a> <img alt="Photos" src="/.element/img/3.0/global/icons/pic_blk.gif"><br>
+<a href="http://www.pgatour.com/r/stats/info/?02394"><span class="tourStoryPicksBold">More:</span> Updated FedExCup points</a> 
+<br>
+</div>
+</div>
+</div>
+</div></div><!--endclickprintexclude--><p>Choi, who ironically finished dead last a week ago at the season-opening Mercedes-Benz Championship, has won more PGA TOUR events than any other Asian-born player. He's among those expected to contend at majors now, and Choi thinks the lessons he learned at Waialae on Sunday will serve him well. </p><p>&quot;I think the biggest thing I learned this week is no matter what the conditions are out there, you have to stay patient with yourself,&quot; Choi said. &quot;You can't just get too greedy. You have to accept the conditions as they are.&quot; </p><p>Choi came close at the 2004 Masters, making eagle at the par-4 11th on the way to a back-nine 31 on Sunday that left him three strokes behind Phil Mickelson. He has three other top-10s in majors, as well, and the mental toughness to persevere. </p><p>&quot;I try to be a very patient man,&quot; Choi said. &quot;I'm not perfect, but that's why I try; I pray every day, I read the Bible. Through that I'm able to learn about patience. I think that's important. Without patience, you can't really accomplish anything in life.&quot; </p><p>And much to his in-laws' delight, Choi has definitely accomplished a lot. </p><!-- START 'quickLinksBot' BRANDING: /.element/ssi/story/3.0/DEFAULT/quickLinksBot.html --><style type="text/css">
+	.tourStoryQuickLinksBot a img{	vertical-align:middle;	}
+</style>
+<div class="tourStoryQuickLinksBot">
+	<a onClick="return(ET());" onMouseOver="return(ETMouseOver());" onMouseOut="return(ETMouseOut());" href="#"><img src="/.element/img/3.0/story/email.gif" border="0" width="21" height="10" alt="Email This Story" /></a>&nbsp;&nbsp;
+	<a onclick="window.print();" href="#"><img src="/.element/img/3.0/story/print.gif" border="0" width="14" height="12" alt="Print This Story"/></a>&nbsp;&nbsp;
+	<a href="/info/rss.html"><img src="/.element/img/3.0/story/rss_blue.gif" border="0" width="12" height="12" alt="RSS" /></a>&nbsp;&nbsp;
+	<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_onmouseover(this, event, '', '', 'PGATour')" onmouseout="addthis_onmouseout()" onclick="return addthis_to()"><img src="/.element/img/3.0/story/bookmark.gif" width="125" height="16" border="0" alt="Bookmark and Share" align=""/></a>
+	<script type="text/javascript" language="javascript" src="http://s7.addthis.com/custom/pgatour/js/addthis_widget.php?v=12"></script>
+</div>  <!-- FINISH 'quickLinksBot' BRANDING --></div></div><!-- START 'contentBot' BRANDING: /.element/ssi/story/3.0/tournaments/contentBot.html --><!--div id="tourSponsoredLinksSub">
+	<script src="/.element/ssi/js/3.0/global/sponsored_links.js" type="text/javascript"></script>	
+	<script type="text/javascript">
+		tourCreateSponLinks(window.location.href);
+	</script>
+</div-->
+<p>&nbsp;</p> 
+ <!-- FINISH 'contentBot' BRANDING --> </div><div class="tourRightRail"><!-- START 'rightCol' BRANDING: /.element/ssi/story/3.0/tournaments/r006/rightCol.html -->
+	<!--INCLUDE BEGIN SASD /.element/ssi/auto/3.0/sdms/tournaments/r006/nav/nav.html--><script language="Javascript">
+        	nav = {		
+                        	
+    	"index": { status:"On",name:"Tournament Home", overrideURL:""}  ,             	
+    	"lb": { status:"On",name:"Full leaderboard", overrideURL:""}  ,             	
+    	"etc": { status:"On",name:"Explore the Course", overrideURL:""}  ,             	
+    	"tc": { status:"On",name:"Tournament Central", overrideURL:""}  ,             	
+    	"field": { status:"On",name:"Field", overrideURL:""}  ,             	
+    	"tee-times": { status:"On",name:"Tee Times", overrideURL:""}  ,             	
+    	"results": { status:"On",name:"Results", overrideURL:""}  ,             	
+    	"winners": { status:"On",name:"Winners", overrideURL:""}  ,             	
+    	"local-info": { status:"On",name:"Local Info", overrideURL:""}  ,             	
+    	"course": { status:"On",name:"Course", overrideURL:""}  ,             	
+    	"tickets": { status:"On",name:"Tickets", overrideURL:""}  ,             	
+    	"sponsors": { status:"On",name:"Sponsors", overrideURL:""}  ,             	
+    	"news": { status:"On",name:"News", overrideURL:""}  ,             	
+    	"schedule": { status:"On",name:"Schedule", overrideURL:""}  ,             	
+    	"charity": { status:"On",name:"Charity", overrideURL:""}  ,             	
+    	"hospitality": { status:"Off",name:"Corporate Hospitality", overrideURL:""}  ,             	
+    	"pro-am": { status:"Off",name:"Pro-Am", overrideURL:""}  ,             	
+    	"volunteer-info": { status:"On",name:"Volunteer Info", overrideURL:""}  ,             	
+    	"special-1": { status:"Off",name:"", overrideURL:""}  ,             	
+    	"special-2": { status:"Off",name:"", overrideURL:""} 
+            };  
+            </script>
+   <!--INCLUDE END SASD /.element/ssi/auto/3.0/sdms/tournaments/r006/nav/nav.html-->
+<div id="tourTournNav">
+	<div class="tourTournNavName" onclick="openVert(1);">Tournament Overview</div>
+	<div class="tourTournNavList">
+		<div class="tourTournNavHalf">
+			<ul>
+				<li><a href="/tournaments/r006/">Main</a></li>
+				<li><a href="/leaderboards/current/r006/">Full Leaderboard</a></li>
+				<li><a href="/tournaments/r006/tee-times.html">Tee Times</a></li>
+			</ul>
+		</div>
+		<div class="tourTournNavHalf">
+			<ul>
+				<!--<li><a href="/courses/r006/">Course</a></li> -->
+				<li><a href="/tournaments/r006/schedule.html">Schedule</a></li>
+				<li><a href="/tournaments/r006/field.html">Field</a></li>
+				<!-- li><a href="/tournaments/r006/press/">Press Room</a></li -->
+			</ul>
+		</div>
+	</div>
+	<div class="tourTournNavName" onclick="openVert(2);">Tickets and Local Event Details</div>
+	<div class="tourTournNavList">
+		<div class="tourTournNavHalf">
+			<ul>
+				<li><a href="/tournaments/r006/tickets.html">Purchase Tickets</a></li>
+				<li><a href="/tournaments/r006/local-info.html">Parking / Local Info</a></li>
+				<li><a href="/tournaments/r006/charity.html">Charity</a></li>
+				<li><a href="/tournaments/r006/sponsors.html">Sponsors</a></li>
+			</ul>
+		</div>
+		<div class="tourTournNavHalf">
+			<ul>
+				<li><a href="/tournaments/r006/hospitality.html">Corporate Hospitality</a></li>
+				<li><a href="/tournaments/r006/pro-am.html">Pro-Am</a></li>
+				<li><a href="/tournaments/r006/volunteer.html">Volunteer Information</a></li>
+				<li><a href="/tournaments/r006/press.html">Press Releases</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="tourTournNavName" onclick="openVert(3);">Past Results and Winners</div>
+	<div class="tourTournNavList">
+		<div class="tourTournNavHalf">
+			<ul>
+				<li><a href="/tournaments/r006/winners.html">Winners</a></li>
+				<li><a href="/tournaments/r006/results.html">Results</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="tourTournNavFooter"></div>
+</div>
+<script language="Javascript"> tourInitializeVert(); </script>
+<div class="tourClear"></div>
+	<!-- 300x250 AD -->		
+	<div id="tour300Ad">
+		<!-- ADSPACE: tournaments/pgatour/sony_open_in_hawaii/right.300x250 --><div id="ad-874506" align="center" style="padding: 0; margin: 0; border: 0;"><script type="text/javascript"> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+cnnad_createAd("874506","http://ads.pgatour.com/html.ng/site=pgatour&pgatour_pos=300x250_rgt&pgatour_rollup=tournaments&pgatour_section=pgatour&pgatour_subsection=sony_open_in_hawaii&params.styles=fs","250","300");
+
+
+
+
+
+
+
+
+
+
+
+</script></div>
+	</div>
+<!-- /300x250 AD -->	
+
+	<!-- <div class="tourPodHeader">MOST POPULAR</div>
+<div class="tourMostPop">
+	<div class="tourMostPopContent">
+		<div class="tourMostPopTabs">
+			<a onclick="tourTab('tourMPTabs1', 'tourMPTabsContent1', 'active')" id="tourMPTabs1">NEWS</a>
+			<a onclick="tourTab('tourMPTabs2', 'tourMPTabsContent2', 'active')" id="tourMPTabs2" class="active">VIDEO</a>
+< ! - - 			<a onclick="tourTab('tourMPTabs3', 'tourMPTabsContent3', 'active')" id="tourMPTabs3">AUDIO</a> - - >
+		</div>
+		<div class="tourClear"></div>
+		<div class="tourMostPopTabContent">
+			<div id="tourMPTabsContent1">
+				<div class="tourMPVidContent">
+					<ul>
+					< ! - - #include virtual="/.element/ssi/auto/3.0/aps/global/news/mostpopular.news.html" - - >
+					</ul>
+				</div>
+			</div>
+			<div id="tourMPTabsContent2" class="active">
+				<div class="tourMPVidContent">
+					< ! - - #include virtual="/.element/ssi/auto/3.0/aps/global/video/mostpopular.video.rail.html" - - >
+				</div>
+			</div>
+			< ! - - 
+			<div id="tourMPTabsContent3">3 </div>
+			- - >
+		</div>
+	</div>
+	<div class="tourPodFooter">
+		<ul>
+			<li><a href="#">More Videos <img src="/.element/img/3.0/global/link_arrow.gif"/></a></li>
+		</ul>
+	</div>
+</div> -->
+	<div class="tourRightPod">
+	<div class="tourPodHeader">SHOP.PGATOUR.COM</div>
+	<div class="tourRightPodContent tourRightShopPod">
+		<a href="http://shop.pgatour.com"><img src="/.element/img/3.0/global/promotions/shop_ad.jpg" /></a>
+		<p>Get the best deals on the best equipment all at the SHOP.PGATOUR.COM.</p>
+	</div>
+	<div class="tourPodFooter">
+		<ul>
+			<li class="tourPodFooterBtnLong"><a href="http://shop.pgatour.com">shop now</a></li>
+		</ul>
+	</div>
+</div>	
+	<div class="tourRightPod">
+	<div class="tourPodHeader">FANTASY</div>
+	<div class="tourRightPodContent">
+		<a href="http://fantasy.pgatour.com/"><img src="/.element/img/3.0/global/promotions/r_rail_298x87.jpg" /></a>
+	</div>
+	<div class="tourPodFooter">
+		<ul>
+			<li class="tourPodFooterBtnLong"><a href="http://fantasy.pgatour.com">play now</a></li>
+		</ul>	
+	</div>
+</div>
+<!-- FINISH 'rightCol' BRANDING --> </div><div class="tourClear"></div></div><script language="JavaScript">var PGAArticleTitle = "Choi chalks up yet another victory for family and country";var PGAArticleAuthor = "Helen Ross, PGATOUR.com Chief of Correspondents";var PGAArticleDate ="2008-01-14";</script><!-- START 'footer' BRANDING: /.element/ssi/story/3.0/DEFAULT/footer.html --><!-- Begin define list-styles for IE -->
+<!--[if lte IE 7]>
+<style type="text/css">
+	div.tourFooterHeader{
+		position:relative;
+		left:9px;
+	}
+	#tourFooter li {
+		list-style:none inside;		
+		list-style-image:url(/.element/img/3.0/global/icons/arrows/arrow_blue_pointRt1.gif);		
+	}	
+	#tourFooter li a {
+		position:relative;
+		left:5px;
+	}
+</style>
+<![endif]-->
+<!-- End define list-styles for IE -->
+
+<div id="tourFooter">
+	<div class="tourFooterLinks">
+		<div class="tourFooterHeader">PGA TOUR Corporate</div>
+		<ul>
+			<li><a href="/company/about_us.html">About PGA TOUR</a></li>
+			<li><a href="/company/executive_bios.html">Commissioner&apos;s Office</a></li>
+			<li><a href="/company/productions.html">PGA TOUR Productions</a></li>
+			<li><a href="http://www.tpc.com/">Tournament Players Clubs</a></li>
+			<li><a href="/tournaments/tickets/">Tournament Tickets</a></li>
+			<li><a href="/company/online_staff.html">Online Staff</a></li>
+			<li><a href="/company/giving.html">TOUR Charities</a></li>
+			<li><a href="/company/benevolent.html">Volunteer</a></li>
+			<li><a href="http://www.prohire.com/candidates/default.cfm?szWID=10455&szCID=47049">Career Opportunities</a></li>
+			<li><a href="/company/internships.html">Internships</a></li>
+			<li><a href="/company/employment_policy.html">Employment Policies</a></li>																		
+			<li><a href="/company/contactus.html">Contact Us</a></li>																				
+		</ul>
+	</div>
+	<div class="tourFooterLinks">
+		<div class="tourFooterHeader">PGATour.com</div>
+		<ul>
+			<li><a href="/company/tos.html">Terms of Service</a></li>	
+			<li><a href="/company/privacy.html">Privacy Policy</a></li>	
+			<li><a href="/member_services/feedback.html">Feedback</a></li>							
+			<li><a href="/company/contactus.html">Contact Us</a></li>
+		</ul>
+	</div>	
+	<div class="tourFooterLinks">
+		<div class="tourFooterHeader">Media Room</div>
+		<ul>
+			<li><a href="/company/">Press Releases</a></li>		
+			<li><a href="/multimedia/audio/pgatournetwork/">PGA TOUR Network on XM Satellite Radio</a></li>		
+			<li><a href="/tv-times/">TV Times</a></li>		
+			<li><a href="/multimedia/wireless/">Wireless</a></li>		
+			<li><a href="/member_services/newsletter.html">Newsletters</a></li>	
+			<li><a href="/multimedia/podcasts/">Podcasts</a></li>																								
+		</ul>
+	</div>
+	<div class="tourFooterLinks">
+		<div class="tourFooterHeader">Sales and Marketing</div>
+		<ul>	
+			<li><a href="/company/marketing_online.html">Online Advertising and Promotion</a></li>	
+			<li><a href="/company/marketing_title_sponsor.html">Title Sponsors</a></li>			
+			<li><a href="/company/marketing_official_marketing_partnership.html">Official Marketing Partners</a></li>	
+			<li><a href="/company/partners.html">Corporate Partners</a></li>			
+			<li><a href="/company/marketing_retail.html">Licensees</a></li>							
+			<li><a href="/company/licensees.html">Retail Licensing</a></li>				
+		</ul>
+	</div>
+	<div class="tourFooterLinks">
+		<div class="tourFooterHeader">Partners</div>
+		<ul>
+			<li><a href="http://www.wgv.com/">World Golf Hall of Fame</a></li>	
+			<li><a href="http://www.thefirsttee.org/Club/Scripts/Home/home.asp">First Tee</a></li>	
+			<li><a href="http://visitors.partnersclubonline.com/?promotion=9P02FOOT&siteid=001">PGA TOUR Partners Club</a></li>	
+			<li><a href="/birdiesforthebrave/">Birdies for the Brave</a></li>													
+		</ul>	
+	</div>	
+	<div class="tourClear"></div>
+	<div class="tourFooterCopyright">&copy; 1995-2008 PGA TOUR, Inc. | Turner Sports Interactive, Inc. All Rights Reserved. PGA TOUR, Champions Tour, Nationwide Tour and the swinging golfer logo are registered trademarks.
+	<div class="tourClear"></div>
+A Turner Entertainment New Media Network</div>
+</div>
+
+<script language="JavaScript" src="/.element/ssi/js/1.0/omniture/s_code.js"></script>
+<script language="JavaScript" src="/.element/ssi/js/1.0/omniture/omniture.js"></script>
+<script language="JavaScript"><!--
+  // store all omniture related data in "s"
+  populateOmnitureStructure();
+
+  /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+  var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+  <!-- SiteCatalyst Code 
+  Copyright 1997-2006 Omniture, Inc. 
+  More info available at http://www.omniture.com -->
+</script>
+
+<!--http://i.pgatour.com/pgatour-->
+<!-- ad_tail0.txt -->
+  <!-- FINISH 'footer' BRANDING --></div></body></html>

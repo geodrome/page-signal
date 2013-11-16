@@ -1,0 +1,5 @@
+NOTE
+
+This is a conversion of the WARC archive into individual HTML pages.
+Use this version only if you are unfamiliar with WARC files (the *.warc.gz
+files will remain the official version of this dataset).

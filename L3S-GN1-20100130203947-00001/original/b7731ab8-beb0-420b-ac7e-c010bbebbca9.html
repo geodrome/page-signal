@@ -1,0 +1,3619 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN"/js/newsi/latest/newsi.js?5" type="text/javascript"></script> 
+<!--end newsi library-->
+<script src="/sol/shared/js/sol3.js?v2" language="JavaScript"></script>
+<script src="http://newsimg.bbc.co.uk/sol/shared/js/livestats_v1_1.js" language="JavaScript" type="text/javascript"></script>
+<script src="http://newsimg.bbc.co.uk/js/app/bookmark/bookmark.js" language="JavaScript" type="text/javascript"></script>
+
+<style type="text/css">
+@import "/css/screen/sol/section/football.css";
+</style>
+
+
+
+	
+		
+
+
+
+	
+
+	
+
+
+	
+
+
+
+	<!-- configuration block for external URLs to break them out of stub class -->
+	<script type="text/javascript">
+	
+	/**
+	 * instantiate the bbccom namespace
+	 */
+	newsi.bbccom = {};
+	
+	/**
+	 * @classDescription Simple config class to provide storage of JSOD URL's
+	 */
+	newsi.bbccom.AdConfigurator = function(){
+		this._zoneFile = "/js/app/bbccom/zonefile.js?2";
+		this._analyticsFile = "/js/app/bbccom/adanalytics.js";
+		this._appFile = "/js/app/bbccom/app.js";
+		this._adSlots = new Object(	{	ad1:{id:1, name:"ad1",size:"728x90"},
+							ad2:{id:2, name:"ad2",size:"160x600"},
+							ad3:{id:3, name:"ad3",size:"468x60"},
+							ad4:{id:4, name:"ad4",size:"120x240"} } );
+		this._adBugElement = "adWebBug";
+		this._timerInterval = 3000;
+		
+		this._fiddleredition = 'domestic';
+		this._document_uri = this._url = '/sport1/hi/football/teams/l/liverpool/7177191.stm';
+
+		switch(this._document_uri){
+			case "/":
+				this._url = (this._fiddleredition == "domestic") ? "/1/hi/default.stm" : "/2/hi/default.stm";
+				break;
+			case "/sport":
+				this._url = (this._fiddleredition == "domestic") ? "/sport1/hi/default.stm" : "/sport2/hi/default.stm";
+				break;
+			case "/sport/":
+				this._url = (this._fiddleredition == "domestic") ? "/sport1/hi/default.stm" : "/sport2/hi/default.stm";
+				break;
+		}
+		
+	}
+	
+		
+	
+	/**
+	 * Expose the props to the Stub Class
+	 * @param {Object} name
+	 * @return {String} Path to the property
+	 */
+	newsi.bbccom.AdConfigurator.prototype.getPropPath = function(name){
+		return this[name];
+	}
+	</script>
+
+<script type="text/javascript" src="/js/app/bbccom/stub.js"></script>
+
+
+
+
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" id="body">
+
+<style type="text/css" media="all">
+			@import "/shared/css/toolbar_banner.css";			
+</style>
+<a name="top" id="top"></a>
+<div id="bbc-logo"><a href="http://www.bbc.co.uk/home/d/" accesskey="1">bbc.co.uk</a></div>
+<div id="accesslinks">
+<p><strong>Accessibility Links</strong></p>
+<ul>
+	<li class="hide"><a href="#startcontent" accesskey="2"><span>Skip to content</span></a></li>
+	<li class="hide"><a href="#toolbar"><span>Skip to bbc.co.uk navigation</span></a></li>
+	<li class="hide"><a href="#toolbar-search-input" accesskey="4"><span>Skip to search</span></a></li>
+	<li class="hide"><a href="http://www.bbc.co.uk/accessibility/accesskeys/keys.shtml" accesskey="0"><span>Access keys help</span></a></li>
+</ul>
+</div>
+<div id="toolbar">
+
+	<h2>bbc.co.uk Navigation</h2>
+	<div id="toolbar-inner">
+		<form action="http://search.bbc.co.uk/cgi-bin/search/results.pl" accept-Charset="UTF-8">
+		<input type="hidden" name="scope" value="all" />	
+		<input type="hidden" name="edition" value="d" /> 
+			<div>				
+				<label for="toolbar-search-input">Search</label>				
+				<input id="toolbar-search-input" type="text" name="q" title="BBC Search" accesskey="4" value="" />		
+					
+				<input id="toolbar-search-button" type="submit" name="go" value="Search" />					
+			</div>
+		</form>
+		<ul>
+			<li class="first"><a href="http://www.bbc.co.uk/home/d/" accesskey="1">Home</a></li>
+			<li><a href="http://www.bbc.co.uk/tv/d/">TV</a></li>
+			<li><a href="http://www.bbc.co.uk/radio/d/">Radio</a></li>
+			<li><a href="http://www.bbc.co.uk/talk">Talk</a></li>
+			<li><a href="http://www.bbc.co.uk/whereilive">Where I Live</a></li>
+			<li class="last"><a href="http://www.bbc.co.uk/a-z/" accesskey="3">A-Z Index</a></li>
+		</ul>
+	</div>
+</div>
+<div id="ad1" class="ad1"></div>
+
+<script language="JavaScript" type="text/javascript">
+function showForm() {
+if(document.getElementById){
+	   document.getElementById('d_rb').innerHTML='<form action="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl" name="ifhForm" method="get"><input type="hidden" name="qs" value="http://news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm" /><input type="hidden" name="content" value="sol" /><input name="dest" type="radio" value="Domestic" onclick="submitForm();" id="dfh" checked /><label for="dfh" class="uk" style="font-weight:bold;">UK version</label><input name="dest" type="radio" value="International" onclick="submitForm();" id="ifh" /><label for="ifh" class="int">International version</label></form>';}
+}
+var site;
+function submitForm() {
+			document.ifhForm.submit();
+}
+</script>
+
+<style type="text/css" media="all">
+/* Change Edition*/
+#ift-banner .pipe{color:#999999;font-weight:bold;font-size:0.9em;padding:0 3px 0 3px;}
+#ift-banner form{float:left;}
+#dfh{margin:0 2px 0 0;padding:0;height:11px;}
+#ifh{margin:0 2px 0 0;padding:0;height:11px;}
+#ift-banner label{font-size:0.8em;color:#ffffff;}
+#ift-banner label.uk{padding:0 6px 0 0;margin:0 0 2px 0;color:#ffffff;cursor:hand;font-size:0.9em;}
+#ift-banner label.int{padding:0 10px 0 0;margin:0 0 2px 0;color:#ffffff;cursor:hand;font-size:0.9em;}
+.domestic{padding:0 5px 0 0;margin:0 0px 0 0;}
+.int{padding:0 9px 0 0;margin:0 0px 0 0;}
+.domestic a{padding:0 0 0 17px;background:url(http://newsimg.bbc.co.uk/ifh/img/icons/radio_but_on.gif) no-repeat 0 -2px;} .int a{padding:0 0 0 17px;background:url(http://newsimg.bbc.co.uk/ifh/img/icons/radio_but_off.gif) no-repeat 0 -2px;}
+.domestic a:hover{background:url(http://newsimg.bbc.co.uk/ifh/img/icons/radio_but_on.gif) no-repeat 0 -2px;}
+.int a:hover{background:url(http://newsimg.bbc.co.uk/ifh/img/icons/radio_but_on.gif) no-repeat 0 -2px;}
+.extraLink {padding:10px 0 0 0;}
+</style>
+
+<div id="ift-banner" class="ift-sport">
+<map name="sportbanner">
+  	<area shape="RECT" coords="578,9,736,35" href="/sport1/hi/video_and_audio/help_guide/4304501.stm" onClick="javascript:launchAVConsoleStory('6164682'); return false;" alt="watch listen">
+    <area shape="RECT" coords="123,7,285,37" alt="BBC Sport" href="http://news.bbc.co.uk/sport1/hi/default.stm">
+</map>
+<img src="http://newsimg.bbc.co.uk/sol/shared/img/nav/v3_banners/football_760x45.gif" border="0" width="760" height="45" alt="BBC Sport" usemap="#sportbanner" /><div id="ift-extra">
+			<span id="d_rb">
+		<span class="domestic"><a href="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl?qs=http://news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm&content=sol&dest=Domestic" style="font-weight:bold;">UK version</a></span>
+		<span class="int"><a href="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl?qs=http://news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm&content=sol&dest=International">International version</a></span>
+</span><script type="text/javascript" language="JavaScript">showForm();</script><a href="http://www.bbc.co.uk/iftoolbar/versions.html" onclick="window.open('http://www.bbc.co.uk/iftoolbar/versions.html', 'aboutversion', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=488,height=305,left=280,top=200'); return false;" class="about">About the versions</a><span class="pipe">|</span><a href="http://news.bbc.co.uk/sport/text_only.stm" class="extraLink">Low graphics</a><span class="pipe">|</span><a href="http://news.bbc.co.uk/sport1/hi/front_page/6470385.stm" class="extraLink">Help</a>
+
+<!--- start live stats logic --->
+		
+
+<!--- end live stats logic --->
+
+
+</div>
+</div>
+<div class="clear"></div>
+
+
+<!-- pulse survey code -->
+
+
+<!-- check requirements are met -->
+
+ 
+
+
+<!-- end survey ukfs football and start football my club survey -->
+
+<!-- check requirements are met -->
+
+ 
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="760">
+    <tr>
+        <td width="121" valign="top">
+
+			
+
+<div class="lhs">
+	
+		
+	
+	
+	
+		
+			
+				
+					<div class="lhssp">&nbsp;</div>
+					
+					<div class="lhsl">
+					<a class="lhsnl" href="/sport/default.stm">Sport Homepage</a>
+					
+					</div>
+				
+				
+			
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+			
+				
+					<div class="lhssp">&nbsp;</div>
+					
+					<div class="lhsl">
+					<a class="lhsnl" href="/sport1/hi/football/default.stm">Football</a>
+					
+					</div>
+				
+				
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+			
+				
+					<div class="lhssp">&nbsp;</div>
+					
+					<div class="lhsl">
+					<a class="lhsnl" href="/sport1/hi/football/teams/default.stm">My Club</a>
+					
+					</div>
+				
+				
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+			
+				
+					<div class="lhssp">&nbsp;</div>
+					<div class="lhssq">
+					
+					<a class="lhsnl" href="/sport1/hi/football/teams/l/liverpool/default.stm">Liverpool</a>
+					
+					</div>
+				
+				
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport1/hi/football/teams/l/liverpool/live_text/default.stm">Live Text</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport1/hi/football/teams/l/liverpool/results/default.stm">Results</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport1/hi/football/teams/l/liverpool/fixtures/default.stm">Fixtures</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport1/hi/football/teams/l/liverpool/tables/default.stm">Tables</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport1/hi/football/teams/l/liverpool/club_stats/default.stm">Club Stats</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport1/hi/football/teams/l/liverpool/squad_profiles/default.stm">Squad Profiles</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport1/hi/football/teams/l/liverpool/squad_selector/default.stm">Squad Selector</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+
+			
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+
+			
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+
+			
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+
+	
+</div>
+
+
+
+
+		<div class="lhs">
+<div class="mvb">
+	<div class="lhsdl">---------------</div>
+
+	<div class="lhsssl"><a href="http://www.bbc.co.uk/go/sport1/football/int/lhn/-/http://www.bbc.co.uk/fivelive/sport/commentaries.shtml" class="lhsnl">Five Live&gt;&gt;</a></div>
+
+	<div class="lhsdl">---------------</div>
+
+	<!--<div class="lhsssl"><a href="http://news.bbc.co.uk/go/sport1/football/int/lhn/-/sportacademy/hi/sa/football/default.stm" class="lhsnl">Academy&gt;&gt;</a></div>-->
+
+	<div class="lhsssl"><a href="http://www.bbc.co.uk/go/sport/int/lhnfb1/-/http://www.bbc.co.uk/email/sport" class="lhsnl">Daily E-mail</a></div>
+	<div class="lhsssl"><a href="http://news.bbc.co.uk/go/sport/int/lhnfb2/-/sport1/hi/2823593.stm" class="lhsnl">Mobiles</a></div>
+</div>
+</div>
+
+<div class="mvt">
+
+<div class="lhsl"><a href="http://news.bbc.co.uk/go/sport/int/lhnfb3/-/sport1/hi/funny_old_game/default.stm" class="lhsnl">Fun and Games</a></div>
+<div class="lhsl"><a href="http://news.bbc.co.uk/go/sport/int/lhnfb4/-/sport1/hi/question_of_sport/default.stm" class="lhsnl">Question of Sport</a></div>
+</div>
+<form action="http://www.bbc.co.uk/cgi-bin/openurl.pl" method="post" name="drop">
+<div class="lhsfm">
+	<div class="lhsnlp">CHOOSE A SPORT</div>
+	<select name="link"  style="font-family : Verdana, Arial, Helvetica, sans-serif; font-size : 11px; width:108px" onchange="if (this.options[selectedIndex].value != '') location.href=this.options[selectedIndex].value">
+            <option value="http://news.bbc.co.uk/sport/">Select</option>
+			<option value="http://news.bbc.co.uk/sport/">----------</option>
+
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb5/-/sport1/hi/football/default.stm">Football</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb6/-/sport1/hi/cricket/default.stm">Cricket</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb7/-/sport1/hi/rugby_union/default.stm">Rugby U</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb8/-/sport1/hi/rugby_league/default.stm">Rugby L</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb9/-/sport1/hi/tennis/default.stm">Tennis</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb10/-/sport1/hi/golf/default.stm">Golf</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb11/-/sport1/hi/motorsport/default.stm">Motorspt</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb12/-/sport1/hi/boxing/default.stm">Boxing</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb13/-/sport1/hi/athletics/default.stm">Athletics</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb14/-/sport1/hi/other_sports/snooker/default.stm">Snooker</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb15/-/sport1/hi/other_sports/horse_racing/default.stm">Racing</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb16/-/sport1/hi/other_sports/cycling/default.stm">Cycling</option>
+	<option value="http://news.bbc.co.uk/go/sport/int/lhnfb17/-/sport1/hi/other_sports/disability_sport/default.stm">Disability Sport</option>
+<option value="http://news.bbc.co.uk/go/sport/int/lhnfb18/-/sport1/hi/other_sports/default.stm">Other</option>
+
+			<option value="http://news.bbc.co.uk/sport">------</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb19/-/sport1/hi/northern_ireland/default.stm">N Ireland</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnfb20/-/sport1/hi/scotland/default.stm">Scotland</option>
+            <option value="http://news.bbc.co.uk/go/sport/int/lhnfb21/-/sport1/hi/wales/default.stm">Wales</option>
+	</select>
+	</div>
+<div class="lhsgo"><input type="image" value="go" src="http://newsimg.bbc.co.uk/sol/shared/img/nav/v3_bbci/go.gif" width="20" height="16" align="right" border="0" alt="Go" />&nbsp;</div>
+</form>
+
+<div class="pvtb">
+<div class="lhsnlp">RELATED BBC SITES</div>
+<ul id="lhsOtherSites">
+	<li><a href="http://news.bbc.co.uk/go/sport/int/lhnfb22/-/1/hi/default.stm" title="BBC News" class="lhsnl">NEWS</a></li>
+	<li><a href="http://www.bbc.co.uk/go/sport/int/lhnfb23/-/http://www.bbc.co.uk/weather" title="BBC Weather" class="lhsnl">WEATHER</a></li>
+</ul>
+</div>
+<script language="JavaScript">getRssUrl()</script>
+
+
+
+
+	
+		
+<img alt="" id="livestats" src="http://stats.bbc.co.uk/o.gif?~RS~s~RS~Sport~RS~t~RS~HighWeb_Story~RS~i~RS~7177191~RS~p~RS~42507~RS~a~RS~Domestic~RS~u~RS~/sport1/hi/football/teams/l/liverpool/7177191.stm~RS~r~RS~(none)~RS~q~RS~~RS~z~RS~05~RS~"/></td>
+        <td width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+        <td width="629" valign="top">
+            <table width="629" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="top" width="629">
+			
+                        
+                        
+<a name="startcontent"></a><span class="ds"><span class="lu">Last Updated: </span>Monday, 14 January 2008, 17:52 GMT</span>
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="2" height="2" alt="" border="0" vspace="0" hspace="0">
+<div class="mvb"><img src="http://newsimg.bbc.co.uk/sol/shared/img/v3/dot_629.gif" width="629" height="1" alt="" border="0" vspace="0" hspace="0"></div>
+
+	
+
+
+                        
+    
+        <div class="mvtb"><table cellspacing="0" width="416" border="0" cellpadding="0"><tr>
+            <td width="213"><a onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm','status=no,scrollbars=yes,resizable=yes,width=370,height=445','Mailer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm" target="Mailer">
+                <img src="http://newsimg.bbc.co.uk/sol/shared/img/v3/email.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+                E-mail this to a friend
+            </a></td>
+            <td width="203"><a onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm','status=no,scrollbars=yes,toolbar=yes,resizable=yes,menubar=yes,width=600,height=445','Printer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm" target="Printer">
+	       	<img src="http://newsimg.bbc.co.uk/sol/shared/img/v3/print.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+	 	Printable version
+            </a></td>
+        </tr></table></div>
+    
+    
+
+
+                        
+                    </td>
+                </tr>
+            </table>
+            <table width="629" border="0" cellpadding="0" cellspacing="0">
+		
+                
+		<tr>
+		<td colspan="3">
+			
+			<div class="mxb">
+				<div class="sh">
+					Carragher defends confrontation
+				</div>
+			</div>
+		</td>
+		</tr>
+    		
+		
+
+                <tr>
+                    <td valign="top" width="416">
+                        
+	
+		
+                    	<font size="2">
+		
+			<!-- S BO -->
+<!-- S IIMA -->
+	
+		<table border="0" cellspacing="0" align="right" width="203" cellpadding="0">
+			<tr><td>
+			<div>
+				<img src="http://newsimg.bbc.co.uk/media/images/44341000/jpg/_44341971_carragher_203getty.jpg" width="203" height="152" alt="Jamie Carragher" border="0" vspace="0" hspace="0">
+				<div class="cap">Carragher was captaining Liverpool at Kenilworth</div>
+			</div>
+			</td></tr>
+		</table>
+		
+	
+
+	
+<!-- E IIMA -->
+<!-- S SF -->
+<B>Jamie Carragher has defended his actions after Liverpool's FA Cup match at Luton when he was abused by fans.</B>
+<P>
+The defender was pictured climbing a barrier to confront supporters who had thrown beer at him during a warm-down.
+<P>
+Carragher said: "A few words were said and someone threw a glass of beer over me, so it wasn't the end of the world but you react in that split second.
+<P>
+"No-one spat at me - I want to put that straight. I don't want whoever did it getting more criticism than necessary."
+<!-- E SF -->
+<P>
+Neither the Football Association or local police received complaints after the incident which followed a 1-1 draw at Kenilworth in the FA Cup third round.
+<p>
+Carragher added: "I just reacted. People from Liverpool have got something about them and if they're not happy about something they let you know."
+<P>
+
+	
+
+	
+		    
+			    <!-- S IBOX -->
+				<table cellspacing="0" align="right" width="208" border="0" cellpadding="0">
+				<tr>
+			            <td width="5"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="5" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+			            <td class="sib606">
+			                
+			                        <div class="sihf">
+			                            606: DEBATE
+			                        </div>
+			                
+					
+			                
+			                     
+			                    <div class="ibqlinks"><!-- S ILIN --><a class="" href="http://www.bbc.co.uk/dna/606/A30830609">Your thoughts on the incident at Luton</a><!-- E ILIN --></div>
+			                
+			            </td>
+			        </tr>
+				</table>
+				
+			    <!-- E IBOX -->
+			
+	
+
+
+
+
+<P>
+A Luton spokesman said the incident was being investigated by their safety officer, although could not confirm or deny it took place.
+<P>
+Liverpool will play Luton in their third-round replay at Anfield on Tuesday 15 January.
+<!-- E BO -->
+		
+                    	</font>
+		
+	
+	
+<br /><br clear="all" />
+                        
+                        <div id="socialBookMarks" class="sharesb"> 
+<h3>Bookmark with:</h3> 
+<ul>
+<li class="delicious"> 
+<a id="delicious" title="Post this story to Delicious" href="http://del.icio.us/post?url=http://news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm&amp;title=Carragher defends confrontation">Delicious</a> 
+</li>
+<li class="digg"> 
+<a id="digg" title="Post this story to Digg" href="http://digg.com/submit?url=http://news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm&amp;title=Carragher defends confrontation">Digg</a> 
+</li>
+<li class="reddit"> 
+<a id="reddit" title="Post this story to reddit" href="http://reddit.com/submit?url=http://news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm&amp;title=Carragher defends confrontation">reddit</a> 
+</li>
+<li class="facebook"> 
+<a id="facebook" title="Post this story to Facebook" href="http://www.facebook.com/sharer.php?u=http://news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm">Facebook</a> 
+</li>
+<li class="stumbleupon"> 
+<a id="stumbleupon" title="Post this story to StumbleUpon" href="http://www.stumbleupon.com/submit?url=http://news.bbc.co.uk/sport1/hi/football/teams/l/liverpool/7177191.stm&amp;title=Carragher defends confrontation">StumbleUpon</a> 
+</li>
+</ul>
+<p><a href="http://news.bbc.co.uk/1/hi/help/6915817.stm">What are these?</a></p>
+</div>
+<script language="JavaScript">
+<!--
+var bm = new BookMark({site:'Sport',storyid:7188136,sectionid:42507,url:'/sport1/hi/football/teams/l/liverpool/7177191.stm',edition:'Domestic'});
+//-->
+</script>
+                    </td>
+                    <td width="10" valign="top"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+                    <td width="203" valign="top">
+			
+			
+                        
+
+
+<div class="puffbox">
+
+			
+
+	<div class="o">
+      
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+                    <a class="lp" href="/sport1/hi/football/teams/l/luton_town/default.stm">LUTON TOWN</a>
+                    
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="http://www.bbc.co.uk/dna/606/ArticleSearchPhrase?phrase=luton%20town%20football&amp;contenttype=-1&amp;articlesortby=DateUploaded&amp;show=20">
+			
+			
+			
+			Your say - 606
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="http://www.bbc.co.uk/weather/5day.shtml?id=2609&amp;links">
+			
+			
+			
+			Weather
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="http://www.bbc.co.uk/threecounties/content/articles/2007/08/01/luton_audio_archive_0708_feature.shtml">
+			
+			
+			
+			BBC Three Counties Radio audio
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="http://www.lutontown.co.uk/">
+			
+			
+			
+			Official club website
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="5" alt="" border="0" vspace="0" hspace="0"><br />
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br /></div>
+
+
+    
+
+	
+                <div class="mvb">
+                        <div class="sah">
+                                SEE ALSO
+                        </div>
+                </div>
+                
+		
+			
+				<div class="arr">
+					
+	
+		<a href="/sport1/hi/football/fa_cup/7177143.stm">
+			
+			
+			
+			BBC One's live FA Cup screenings
+			
+		</a>
+		
+			<br />
+		
+	
+
+					
+						
+							<span class="sad">
+								08 Jan 08&nbsp;|&nbsp;
+								FA Cup
+								
+							</span>
+						
+					
+					
+				</div>
+			
+				<div class="arr">
+					
+	
+		<a href="/sport1/hi/football/fa_cup/7164002.stm">
+			
+			
+			
+			Luton 1-1 Liverpool
+			
+		</a>
+		
+			<br />
+		
+	
+
+					
+						
+							<span class="sad">
+								06 Jan 08&nbsp;|&nbsp;
+								FA Cup
+								
+							</span>
+						
+					
+					
+				</div>
+			
+		
+		<hr class="pufff">
+	
+
+	
+
+ 
+
+
+    <img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br />
+
+	
+    
+	
+		
+			<div class="mvb">
+				<div class="nlp">
+					RELATED BBC LINKS:
+					
+				</div>
+			</div>
+			<div class="miiib">
+				
+					<div class="arr">
+						<a href="http://news.bbc.co.uk/sport1/hi/football/5161070.stm">
+							Football on the BBC
+							
+						</a>
+					</div>
+				
+					<div class="arr">
+						<a href="http://www.bbc.co.uk/dna/606/ArticleSearchPhrase?phrase=liverpool%20football&amp;contenttype=-1&amp;articlesortby=DateUploaded&amp;show=20">
+							Liverpool fans' views on 606
+							
+						</a>
+					</div>
+				
+					<div class="arr">
+						<a href="http://www.bbc.co.uk/liverpool/sport/liverpool_fc/">
+							BBC Liverpool
+							
+						</a>
+					</div>
+				
+					<div class="arr">
+						<a href="http://www.bbc.co.uk/weather/5day.shtml?id=2387&amp;links">
+							Liverpool weather
+							
+						</a>
+					</div>
+				
+					<div class="arr">
+						<a href="http://news.bbc.co.uk/sport1/hi/football/eng_prem/default.stm">
+							BBC Sport Premier League
+							
+						</a>
+					</div>
+				
+			</div>
+			
+		
+	
+
+	
+		
+			<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="5" alt=""><br />
+		
+		
+                        <div class="mvb">
+                                <div class="nlp">
+                                        RELATED INTERNET LINKS:
+                                        
+                                </div>
+                        </div>
+                        <div class="miiib">
+                                
+                                        <div class="arr">
+                                                <a href="http://www.liverpoolfc.tv/">
+                                                        Liverpool
+                                                        
+                                                </a>
+                                        </div>
+                                
+                        </div>
+                        
+                                
+                                        <div class="di">
+                                                The BBC is not responsible for the content of external internet sites
+                                        </div>
+                                        
+                                
+                        
+                
+	
+
+
+
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br />
+
+
+
+
+
+
+                    </td>
+                </tr>
+                
+            </table>
+        </td>
+    </tr>
+</table>
+
+	<div id="sportfooter">
+        <div id="f1">
+	<div>
+	BBC PRODUCTS AND SERVICES<br />
+	<a href="http://www.bbc.co.uk/go/sport1/int/footer/-/http://www.bbc.co.uk/email/sport" >Daily and weekly e-mails</a> | <a href="http://news.bbc.co.uk/go/sport1/int/footer/-/sport1/hi/2823593.stm">Mobiles</a> | <a href="http://news.bbc.co.uk/sport1/hi/minimotty/">Desktop Tools</a> | <a href="http://news.bbc.co.uk/sport1/hi/help/rss/default.stm">News Feeds</a> | <a href="http://news.bbc.co.uk/sport1/hi/tv_and_radio/5345480.stm" >Interactive Television</a> | <a href="http://www.bbc.co.uk/radio/podcasts/directory/genre/sport/">Downloads</a>
+	</div>
+</div>
+<ul id="serviceBar">
+	<li class="copyright2"><div class="logo"><a href="http://news.bbc.co.uk/sport1/shared/bsp/hi/services/copyright/html/default.stm">BBC Copyright Notice</a></div><div class="copyrightdate">MMVIII</div></li>
+	<li class="footertotop"><a href="#top">Back to top ^^</a></li>
+</ul>
+
+
+        <div id="f3"><div>
+
+	
+	<a class="fl" href="/sport/default.stm">Sport Homepage</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/football/default.stm">Football</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/cricket/default.stm">Cricket</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/rugby_union/default.stm">Rugby Union</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/rugby_league/default.stm">Rugby League</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/tennis/default.stm">Tennis</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/golf/default.stm">Golf</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/motorsport/default.stm">Motorsport</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/boxing/default.stm">Boxing</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/athletics/default.stm">Athletics</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/other_sports/snooker/default.stm">Snooker</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/other_sports/horse_racing/default.stm">Horse Racing</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/other_sports/cycling/default.stm">Cycling</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/other_sports/disability_sport/default.stm">Disability sport</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/other_sports/olympics_2012/default.stm">Olympics 2012</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/tv_and_radio/sport_relief/default.stm">Sport Relief</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport1/hi/other_sports/default.stm">Other sport...</a>
+	
+	<br /><br />
+</div></div>
+        <div id="ad3" class="ad3"></div>
+<div id="f4">
+	<div>
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="629" height="1" border="0" alt="" class="vspace5" />
+	<a href="http://news.bbc.co.uk/sport1/hi/front_page/6470385.stm" >Help</a> |
+	<a href="http://www.bbc.co.uk/privacy/">Privacy &amp; Cookies Policy</a> | <a href="http://news.bbc.co.uk/sport1/hi/front_page/2823295.stm" >News sources</a> | <a href="http://www.bbc.co.uk/info/">About the BBC</a> | <a href="http://news.bbc.co.uk/sport1/hi/front_page/3701180.stm">Contact us</a>
+	</div>
+</div>
+
+<img src="/sol/shared/img/timezone/z.zzz" width="0" height="0"/>
+
+
+<div id="ad2" class="ad2"></div>
+<div id="bbccomWebBug" class="bbccomWebBug"></div>
+
+
+        <br />
+	</div>
+
+</body>
+</html>

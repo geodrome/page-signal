@@ -1,0 +1,718 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Fun returns</title>
+<link href="http://static.expressindia.com/expressindia/css/head_foot.css" rel="stylesheet" type="text/css" />
+<link href="http://static.expressindia.com/expressindia/css/story_style_new.css" rel="stylesheet" type="text/css" />
+<link title="em1" rel="stylesheet" href="http://static.expressindia.com/expressindia/css/em1.css" type="text/css" />
+<link title="em2" rel="alternate stylesheet" href="http://static.expressindia.com/expressindia/css/em2.css" type="text/css" />
+<link title="em3" rel="alternate stylesheet" href="http://static.expressindia.com/expressindia/css/em3.css" type="text/css" />
+
+
+<script type="text/javascript" src="http://static.expressindia.com/expressindia/js/tab_right.js"></script>
+<script type="text/javascript" src="http://static.expressindia.com/expressindia/js/tab_comm.js"></script>
+<script type="text/javascript" src="http://static.expressindia.com/expressindia/js/font-size.js"></script>
+<script type="text/javascript" src="http://static.expressindia.com/expressindia/js/prototype.js"></script>
+<script type="text/javascript" src="http://static.expressindia.com/expressindia/js/hide.js"></script>
+<script type="text/javascript" src="http://static.expressindia.com/expressindia/js/rating.js"></script>
+<script type="text/javascript">
+	onload = function() {
+	//height effect
+	myHeight = new fx.Height('box2');
+	$('height').onclick = function() {
+		myHeight.toggle();
+		};
+	};
+	</script>
+<!--text change script-->
+<script type="text/javascript">
+<!--
+function toggle_visibility() {
+var e = document.getElementById("foo");
+if(e.style.display == 'none')
+e.style.display = 'block';
+else
+e.style.display = 'none';
+
+var e1 = document.getElementById("foo1");
+if(e1.style.display == 'none'){
+	e1.style.display = 'block';
+	document.getElementById("box2").style.display="none";	
+}	
+else{
+	e1.style.display = 'none';
+	document.getElementById("box2").style.display="block";		
+}	
+
+}
+//-->
+</script>
+
+
+<script type="text/javascript">
+function MM_openBrWindow(theURL,winName,features) 
+{ 
+	//v2.0
+	window.open(theURL,winName,features);
+}
+function setActiveStyleSheet(title) {
+  var i, a, main;
+  for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
+    if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+      a.disabled = true;
+      if(a.getAttribute("title") == title) a.disabled = false;
+    }
+  }
+}
+</script>
+<script language="javascript">
+var lastDiv = '';
+var frmData = "<div class='form-box-inner'><div class='form-hd'>Post Comments <span id='divmessagechild'></span> </div><form  method='post' name='replycomment' id='replycomment' onSubmit='return insertCommetChild(255997, this);' style='margin:0'><div class='form-inbox'><table width='100%' border='0' align='center' cellpadding='4' cellspacing='0' bgcolor='#e2eaf1' class='frm-mrg '>    <tr><td>Message<b>*</b></td><td colspan='3'><div align='right' class='frm-lft'>Maximum characters allowed <span class='textfild'>&nbsp; 1200 &nbsp;&nbsp;</span></div></td></tr><tr><td>&nbsp;</td><td colspan='3'><textarea name='comment' cols='39' rows='2'></textarea></td></tr><tr><td>Name<b>*</b></td><td><input name='name' type='text' class='textfild' /></td><td>Email ID<b>*</b></td> <td><input name='email' type='text' class='textfild' /></td></tr><tr><td>Subject<b>*</b></td><td><input name='subject' type='text' class='textfild' /></td><td>Country<b>*</b></td><td><select class='textfild' name='country'><option value=''>Select</option><option value='1'>India</option><option value='2'>USA</option><option value='3'>UK</option><option value='5'>UAE</option><option value='4'>Australia</option></select> </td></tr></table><div class='terms'><b>TERMS OF USE:</b> The views represented here are not neccesarily endorsed by www.expressindia.com and its allied websites. All messages will be moderated and no message that has inflammatory, abusive, derogatory language or any language deemed unfit for publication by the editor will be displayed. Though it will be endeavoured that as many messages as possible be displayed, there will be time lag between the submission and publication of the messages. The website reserves the right to publish or reject any message. </div><div class='msg-box'><input name='checkbox' type='checkbox' value='checkbox' />I agree to the terms of use. </div><div class='button' align='center'><input name='Submit' type='submit' value='Submit' /><input name='Reset' type='reset' /><input type='hidden' name='parent'></div></div></form></div>";
+
+var frmdataforward = "<div class='form-box-inner'><div class='form-hd'>Forward To Friend <span id='divmynameforward'></span> </div><form  method='post' name='frmcommentforward' id='frmcommentforward' onSubmit='return forwardLink();' style='margin:0'><div class='form-inbox'><table width='100%' border='0' align='center' cellpadding='4' cellspacing='0' bgcolor='#e2eaf1' class='frm-mrg '>    <tr><td>Name<b>*</b></td><td><input name='myname' type='text' class='textfild' /></td><td>&nbsp;</td> <td>&nbsp;</td></tr><tr><td>Friend's Email ID<b>*</b></td><td><input name='friendsemail' type='text' class='textfild' id='friendsemail' /></td><td>&nbsp;</td><td>&nbsp;</td></tr>        <tr>          <td>Your Email ID<b>*</b></td>          <td><input name='myemail' type='text' class='textfild' id='myemail' /></td>          <td>&nbsp;</td>          <td>&nbsp;</td>        </tr>        <tr><td>&nbsp;</td><td><div align='left'><span class='button'>          <input name='Submit2' type='submit' value='Submit' />          <input name='Reset2' type='reset' />          <input type='hidden' name='parent'>          <INPUT TYPE='hidden' NAME='link' VALUE=''/>        </span></div></td><td>&nbsp;</td><td>&nbsp;</td></tr></table></div></form></div>";
+
+
+var frmdataabuse = "<div class='form-box-inner' id='abuse'><div class='form-hd'>Report Abuse <span id='divmynameabuse'></span> </div><form  method='post' name='frmcommentabuse' id='frmcommentabuse' onSubmit='return updateAbuse();' style='margin:0'><div class='form-inbox'><table width='100%' border='0' align='center' cellpadding='4' cellspacing='0' bgcolor='#e2eaf1' class='frm-mrg '>            <tr>          <td><div align='right'><span class='button'><INPUT TYPE='hidden' NAME='commentid' VALUE='####COMMENT_ID####' />            <INPUT TYPE='hidden' NAME='storyid' VALUE='255997' />          </span></div>                        <div align='center'><span class='button'>                                  <input name='Submit' type='submit' value='Confirm' />                            <input name='Submit2' type='button' value='Cancel' onClick=\"javascript:document.getElementById('abuse').style.display='none'\" />            </span></div></td>          </tr></table>      </div></form></div>";
+
+</script>
+
+<style type="text/css">
+<!--
+.style1 {
+	color: #0062af;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body onLoad="showCurrentRating(255997);" id="pg_height">
+<!-- Header Start-->
+<script>
+function readCookie(name) {
+
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+			
+		while (c.charAt(0)==' ') 
+			c = c.substring(1,c.length);
+
+		if (c.indexOf(name) == 0){ 
+
+			document.getElementById("login").innerHTML = "Hi "+ c.substring(nameEQ.length,c.length)+ " <a href='/logout.php'>Logout</a>";
+			return c.substring(nameEQ.length,c.length);
+
+		}
+	}
+		document.getElementById("login").innerHTML = "<a href='/login.php'>Login</a> ";	
+	return null;
+}		
+</script>
+	
+<SCRIPT>
+	var thisdate = new Date();
+	var Days = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thu','Fri', 'Sat');
+	var Mons = new Array('Jan','Feb','Mar','Apr',
+	'May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
+	var dataStr;
+dataStr = Days[thisdate.getDay()]+', '+thisdate.getDate()+' '+Mons[(thisdate.getMonth())]+' '+thisdate.getFullYear();
+</SCRIPT>
+
+<div class="top_div"></div>
+
+<div class="main_head">
+<div style="float:left; width:600px;">
+  <a href="http://www.expressindia.com"><img src="http://static.expressindia.com/expressindia/images/logo.png" alt="" border="0" class="logo" align="absbottom" /></a>
+   <span class="today" style="padding-left:90px;"> <script>document.write(dataStr)</script> -  <a href="http://www.expressindia.com/weatherReport.php" title="Latest weather report">Weather</a> | <a href="http://astro.expressindia.com" title="Astrology & Horoscope" target="blank">Horoscope</a> | <a href="http://www.financialexpress.com/stocks.php" title="Latest stocks report">Stocks</a></span></div>
+      <form action="/tsearch/search.php" style="margin:0">
+<div class="head_search_cov">
+      <div class="date_redio" align="left">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="15%"><input name="radiobutton"  type="radio" value="express" checked="checked" /></td>
+            <td width="47%">expressindia</td>
+            <td width="13%"><input name="radiobutton" type="radio" value="web" /></td>
+            <td width="25%">web</td>
+          </tr>
+        </table>
+      </div>
+	 <div class="goog_logo" align="right"><img src="http://static.expressindia.com/expressindia/images/goog_logo.gif" width="121" height="20"/></div>
+	          <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="187"><input type="text" name="q" class="search_input" /></td>
+            <td width="88"><input type="image" src="http://static.expressindia.com/expressindia/images/search_but.gif" /></td>
+          </tr>
+    </table>
+  </div>
+  </form>
+ <div class="tab_cov">
+<a href="http://www.expressindia.com/" id="tab_cov_active" title="Latest news from India">Home</a><a href="http://www.expressindia.com/blogs" title="Express blogs">Blogs</a><a href="http://cricket.expressindia.com/" title="Latest cricket news">Cricket</a><a href="http://www.expressindia.com/astro.php" title="Astrology & Horoscope">Astrology</a><a href="http://shopping.expressindia.com/" title="Online shopping">Shopping</a><a href="http://travel.expressindia.com/" title="Travel">Hotels</a><a href="http://tenders.expressindia.com/" title="Tenders">Tenders</a><a href="http://www.expressclassifieds.in/" title="Book classifieds">Classifieds</a><a href="http://www.expressestates.in/" title="Express estates">Estates</a> <a href="http://www.expressindia.com/eicomments.php" title="Top comments">Opinions</a>
+  </div> 
+  <div class="right_tab ">
+     <div style="width:42px;display:inline; vertical-align:text-bottom;" id="login"></div> 
+    | <a href="#" onClick="this.style.behavior = 'url(#default#homepage)'; this.setHomePage('http://www.expressindia.com/');" title="">Make this your homepage</a> | <a href="/archiveMap.php" title="Expressindia stories archives">Archive</a></div>
+</div>
+
+<!--Header End-->
+<!--content Start-->
+<!--login start-->
+<div class="left_div1"><a href="#"><strong>Expressindia</strong></a> &raquo; Story </div>
+<!--login End-->
+<div class="clear"><img src="http://static.expressindia.com/expressindia/images/zero.gif" alt="" /></div>
+<!--Story Start-->
+<div class="left_div">
+  <h1>Fun returns</h1>
+  <table width="132" border="0" align="right" cellpadding="0" cellspacing="0" class="font_size">
+    <tr>
+      <td width="58" valign="top"><strong>Font Size - </strong></td>
+      <td width="63"><div class="fonts"><a href="#" onclick="setActiveStyleSheet('em2');">-A</a> <a href="#" onclick="setActiveStyleSheet('em1');" style="font-size:12px;">+A</a></div></td>
+    </tr>
+  </table>
+  <h2>EXPRESS FEATURES SERVICE</h2>
+  <span class="sub_head">Posted online: Monday   , December  31, 2007 at 12:00:00<br />
+    Updated: Monday   , December  31, 2007 at 01:26:08
+  <div class="link_box"><a href="http://www.indianexpress.com/printerFriendly/255997.html" target="_blank">Print</a> 
+   <a HREF="#" onClick="MM_openBrWindow('http://www.indianexpress.com/post.php?link=http://indianexpress.com/story/255997.html' ,'EmailArticle','width=500,height=400')">Email</a>
+   <a href="/feedback.php">To Editor</a> <a href="#post">Post Comments</a></div>
+  </span> 
+  <div class="story_add"></div>
+  <font><br />
+  <br />
+  <strong></strong> 
+  
+<p><B>Hanuman Returns<p>Director : Anurag Kashyap</B><p>Anurag Kashyap saves the day. Or rather, the year, from ending on a dismal note. Hanuman Returns is the way we want our animation movies to be heading, filled with zippy dialogue, funny characters, and engaging situations, rather than the standard preaching-from-the- pulpit monstrosities we have been subjected to, all these years. 
+<p>The first Hanuman was wonderful. It had a great hero, foot-tapping music, and the quality of animation was high, for the first time, it looked as if we could put the  familiar  dead stick-like characters, and turn them into life-like approximations. 
+<p>Funnily, Hanuman Returns, the sequel from the same production house, doesn't have the same superior animated quality. What it does have in abundance is superb lines, and fun, quirky characters, which make the film come alive. 
+<p>Hanuman sees the earth groaning under the weight of ancient and contemporary paapis ( sinners). Bad guys Shukracharya and Rahu and Ketu threaten to gobble the world, and create pralay (doomsday). In a sharp move, D Day is also the result of humans who don't care for the earth and pollute it. So he comes to earth to deal with bullies who make life miserable for little boys in Bajrangpuram (nice touch). As well as the heavenly baddies, all of who are sent packing. Like all beloved superheroes, he saves the world while he is at it. And leaves with a strong message: be green, stay green.
+<p>Some of our favourite lines " tumhari poonch detachable nahin hai ( this to Hanuman as he is heading off to this duniya as a little boy called Maruti); "main pandit hoon, politician nahin" ( this from Narad, who zips around the skies in a smart roadster, to the monkey god), and a Gabbar-like villain with the accents of Sanjiv Kumar's thakur, who yells at his cohorts  "mujhe woh bachcha chahiye, zinda ya murda" 
+<p>If only they'd been able to throw out these tired lines : " tune meri kokh se janam liya hai", says his saintly mother to the little boy. And if only they'd kept the film shorter. But even so, Hanuman Returns is a nice holiday outing for kiddos, and mums and dads. Go with a gang.
+<p><B>No takers for it</B><p><B>Showbiz<p>Cast: Mrinalini Sharma, Tushar Jalota, Gulshan Grover, Saurabh Shukla, Sushant Singh<p>Director: Raju Khan</B><p>This has been a year in which the media has been seriously bashed in the movies. A few months ago, a film called, what else, Breaking News showed us how sting operations could ruin innocent lives. It was topical, but it was also very sleazy: a dirty cop films a hapless girl in the altogether, and then forces her into prostitution. 
+<p>Mahesh-Mukesh Bhatt's Showbiz takes the whole deal several steps further. A pop star newly-emergent-from-a-talent-contest (Tushar) is the target of a masquerading as a media magnate (Gulshan Grover). Use, abuse, misuse, thunders the boss, but get me breaking news. His stooges, led by Sushant Singh, take his word for it, and turn into monsterazzi. Said pop star spills out, reeking of alcohol, from a skidding car, along with one number hooker: it's flashed on TV screens, TRPs shoot up, and everyone's happy. Except pop star and girlfriend ( Mrinalini), the former roams around with a bruised face; the latter wraps a towel around herself, and sings songs.. 
+<p>When did you last see a TV reporter roaming around with a beer bottle ready to sling it at a windscreen in order to cause an accident? When was the last time a talent hunt winner became big enough to boost the TRPs of a news channel? Sure, the media can be heartless, but then film (aka Bollywood) is media too, showing the reporter pulling the zip of the hooker's bustier down so that the camera can get a better view, and the blood-lust in Sushant Singh's eyes, is beyond bad. 
+<p>Nothing the unfortunate lead pair do —him with his pumped-up body, and her with inch-thick pancake layers   saves this film from doom. The theatre decided to screen the film only when this critic showed up, there were no takers for it. 
+</font> </div>
+<!--Story End-->
+<div class="clear"><img src="http://static.expressindia.com/expressindia/images/zero.gif" alt="" /></div>
+<!--Page Next Previous Start-->
+<div class="next_button" style="display:none">
+<span>Go to</span>
+<a href="/latest-news/Fun-returns/255997/1/"><img src="http://static.expressindia.com/expressindia/images/arrow_next_l.gif" alt="" width="15" height="10"vspace="2" border="0" /></a><a href="/latest-news/Fun-returns/255997/1/"><img src="http://static.expressindia.com/expressindia/images/arrow_next_r.gif" alt="" width="15" height="10" vspace="2" border="0" /></a></div>
+<!--Page Next Previous end--><!-- Rateing Start-->
+<!-- Rateing End-->
+
+
+<!--content End-->
+<!--Ads by google start here-->
+
+  <div class="google">
+  <div class="google_add_bottom">
+    <div class="google_add_txt"></div>
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+
+<script language="JavaScript">
+
+ function google_ad_request_done(google_ads) {
+   var s = '';
+   var i;
+
+   if (google_ads.length == 0) {
+     return;
+   }
+if (google_ads[0].type=="text") {
+       if (google_ads.length > 0) {
+              s += "";
+              for(i=0; i < google_ads.length; ++i) {
+               s += '<td><div class="google_add_txt1"><a href="' + google_ads[i].url + '" target="_blank" ' +
+                                 'onmouseout="window.status=\'\'" ' +
+                                 'onmouseover="window.status=\'go to ' +
+                                 google_ads[i].visible_url + '\'" ' +
+                                 '><strong>' +
+                                 google_ads[i].line1 + 
+                                                                 '</strong>' + 
+                                                                 google_ads[i].line2 + '&nbsp;' +
+                                 google_ads[i].line3 + '</a></div></td>';
+           }
+        }
+                 s += "";
+   }
+
+   document.write(s);
+   return;
+ }
+ 
+                          google_ad_client   = 'ca-expressindia_site_js';
+                          google_ad_output   = 'js';
+                          google_max_num_ads = 3;
+                          google_ad_channel  = "express_india,newui";
+                          google_adtest    = 'off';
+                          google_safe = 'high';
+                                  google_ad_type = "text";
+
+</script>
+<script language="JavaScript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</tr></table>
+<div class="goog_ad"> Ads by Google</div>
+</div></div>
+
+<!--Ads by google end here-->
+<div class="clear"><img src="http://static.expressindia.com/expressindia/images/zero.gif" alt="" /></div>
+<a href="#" name="post"></a>
+<div class="form-box">
+  <div class="form-hd">Post Comments <span id="divmessagemain"></span> </div>
+ <form  method="post" name="frmcommentmain" id="frmcommentmain" onSubmit="return insertCommetMain(255997, this);">
+    <div class="form-inbox">
+      <table width="100%" border="0" align="center" cellpadding="4" cellspacing="0" bgcolor="#e2eaf1" class="frm-mrg ">
+        <tr>
+          <td>Message<b>*</b></td>
+          <td colspan="3"><div align="right" class="frm-lft">Maximum characters allowed <span class="textfild">&nbsp; 1200 &nbsp;&nbsp;</span></div></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td colspan="3"><textarea name="comment" cols="49" rows="2"></textarea></td>
+        </tr>
+        <tr>
+          <td>Name<b>*</b></td>
+          <td><input name="name" type="text" class="textfild" /></td>
+          <td>Email ID<b>*</b></td>
+          <td><input name="email" type="text" class="textfild" /></td>
+        </tr>
+        <tr>
+          <td>Subject<b>*</b></td>
+          <td><input name="subject" type="text" class="textfild" /></td>
+          <td>Country<b>*</b></td>
+          <td><select class="textfild" name="country">
+	<option value="">Select</option>
+	<option value='1'>India</option><option value='2'>USA</option><option value='3'>UK</option><option value='5'>UAE</option><option value='4'>Australia</option>
+	</select> </td>
+        </tr>
+      </table>
+      <div class="terms"><b>TERMS OF USE:</b> The views represented here are not neccesarily endorsed by www.expressindia.com and its allied websites. All messages will be moderated and no message that has inflammatory, abusive, derogatory language or any language deemed unfit for publication by the editor will be displayed. Though it will be endeavoured that as many messages as possible be displayed, there will be time lag between the submission and publication of the messages. The website reserves the right to publish or reject any message. </div>
+      <div class="msg-box">
+        <input name="checkbox" type="checkbox" value="checkbox" />
+        I agree to the terms of use. </div>
+      <div class="button" align="center">
+        <input name="Submit" type="submit" value="Submit" />
+        <input name="Reset" type="reset" />
+		<input type="hidden" name="parent" value="0">
+      </div>
+    </div>
+  </form>
+</div>
+<div class="marg"></div>
+<a href="#" name="view"></a>
+<div class="viewcomm_div">
+  <div class="viewcommnav" id="height">
+    <ul>
+      <li onclick="toggle_visibility();">
+        <div style="width:200px; text-align:left; float:left; margin-top:2px;margin-bottom:1px;">Comments - 0</div>
+        <div style="display:block;text-align:center;padding:0px 4px; width:200px; float:right;margin-top:2px;margin-bottom:1px; font-weight:normal" id="foo" >
+          <div align="right">Hide Comments</div>
+        </div>
+        <div style="display:none;text-align:center;padding:0px 4px;width:200px; float:right;margin-top:2px; margin-bottom:1px;font-weight:normal" id="foo1">
+          <div align="right">Show Comments</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- Sub Menus container. Do not remove -->
+  <div id="box2" class="box_2">
+  
+    <div class="in-box-com">  </div>
+    <!--new tab -->
+      
+  </div>
+<div class="page-nav" id="box2" style="display:none"> <span>Go to - </span> -</div>
+</div>
+
+<!-- feature services begins -->
+<div class="featureadds_main">
+  <div class="featureadds_tab">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td class="active_link"  align="center" valign="middle">Most Read Articles</td>
+      </tr>
+      <tr>
+        <td align="center" valign="top" height="3"><img src="http://static.expressindia.com/expressindia/images/blue_arrow_sm.gif" width="9" height="3" border="0" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="featureadds_box" style="margin-right:15px"> <a href="http://www.expressindia.com/latest-news/India-move-on-withdraw-charges-against-Hogg/261332/">India 'move on', withdraw charges against Hogg</a> <a href="http://www.expressindia.com/latest-news/Britney-Spears-moving-to-Pak/261338/">Britney Spears moving to Pak?</a> <a href="http://www.expressindia.com/latest-news/SP-urges-Bharat-Ratna-for-Mulayum-Singh/261337/">SP urges Bharat Ratna for Mulayum Singh</a> <a href="http://www.expressindia.com/latest-news/Pontings-men-are-the-worst-behaved-Holding/261303/">Ponting's men are the worst behaved: Holding</a> <a href="http://www.expressindia.com/latest-news/Troublemakers-will-be-shot-Musharraf/261331/">Troublemakers will be shot: Musharraf</a> <a href=""></a>  </div>
+  </div>
+<!-- feature services end -->
+<!--Right Ads Start-->
+<div class="right_ads">
+  <div id="rightadd">
+    <!-- start 160x600 + 120x600 banner -->
+ <script language="javascript">
+   if (!document.phpAds_used) document.phpAds_used = ',';
+   phpAds_random = new String (Math.random()); phpAds_random = phpAds_random.substring(2,11);
+   
+   document.write ("<" + "script language='JavaScript' type='text/javascript' src='");
+   document.write ("http://banners.expressindia.com/adsnew/adjs.php?n=" + phpAds_random);
+   document.write ("&amp;what=zone:658&amp;target=_blank");
+   document.write ("&amp;exclude=" + document.phpAds_used);
+   if (document.referer)
+      document.write ("&amp;referer=" + escape(document.referer));
+   document.write ("'><" + "/script>");
+</script>
+
+<script language="javascript">
+var page_height = document.getElementById("pg_height").clientHeight;
+
+	if(page_height>1600){
+				if (!document.phpAds_used) document.phpAds_used = ',';
+		   phpAds_random = new String (Math.random()); phpAds_random = phpAds_random.substring(2,11);
+		   
+		   document.write ("<" + "script language='JavaScript' type='text/javascript' src='");
+		   document.write ("http://banners.expressindia.com/adsnew/adjs.php?n=" + phpAds_random);
+		   document.write ("&amp;what=zone:658&amp;target=_blank");
+		   document.write ("&amp;exclude=" + document.phpAds_used);
+		   if (document.referer)
+			  document.write ("&amp;referer=" + escape(document.referer));
+		   document.write ("'><" + "/script>");
+}
+
+</script>
+
+
+<!--End 160x600 + 120x600 banner -->
+<!--<img src="http://static.expressindia.com/expressindia/images/ad.gif" alt="" border="0" />-->
+    <br />
+      <br />
+      <br />
+  </div>
+  <div class="featureadd_two">
+<span class="poll_header"><strong>Group Websites</strong></span>
+<div><img src="http://static.expressindia.com/expressindia/images/zero.gif" width="1" height="7" /></div>
+<a href="http://www.indianexpress.com/" target="blank">Indian Express</a>
+<a href="http://www.financialexpress.com/" target="blank">Financial Express</a>
+<a href="http://www.screenindia.com/" target="blank">Screen</a>
+<a href="http://www.loksatta.com/" target="blank">Loksatta</a>
+<a href="http://cricket.expressindia.com/" target="blank">Express Cricket</a>
+<a href="http://www.kashmirlive.com/" target="blank">Kashmir Live</a>
+<a href="http://www.expressbusinesspublications.com/" target="blank">Biz Publications</a>
+</div>
+  <div class="featureadd">
+<span class="poll_header"><strong>Featured Services</strong></span>
+<div class="featureadd_service">
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3134&zoneid=&source=&dest=http%3A%2F%2Fwww.shaadi.com%2Fregistration%2Fuser%2Findex.php%3Fptnr%3Dielink" target="_blank" rel="nofollow">Matrimonials</a></div>
+<div class="featureadd_border"><img src="http://static.expressindia.com/expressindia/images/zero.gif" /></div>
+
+<div class="featureadd_service">
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=2626&zoneid=&source=&dest=http%3A%2F%2Fwww.naukri.com%2Ftieups%2Ftieups.php%3Fothersrcp%3D4655" target="_blank" rel="nofollow">Register FREE on Naukri.com.</a></div>
+<div class="featureadd_border"><img src="http://static.expressindia.com/expressindia/images/zero.gif" /></div>
+
+<div class="featureadd_service">
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3166&zoneid=&source=&dest=http%3A%2F%2Fwww.s2d6.com%2Fx%2F%3Fx%3Dc%26z%3Ds%26v%3D579065" target="_blank" rel="nofollow">Buy 1 & get 2 tickets Free</a></div>
+<div class="featureadd_border"><img src="http://static.expressindia.com/expressindia/images/zero.gif" /></div>
+<!--
+<div class="featureadd_service">
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3197&zoneid=&source=&dest=http%3A%2F%2Fwww.photonow.in%2F" target="_blank" rel="nofollow">Send Photos to India in an Hour</a></div>
+<div class="featureadd_border"><img src="http://static.expressindia.com/expressindia/images/zero.gif" /></div>
+-->
+
+<div class="featureadd_service">
+<a href=" http://eshop.talash.com" target="_blank" rel="nofollow">Send Gifts & Flowers to India</a></div>
+<div class="featureadd_border"><img src="http://static.expressindia.com/expressindia/images/zero.gif" /></div>
+
+<div class="featureadd_service">
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3167&zoneid=&source=&dest=http%3A%2F%2Fwww.s2d6.com%2Fx%2F%3Fx%3Dc%26z%3Ds%26v%3D579062" target="_blank" rel="nofollow">Send Flowers</a></div>
+<div class="featureadd_border"><img src="http://static.expressindia.com/expressindia/images/zero.gif" /></div>
+<!--
+<div class="featureadd_service">
+<a href="http://ads.ozonemedia.co.in/accipiter/adclick/CID=0000270e0000000000000000/acc_random=150992/SITE=FINANCIALEXPRESS/AAMSZ=TEXT/pageid=40881219" target="_blank" rel="nofollow">CVs Required @ naukri.com</a></div>
+<div class="featureadd_border"><img src="http://static.expressindia.com/expressindia/images/zero.gif" /></div>
+-->
+
+<div class="featureadd_service">
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3120&zoneid=&source=&dest=http%3A%2F%2Fwww.fropper.com%2Fdating-member%2Findex.php%3Fregister%3DY%26ptnr%3Dietkl021" target="_blank" rel="nofollow">Find Love, Romance & friends</a></div>
+<div class="featureadd_border"><img src="http://static.expressindia.com/expressindia/images/zero.gif" /></div>
+
+
+
+
+<div class="featureadd_service">
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3168&zoneid=&source=&dest=http%3A%2F%2Fwww.indiafloristonline.com%2F" target="_blank" rel="nofollow">Send</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3168&zoneid=&source=&dest=http%3A%2F%2Fwww.indiafloristonline.com%2F" target="_blank" rel="nofollow"> Flowers</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3168&zoneid=&source=&dest=http%3A%2F%2Fwww.indiafloristonline.com%2F" target="_blank" rel="nofollow"> gifts</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3168&zoneid=&source=&dest=http%3A%2F%2Fwww.indiafloristonline.com%2F" target="_blank" rel="nofollow"> to</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3169&zoneid=&source=&dest=http%3A%2F%2Fwww.flowersfloristsgifts.com%2F" target="_blank" rel="nofollow"> india</a></div>
+<div class="featureadd_border"><img src="http://static.expressindia.com/expressindia/images/zero.gif" /></div>
+
+
+<div class="featureadd_service">
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3170&zoneid=&source=&dest=http%3A%2F%2Fwww.allindiaflowers.com%2F" TARGET="_blank" rel="nofollow">Send</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3171&zoneid=&source=&dest=http%3A%2F%2Fwww.allindiaflorist.com%2F
+" TARGET="_blank" rel="nofollow"> Flowers</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3172&zoneid=&source=&dest=http%3A%2F%2Fwww.sendflowerstomumbai.com%2F" TARGET="_blank" rel="nofollow"> to</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3173&zoneid=&source=&dest=http%3A%2F%2Fwww.sendflowerstobangalore.com%2F" TARGET="_blank" rel="nofollow"> India</a></div>
+<div class="featureadd_border"><img src="http://static.expressindia.com/expressindia/images/zero.gif" /></div>
+
+
+<div class="featureadd_service">
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3174&zoneid=&source=&dest=http%3A%2F%2Fwww.japanfloristshop.com%2F" target="_blank" rel="nofollow">Flowers</a> to
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3175&zoneid=&source=&dest=http%3A%2F%2Fwww.indiafloristnetwork.com%2F" target="_blank" rel="nofollow"> India</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3176&zoneid=&source=&dest=http%3A%2F%2Fwww.germanyflowershop.com%2F" target="_blank" rel="nofollow"> Germany</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3177&zoneid=&source=&dest=http%3A%2F%2Fwww.gifts2spain.com%2F" target="_blank" rel="nofollow"> Spain</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3178&zoneid=&source=&dest=http%3A%2F%2Fwww.mexflores.com%2F" target="_blank" rel="nofollow"> Mexico</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3179&zoneid=&source=&dest=http%3A%2F%2Fwww.giftflowersusa.com%2F" target="_blank" rel="nofollow"> USA</a>
+<a href="http://banners.expressindia.com/adsnew/adclick.php?bannerid=3180&zoneid=&source=&dest=http%3A%2F%2Fwww.amourfleurs.com%2F" target="_blank" rel="nofollow"> France</a></div>
+<div class="featureadd_border"><img src="http://static.expressindia.com/expressindia/images/zero.gif" /></div>
+
+
+</div>
+
+
+</div>
+<!--Right Ads End-->
+
+<!--Footer Start-->
+<div class="footer">
+<div class="footlink">
+    <div class="foot_text"> <a href="/">Home</a><br />
+      <a href="http://blogs.expressindia.com/">Blogs</a> </div>
+    <div class="foot_text"> <a href="http://www.expressmoney.in/">Money</a><br />
+      <a href="http://www.expressestates.in/">Estates</a> </div>
+    <div class="foot_text"> <a href="http://cricket.expressindia.com/">Cricket</a><br />
+      <a href="http://www.expressindia.com/astro.php" target="_blank">Astrology</a> </div>
+    <div class="foot_text"> <a href="http://shopping.expressindia.com/" target="_blank">Shopping</a><br />
+      <a href="http://travel.expressindia.com/">Hotels</a></div>
+    <div class="foot_text"> <a href="http://tenders.expressindia.com/">Tenders</a><br />
+      <a href="http://www.expressclassifieds.in/beta/">Classifieds</a> </div>
+  </div>
+<form action="/tsearch/search.php">
+<div class="foot_search_cov">
+      <div class="date_redio" align="left">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="15%"><input name="radiobutton"  type="radio" value="express" checked="checked" /></td>
+            <td width="47%">expressindia</td>
+            <td width="13%"><input name="radiobutton" type="radio" value="web" /></td>
+            <td width="25%">web</td>
+          </tr>
+        </table>
+      </div>
+	 <div class="goog_logo" align="right"><img src="http://static.expressindia.com/expressindia/images/goog_logo.gif" width="121" height="20"/></div>
+	  <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="187"><input type="text" name="q" class="search_input" /></td>
+            <td width="88"><input type="image" src="http://static.expressindia.com/expressindia/images/search_but.gif" /></td>
+          </tr>
+    </table>
+  </div>
+</div>
+</form>
+<div class="footer_banner">
+<script language = 'Javascript' src="http://banners.expressindia.com/banner/ei/ei_story468x60.js"></script>
+</div>
+<div class="copy_container">
+  <div class="copy_textleft">&copy; 2008 Indian Express Newspapers (Mumbai) Ltd. All rights reserved</div>
+  <div class="copy_textright"> <a href="http://www.expressindia.com/expressgroup/" >The Indian Express Group</a> | <a href="http://www.expressindia.com/advertise.php">Advertise With Us</a> | <a href="http://www.expressindia.com/policy.php">Privacy Policy</a> | <a href="http://www.expressindia.com/feedback.php">Feedback</a> | <a href="http://www.expressindia.com/expressgroup/careers.php">Work With Us</a> | <a href="http://www.expressindia.com/sitemap.php">Site Map</a></div>
+		
+</div>
+<!--Header banner -->
+<div class="add_baner">
+<script language="javascript" src="http://banners.expressindia.com/banner/ei/ei_story728x90.js"></script>
+</div>
+<!-- / Header banner -->
+<!-- Record page views -->
+</SCRIPT>
+<!-- End Record page views -->
+<script> readCookie('user1')</script>
+
+
+
+
+<!-- Google analytics starts expressindia.com -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1403607-1";
+urchinTracker();
+</script>
+<!-- Google analytics ends -->
+
+<!--Footer end-->
+
+<!--Mid Banner Start-->
+<div class="mid_banner">
+<script language="JavaScript1.1" src="http://banners.expressindia.com/banner/ei/ei_story300x250.js" type="text/javascript"></script>
+  
+</div>
+<!--Mid Banner end-->
+<div class="rta-box">
+  <div class="rta">Rate this Article</div>
+  <div class="atr-txtt">
+    <div align="right" class="atr-txt" id="ratingRes"></div>
+  </div>
+  <div class="rta-st">
+  <a href="javascript:setRating(1,255997)"><img src="http://static.expressindia.com/expressindia/images/zero.gif" width="12" height="11" border="0"/></a> 
+  <a href="javascript:setRating(2,255997)"><img src="http://static.expressindia.com/expressindia/images/zero.gif" width="12" height="11" border="0"/></a> 
+  <a href="javascript:setRating(3,255997)"><img src="http://static.expressindia.com/expressindia/images/zero.gif" width="12" height="11" border="0"/></a> 
+  <a href="javascript:setRating(4,255997)"><img src="http://static.expressindia.com/expressindia/images/zero.gif" width="12" height="11" border="0"/></a> 
+  <a href="javascript:setRating(5,255997)"><img src="http://static.expressindia.com/expressindia/images/zero.gif" width="12" height="11" border="0"/></a> 
+  <a href="javascript:setRating(6,255997)"><img src="http://static.expressindia.com/expressindia/images/zero.gif" width="12" height="11" border="0"/></a> 
+  <a href="javascript:setRating(7,255997)"><img src="http://static.expressindia.com/expressindia/images/zero.gif" width="12" height="11" border="0"/></a> 
+  <a href="javascript:setRating(8,255997)"><img src="http://static.expressindia.com/expressindia/images/zero.gif" width="12" height="11" border="0"/></a> 
+  <a href="javascript:setRating(9,255997)"><img src="http://static.expressindia.com/expressindia/images/zero.gif" width="12" height="11" border="0"/></a> 
+  <a href="javascript:setRating(10,255997)"><img src="http://static.expressindia.com/expressindia/images/zero.gif" width="12" height="11" border="0"/></a> <span>Average Rating</span></div>
+  <br />
+
+<script language="javascript">
+var url = window.location.href;
+</script>
+
+  <div class="rta-box1">
+    <div class="rta1"><table cellpadding=0 cellspacing=0 width=100%><tr><td width=50%>Bookmark this Page</td><td align=right width=50%>
+    <div class="balloon">
+              <ul>
+                <li> <a href="#">What is this?
+                  <!--[if IE 7]><!-->
+                  </a>
+                      <!--<![endif]-->
+                      <dl>
+		       <div style="border : solid 0px #000000; padding : 4px; width : 280px; height : 300px; overflow : auto; ">
+                        <img src="http://static.expressindia.com/expressindia/images/digg_icon.gif" alt="" width="16" height="14" hspace="5" vspace="5" border="0" align="right" />
+                        <dt>Digg</dt>
+                        <dd>
+                          <p>On Digg, users share intersting online content by submitting links to the site. At that point, the Digg audience can vote on whether or not they think it is interesting. Articles with lots of votes, or &quot;diggs,&quot; rise up higher on the site's main page and topical subsection pages. Another form of social sharing, this site also lets users categorize the content they are submitting to Digg and label it with descriptions of up to 350 characters. Digg users can also submit comments on each content item submitted to the site.</p>
+
+                          <p> To register, go to: http://digg.com/register</p>
+                        </dd>
+
+                         <img src="http://static.expressindia.com/expressindia/images/delicous_icon.gif" alt="" width="18"  height="18" hspace="5" vspace="5" border="0" align="right" />
+                          <dt>del.icio.us</dt>
+                          <dd>
+                            <p>At its most basic level, del.icio.us allows users to save their bookmarks online. Del.icio.us also gives users the ability to &quot;tag&quot; their bookmarks with descriptive category names. For example, someone who has bookmarked multiple Web pages that deal with the Washington Nationals baseball team could tag those links with any terms they want, like &quot;baseball,&quot; &quot;nationals,&quot; &quot;natsfan,&quot; etc.</p>
+                            <p> As members of a &quot;social bookmarking&quot; community, del.icio.us sers can also see how many other people have bookmarked the same pages, and they can look at those users' bookmark collections to find other interesting online content.</p>
+
+                            <p> To register, go to: http://del.icio.us/register</p>
+                          </dd>
+
+			<img src="http://static.expressindia.com/expressindia/images/reddit_icon.gif" alt="" width="18" height="18" hspace="5"  vspace="5" border="0" align="right" />
+                          <dt>Reddit</dt>
+                          <dd>
+                            <p>Reddit allows users to submit news articles and other online content to the site. Users also give articles a thumbs-up or thumbs-down. Reddit then uses those votes to build a user profile and to find articles to recommend to you. Users can also submit comments on items posted to the site.</p>
+                            <p>To register, go to: http://reddit.com/login</p>
+                          </dd>
+			</div>
+		      </dl>
+
+                  <!--[if lte IE 6]>
+			</a>
+			<![endif]-->
+                </li>
+              </ul>
+            </div>
+    </td></tr></table>
+    
+    </div>
+    <div class="rta-st1">
+      <div class="bottom_links">
+        <table border="0" cellspacing="0" cellpadding="0" class="bal-mar">
+          <tr>
+            <td width="36"><div class="balloon">
+              <ul>
+                <li> <a href="#" onclick="MM_openBrWindow('http://digg.com/submit?phase=2&url='+url ,'EmailArticle','width=800,height=600')">Digg
+                  <!--[if IE 7]><!-->
+                  </a>
+                      <!--<![endif]-->
+                  <!--[if lte IE 6]>
+			</a>
+			<![endif]-->
+                </li>
+              </ul>
+            </div></td>
+            <td width="61"><!--balloon effect starts-->
+                <div class="balloon">
+                  <ul>
+                    <li> <a href="#" onclick="MM_openBrWindow('http://myweb2.search.yahoo.com/myresults/bookmarklet?u='+url ,'EmailArticle','width=800,height=600')">My Yahoo
+                      <!--[if IE 7]><!-->
+                      </a>
+                        <!--<![endif]-->
+                    
+                      <!--[if lte IE 6]>
+			</a>
+			<![endif]-->
+                    </li>
+                  </ul>
+                </div>
+              <!--balloon effect ends-->
+            </td>
+            <td width="34" align="center"><!--balloon effect starts-->
+                <div class="balloon">
+                  <ul>
+                    <li> <a href="#" onclick="MM_openBrWindow('http://cgi.fark.com/cgi/fark/edit.pl?new_url='+encodeURIComponent(document.location.href)+'&amp;new_comment='+encodeURIComponent(document.title)+'&amp;new_link_other=&amp;linktype=Misc','EmailArticle','width=800,height=600')" id=last>Fark
+                      <!--[if IE 7]><!-->
+                      </a>
+                        <!--<![endif]-->
+                      
+                      <!--[if lte IE 6]>
+			</a>
+			<![endif]-->
+                    </li>
+                  </ul>
+                </div>
+              <!--balloon effect ends-->
+            </td>
+            <td width="61" align="center"><!--balloon effect starts-->
+                <div class="balloon">
+                  <ul>
+                    <li> <a href="#" onclick="MM_openBrWindow('http://del.icio.us/post?url='+url ,'EmailArticle','width=800,height=600')">del.icio.us
+                      <!--[if IE 7]><!-->
+                      </a>
+                        <!--<![endif]-->
+                      
+                      <!--[if lte IE 6]>
+			</a>
+			<![endif]-->
+                    </li>
+                  </ul>
+                </div>
+              <!--balloon effect ends-->
+            </td>
+            <td width="62" align="center"><!--balloon effect starts-->
+                <div class="balloon">
+                  <ul>
+                    <li> <a href="#" onclick="MM_openBrWindow('http://www.newsvine.com/_wine/save?u='+url ,'EmailArticle','width=800,height=600')">Newsvine
+                      <!--[if IE 7]><!-->
+                      </a>
+                        <!--<![endif]-->
+                    
+                      <!--[if lte IE 6]>
+			</a>
+			<![endif]-->
+                    </li>
+                  </ul>
+                </div>
+              <!--balloon effect ends-->
+            </td>
+            <td width="44" align="center"><!--balloon effect starts-->
+                <div class="balloon">
+                  <ul>
+                    <li> <a href="#" onclick="MM_openBrWindow('http://reddit.com/submit?url='+url ,'EmailArticle','width=800,height=600')">Reddit
+                      <!--[if IE 7]><!-->
+                      </a>
+                        <!--<![endif]-->
+                   
+                      <!--[if lte IE 6]>
+			</a>
+			<![endif]-->
+                    </li>
+                  </ul>
+                </div>
+              <!--balloon effect ends-->
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

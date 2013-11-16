@@ -1,0 +1,1367 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>BBnd newsi library-->
+<script src="http://newsimg.bbc.co.uk/sol/shared/js/sol3.js" language="JavaScript"></script>
+<script src="http://newsimg.bbc.co.uk/sol/shared/js/livestats_v1_1.js" language="JavaScript" type="text/javascript"></script>
+<script src="http://newsimg.bbc.co.uk/js/app/bookmark/bookmark.js" language="JavaScript" type="text/javascript"></script>
+
+
+<style type="text/css">
+@import "/css/screen/sol/section/tennis.css";
+</style>
+
+
+
+	
+		
+
+
+
+	
+
+	
+
+
+	
+
+
+
+	<!-- configuration block for external URLs to break them out of stub class -->
+	<script type="text/javascript">
+	
+	/**
+	 * instantiate the bbccom namespace
+	 */
+	newsi.bbccom = {};
+	
+	/**
+	 * @classDescription Simple config class to provide storage of JSOD URL's
+	 */
+	newsi.bbccom.AdConfigurator = function(){
+		this._zoneFile = "/js/app/bbccom/zonefile.js?2";
+		this._analyticsFile = "/js/app/bbccom/adanalytics.js";
+		this._appFile = "/js/app/bbccom/app.js";
+		this._adSlots = new Object(	{	ad1:{id:1, name:"ad1",size:"728x90"},
+							ad2:{id:2, name:"ad2",size:"160x600"},
+							ad3:{id:3, name:"ad3",size:"468x60"},
+							ad4:{id:4, name:"ad4",size:"120x240"} } );
+		this._adBugElement = "adWebBug";
+		this._timerInterval = 3000;
+		
+		this._fiddleredition = 'international';
+		this._document_uri = this._url = '/sport2/hi/tennis/7178456.stm';
+
+		switch(this._document_uri){
+			case "/":
+				this._url = (this._fiddleredition == "domestic") ? "/1/hi/default.stm" : "/2/hi/default.stm";
+				break;
+			case "/sport":
+				this._url = (this._fiddleredition == "domestic") ? "/sport1/hi/default.stm" : "/sport2/hi/default.stm";
+				break;
+			case "/sport/":
+				this._url = (this._fiddleredition == "domestic") ? "/sport1/hi/default.stm" : "/sport2/hi/default.stm";
+				break;
+		}
+		
+	}
+	
+		
+	
+	/**
+	 * Expose the props to the Stub Class
+	 * @param {Object} name
+	 * @return {String} Path to the property
+	 */
+	newsi.bbccom.AdConfigurator.prototype.getPropPath = function(name){
+		return this[name];
+	}
+	</script>
+
+<script type="text/javascript" src="/js/app/bbccom/stub.js"></script>
+
+
+
+
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+<style type="text/css" media="all">
+			@import "/shared/css/toolbar_banner.css";			
+</style>
+<a name="top" id="top"></a>
+<!-- START TOOLBAR -->	
+
+	<div id="ift-toolbar" class="ift-sport">
+	<div id="ift-wrap">
+	<div id="ift-accesskeys"><a href="#startcontent" accesskey="2"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" alt="Skip to main content" border="0" /></a><a href="http://www.bbc.co.uk/accessibility/accesskeys/keys.shtml" accesskey="0"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" alt="Access keys help" border="0" /></a><a href="http://www.bbc.co.uk/a-z/" accesskey="3"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" alt="A-Z index" border="0" /></a></div>
+	
+		<div id="ift-logo"><a href="http://www.bbc.co.uk/go/toolbar/i/-/home/i/" accesskey="1"><img src="http://newsimg.bbc.co.uk/shared/img/toolbar_logo.gif" alt="BBC logo" /></a></div>
+		<div id="ift-tabs"><ul><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/text/-/home/i/">Home</a></div></li><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/news/2/hi/">News</a></div></li><li id="ift-current"><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/news/sport2/hi/">Sport</a></div></li><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/radio/i/">Radio</a></div></li><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/tv/i/">TV</a></div></li><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/weather/i/">Weather</a></div></li><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/worldservice/languages/">Languages</a></div></li></ul><br class="ift-clear" /></div>
+		<div id="ift-search">
+			
+	<form action="http://search.bbc.co.uk/cgi-bin/search/results.pl" accept-Charset="UTF-8">
+	<input type="hidden" name="scope" value="all" />	
+	<input type="hidden" name="edition" value="i" /> 
+	<input type="text" id="ift-searchbox" name="q" size="10" title="BBC Search" accesskey="4"/>
+	<input type="image" id="ift-searchbutton" src="http://newsimg.bbc.co.uk/shared/img/v3_tb/search_button.gif" name="go" value="go" alt="Search"/>
+</form>
+		</div><br class="ift-clear" />
+	</div>
+</div>
+<!-- END TOOLBAR -->	
+<div id="ad1" class="ad1"></div>
+
+	<script language="JavaScript" type="text/javascript">
+function showForm() {
+if(document.getElementById){
+	   document.getElementById('d_rb').innerHTML='<form action="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl" name="ifhForm" method="get"><input type="hidden" name="qs" value="http://news.bbc.co.uk/sport2/hi/tennis/7178456.stm" /><input type="hidden" name="content" value="sol" /><input name="dest" type="radio" value="Domestic" onclick="submitForm();" id="dfh" /><label for="dfh" class="uk" style="">UK version</label><input name="dest" type="radio" value="International" id="ifh" onclick="submitForm();"checked /><label for="ifh" class="int" style="font-weight:bold;">International version</label></form>';}
+}
+var site;
+function submitForm() {
+			document.ifhForm.submit();
+}
+</script>
+
+<style type="text/css" media="all">
+/* Change Edition*/
+#ift-banner{width:760px;}
+#ift-banner .pipe{color:#999999;font-weight:bold;font-size:0.9em;padding:0 3px 0 3px;}
+#ift-banner form{float:left;}
+#dfh{margin:0 2px 0 0;padding:0;height:11px;}
+#ifh{margin:0 2px 0 0;padding:0;height:11px;}
+#ift-banner label{font-size:0.8em;color:#ffffff;}
+#ift-banner label.uk{padding:0 6px 0 0;margin:0 0 2px 0;color:#ffffff;cursor:hand;font-size:0.9em;}
+#ift-banner label.int{padding:0 10px 0 0;margin:0 0 2px 0;color:#ffffff;cursor:hand;font-size:0.9em;}
+.domestic{padding:0 5px 0 0;margin:0 0px 0 0;}
+.int{padding:0 9px 0 0;margin:0 0px 0 0;}
+.domestic a{padding:0 0 0 17px;background:url(http://newsimg.bbc.co.uk/ifh/img/icons/radio_but_off.gif) no-repeat 0 -2px;} .int a{padding:0 0 0 17px;background:url(http://newsimg.bbc.co.uk/ifh/img/icons/radio_but_on.gif) no-repeat 0 -2px;}
+.domestic a:hover{background:url(http://newsimg.bbc.co.uk/ifh/img/icons/radio_but_on.gif) no-repeat 0 -2px;}
+.int a:hover{background:url(http://newsimg.bbc.co.uk/ifh/img/icons/radio_but_on.gif) no-repeat 0 -2px;}
+.extraLink {padding:10px 0 0 0;}
+</style>
+
+<div id="ift-banner" class="ift-sport">
+<map name="sportbanner">
+	<area shape="RECT" coords="578,9,736,35" href="/sport2/hi/video_and_audio/help_guide/4304501.stm" onClick="javascript:launchAVConsoleStory('5173498'); return false;" alt="watch listen">
+    <area shape="RECT" coords="123,7,285,37" alt="BBC Sport" href="http://news.bbc.co.uk/sport2/hi/default.stm">
+</map>
+<img src="http://newsimg.bbc.co.uk/sol/shared/img/nav/v3_banners/ifs_tennis_760x45.gif" border="0" width="760" height="45" alt="BBC Sport" usemap="#sportbanner" /><div id="ift-extra">
+			<span id="d_rb">
+			<span class="domestic"><a href="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl?qs=http://news.bbc.co.uk/sport2/hi/tennis/7178456.stm&content=bol&dest=Domestic">UK version</a></span>
+	<span class="int"><a href="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl?qs=http://news.bbc.co.uk/sport2/hi/tennis/7178456.stm&content=sol&dest=International">International version</a></span>
+</span><script type="text/javascript" language="JavaScript">showForm();</script><a href="http://www.bbc.co.uk/iftoolbar/versions.html" onclick="window.open('http://www.bbc.co.uk/iftoolbar/versions.html', 'aboutversion', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=488,height=305,left=280,top=200'); return false;" class="about">About the versions</a><span class="pipe">|</span><a href="http://news.bbc.co.uk/sport/text_only.stm" class="extraLink">Low graphics</a><span class="pipe">|</span><a href="http://news.bbc.co.uk/sport2/hi/front_page/6470385.stm" class="extraLink">Help</a>
+<!--- start live stats logic --->
+		
+
+<!--- end live stats logic --->
+	</div>
+</div>
+<div class="clear"></div>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="760">
+    <tr>
+        <td width="121" valign="top">
+
+			
+
+<div class="lhs">
+	
+		
+	
+	
+	
+		
+			
+				
+					<div class="lhssp">&nbsp;</div>
+					
+					<div class="lhsl">
+					<a class="lhsnl" href="/sport2/hi/default.stm">Sport Homepage</a>
+					
+					</div>
+				
+				
+			
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+			
+				
+					<div class="lhssp">&nbsp;</div>
+					<div class="lhssq">
+					
+					<a class="lhsnl" href="/sport2/hi/tennis/default.stm">Tennis</a>
+					
+					</div>
+				
+				
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport2/hi/tennis/results/default.stm">Results</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport2/hi/tennis/calendar/default.stm">Calendar</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport2/hi/tennis/top_20_men/default.stm">Men's Rankings</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport2/hi/tennis/top_20_women/default.stm">Women's Rankings</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport2/hi/tennis/skills/default.stm">Skills</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport2/hi/tennis/rules_and_equipment/default.stm">Rules and Equipment</a>
+						
+					</div>
+					
+					
+				
+			
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+			
+				
+					<div class="lhsssl">
+						<a class="lhsnl" href="/sport2/hi/tennis/get_involved/default.stm">Get Involved</a>
+						
+					</div>
+					<div id="ad4" class="ad4"></div>
+					
+				
+			
+		
+	
+	
+
+
+
+
+
+			
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+	
+	
+	
+		
+		
+	
+	
+
+
+
+
+
+	
+</div>
+
+
+
+
+		<div class="lhs">
+<div class="mvb">
+	<div class="lhsdl">---------------</div>    
+	
+	<div class="lhsssl"><a href="http://www.bbc.co.uk/go/sport/int/lhnte1/-/http://www.bbc.co.uk/email/sport" class="lhsnl">Daily E-mail</a></div>  
+	<div class="lhsssl"><a href="http://news.bbc.co.uk/go/sport/int/lhnte2/-/sport1/hi/2823593.stm" class="lhsnl">Mobiles</a></div> 
+</div>
+</div>
+
+<div class="mvt">
+<div class="lhsl"><a href="http://news.bbc.co.uk/go/sport/int/lhnte3/-/sport1/hi/funny_old_game/default.stm" class="lhsnl">Fun and Games</a></div>
+<div class="lhsl"><a href="http://news.bbc.co.uk/go/sport/int/lhnte4/-/sport1/hi/question_of_sport/default.stm" class="lhsnl">Question of Sport</a></div>
+</div>
+<table width="121" cellspacing="0" cellpadding="0" border="0">
+<form action="http://www.bbc.co.uk/cgi-bin/openurl.pl" method="post" name="drop">
+<tr>
+	<td><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="6" height="1" border="0" alt="" /></td>
+	<td><div class="lhsnlp">CHOOSE A SPORT</div>
+	<select name="link"  style="font-family : Verdana, Arial, Helvetica, sans-serif; font-size : 11px; width:108px" onchange="if (this.options[selectedIndex].value != '') location.href=this.options[selectedIndex].value">
+            <option value="http://news.bbc.co.uk/sport/">Select</option>	
+			<option value="http://news.bbc.co.uk/sport/">----------</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte5/-/sport1/hi/football/default.stm">Football</option>	
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte6/-/sport1/hi/cricket/default.stm">Cricket</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte7/-/sport1/hi/rugby_union/default.stm">Rugby U</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte8/-/sport1/hi/rugby_league/default.stm">Rugby L</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte9/-/sport1/hi/tennis/default.stm">Tennis</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte10/-/sport1/hi/golf/default.stm">Golf</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte11/-/sport1/hi/motorsport/default.stm">Motorspt</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte12/-/sport1/hi/boxing/default.stm">Boxing</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte13/-/sport1/hi/athletics/default.stm">Athletics</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte14/-/sport1/hi/other_sports/snooker/default.stm">Snooker</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte15/-/sport1/hi/other_sports/horse_racing/default.stm">Racing</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte16/-/sport1/hi/other_sports/cycling/default.stm">Cycling</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte17/-/sport1/hi/other_sports/disability_sport/default.stm">Disability Sport</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhncr18/-/sport1/hi/other_sports/default.stm">Other</option>
+			<option value="http://news.bbc.co.uk/sport/">------</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte19/-/sport1/hi/northern_ireland/default.stm">N Ireland</option>
+			<option value="http://news.bbc.co.uk/go/sport/int/lhnte20/-/sport1/hi/scotland/default.stm">Scotland</option>
+            <option value="http://news.bbc.co.uk/go/sport/int/lhnte21/-/sport1/hi/wales/default.stm">Wales</option>
+	</select></td>
+</tr>
+<tr>
+	<td colspan="2"><div class="lhsgo"><input type="image" value="go" src="http://newsimg.bbc.co.uk/sol/shared/img/nav/v3_bbci/go.gif" width="20" height="16" align="right" border="0" alt="Go" /></div></td>
+</tr></form>
+</table>
+<div class="pvtb">
+<div class="lhsnlp">RELATED BBC SITES</div>
+<ul id="lhsOtherSites">
+	<li><a href="http://news.bbc.co.uk/go/sport/int/lhnte22/-/1/hi/default.stm" title="BBC News" class="lhsnl">NEWS</a></li>
+	<li><a href="http://www.bbc.co.uk/go/sport/int/lhnte23/-/http://www.bbc.co.uk/weather" title="BBC Weather" class="lhsnl">WEATHER</a></li>
+</ul>
+</div>
+
+<script language="JavaScript">getRssUrl()</script>
+	
+		
+<img alt="" id="livestats" src="http://stats.bbc.co.uk/o.gif?~RS~s~RS~Sport~RS~t~RS~HighWeb_Story~RS~i~RS~7178456~RS~p~RS~46655~RS~a~RS~International~RS~u~RS~/sport2/hi/tennis/7178456.stm~RS~r~RS~(none)~RS~q~RS~~RS~z~RS~56~RS~"/></td>
+        <td width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+        <td width="629" valign="top">
+            <table width="629" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="top" width="629">
+			
+                        
+                        
+<a name="startcontent"></a><span class="ds"><span class="lu">Last Updated: </span>Wednesday, 9 January 2008, 09:06 GMT</span>
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="2" height="2" alt="" border="0" vspace="0" hspace="0">
+<div class="mvb"><img src="http://newsimg.bbc.co.uk/sol/shared/img/v3/dot_629.gif" width="629" height="1" alt="" border="0" vspace="0" hspace="0"></div>
+
+	
+
+
+                        
+    
+        <div class="mvtb"><table cellspacing="0" width="416" border="0" cellpadding="0"><tr>
+            <td width="213"><a onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/sport2/hi/tennis/7178456.stm','status=no,scrollbars=yes,resizable=yes,width=370,height=445','Mailer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/sport2/hi/tennis/7178456.stm" target="Mailer">
+                <img src="http://newsimg.bbc.co.uk/sol/shared/img/v3/email.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+                E-mail this to a friend
+            </a></td>
+            <td width="203"><a onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/sport2/hi/tennis/7178456.stm','status=no,scrollbars=yes,toolbar=yes,resizable=yes,menubar=yes,width=600,height=445','Printer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/sport2/hi/tennis/7178456.stm" target="Printer">
+	       	<img src="http://newsimg.bbc.co.uk/sol/shared/img/v3/print.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+	 	Printable version
+            </a></td>
+        </tr></table></div>
+    
+    
+
+
+                        
+                    </td>
+                </tr>
+            </table>
+            <table width="629" border="0" cellpadding="0" cellspacing="0">
+		
+                
+		<tr>
+		<td colspan="3">
+			
+			<div class="mxb">
+				<div class="sh">
+					Hewitt blasts umpires after loss
+				</div>
+			</div>
+		</td>
+		</tr>
+    		
+		
+
+                <tr>
+                    <td valign="top" width="416">
+                        
+	
+		
+                    	<font size="2">
+		
+			<!-- S BO -->
+<!-- S IIMA -->
+	
+		<table border="0" cellspacing="0" align="right" width="203" cellpadding="0">
+			<tr><td>
+			<div>
+				<img src="http://newsimg.bbc.co.uk/media/images/44343000/jpg/_44343364_hewittbody.jpg" width="203" height="152" alt="Lleyton Hewitt" border="0" vspace="0" hspace="0">
+				<div class="cap">Hewitt saw his hopes of a record fifth Sydney title ended</div>
+			</div>
+			</td></tr>
+		</table>
+		
+	
+
+	
+<!-- E IIMA -->
+<!-- S SF -->
+<B>Australian Lleyton Hewitt hit out at the standard of umpiring after crashing out of the Sydney International.</B>
+<P>
+Hewitt lost to compatriot Chris Guccione 7-6 (7-4) 7-6 (7-2) and complained umpires had become too reliant on line-calling technology.
+<P>
+"I feel like the (Indian) cricketers," Hewitt, 26, said. "What's going on with all the refs these days? Useless."
+<P>
+Top seed Richard Gasquet also lost 3-6 6-3 6-4 to Dmitry Tursunov but women's top seed Justine Henin sailed through.
+<!-- E SF -->
+<P>
+Hewitt did not face a single break point against Guccione and conceded his luck just ran out, but not before complaining about umpiring standards across the board.
+<P>
+"I think central umpires have probably gone into their shell more so since Hawk-Eye (line-calling technology) has come in," said Hewitt, 26.
+<P>
+"At the smaller tournaments, where you don't have Hawk-Eye, you have to stand up and make decisions.
+<P>
+"It's obviously tough for them because one week they've got Hawk-Eye and the next week they don't."
+<P>
+
+	
+
+	
+		    
+			    <!-- S IBOX -->
+				<table cellspacing="0" align="right" width="208" border="0" cellpadding="0">
+				<tr>
+			            <td width="5"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="5" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+			            <td class="sibStdQuote">
+			                
+					
+			                
+			                     
+			                    <div>
+	
+		<div class="mva">
+			<div id="q1"></div>
+			<b>I'm number one in the world and I can understand everyone seeing me as the favourite</b>
+		<div id="q2"></div><br clear="all"/>	</div>
+	
+	
+
+
+
+
+</div>
+			                
+			                     
+			                    <div class="mva">
+	<div class="mva">Justine Henin</div>
+
+
+</div>
+			                
+			            </td>
+			        </tr>
+				</table>
+				
+			    <!-- E IBOX -->
+			
+	
+
+
+
+
+<P>
+Hewitt will now continue to train with coach Tony Roche in preparation for the Australian Open in Melbourne, which starts on Monday.
+<P>
+"I wasn't lucky today," he said. "I just hope it all comes together next week."
+<P>
+Gasquet, 21, said he had to adjust to playing with the heavy tennis balls which will be used on the hard-court surface in Melbourne.
+<P>
+"You have to be really strong to play with this ball," Gasquet said. "It's not my game to be really strong."
+<P>
+Henin was back at full strength in her first match on Australian soil for two years as she swept into the semi-finals with a 6-2 6-0 win over Estonia's Kaia Kanepi.
+<P>
+The Belgian will now meet world number four Ana Ivanovic, who saw off Katarina Srebotnik of Slovenia 6-3 3-6 6-2.
+<P>
+But whatever the outcome in Sydney, Henin goes into the first Grand Slam of the year in Melbourne as the player to beat.
+<P>
+"I'm number one in the world and I can understand everyone seeing me as the favourite," Henin, the reigning French Open and US Open champion, said.
+<P>
+"But I can tell you that every time I  wake up I know that anything can happen and I try to do the best I can."
+<P>
+Russian Svetlana Kuznetsova will face Nicole Vaidisova in the other semi-final after the Czech beat world number three Jelena Jankovic 6-4 4-6 6-4.
+<P>
+Kuznetsova, the second seed in Sydney, defeated Italy's Francesca Schiavone 6-4 6-0.
+<P><!-- E BO -->
+		
+                    	</font>
+		
+	
+	
+<br /><br clear="all" />
+                        
+                        <div id="socialBookMarks" class="sharesb"> 
+<h3>Bookmark with:</h3> 
+<ul>
+<li class="delicious"> 
+<a id="delicious" title="Post this story to Delicious" href="http://del.icio.us/post?url=http://news.bbc.co.uk/sport2/hi/tennis/7178456.stm&amp;title=Hewitt blasts umpires after loss">Delicious</a> 
+</li>
+<li class="digg"> 
+<a id="digg" title="Post this story to Digg" href="http://digg.com/submit?url=http://news.bbc.co.uk/sport2/hi/tennis/7178456.stm&amp;title=Hewitt blasts umpires after loss">Digg</a> 
+</li>
+<li class="reddit"> 
+<a id="reddit" title="Post this story to reddit" href="http://reddit.com/submit?url=http://news.bbc.co.uk/sport2/hi/tennis/7178456.stm&amp;title=Hewitt blasts umpires after loss">reddit</a> 
+</li>
+<li class="facebook"> 
+<a id="facebook" title="Post this story to Facebook" href="http://www.facebook.com/sharer.php?u=http://news.bbc.co.uk/sport2/hi/tennis/7178456.stm">Facebook</a> 
+</li>
+<li class="stumbleupon"> 
+<a id="stumbleupon" title="Post this story to StumbleUpon" href="http://www.stumbleupon.com/submit?url=http://news.bbc.co.uk/sport2/hi/tennis/7178456.stm&amp;title=Hewitt blasts umpires after loss">StumbleUpon</a> 
+</li>
+</ul>
+<p><a href="http://news.bbc.co.uk/1/hi/help/6915817.stm">What are these?</a></p>
+</div>
+<script language="JavaScript">
+<!--
+var bm = new BookMark({site:'Sport',storyid:7178456,sectionid:46655,url:'/sport2/hi/tennis/7178456.stm',edition:'International'});
+//-->
+</script>
+                    </td>
+                    <td width="10" valign="top"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+                    <td width="203" valign="top">
+			
+			
+                        
+
+
+
+
+
+    
+
+	
+                <div class="mvb">
+                        <div class="sah">
+                                SEE ALSO
+                        </div>
+                </div>
+                
+		
+			
+				<div class="arr">
+					
+	
+		<a href="/sport2/hi/tennis/7176628.stm">
+			
+			
+			
+			Robredo suffers shock Sydney loss
+			
+		</a>
+		
+			<br />
+		
+	
+
+					
+						
+							<span class="sad">
+								08 Jan 08&nbsp;|&nbsp;
+								Tennis
+								
+							</span>
+						
+					
+					
+				</div>
+			
+				<div class="arr">
+					
+	
+		<a href="/sport2/hi/tennis/7175090.stm">
+			
+			
+			
+			Blake dumped out of Sydney event
+			
+		</a>
+		
+			<br />
+		
+	
+
+					
+						
+							<span class="sad">
+								07 Jan 08&nbsp;|&nbsp;
+								Tennis
+								
+							</span>
+						
+					
+					
+				</div>
+			
+				<div class="arr">
+					
+	
+		<a href="/sport2/hi/tennis/7167656.stm">
+			
+			
+			
+			Thigh injury concern for Jankovic
+			
+		</a>
+		
+			<br />
+		
+	
+
+					
+						
+							<span class="sad">
+								04 Jan 08&nbsp;|&nbsp;
+								Tennis
+								
+							</span>
+						
+					
+					
+				</div>
+			
+		
+		<hr class="pufff">
+	
+
+	
+
+ 
+
+
+    <img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br />
+
+	
+    
+	
+		
+			<div class="mvb">
+				<div class="nlp">
+					RELATED BBC LINKS:
+					
+				</div>
+			</div>
+			<div class="miiib">
+				
+					<div class="arr">
+						<a href="http://www.bbc.co.uk/dna/606/ArticleSearchPhrase?phrase=tennis&amp;contenttype=-1&amp;articlesortby=DateUploaded&amp;show=20">
+							Latest tennis talk on 606
+							
+						</a>
+					</div>
+				
+					<div class="arr">
+						<a href="http://news.bbc.co.uk/sport1/hi/tennis/6102132.stm">
+							Tennis on the BBC
+							
+						</a>
+					</div>
+				
+					<div class="arr">
+						<a href="http://news.bbc.co.uk/sport1/hi/tennis/skills/default.stm">
+							Tennis tips and tricks
+							
+						</a>
+					</div>
+				
+					<div class="arr">
+						<a href="http://news.bbc.co.uk/sport1/hi/tennis/get_involved/4467076.stm">
+							Download our tennis masks
+							
+						</a>
+					</div>
+				
+			</div>
+			
+		
+	
+
+	
+		
+			<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="5" alt=""><br />
+		
+		
+                        <div class="mvb">
+                                <div class="nlp">
+                                        RELATED INTERNET LINKS:
+                                        
+                                </div>
+                        </div>
+                        <div class="miiib">
+                                
+                                        <div class="arr">
+                                                <a href="http://www.medibankinternational.com/">
+                                                        MediaBank International 2008
+                                                        
+                                                </a>
+                                        </div>
+                                
+                                        <div class="arr">
+                                                <a href="http://www.atptennis.com/en/">
+                                                        ATP
+                                                        
+                                                </a>
+                                        </div>
+                                
+                                        <div class="arr">
+                                                <a href="http://www.wtatour.com/">
+                                                        Sony Ericsson WTA
+                                                        
+                                                </a>
+                                        </div>
+                                
+                                        <div class="arr">
+                                                <a href="http://www.itftennis.com/">
+                                                        ITF
+                                                        
+                                                </a>
+                                        </div>
+                                
+                                        <div class="arr">
+                                                <a href="http://www.lta.org.uk/">
+                                                        LTA
+                                                        
+                                                </a>
+                                        </div>
+                                
+                        </div>
+                        
+                                
+                                        <div class="di">
+                                                The BBC is not responsible for the content of external internet sites
+                                        </div>
+                                        
+                                
+                        
+                
+	
+
+
+
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br />
+
+
+<div class="puffbox">
+
+<!-- S BO -->
+	<!-- S IINC -->
+
+
+
+
+
+
+
+<!-- newstracker puffbox sport 7178456 -->
+
+
+
+
+
+
+
+<!-- E IINC -->
+<!-- E BO -->
+
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br /></div>
+
+
+
+                    </td>
+                </tr>
+                
+            </table>
+        </td>
+    </tr>
+</table>
+
+	<div id="sportfooter">
+        <div id="f1">
+	<div>
+	BBC PRODUCTS AND SERVICES<br />
+	<a href="http://www.bbc.co.uk/go/sport1/int/footer/-/http://www.bbc.co.uk/email/sport" >Daily and weekly e-mails</a> | <a href="http://news.bbc.co.uk/go/sport1/int/footer/-/sport1/hi/2823593.stm">Mobiles</a> | <a href="http://news.bbc.co.uk/sport2/hi/minimotty/">Desktop Tools</a> | <a href="https://ssl.bbc.co.uk/syndication/html/registration/">News Feeds</a> | <a href="http://news.bbc.co.uk/sport1/hi/tv_and_radio/5345480.stm" >Interactive Television</a> | <a href="http://www.bbc.co.uk/radio/podcasts/directory/genre/sport/">Downloads</a>
+	</div>
+</div>
+<ul id="serviceBar">
+	<li class="copyright2"><div class="logo"><a href="http://news.bbc.co.uk/sport1/shared/bsp/hi/services/copyright/html/default.stm">BBC Copyright Notice</a></div><div class="copyrightdate">MMVIII</div></li>
+	<li class="footertotop"><a href="#top">Back to top ^^</a></li>
+</ul>
+
+
+        <div id="f3"><div>
+
+	
+	<a class="fl" href="/sport2/hi/default.stm">Sport Homepage</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/football/default.stm">Football</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/cricket/default.stm">Cricket</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/rugby_union/default.stm">Rugby Union</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/rugby_league/default.stm">Rugby League</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/tennis/default.stm">Tennis</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/golf/default.stm">Golf</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/motorsport/default.stm">Motorsport</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/boxing/default.stm">Boxing</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/athletics/default.stm">Athletics</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/other_sports/snooker/default.stm">Snooker</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/other_sports/horse_racing/default.stm">Horse Racing</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/other_sports/cycling/default.stm">Cycling</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/other_sports/disability_sport/default.stm">Disability sport</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/other_sports/olympics_2012/default.stm">Olympics 2012</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/tv_and_radio/sport_relief/default.stm">Sport Relief</a>
+	 | 
+	
+
+
+	
+	<a class="fl" href="/sport2/hi/other_sports/default.stm">Other sport...</a>
+	
+	<br /><br />
+</div></div>
+        <div id="ad3" class="ad3"></div>
+<div id="f4">
+	<div>
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="629" height="1" border="0" alt="" class="vspace5">
+	<a href="http://news.bbc.co.uk/sport2/hi/front_page/6470385.stm" >Help</a> |
+	<a href="http://www.bbc.co.uk/privacy/">Privacy &amp; Cookies Policy</a> | <a href="http://news.bbc.co.uk/sport1/hi/front_page/2823295.stm" >News sources</a> | <a href="http://www.bbc.co.uk/info/">About the BBC</a> | <a href="http://news.bbc.co.uk/sport2/hi/front_page/3701180.stm">Contact us</a>
+	</div>
+</div>
+<!-- START NetRatings Measurement V5.1 -->
+<!-- COPYRIGHT 2003 NetRatings Limited -->
+<script language="JavaScript" type="text/javascript">
+<!--
+var _rsCI="bbc";
+var _rsCG="0";
+var _rsDT=1;
+var _rsDU=0;
+var _rsDO=0;
+var _rsX6=0;
+var _rsSI=escape(window.location);
+var _rsLP=location.protocol.indexOf('https')>-1?'https:':'http:';
+var _rsRP=escape(document.referrer);
+var _rsND=_rsLP+'//secure-uk.imrworldwide.com/';
+
+ if (parseInt(navigator.appVersion)>=4)
+ {
+     var _rsRD=(new Date()).getTime();
+     var _rsSE=1;
+     var _rsSV="";
+     var _rsSM=0.1;
+     _rsCL='<scr'+'ipt language="JavaScript" type="text/javascript" src="'+_rsND+'v51.js"><\/scr'+'ipt>';
+ }
+ else
+ {
+     _rsCL='<img src="'+_rsND+'cgi-bin/m?ci='+_rsCI+'&cg='+_rsCG+'&si='+_rsSI+'&rp='+_rsRP+'">';
+ }
+ document.write(_rsCL);
+//-->
+</script>
+<noscript>
+ <img src="//secure-uk.imrworldwide.com/cgi-bin/m?ci=bbc&amp;cg=0" alt=""/>
+</noscript>
+<!-- END RedMeasure V5.1 -->
+
+<img src="/sol/shared/img/timezone/z.zzz" width="0" height="0"/>
+
+
+<div id="ad2" class="ad2"></div>
+<div id="bbccomWebBug" class="bbccomWebBug"></div>
+
+        <br />
+	</div>
+
+</body>
+</html>

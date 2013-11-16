@@ -1,0 +1,821 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>CrunchGear  &raquo; Archive   &raquo; NetGear CES cavalcade: Wire-line and hotter Wireless</title>
+	<meta http-equiv="content-type" content="text/xhtml; charset=utf-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="generator" content="WordPress 2.3.2" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/stylesheets/layout.css" />
+	<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/stylesheets/layout_ie6.css" /><![endif]-->
+	<script type="text/javascript" src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/javascripts/mootools.1.11.js"></script>
+	<script type="text/javascript" src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/javascripts/site.js"></script>
+	<script defer="defer" type="text/javascript" src="http://www.sphere.com/widgets/sphereit/js?siteid=__SITE_ID__"></script>
+	<script type="text/javascript" src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/javascripts/comments.js"></script>
+	
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.crunchgear.com/xmlrpc.php?rsd" />
+ <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.crunchgear.com/wp-includes/wlwmanifest.xml" /> <script language="javascript1.4" type="text/javascript" src="http://www.crunchgear.com/wp-content/plugins/audio-player/audio-player.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+		function collapseThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} else {
+				comment.className += " collapsed";
+			}
+		}
+
+		function expandThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} 
+		}
+		
+		function findBody(el)
+		{
+			var divs = el.getElementsByTagName("div");
+			var ret;
+			for(var i = 0; i < divs.length; ++i) {
+				if(divs.item(i).className.indexOf("body") > -1)
+					return divs.item(i);
+			}
+			return false;
+		}
+	
+		function onAddComment() {
+			//checkDocumentIntegrity();
+			var el = document.getElementById("commentform");
+			// Future release: Check if form is filled correctly and mark the form fields.
+			el.submit();
+		}
+		
+		function moveAddCommentBelow(theId, threadId, collapse)
+		{
+			expandThread( theId );
+			var addComment = document.getElementById("addcomment");
+			if(!addComment)
+			{
+			  	alert("ERROR:\nThreaded Comments can't find the 'addcomment' div.\nThis is probably because you have changed\nthe comments.php file.\nMake sure there is a tag around the form\nthat has the id 'addcomment'"); 
+				return
+			}
+			var comment = document.getElementById(theId);
+			if(collapse)
+			{
+				for(var i = 0; i < comment.childNodes.length; ++i) {
+					var c = comment.childNodes.item(i);
+					if(typeof(c.className) == "string" && c.className.indexOf("collapsed")<0) {
+						c.className += " collapsed";
+					}
+				}
+			}
+			addComment.parentNode.removeChild(addComment);
+
+			comment.appendChild(addComment);			
+			if(comment.className.indexOf("alt")>-1) {
+				addComment.className = addComment.className.replace(" alt", "");					
+			} else {
+				addComment.className += " alt";
+			}
+		        var replyId = document.getElementById("comment_reply_ID");
+			if(replyId == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no hidden form field called\n'comment_reply_ID'. This is probably because you\nchanged the comments.php file and forgot\nto include the field. Please take a look\nat the original comments.php and copy the\nform field over.");
+			}
+			replyId.value = threadId;
+			var reRootElement = document.getElementById("reroot");
+			if(reRootElement == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no anchor tag called 'reroot' where\nthe comment form starts.\nPlease compare your comments.php to the original\ncomments.php and copy the reroot anchor tag over.");
+			}
+			reRootElement.style.display = "block";
+			var aTags = comment.getElementsByTagName("A");
+			var anc = aTags.item(0).id;
+			//document.location.href = "#"+anc;
+			document.getElementById("comment").focus();
+		}
+
+		function checkDocumentIntegrity()
+		{
+			str = "";
+			
+			str += checkElement("reroot","div tag");
+			str += checkElement("addcomment", "div tag");
+			str += checkElement("comment_reply_ID", "hidden form field");
+			str += checkElement("content", "div tag");
+			str += checkElement("comment", "textfield");
+			str += checkElement("addcommentanchor", "anchor tag");
+			
+			if(str != "")
+			{
+				str = "Brian's Threaded Comments are missing some of the elements that are required for it to function correctly.\nThis is probably the because you have changed the original comments.php that was included with the plugin.\n\nThese are the errors:\n" + str;
+				str += "\nYou should compare your comments.php with the original comments.php and make sure the required elements have not been removed.";
+
+				alert(str);
+			}
+		}
+               
+		function checkElement(theId, elDesc)
+		{
+			var el = document.getElementById(theId);
+			if(!el)
+			{
+				if(elDesc == null)
+					elDesc = "element";
+				return "- The "+elDesc+" with the ID '" +theId + "' is missing\n"; 
+			}
+			else 
+				return "";
+		}
+		
+		function reRoot(reRootContainerName)
+		{
+			var addComment = document.getElementById("addcomment");			
+			var reRootElement = document.getElementById("reroot");
+			reRootElement.style.display = "none";
+//			var content = document.getElementById("content");
+			var container = document.getElementById(reRootContainerName);
+			addComment.parentNode.removeChild(addComment);
+//			content.appendChild(addComment);
+			container.appendChild(addComment);
+			addComment.className = addComment.className.replace(" alt", "");
+			document.location.href = "#addcommentanchor";
+			document.getElementById("comment").focus();				
+			document.getElementById("comment_reply_ID").value = "0";
+		}			
+		
+		function changeCommentSize(d)
+		{
+			var el = document.getElementById("comment");
+			var height = parseInt(el.style.height);
+			if(!height && el.offsetHeight)
+				height = el.offsetHeight;
+			height += d;
+			if(height < 20) 
+				height = 20;
+			el.style.height = height+"px";
+		}		
+-->
+</script>
+<style type="text/css">
+.comment 
+{
+	position: 				relative;
+	margin:					3px;
+	margin-top:				6px;
+/*	border: 				1px solid #666; */
+	padding:				4px 4px 4px 8px;
+	background-color:		#fff;
+}
+
+.odd
+{
+	background-color: #f8f8f8;
+}
+
+.comment div {
+	position: 				relative;
+}
+
+.comment .comment img
+{
+	margin: 				0px;
+}
+
+.comment .collapseicon 
+{
+	width: 					13px;
+	height: 				13px;
+	overflow:				hidden;
+	background-image: 		url(http://www.crunchgear.com/wp-content/plugins/briansthreadedcomments.php?image=subthread-open.png);
+}
+
+.collapsed .collapseicon 
+{
+	background-image: 		url(http://www.crunchgear.com/wp-content/plugins/briansthreadedcomments.php?image=subthread.png);
+}
+
+
+.comment .reply {
+	text-align: 			right;
+	font-size: 				80%;
+	padding: 				0px 6px 6px 0px;
+}
+
+.comment
+{
+	border: 	1px solid #ddd;
+	margin-top: 			10px;
+}
+
+input#subscribe
+{
+	width: auto;
+}
+
+.comment .body .content
+{
+	padding:				0px 3px 0px 3px;
+	width: 					100%;	
+	overflow: 				auto; 
+}
+
+.comment .title abbr
+{
+	border: none;
+}
+
+.collapsed .body, .collapsed .comment
+{
+	display:				none;
+}
+/*
+#addcomment small, #addcomment div
+{
+	padding:				3px;
+}
+*/
+#commentform textarea {
+	width: 97%;
+}
+</style>
+
+	<!-- Added By Democracy Plugin. Version 2.0.1 -->
+	<script type='text/javascript' src='http://www.crunchgear.com/wp-content/plugins/democracy/democracy.js'></script>
+	<link rel='stylesheet' href='http://www.crunchgear.com/wp-content/plugins/democracy/basic.css' type='text/css' />
+	<link rel='stylesheet' href='http://www.crunchgear.com/wp-content/plugins/democracy/style.css' type='text/css' />
+	<link rel="icon" href="http://www.crunchgear.com/favicon.jpg" type="image/jpg" />
+	<link rel="shortcut icon" href="http://www.crunchgear.com/favicon.jpg" type="image/jpg" />
+<link rel="stylesheet" href="http://www.crunchgear.com/index.php?cffp_action=css_published" type="text/css" media="screen" /><!-- Google Analytics Tracking by Google Analyticator: http://cavemonkey50.com/code/google-analyticator/ -->
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script><script type="text/javascript"> _uacct="UA-991406-4";  urchinTracker(); </script>
+<meta name="description" content="[photopress:Hi_Res_ReadyNAS_DUO_front_1_2_3.jpg,full,pp_image]  NetGear release a heady 8 products today including a new home storage NAS with redundant drives and wireless devices with improved HD streaming ..." />
+<link rel='stylesheet' id='szProfAndEmbedStyleSheet' href='http://www.sezwho.com/css/1.3/prof_tc.css' type='text/css' media='screen' />
+
+	<script type="text/javascript" src="http://www.crunchgear.com/wp-content/plugins/share-this/share-this.php?akst_action=js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.crunchgear.com/wp-content/plugins/share-this/share-this.php?akst_action=css" />
+	<style type="text/css" media="screen">
+
+/* Begin Contact Form ][ CSS */
+.contactform {
+	position: static;
+	overflow: hidden;
+}
+
+.contactleft {
+	width: 25%;
+	text-align: right;
+	clear: both;
+	float: left;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+    font-weight: bold;
+}
+
+.contactright {
+	width: 70%;
+	text-align: left;
+	float: right;
+	display: inline;
+	padding: 4px;
+	margin: 5px 0;
+}
+
+.contacterror {
+	border: 2px solid #ff0000;
+}
+/* End Contact Form ][ CSS */
+
+	</style>
+
+<link rel="stylesheet" href="http://www.crunchgear.com/wp-content/plugins/wppa/theme/wppa_style.css" type="text/css" media="screen" />
+		
+</head>
+<body>
+	
+<div id="top" class="gasket">
+
+	<div class="above_header">
+		
+		<!-- FM Leaderboard Zone -->
+		<script type='text/javascript'>
+		var federated_media_section = '';
+		</script>
+		<script type='text/javascript' src='http://static.fmpub.net/zone/402'></script>
+		<!-- FM Leaderboard Zone -->
+		
+		<script type="text/javascript"><!--
+		google_ad_client = "pub-6181816114362650";
+		google_ad_width = 728;
+		google_ad_height = 15;
+		google_ad_format = "728x15_0ads_al_s";
+		google_ad_channel = "";
+		google_color_border = "B9B9B9";
+		google_color_bg = "B9B9B9";
+		google_color_link = "000000";
+		google_color_text = "000000";
+		google_color_url = "008000";
+		//-->
+		</script>
+		<script type="text/javascript"
+		 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+	</div>
+
+	<div id="header">
+		<h1><a href="/">CrunchGear</a></h1>
+		<div class="navigation">
+			<form action="http://www.crunchgear.com/index.php" method="get">
+			<fieldset>
+					<input type="text" name="s" value=""/> 
+					<input type="image" src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/header/btn_search.gif" class="search_button" alt="Search"/>
+			</fieldset>
+			</form>
+			<ul>
+				<li class="rss"><a href="http://feeds.feedburner.com/crunchgear">RSS</a></li>
+				<li class="email"><a href="http://www.feedburner.com/fb/a/emailverifySubmit?feedId=446590">Subscribe by Email</a></li>
+				<li class="tip"><a href="http://www.crunchgear.com/contact/">Got a tip?</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="main">
+
+		<div id="content">
+
+			<div class="entry" id="post-19231">
+
+				<h2><a href="http://www.crunchgear.com/2008/01/06/netgear-ces-cavalcade-wire-line-and-hotter-wireless/" rel="bookmark" title="Permanent Link to NetGear CES cavalcade: Wire-line and hotter Wireless">NetGear CES cavalcade: Wire-line and hotter Wireless</a></h2>
+
+				<ul class="info">
+					<li class="author">Written by <a href="http://www.crunchgear.com/author/johnbiggs/" title="Posts by John Biggs">John Biggs</a></li>
+					<li class="date">January 6th, 2008</li>
+					<li class="comments"><a href="http://www.crunchgear.com/2008/01/06/netgear-ces-cavalcade-wire-line-and-hotter-wireless/#comments"><span>No Comments</span></a></li>
+				</ul>
+				<div class="clear"></div>
+				
+				<div class="entry_content">
+				
+				<p><a href="http://www.crunchgear.com/?pp_album=main&amp;pp_cat=ces-2008-netgear&amp;pp_image=Hi_Res_ReadyNAS_DUO_front_1_2_3.jpg" title="Hi Res ReadyNAS DUO front 1 2 3"><img src="http://www.crunchgear.com/wp-content/photos/Hi_Res_ReadyNAS_DUO_front_1_2_3.jpg" class="pp_image" alt="Hi Res ReadyNAS DUO front 1 2 3" width="480" height="560" /></a></p>
+<p>NetGear release a heady 8 products today including a new home storage NAS with redundant drives and wireless devices with improved HD streaming over WiFi complete with increased range.<br />
+<span id="more-19231"></span><br />
+To begin, we have RangeMax Dual Band Wireless-N adapter. You know what to do with it. Stick it in and you have 802.11.n. However, you&#8217;ve got some quality of service built-in so you&#8217;ll get good HD content on the fly.</p>
+<p>How about a router? The RangeMax Wireless-N Gigabit Router offers video QoS and 4-port Gigabit Ethernet switch along with 802.11n. Are you sensing a trend? 802.11n is NetGear&#8217;s new play.</p>
+<p>The HD/Gaming 5 GHz Wireless-N WNHDEB111 is a wireless bridge for game consoles and other devices. It basically connects to your N gear and creates a wired environment at the console that can take advantage of N&#8217;s improved speeds.</p>
+<p>They&#8217;re also selling two new dual-band routers, the 3300 and 3500, which offer G and N. </p>
+<p>The ReadyNAS Duo is one of the coolest devices. It&#8217;s a two-drive NAS that stores all of your content and streams HD video and high quality audio. It acts as a Media Center server so you can share with XBox 360s and PCs.</p>
+<p>Finally, for fans of wire-line &mdash; I know you&#8217;re out there, Frank! &mdash; we have the XEPSB103 wireline kit. The kit isn&#8217;t an actual wall wart so you won&#8217;t have to use the entire outlet to connect your computer to 85Mbps of power.</p>
+<p>No pricing off-hand but click below to view a gallery of the new gear.<br />
+<a href="http://www.crunchgear.com/?pp_album=main&amp;pp_cat=ces-2008-netgear&amp;pp_image=Hires_HDXB111_1_2_3.jpg" title="Hires HDXB111 1 2 3"><img src="http://www.crunchgear.com/wp-content/photos/thumb_Hires_HDXB111_1_2_3.jpg" class="pp_image" alt="Hires HDXB111 1 2 3" width="75" height="75" /></a><a href="http://www.crunchgear.com/?pp_album=main&amp;pp_cat=ces-2008-netgear&amp;pp_image=hires_WNDR3300_3_4rtview_1_2_3.jpg" title="hires WNDR3300 3 4rtview 1 2 3"><img src="http://www.crunchgear.com/wp-content/photos/thumb_hires_WNDR3300_3_4rtview_1_2_3.jpg" class="pp_image" alt="hires WNDR3300 3 4rtview 1 2 3" width="75" height="75" /></a><a href="http://www.crunchgear.com/?pp_album=main&amp;pp_cat=ces-2008-netgear&amp;pp_image=hires_WNR3500_3_4rtview_copy.jpg" title="hires WNR3500 3 4rtview copy"><img src="http://www.crunchgear.com/wp-content/photos/thumb_hires_WNR3500_3_4rtview_copy.jpg" class="pp_image" alt="hires WNR3500 3 4rtview copy" width="75" height="75" /></a><a href="http://www.crunchgear.com/?pp_album=main&amp;pp_cat=ces-2008-netgear&amp;pp_image=hires_WNHDEB111_standingview.jpg" title="hires WNHDEB111 standingview"><img src="http://www.crunchgear.com/wp-content/photos/thumb_hires_WNHDEB111_standingview.jpg" class="pp_image" alt="hires WNHDEB111 standingview" width="75" height="75" /></a><a href="http://www.crunchgear.com/?pp_album=main&amp;pp_cat=ces-2008-netgear&amp;pp_image=hires_WNDA3100.jpg" title="hires WNDA3100"><img src="http://www.crunchgear.com/wp-content/photos/thumb_hires_WNDA3100.jpg" class="pp_image" alt="hires WNDA3100" width="75" height="75" /></a><a href="http://www.crunchgear.com/?pp_album=main&amp;pp_cat=ces-2008-netgear&amp;pp_image=Hires_XEPSB103.jpg" title="Hires XEPSB103"><img src="http://www.crunchgear.com/wp-content/photos/thumb_Hires_XEPSB103.jpg" class="pp_image" alt="Hires XEPSB103" width="75" height="75" /></a><a href="http://www.crunchgear.com/?pp_album=main&amp;pp_cat=ces-2008-netgear&amp;pp_image=hires_WNHDE111_lftview.jpg" title="hires WNHDE111 lftview"><img src="http://www.crunchgear.com/wp-content/photos/thumb_hires_WNHDE111_lftview.jpg" class="pp_image" alt="hires WNHDE111 lftview" width="75" height="75" /></a></p>
+			
+				</div>
+				
+				<div class="clear"></div>
+				<div class="related">
+					<h4>Related Posts</h4>
+					<ul><li><a href="http://www.crunchgear.com/2008/01/07/linksys-ces-cavalcade/" rel="bookmark" title="January 7, 2008">Linksys CES cavalcade</a></li>
+<li><a href="http://www.crunchgear.com/2008/01/05/logitechs-ces-cavalcade-new-harmony-remote-squeezebox-lead-the-day/" rel="bookmark" title="January 5, 2008">Logitech&#8217;s CES cavalcade: New Harmony Remote, Squeezebox lead the day</a></li>
+<li><a href="http://www.crunchgear.com/2008/01/04/hands-on-with-the-samsung-progressive-hd-camcorder-sc-hmx10c/" rel="bookmark" title="January 4, 2008">Hands on with the Samsung Progressive HD camcorder, SC-HMX10C</a></li>
+<li><a href="http://www.crunchgear.com/2008/01/09/hands-on-with-nykos-slew-of-gaming-accessories/" rel="bookmark" title="January 9, 2008">Hands on with Nyko&#8217;s slew of gaming accessories</a></li>
+<li><a href="http://www.crunchgear.com/2008/01/07/ces-2008-nykos-wireless-video-game-console-accessories-includes-wireless-wii-nunchuck-adapter/" rel="bookmark" title="January 7, 2008">CES 2008: Nyko&#8217;s wireless video game console accessories includes wireless Wii nunchuck adapter</a></li>
+</ul><!--Similar Posts took 0.014 seconds--><small></small>				
+</div>
+<div class="tag-list">Tags: <a href="http://www.crunchgear.com/tag/80211n/" rel="tag">802.11n</a>, <a href="http://www.crunchgear.com/tag/CES-2008/" rel="tag">CES 2008</a>, <a href="http://www.crunchgear.com/tag/ces-2008-exclusive/" rel="tag">ces 2008 exclusive</a>, <a href="http://www.crunchgear.com/tag/hot/" rel="tag">hot</a>, <a href="http://www.crunchgear.com/tag/Netgear/" rel="tag">Netgear</a>, <a href="http://www.crunchgear.com/tag/wireless/" rel="tag">wireless</a></div>				
+				<div class="tools">
+					<ul class="tools">
+						<li class="digg"><script type='text/javascript'>
+<!--
+digg_url='http://www.crunchgear.com/2008/01/06/netgear-ces-cavalcade-wire-line-and-hotter-wireless/';
+digg_skin = 'compact';
+digg_bgcolor = '#F3F4F3';
+digg_title = 'NetGear CES cavalcade: Wire-line and hotter Wireless';
+digg_bodytext = '';
+digg_topic = '';
+//-->
+</script>
+<script type='text/javascript' src='http://digg.com/tools/diggthis.js'></script>
+</li>
+						<li class="sphere"><a href="http://www.sphere.com/search?q=sphereit:http://www.crunchgear.com/2008/01/06/netgear-ces-cavalcade-wire-line-and-hotter-wireless/" onclick="return Sphere.Widget.search('http://www.crunchgear.com/2008/01/06/netgear-ces-cavalcade-wire-line-and-hotter-wireless/')">Sphere It</a></li>
+						<li class="sharethis"><a href="http://www.crunchgear.com/?p=19231&amp;akst_action=share-this" onclick="akst_share('19231', 'http%3A%2F%2Fwww.crunchgear.com%2F2008%2F01%2F06%2Fnetgear-ces-cavalcade-wire-line-and-hotter-wireless%2F', 'NetGear+CES+cavalcade%3A+Wire-line+and+hotter+Wireless', '19231', '4efe561e-f46b-42a5-940c-1e162b896258'); return false;" title="Email, post to del.icio.us, etc." id="akst_link_19231" class="akst_share_link" rel="noindex nofollow">ShareThis</a>
+</li>
+					</ul>
+				</div>
+					
+			</div>
+
+<div class="entry" style="padding-left: 20px; width: 577px;">
+<script type="text/javascript"><!--
+ch_client = "techcrunch";
+ch_type = "rpu";
+ch_alternate_css_url = "http://scripts.chitika.net/static/crunchgearrpu.css";
+ch_noprice = "1";
+ch_width = 468;
+ch_height = 90;
+ch_nosearch = 1;
+ch_non_contextual = 1;
+ch_default_category = "200001";
+ch_sid = "crunchgear RPU";
+ch_query = "802.11n","CES 2008","ces 2008 exclusive","hot","Netgear","wireless";
+//--></script>
+<script src="http://scripts.chitika.net/eminimalls/mm.js" type="text/javascript">
+</script>
+</div>
+<div class="clear"></div>
+
+
+
+<!-- You can start editing here. -->
+
+
+
+
+<div id="commentwrap">
+
+		<div class="post_a_comment">
+			<a href="#addcommentanchor">
+				<img src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/comments/post-a-comment.gif" />
+			</a>
+		</div>
+		
+	<h3 id="comments">
+		No Responses so far
+		<span class="comments_feed_icon">
+			<a href="http://www.crunchgear.com/2008/01/06/netgear-ces-cavalcade-wire-line-and-hotter-wireless/feed/"><img src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/comments/feed.gif"></a>
+		</span>
+	</h3>
+
+<div><table class='szw_t szw_t_c' id='cpEmbedPageTableid'>  <tr>    <td class='szw_tc szw_tc_c'>      <p class='szw_sp szw_sp_c'>Filter:<SELECT onchange="javascript:SezWho.Utils.CommentFilterProcessing.cpshowFilterOptions(this)"><OPTION value="0">All Comments</OPTION><OPTION value="5.5">Good Comment(3+)</OPTION><OPTION value="7.5">Great Comments(4+)</OPTION></SELECT> <a href="javascript:void SezWho.Utils.openPage('help');">What is this?</a>      </p>    </td>    <td class='szw_bc szw_bc_c'><a href="javascript:void SezWho.Utils.openPage('home');" class='szw_bl'/>    </td>  </tr></table></div>
+	<ol class="commentlist">
+<li>No comments yet.</li>	</ol>
+
+<h3 class="trackback_heading">Trackbacks/Pings</h3>
+
+<ol class="trackback_list">	
+<li>No trackbacks or pings yet.</li></ol>
+
+
+<h3 id="respond">Leave a Reply</h3>
+<a id="addcommentanchor" name="addcommentanchor"></a>
+<div class="cform" id="addcomment">
+
+<form action="http://www.crunchgear.com/wp-comments-post.php" method="post" id="commentform">
+<div id="reroot" style="display: none;">
+	<small><a href="#" onclick="reRoot('commentwrap'); return false;">
+		Click here to cancel "reply".
+	</a></small>
+</div>
+
+
+
+<p><input type="text" name="author" id="author" value="" size="26" tabindex="1" />
+<label for="author">Name </label></p>
+
+<p><input type="text" name="email" id="email" value="" size="26" tabindex="2" />
+<label for="email">Mail (will not be published) </label></p>
+
+<p><input type="text" name="url" id="url" value="" size="26" tabindex="3" />
+<label for="url">Website</label></p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+
+<p><textarea name="comment" id="comment" cols="60" rows="8" tabindex="4"></textarea></p>
+
+<p>
+
+<input type='hidden' id='comment_reply_ID' name='comment_reply_ID' value='0' />
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+
+<input name="submit" type="image" src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/comments/submit.gif" id="submit" tabindex="5" value="Submit Comment" />
+</p>
+<input type="hidden" name="comment_post_ID" value="19231" />
+<input type="hidden" name="redirect_to" value="/2008/01/06/netgear-ces-cavalcade-wire-line-and-hotter-wireless/" />
+</p>
+
+
+</form>
+</div> <!-- cform -->
+</div> <!-- commentwrap -->
+
+
+		</div>
+		
+		<div id="sidecar">
+			
+			<div class="cluster">
+				<ul class="tabs">
+					<li class="first active"><a href="#">Featured</a></li>
+					<li><a href="#">Most Recent</a></li>
+					<li class="last"><a href="#">Most Commented</a></li>
+				</ul>
+				<h3>Featured</h3>
+				<ul class="list">
+<li><a href="http://www.crunchgear.com/2008/01/15/what-to-expect-when-youre-expecting-iphone-firmware-113/">What to expect when you're expecting iPhone firmware 1.1.3</li><li><a href="http://www.crunchgear.com/2008/01/14/macworld-2008-anticipation/">MacWorld 2008: Anticipation</li><li><a href="http://www.crunchgear.com/2008/01/14/pleo-dies-for-our-sins/">Pleo dies for our sins</li><li><a href="http://www.crunchgear.com/2008/01/11/on-gizmodos-douchery-and-blogging/">On Gizmodo's douchery and blogging</li><li><a href="http://www.crunchgear.com/2008/01/10/ces-2008-its-done-and-were-tired-thanks-for-tuning-in/">CES 2008: It's done and we're tired, thanks for tuning in!</li>				</ul>
+				<h3 style="display: none;">Most Recent</h3>
+				<ul class="list" style="display: none;">
+<li><a href="http://www.crunchgear.com/2008/01/15/what-to-expect-when-youre-expecting-iphone-firmware-113/"rel="bookmark" title="Permanent Link: What to expect when you're expecting iPhone firmware 1.1.3">What to expect when you're expecting iPhone firmware 1.1.3</a></li><li><a href="http://www.crunchgear.com/2008/01/15/video-game-industry-starts-a-political-action-committee-will-give-money-to-favored-politicians/"rel="bookmark" title="Permanent Link: Video game industry starts a political action committee, will give money to favored politicians ">Video game industry starts a political action committee, will give money to favored politicians </a></li><li><a href="http://www.crunchgear.com/2008/01/15/alltel-does-over-the-air-music-synching-and-streaming/"rel="bookmark" title="Permanent Link: Alltel does over-the-air music synching and streaming">Alltel does over-the-air music synching and streaming</a></li><li><a href="http://www.crunchgear.com/2008/01/15/the-worst-website-ever-beautiful-sweet-cat-pictures/"rel="bookmark" title="Permanent Link: The worst website ever: Beautiful &amp; Sweet Cat Pictures">The worst website ever: Beautiful & Sweet Cat Pictures</a></li><li><a href="http://www.crunchgear.com/2008/01/15/star-wars-kicks-i-see-your-schwartz-is-as-big-as-mine/"rel="bookmark" title="Permanent Link: Star Wars kicks: I see your Schwartz is as big as mine">Star Wars kicks: I see your Schwartz is as big as mine</a></li>				</ul>
+				<h3 style="display: none;">Most Commented</h3>
+				<ul class="list" style="display: none;">
+					<li><a href="http://www.crunchgear.com/2008/01/10/tata-nano-the-worlds-least-expensive-car/">Tata Nano, the world's least expensive car (77 comments)</a></li>
+					<li><a href="http://www.crunchgear.com/2008/01/07/contest-the-saddest-ces-meatballhush-puppy-in-the-world/">Contest: The saddest CES meatball/hush puppy in the world (67 comments)</a></li>
+					<li><a href="http://www.crunchgear.com/2008/01/11/on-gizmodos-douchery-and-blogging/">On Gizmodo's douchery and blogging (55 comments)</a></li>
+					<li><a href="http://www.crunchgear.com/2008/01/02/new-apple-notebook-spotted-we-told-you-so/">New Apple notebook spotted, we told you so (42 comments)</a></li>
+					<li><a href="http://www.crunchgear.com/2008/01/09/ces-2008-exclusive-crunchgear-interviews-penn-jillette-about-cracklecom-mormons-and-his-choices-in-technology/">CES 2008 Exclusive: CrunchGear interviews Penn Jillette about Crackle.com, Mormons, and his choices in technology (36 comments)</a></li>
+				</ul>
+			
+<center>
+<a href="http://www.crunchgear.com/tag/macworld-2008"><img src="http://www.crunchgear.com/bugs/macworld08300.jpg" alt='300smn.jpg' /></a>
+</center>
+
+</div>
+			
+			<div class="ads">
+				
+				
+				<!-- FM Medium Rectangle Zone -->
+				<script type='text/javascript'>
+				var federated_media_section = '';
+				</script>
+				<script type='text/javascript' src='http://static.fmpub.net/zone/403'></script>
+				<!-- FM Medium Rectangle Zone -->
+
+				<h3>CrunchGear Sponsors</h3>				
+				<div class="left">					
+					<!-- Place ad code here... -->					
+					<a href="http://www.scottevest.com/Merchant2/merchant.mv?Screen=SFNT&Store_Code=sev&AFFIL=ebTwey"><img src="http://www.crunchgear.com/crunchgear.gif"/></a>
+
+					<!-- FM Square Button (1) Zone -->
+					<script type='text/javascript'>
+					var federated_media_section = '';
+					</script>
+					<script type='text/javascript' src='http://static.fmpub.net/zone/23'></script>
+					<!-- FM Square Button (1) Zone -->
+					
+					<!-- FM Skyscraper Zone -->
+					<script type='text/javascript'>
+					var federated_media_section = '';
+					</script>
+					<script type='text/javascript' src='http://static.fmpub.net/zone/404'></script>
+					<!-- FM Skyscraper Zone -->					
+
+				</div>
+				
+				<div class="right">
+					
+					<!-- Place ad code here. Smaller ads can go here. Up to 125px wide... -->
+					<a href="http://www.rackspace.com/index.php?CMP=crunchgear_sponsorship">
+						<img src="http://www.crunchgear.com/wp-content/uploads/2008/01/rackspace-125x125-learnmore.gif" title="RackSpace"/>
+					</a>
+
+					<a href="http://crowdfavorite.com" alt="Crowd Favorite" title="Custom WordPress and web-application development">
+						<img src="http://www.crunchgear.com/wp-content/misc-ads/crowdfavorite.gif"/>
+					</a>
+
+					<script type="text/javascript"><!--
+					ch_client = "techcrunch";
+					ch_type = "rpu";
+					ch_alternate_css_url = "http://scripts.chitika.net/static/crunchgearrpu.css";
+					ch_noprice = "1";
+					ch_width = 120;
+					ch_height = 600;
+					ch_nosearch = 1;
+					ch_non_contextual = 1;
+					ch_default_category = "200001";
+					ch_sid = "crunchgear RPU";
+					var ch_queries = new Array( "802.11n","CES 2008","ces 2008 exclusive","hot","Netgear","wireless" );
+					var ch_selected=Math.floor((Math.random()*ch_queries.length));
+					if ( ch_selected < ch_queries.length ) ch_query = ch_queries[ch_selected];
+					//--></script>
+					<script  src="http://scripts.chitika.net/eminimalls/mm.js" type="text/javascript">
+					</script>
+
+					<script type="text/javascript"><!--
+					google_ad_client = "pub-6181816114362650";
+					google_ad_width = 120;
+					google_ad_height = 600;
+					google_ad_format = "120x600_as";
+					google_ad_type = "text_image";
+					google_ad_channel = "";
+					google_color_border = "FFFFFF";
+					google_color_bg = "FFFFFF";
+					google_color_link = "ff9400";
+					google_color_text = "000000";
+					google_color_url = "666666";
+					//-->
+					</script>
+					<script type="text/javascript"
+					 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>
+
+					
+				</div>
+				<!-- FM Tracking Pixel -->
+				<script type='text/javascript' src='http://static.fmpub.net/site/crunchgear'></script>
+				<!-- FM Tracking Pixel -->				
+			</div>
+			
+			<div class="resources">
+				<h3>Resources</h3>
+				<ul>
+					<li><a href="http://www.crunchgear.com">Home</a></li>
+					<li><a href="http://www.crunchgear.com/bff">BFF</a></li>
+					<li><a href="http://www.crunchgear.com/about/">About</a></li>
+					<li><a href="http://www.techcrunch.com/advertise/">Advertise</a></li>
+					<li><a href="http://www.crunchgear.com/archives/">Archives</a></li>
+					<li><a href="http://www.crunchboard.com/">Cool Jobs</a></li>
+					<li><a href="http://www.techcrunch40.com/">TC40</a></li>
+					<li><a href="http://www.crunchgear.com/contact/">Research</a></li>
+					<li><a href="mailto:tips@crunchgear.com">Contact</a></li>
+				</ul>
+			</div>
+			
+			<div class="powered_by">
+				<h3>Powered by:</h3>
+				<div class="feedburner">
+					<a href="http://feeds.feedburner.com/crunchgear"><img src="http://feeds.feedburner.com/~fc/crunchgear?bg=ff5200&amp;fg=000000&amp;anim=0" height="26" width="88" style="border:0" alt="Feedburner" /></a>
+		<!-- Site Meter -->
+<script type="text/javascript" src="http://s27.sitemeter.com/js/counter.js?site=s27crunchgear">
+</script>
+<noscript> 
+
+<a href="http://s27.sitemeter.com/stats.asp?site=s27crunchgear" target="_top">
+<img src="http://s27.sitemeter.com/meter.asp?site=s27crunchgear" alt="Site Meter" border="0"/></a>
+</noscript>
+<!-- Copyright (c)2006 Site Meter -->		
+		</div>
+				<ul>
+					<li class="acs"><a href="http://acsseo.com/">Marketing Consulting by ACS</a></li>
+					<li class="mt"><a href="http://mediatemple.net/">(mt) Media Temple</a></li>
+				</ul>
+			</div>
+			
+			<div class="cluster">
+				<ul class="tabs">
+					<li class="active"><a href="http://www.crunchgear.com/bff">CrunchGear BFF</a></li>
+				</ul>
+				<ul class="list">
+<ol><li><strong><a href="http://www.crunchgear.com/bff/?p=236">Spam Baiting</a></li><li><strong><a href="http://www.crunchgear.com/bff/?p=233">2008’s (Not So) Fav Fives</a></li><li><strong><a href="http://www.crunchgear.com/bff/?p=232">LittleRedRyanHood!  In an Adventure with Spammers (final notes)</a></li><li><strong><a href="http://www.crunchgear.com/bff/?p=231">Holiday Horror - Our Troops</a></li><li><strong><a href="http://www.crunchgear.com/bff/?p=230">CrunchGear Web Revamp</a></li></ol>				</ul>
+			</div>
+			
+		</div>
+		
+		<div id="to_top">
+			<a href="#top">Back to top</a>
+		</div>
+		
+	</div>
+	
+</div>
+
+<div id="network">
+	
+	<div class="gasket">
+		
+		<h2>TechCrunch Network</h2>
+		
+		<div class="left">
+			
+			<h3 class="techcrunch"><a href="http://techcrunch.com" title="TechCrunch"><span>TechCrunch</span></a> <a href="http://feeds.feedburner.com/Techcrunch?format=xml" class="feed"><img src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/network/feed.gif" alt="Subscribe" /></a></h3>
+			<ul class="sep">
+<ol><li><strong><a href="http://feeds.feedburner.com/~r/Techcrunch/~3/216799569/">Plaxo And Facebook Merger Rumors False (So Far)</a></li><li><strong><a href="http://feeds.feedburner.com/~r/Techcrunch/~3/216796636/">Macworld Expo Keynote Live On TechCrunch Tomorrow</a></li><li><strong><a href="http://feeds.feedburner.com/~r/Techcrunch/~3/216778271/">Babbel: Help Me, Help You Learn A New Language</a></li><li><strong><a href="http://feeds.feedburner.com/~r/Techcrunch/~3/216726456/">Drop.io Launches Easy Phone-To-MP3 Tool</a></li><li><strong><a href="http://feeds.feedburner.com/~r/Techcrunch/~3/216741750/">SuccessFactors Releases 71st Version of Its Employee Management Software</a></li></ol>			</ul>
+			
+			<h3 class="talkcrunch"><a href="http://talkcrunch.com" title="TalkCrunch"><span>TalkCrunch</span></a> <a href="http://feeds.feedburner.com/Talkcrunch?format=xml" class="feed"><img src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/network/feed.gif" alt="Subscribe" /></a></h3>
+			<ul class="sep">
+<ol><li><strong><a href="http://www.talkcrunch.com/2008/01/05/interview-almost-with-congressman-dennis-kucinich/">Interview (almost) With Congressman Dennis Kucinich</a></li><li><strong><a href="http://www.talkcrunch.com/2007/12/08/qa-with-senator-gravel/">Q&#038;A With 2008 Presidential Candidate Mike Gravel</a></li><li><strong><a href="http://www.talkcrunch.com/2007/11/12/interview-with-senator-john-mccain/">Interview With Senator John McCain</a></li><li><strong><a href="http://www.talkcrunch.com/2007/11/01/interview-with-2008-presidential-candidate-mitt-romney/">Interview With 2008 Presidential Candidate Mitt Romney</a></li><li><strong><a href="http://www.talkcrunch.com/2007/08/23/interview-with-joe-hewitt-iphone-god/">Interview With Joe Hewitt, iPhone God</a></li></ol>			</ul>
+		
+			<h3 class="inviteshare"><a href="http://inviteshare.com" title="InviteShare"><span>InviteShare</span></a> <a href="http://www.inviteshare.com/sites_rss.php" class="feed"><img src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/network/feed.gif" alt="Subscribe" /></a></h3>
+			<ul class="sep">
+<ol><li><strong><a href="http://www.inviteshare.com/site.php?id=3">torrentleech.org</a></li><li><strong><a href="http://www.inviteshare.com/site.php?id=26">dopplr.com</a></li><li><strong><a href="http://www.inviteshare.com/site.php?id=84">kango.com</a></li><li><strong><a href="http://www.inviteshare.com/site.php?id=34">yumondo.com</a></li><li><strong><a href="http://www.inviteshare.com/site.php?id=83">Driftr.com</a></li></ol>			</ul>
+
+			<h3 class="crunchnotes"><a href="http://crunchnotes.com" title="Crunchnotes"><span>Crunchnotes</span></a> <a href="http://feeds.feedburner.com/crunchnotes?format=xml" class="feed"><img src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/network/feed.gif" alt="Subscribe" /></a></h3>
+			<ul>
+<ol><li><strong><a href="http://www.crunchnotes.com/?p=442">Help Make Duncan Famous</a></li><li><strong><a href="http://www.crunchnotes.com/?p=441">Loren Feldman Makes His 2008 Predictions</a></li><li><strong><a href="http://www.crunchnotes.com/?p=440">Here Comes A Train Wreck</a></li><li><strong><a href="http://www.crunchnotes.com/?p=439">Our Very Own Facebook Group Thingy</a></li><li><strong><a href="http://www.crunchnotes.com/?p=438">The Fact And Fiction Of Sam Sethi</a></li></ol>			</ul>
+			
+		</div>
+		
+		<div class="right">
+
+			<h3 class="crunchbase"><a href="http://crunchbase.com" title="CrunchBase"><span>CrunchBase</span></a> <a href="http://www.crunchbase.com/recently_profiled_rss.php" class="feed"><img src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/network/feed.gif" alt="Subscribe" /></a></h3>
+			<ul class="sep">
+<ol><li><strong><a href="http://www.crunchbase.com/company/kadoink">Kadoink</a></li><li><strong><a href="http://www.crunchbase.com/company/nuconomy">Nuconomy</a></li><li><strong><a href="http://www.crunchbase.com/company/mfg.com">MFG.com</a></li><li><strong><a href="http://www.crunchbase.com/company/plymedia">PLYmedia</a></li><li><strong><a href="http://www.crunchbase.com/company/imantri">iMantri</a></li></ol>			</ul>
+			
+			<h3 class="mobilecrunch"><a href="http://mobilecrunch.com" title="MobileCrunch"><span>MobileCrunch</span></a> <a href="http://feeds.feedburner.com/Mobilecrunch?format=xml" class="feed"><img src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/network/feed.gif" alt="Subscribe" /></a></h3>
+			<ul class="sep">
+<ol><li><strong><a href="http://mobilecrunch.com/2008/01/14/nba-2-go-get-charged-for-whats-already-on-the-web/">NBA 2 Go: Get Charged For What’s Already On The Web</a></li><li><strong><a href="http://mobilecrunch.com/2008/01/14/china-mobile-drops-iphone/">China Mobile Drops iPhone</a></li><li><strong><a href="http://mobilecrunch.com/2008/01/11/start-up-company-soonr-receives-cisco-money/">Start-Up Company SoonR Receives Cisco Money</a></li><li><strong><a href="http://mobilecrunch.com/2008/01/11/color-document-scanning-from-scanr/">Color Document Scanning from scanR</a></li><li><strong><a href="http://mobilecrunch.com/2008/01/10/mobile-computing-catching-wind-with-open-source-sails/">Mobile Computing catching Wind with Open Source Sails</a></li></ol>			</ul>
+			
+			<h3 class="crunchforums"><a href="http://forums.techcrunch.com" title="CrunchForums"><span>CrunchForums</span></a> <a href="http://forums.techcrunch.com/forums/rss/rssmessages.jspa?categoryID=9" class="feed"><img src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/network/feed.gif" alt="Subscribe" /></a></h3>
+			<ul class="sep">
+<ol><li><strong><a href="http://forums.techcrunch.com/forums/thread.jspa?messageID=22241&amp;tstart=0#22241">Re: MarketingWarriorTeam.com | The Prosperity Cast Network Social Networkin</a></li><li><strong><a href="http://forums.techcrunch.com/forums/thread.jspa?messageID=22240&amp;tstart=0#22240">Re: MarketingWarriorTeam.com | The Prosperity Cast Network Social Networking</a></li><li><strong><a href="http://forums.techcrunch.com/forums/thread.jspa?messageID=22239&amp;tstart=0#22239">Rip DVD on Mac OS X made easy</a></li><li><strong><a href="http://forums.techcrunch.com/forums/thread.jspa?messageID=22238&amp;tstart=0#22238">Re: Technology Startup looking for Investors</a></li><li><strong><a href="http://forums.techcrunch.com/forums/thread.jspa?messageID=22237&amp;tstart=0#22237">Re: FartProofUnderwear.com</a></li></ol>			</ul>
+			
+			<h3 class="crunchboard"><a href="http://crunchboard.com" title="CrunchBoard"><span>CrunchBoard</span></a> <a href="http://www.crunchboard.com/s2/_v_t_in_usa_locid.html?rank=time&dir=desc&rss=1" class="feed"><img src="http://www.crunchgear.com/wp-content/themes/crunchgear-2.0/images/network/feed.gif" alt="Subscribe" /></a></h3>
+			<ul>
+<ol><li><strong><a href="http://www.crunchboard.com/item/42662205-Community-Manager-Consumer-Products">Community Manager, Consumer Products
+in 
+San Diego, CA
+@ Opera Software ASA</a></li><li><strong><a href="http://www.crunchboard.com/item/42121089-Software-Engineer-Architect">Software Engineer / Architect
+in 
+San Francisco, CA
+@ CastTV</a></li><li><strong><a href="http://www.crunchboard.com/item/42080297-Senion-Software-Engineer-Systems-%28job-%23-787344%29">Senion Software Engineer, Systems (job # 787344)
+in 
+New York, NY
+@ NBC Universal</a></li><li><strong><a href="http://www.crunchboard.com/item/42080287-Microsoft-%E2%80%93-Windows-International-Opportunities">Microsoft – Windows International Opportunities
+in 
+Redmond, WA
+@ Microsoft</a></li><li><strong><a href="http://www.crunchboard.com/item/42060178-Demand-Marketing-Guru">Demand Marketing Guru
+in 
+San Francisco, CA
+@ Keibi Technologies, Inc.</a></li></ol>			</ul>
+			
+		</div>
+		
+		<div class="clear"></div>
+		
+	</div>
+	
+</div>
+
+<div id="footer" class="gasket">
+
+	<p><a href="http://www.crunchgear.com">Home</a> &nbsp; <a href="http://www.crunchgear.com/bff">BFF</a> &nbsp; <a href="http://www.crunchgear.com/about/">About</a> &nbsp; <a href="http://www.techcrunch.com/advertise/">Advertise</a> &nbsp; <a href="http://www.crunchgear.com/archives/">Archives</a> &nbsp; <a href="http://www.crunchboard.com/">Cool Jobs</a> &nbsp; <a href="http://www.techcrunch40.com/">TC40</a> &nbsp; <a href="http://www.crunchgear.com/contact/">Research</a> &nbsp; <a href="mailto:tips@crunchgear.com">Contact</a></p>
+
+	<p>All contents copyright &copy; 2007, TechCrunch. All rights reserved</p>
+	
+</div>
+	<!-- Share This BEGIN -->
+	<div id="akst_form">
+		<a href="javascript:void($('akst_form').style.display='none');" class="akst_close">Close</a>
+		<ul class="tabs">
+			<li id="akst_tab1" class="selected" onclick="akst_share_tab('1');">Social Web</li>
+			<li id="akst_tab2" onclick="akst_share_tab('2');">E-mail</li>
+		</ul>
+		<div class="clear"></div>
+		<div id="akst_social">
+			<ul>
+				<li><a href="#" id="akst_facebook">Facebook</a></li>
+				<li><a href="#" id="akst_digg">Digg</a></li>
+				<li><a href="#" id="akst_stumbleupon">StumbleUpon</a></li>
+				<li><a href="#" id="akst_delicious">del.icio.us</a></li>
+				<li><a href="#" id="akst_reddit">reddit</a></li>
+				<li><a href="#" id="akst_blinklist">BlinkList</a></li>
+				<li><a href="#" id="akst_newsvine">Newsvine</a></li>
+				<li><a href="#" id="akst_furl">Furl</a></li>
+				<li><a href="#" id="akst_tailrank">Tailrank</a></li>
+				<li><a href="#" id="akst_magnolia">Ma.gnolia</a></li>
+				<li><a href="#" id="akst_wists">Wists</a></li>
+				<li><a href="#" id="akst_gifttagging">BoxedUp</a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div style="display: none;" id="akst_email">
+			<form action="http://www.crunchgear.com/index.php" method="post">
+				<fieldset>
+					<legend>E-mail It</legend>
+					<ul>
+						<li>
+							<label for="akst_to">To Addresses (up to 5):</label>
+							<input type="text" id="akst_to" name="akst_to" value="" class="akst_text" />
+						</li>
+						<li>
+							<label for="akst_name">Your Name:</label>
+							<input type="text" id="akst_name" name="akst_name" value="" class="akst_text" />
+						</li>
+						<li>
+							<label for="akst_email_field">Your Address:</label>
+							<input type="text" id="akst_email_field" name="akst_email" value="" class="akst_text" />
+						</li>
+						<li>
+							<input type="submit" name="akst_submit" value="Send It" />
+						</li>
+					</ul>
+					<input type="hidden" name="akst_action" value="send_mail" />
+					<input type="hidden" name="akst_post_id" id="akst_post_id" value="" />
+				</fieldset>
+			</form>
+		</div>
+		<div id="akst_credit"><a href="http://sharethis.com"><img src="http://r.sharethis.com/powered-by?publisher=4efe561e-f46b-42a5-940c-1e162b896258" alt="Powered by ShareThis" /></a></div>
+	</div>
+	<!-- Share This END -->
+</body>
+</html>
+<!-- 36 queries. 0.622 seconds. -->
+
+<!-- Dynamic Page Served (once) in 0.622 seconds -->

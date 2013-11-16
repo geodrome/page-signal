@@ -1,0 +1,2317 @@
+<!<script src="http://newsimg.bbc.co.uk/nol/shared/js/nol4.js?v2" language="JavaScript" type="text/javascript"></script>
+<script src="http://newsimg.bbc.co.uk/nol/shared/js/livestats_v1_1.js?v5" language="JavaScript" type="text/javascript"></script>
+<script src="http://newsimg.bbc.co.uk/nol/ukfs_news/js/av.js?v2" language="JavaScript" type="text/javascript"></script> 
+<script src="http://www.bbc.co.uk/radio/aod/radioplayer.js" type="text/javascript"></script>
+<script src="http://newsimg.bbc.co.uk/js/app/tools/hide_and_show/hide_and_show.js" type="text/javascript"></script>
+<script src="http://newsimg.bbc.co.uk/js/app/bookmark/bookmark.js" language="JavaScript" type="text/javascript"></script>
+
+	
+		
+
+
+
+	
+
+	
+
+
+	
+
+
+
+	<!-- configuration block for external URLs to break them out of stub class -->
+	<script type="text/javascript">
+	
+	/**
+	 * instantiate the bbccom namespace
+	 */
+	newsi.bbccom = {};
+	
+	/**
+	 * @classDescription Simple config class to provide storage of JSOD URL's
+	 */
+	newsi.bbccom.AdConfigurator = function(){
+		this._zoneFile = "/js/app/bbccom/zonefile.js?2";
+		this._analyticsFile = "/js/app/bbccom/adanalytics.js";
+		this._appFile = "/js/app/bbccom/app.js";
+		this._adSlots = new Object(	{	ad1:{id:1, name:"ad1",size:"728x90"},
+							ad2:{id:2, name:"ad2",size:"160x600"},
+							ad3:{id:3, name:"ad3",size:"468x60"},
+							ad4:{id:4, name:"ad4",size:"120x240"} } );
+		this._adBugElement = "adWebBug";
+		this._timerInterval = 3000;
+		
+		this._fiddleredition = 'domestic';
+		this._document_uri = this._url = '/1/hi/uk/7127050.stm';
+
+		switch(this._document_uri){
+			case "/":
+				this._url = (this._fiddleredition == "domestic") ? "/1/hi/default.stm" : "/2/hi/default.stm";
+				break;
+			case "/sport":
+				this._url = (this._fiddleredition == "domestic") ? "/sport1/hi/default.stm" : "/sport2/hi/default.stm";
+				break;
+			case "/sport/":
+				this._url = (this._fiddleredition == "domestic") ? "/sport1/hi/default.stm" : "/sport2/hi/default.stm";
+				break;
+		}
+		
+	}
+	
+		
+	
+	/**
+	 * Expose the props to the Stub Class
+	 * @param {Object} name
+	 * @return {String} Path to the property
+	 */
+	newsi.bbccom.AdConfigurator.prototype.getPropPath = function(name){
+		return this[name];
+	}
+	</script>
+
+<script type="text/javascript" src="/js/app/bbccom/stub.js"></script>
+
+
+
+
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+<!-- bbc toolbar code -->
+<div id="accesslinks">
+<p><strong>Accessibility Links</strong></p>
+<ul>
+	<li class="hide"><a href="#startcontent" accesskey="2"><span>Skip to content</span></a></li>
+	<li class="hide"><a href="#toolbar"><span>Skip to bbc.co.uk navigation</span></a></li>
+	<li class="hide"><a href="#toolbar-search-input" accesskey="4"><span>Skip to search</span></a></li>
+	<li class="hide"><a href="http://www.bbc.co.uk/accessibility/accesskeys/keys.shtml" accesskey="0"><span>Access keys help</span></a></li>
+</ul>
+</div>
+<div id="toolbar">
+<div id="bbc-logo"><a href="http://www.bbc.co.uk/home/d/" accesskey="1">bbc.co.uk</a><!--- start live stats logic --->
+		
+		
+		
+		
+		
+		
+		<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="1" alt="" />
+		
+		
+		<!--- end live stats logic --->
+		</div>
+
+
+	<h2>bbc.co.uk Navigation</h2>
+	<div id="toolbar-inner">
+		<form action="http://search.bbc.co.uk/cgi-bin/search/results.pl" accept-Charset="UTF-8">
+		<input type="hidden" name="scope" value="all" />	
+		<input type="hidden" name="edition" value="d" /> 
+			<div>				
+				<label for="toolbar-search-input">Search</label>				
+				<input id="toolbar-search-input" type="text" name="q" title="BBC Search" accesskey="4" value="" />		
+					
+				<input id="toolbar-search-button" type="submit" name="go" value="Search" />					
+			</div>
+		</form>
+		<ul>
+			<li class="first"><a href="http://www.bbc.co.uk/home/d/" accesskey="1">Home</a></li>
+			<li><a href="http://www.bbc.co.uk/tv/d/">TV</a></li>
+			<li><a href="http://www.bbc.co.uk/radio/d/">Radio</a></li>
+			<li><a href="http://www.bbc.co.uk/talk">Talk</a></li>
+			<li><a href="http://www.bbc.co.uk/whereilive">Where I Live</a></li>
+			<li class="last"><a href="http://www.bbc.co.uk/a-z/" accesskey="3">A-Z Index</a></li>
+		</ul>
+	</div>
+</div>
+<div id="ad1" class="ad1"></div>
+
+<script language="JavaScript" type="text/javascript">
+function showForm() {
+if(document.getElementById){
+	   document.getElementById('d_rb').innerHTML='<form action="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl" name="ifhForm" method="get"><input type="hidden" name="qs" value="http://news.bbc.co.uk/1/hi/uk/7127050.stm" /><input type="hidden" name="content" value="nol" /><input name="dest" type="radio" value="Domestic" onclick="submitForm();" id="dfh" checked /><label for="dfh" class="uk" style="font-weight:bold;">UK version</label><input name="dest" type="radio" value="International"  onclick="submitForm();" id="ifh" /><label for="ifh" class="int">International version</label></form>';}
+}
+var site;
+function submitForm() {
+			document.ifhForm.submit();
+}
+</script>
+
+<div id="ift-banner" class="ift-news">
+<div id="ift-extra" style="padding:2px 0 0 0;height:1.5em;width:760px;">
+	<div class="fl">
+			<span id="d_rb"><span class="domestic"><a href="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl?qs=http://news.bbc.co.uk/1/hi/uk/7127050.stm&amp;content=nol&amp;dest=Domestic" style="font-weight:bold;">UK version</a></span><span class="int"><a href="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl?qs=http://news.bbc.co.uk/1/hi/uk/7127050.stm&amp;content=nol&amp;dest=International">International version</a></span></span><script type="text/javascript" language="JavaScript">showForm();</script><span class="pipe">|</span><a href="http://www.bbc.co.uk/iftoolbar/versions.html" onclick="window.open('http://www.bbc.co.uk/iftoolbar/versions.html', 'aboutversion', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=488,height=305,left=280,top=200'); return false;" class="extraLink">About the versions</a>
+	</div>
+	<div class="fr">
+<a href="http://news.bbc.co.uk/text_only.stm" class="extraLink" onClick="goToOtherBandwidth(this);return false;">Low graphics</a><span class="pipe">|</span><a href="http://www.bbc.co.uk/accessibility/" class="extraLink">Accessibility help</a>
+	</div>
+</div>
+<div class="clear"></div>
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0" width="760">
+	<tr>
+		<td width="121" valign="top">
+		<a href="http://news.bbc.co.uk/"><img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/bbc_logo.gif" width="121" height="64" border="0" alt="BBC News" /></a></td>
+		<td width="436" valign="top">
+		
+		<table cellpadding="0" cellspacing="0" border="0" width="100%">
+		<tr>
+		<td valign="middle" class="banmain">					
+		<a href="http://news.bbc.co.uk/player/nol/newsid_6610000/newsid_6615400/6615433.stm" onclick="javascript:newsi.utils.av.launch({storyId:6615433, fileLoc: '/player/nol/newsid_6610000/newsid_6615400/', bbram: 1,nbwm: 1,nbram: 1,bbwm: 1});return false;"><img height="13" align="left" vspace="0" border="0" width="82" alt="Launch console" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_live.gif" />BBC News 24</a><br clear="all" />
+		</td>
+		</tr>
+		</table>
+		
+		</td>
+		<td width="203" valign="top">	
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+			<td valign="middle" class="banaddition">				
+			<div>
+			<a href="http://news.bbc.co.uk/go/news/int/banner/story/services/-/1/hi/help/products_and_services/default.stm">
+				<img height="50" hspace="0" align="right" vspace="0" border="0" width="50" alt="mobiles" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/services_gen.gif" />                
+					<b>News services</b>
+					<br />Your news when you want it
+			</a>
+			<br clear="all" />
+			</div>
+					
+			</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="760">
+    <tr>
+        <td width="121" valign="top">
+
+			
+
+<div class="lhs">
+	
+		
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/default.stm">News Front Page</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/world/default.stm">World</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+				<div class="lhssqs">
+					
+					<a href="/1/hi/uk/default.stm">UK</a>
+				</div>
+				
+				
+
+			
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/england/default.stm">England</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/northern_ireland/default.stm">Northern Ireland</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/scotland/default.stm">Scotland</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/wales/default.stm">Wales</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/business/default.stm">Business</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/uk_politics/default.stm">Politics</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/health/default.stm">Health</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/education/default.stm">Education</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/sci/tech/default.stm">Science/Nature</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/technology/default.stm">Technology</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/entertainment/default.stm">Entertainment</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/1/hi/also_in_the_news/default.stm">Also in the news</a>
+				</div>
+				
+			
+			<div class="lhsdl">-----------------</div>
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsl">
+					
+					<a href="/1/hi/video_and_audio/default.stm">Video and Audio</a>
+				</div>
+				
+			
+			<div class="lhsdl">-----------------</div>
+			
+			<div id="ad4" class="ad4"></div>
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsl">
+					
+					<a href="/1/hi/talking_point/default.stm">Have Your Say</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsl">
+					
+					<a href="/1/hi/magazine/default.stm">Magazine</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsl">
+					
+					<a href="/1/hi/in_pictures/default.stm">In Pictures</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsl">
+					
+					<a href="/1/hi/country_profiles/default.stm">Country Profiles</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsl">
+					
+					<a href="/1/hi/in_depth/default.stm">Special Reports</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+
+
+
+
+
+	
+</div>
+
+
+
+
+		<div class="lhsad"><script language="JavaScript">getRssUrl()</script></div>
+<div class="lhsad">
+<div class="lhsnlp">RELATED BBC SITES</div>
+<ul id="lhsOtherSites">
+	<li><a href="http://news.bbc.co.uk/sport1/hi/default.stm" title="Home of BBC Sport on the internet" class="relatedSitesLink">SPORT</a></li>
+	<li><a href="http://www.bbc.co.uk/weather/d/" title="Weather information from around the world" class="relatedSitesLink">WEATHER</a></li>
+	<li><a href="http://news.bbc.co.uk/cbbcnews/default.stm" title="CBBC News" class="relatedSitesLink">CBBC NEWSROUND</a></li>
+	<li><a href="http://www.bbc.co.uk/onthisday" title="BBC On This Day" class="relatedSitesLink">ON THIS DAY</a></li>
+	<li><a href="http://www.bbc.co.uk/blogs/theeditors/" title="Editors' Blog" class="relatedSitesLink">EDITORS' BLOG</a></li>	
+</ul>
+</div>
+
+
+
+	
+		<div class="lang">LANGUAGES</div>
+<ul id="languages">
+	<li id="newyddionLoz"><a href="http://news.bbc.co.uk/welsh/default.stm" title="BBCNewyddion.com">Newyddion</a></li>
+</ul>
+
+<img alt="" id="livestats" src="http://stats.bbc.co.uk/o.gif?~RS~s~RS~News~RS~t~RS~HighWeb_Story~RS~i~RS~7127050~RS~p~RS~38251~RS~a~RS~Domestic~RS~u~RS~/1/hi/uk/7127050.stm~RS~r~RS~(none)~RS~q~RS~~RS~z~RS~11~RS~"/></td>
+        <td width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+        <td width="629" valign="top">
+            <table width="629" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="top" width="629">
+			
+                        
+                        
+<a name="startcontent"></a><span class="ds"><span class="lu">Last Updated: </span>Tuesday, 4 December 2007, 23:57 GMT</span>
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="2" height="2" alt="" border="0" vspace="0" hspace="0">
+<div class="mvb"><img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/dot_629.gif" width="629" height="1" alt="" border="0" vspace="0" hspace="0"></div>
+
+	
+
+
+                        
+    
+        <div class="mvtb"><table cellspacing="0" width="416" border="0" cellpadding="0"><tr>
+            <td width="213"><a class="epl" onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/1/hi/uk/7127050.stm','status=no,scrollbars=yes,resizable=yes,width=370,height=445','Mailer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/1/hi/uk/7127050.stm" target="Mailer">
+                <img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/email.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+                E-mail this to a friend
+            </a></td>
+            <td width="203"><a class="epl" onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/1/hi/uk/7127050.stm','status=no,scrollbars=yes,toolbar=yes,resizable=yes,menubar=yes,width=600,height=445','Printer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/1/hi/uk/7127050.stm" target="Printer">
+	       	<img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/print.gif " align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+	 	Printable version
+            </a></td>
+        </tr></table></div>
+    
+    
+
+
+                        
+                    </td>
+                </tr>
+            </table>
+            <table width="629" border="0" cellpadding="0" cellspacing="0">
+		
+                
+		<tr>
+		<td colspan="3">
+			
+			<div class="mxb">
+				<div class="sh">
+					Kidnapped Britons tape condemned
+				</div>
+			</div>
+		</td>
+		</tr>
+    		
+		
+
+                <tr>
+                    <td valign="top" width="416">
+                        
+	
+		
+                    	<font size="2">
+		
+			<!-- S BO -->
+	
+
+	
+		    
+			    <!-- S IBOX -->
+				<table cellspacing="0" align="right" width="208" border="0" cellpadding="0">
+				<tr>
+			            <td width="5"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="5" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+			            <td class="sibtbg">
+			                
+					
+			                    <div class="o">
+			                            <img src="http://newsimg.bbc.co.uk/media/images/44279000/jpg/_44279544_hostage_1_203.jpg" width="203" height="152" alt="Hostage video" border="0" vspace="0" hspace="0">
+			                    </div>
+					
+			                
+			                    
+			                        <div class="o">
+			                            <img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/inline_dashed_line.gif" width="203" height="1" alt="" border="0" vspace="2" hspace="0"><br />
+			                        </div>
+			                     
+			                    <div>
+    
+	<!-- S IMED -->
+
+	
+
+	<div class="mvtb">
+		<a href="http://www.bbc.co.uk/mediaselector/check/player/nol/newsid_7120000/newsid_7127200?redirect=7127225.stm&amp;news=1&amp;nbram=1&amp;bbram=1&amp;nbwm=1&amp;bbwm=1&amp;asb=1" onClick="javascript:newsi.utils.av.launch({el:this});return false;">
+			<img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_text.gif" align="left" height="13" alt="" border="0" vspace="0"><b>Video extract</b>
+		</a>
+	</div>
+
+	
+
+	<!-- E IMED -->
+    
+</div>
+			                
+			            </td>
+			        </tr>
+				</table>
+				
+			    <!-- E IBOX -->
+			
+	
+
+
+
+<!-- S SF -->
+<B>The UK government has condemned a videotape issued by the kidnappers of five British men held captive in Iraq.</B>
+<P>
+A Foreign Office spokesman said the tape would "add to the distress of the men's families and friends".
+<P>
+In the film, dated 18 November, the kidnappers say they will kill one of the men as a "first warning" unless UK forces leave Iraq within 10 days.
+<P>
+The five men were seized on 29 May from Baghdad's finance ministry building by gunmen disguised as police officers.
+<!-- E SF -->
+<P>
+They are being held by a militia group calling itself the Islamic Shia Resistance in Iraq.
+<P>
+
+	
+
+	
+		    
+			    <!-- S IBOX -->
+				<table cellspacing="0" align="right" width="208" border="0" cellpadding="0">
+				<tr>
+			            <td width="5"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="5" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+			            <td class="sibtbg">
+			                
+					
+			                
+			                     
+			                    <div>
+	
+		<div class="mva">
+			<img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/start_quote_rb.gif" width="24" height="13" alt="" border="0">
+			<b>No matter what the cause, hostage-taking can never be justified</b>
+		<img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/end_quote_rb.gif" align="right" width="23" height="13" alt="" border="0" vspace="0"><br clear="all"/>	</div>
+	
+	
+
+
+
+
+</div>
+			                
+			                     
+			                    <div class="mva">
+	<div>Foreign Office spokesman</div>
+
+
+</div>
+			                
+			            </td>
+			        </tr>
+				</table>
+				
+			    <!-- E IBOX -->
+			
+	
+
+
+
+
+<P>
+The tape, which the Foreign Office is studying, is in Arabic and was broadcast on Al-Arabiya television on Tuesday.
+<P>
+The Britons - four guards and a computer expert - were initially taken to a Shia suburb after being seized.
+<P>
+Consular officials had remained in regular contact with the families of the men, the spokesman added.
+<P>
+The case has not featured in the media as much as other kidnappings in Iraq - including those of Ken Bigley and Margaret Hassan - because of a Foreign Office request for minimal coverage.
+<P>
+That request was made in keeping with the wishes of the men's families.
+<P>
+The Foreign Office says it does not want anything to get in the way of its negotiations, through third parties, to get the men released.
+<P>
+<B>'Withdraw thieves'</B>
+<P>
+In the tape, filmed in front of an "Islamic Shia Resistance in Iraq" flag, one of the men gives his name, says he has been held for 173 days and adds: "I feel we have been forgotten." 
+<P>
+In written text shown on the video, the kidnappers say the UK should "withdraw all the thieves and the gangs that they have brought with them to plunder and squander our wealth and resources, and to return what they have stolen".
+<P>
+They warn that, if the UK does not meet its demands, "this hostage will be executed on day number 10 as a first warning, then other details that you will not like will be made public".
+<P>
+It is unclear whether the 10-day deadline begins now, or when the recording was made.
+<P>
+The Foreign Office spokesman said: "No matter what the cause, hostage-taking can never be justified.
+<P>
+"We again call on those holding the men to release them unconditionally."
+<P>
+Prime Minister Gordon Brown's spokesman also condemned the release of the videotape.
+<P>
+"It's our long-established policy not to comment on such footage and we encourage others not to speculate," he added.
+<P>
+"That would be unhelpful and distressing to the families concerned."
+<P>
+<B>'Ordinary men'</B>
+<P>
+BBC special correspondent Gavin Hewitt said a crucial difference between this kidnapping and previous cases had been that intelligence agencies believed the Britons were being held by a splinter group of the Mahdi army - a Shia militia - rather than Sunnis linked to al-Qaeda.
+<P>
+But the "secretive cell" did not appear to be part of a big organisation, BBC security correspondent Frank Gardner said, which made it more difficult for British authorities to understand its motives.
+<P>
+However, our correspondent said going public with the tape signalled a change of behaviour in the kidnappers as, up until now, nothing had been heard from the five men being held.
+<P>
+
+	
+
+	
+		    
+			    <!-- S IBOX -->
+				<table cellspacing="0" align="right" width="208" border="0" cellpadding="0">
+				<tr>
+			            <td width="5"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="5" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+			            <td class="sibtbg">
+			                
+					
+			                
+			                     
+			                    <div>
+	
+		<div class="mva">
+			<img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/start_quote_rb.gif" width="24" height="13" alt="" border="0">
+			<b>We miss them so much and want them to come home to us so that our families can be complete again and our children no longer have to endure the pain of missing their fathers</b>
+		<img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/end_quote_rb.gif" align="right" width="23" height="13" alt="" border="0" vspace="0"><br clear="all"/>	</div>
+	
+	
+
+
+
+
+</div>
+			                
+			                     
+			                    <div class="mva">
+	<div>Earlier statement from families </div>
+
+
+</div>
+			                
+			            </td>
+			        </tr>
+				</table>
+				
+			    <!-- E IBOX -->
+			
+	
+
+
+
+
+<P>
+It was putting "immense pressure" on the British government to resolve the issue, but little was yet known about the hostages' whereabouts and how serious the group's threats were, he added.
+<P>
+In September, the families of the five men urged their captors to end their "torment" of being separated from "ordinary family men". 
+<P>
+The statement continued: "They are sons, fathers and brothers who were working to support us - their families.
+<P>
+"We miss them so much and want them to come home to us so that our families can be complete again and our children no longer have to endure the pain of missing their fathers."
+<P>
+<P>
+<P><!-- E BO -->
+		
+                    	</font>
+		
+	
+	
+<br /><br clear="all" />
+                        
+    
+        <div class="mvtb"><table cellspacing="0" width="416" border="0" cellpadding="0"><tr>
+            <td width="213"><a class="epl" onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/1/hi/uk/7127050.stm','status=no,scrollbars=yes,resizable=yes,width=370,height=445','Mailer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/1/hi/uk/7127050.stm" target="Mailer">
+                <img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/email.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+                E-mail this to a friend
+            </a></td>
+            <td width="203"><a class="epl" onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/1/hi/uk/7127050.stm','status=no,scrollbars=yes,toolbar=yes,resizable=yes,menubar=yes,width=600,height=445','Printer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/1/hi/uk/7127050.stm" target="Printer">
+	       	<img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/print.gif " align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+	 	Printable version
+            </a></td>
+        </tr></table></div>
+    
+    
+
+
+                        <div id="socialBookMarks" class="sharesb"> 
+<h3>Bookmark with:</h3> 
+<ul>
+<li class="delicious"> 
+<a id="delicious" title="Post this story to Delicious" href="http://del.icio.us/post?url=http://news.bbc.co.uk/1/hi/uk/7127050.stm&amp;title=Kidnapped Britons tape condemned">Delicious</a> 
+</li>
+<li class="digg"> 
+<a id="digg" title="Post this story to Digg" href="http://digg.com/submit?url=http://news.bbc.co.uk/1/hi/uk/7127050.stm&amp;title=Kidnapped Britons tape condemned">Digg</a> 
+</li>
+<li class="reddit"> 
+<a id="reddit" title="Post this story to reddit" href="http://reddit.com/submit?url=http://news.bbc.co.uk/1/hi/uk/7127050.stm&amp;title=Kidnapped Britons tape condemned">reddit</a> 
+</li>
+<li class="facebook"> 
+<a id="facebook" title="Post this story to Facebook" href="http://www.facebook.com/sharer.php?u=http://news.bbc.co.uk/1/hi/uk/7127050.stm">Facebook</a> 
+</li>
+<li class="stumbleupon"> 
+<a id="stumbleupon" title="Post this story to StumbleUpon" href="http://www.stumbleupon.com/submit?url=http://news.bbc.co.uk/1/hi/uk/7127050.stm&amp;title=Kidnapped Britons tape condemned">StumbleUpon</a> 
+</li>
+</ul>
+<p><a href="http://news.bbc.co.uk/1/hi/help/6915817.stm">What are these?</a></p>
+</div>
+<script language="JavaScript">
+<!--
+var bm = new BookMark({site:'News',storyid:7128125,sectionid:38251,url:'/1/hi/uk/7127050.stm',edition:'Domestic'});
+//-->
+</script>
+                    </td>
+                    <td width="10" valign="top"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+                    <td width="203" valign="top">
+			
+			
+                        
+        
+
+        <div class="puffbox">
+
+			
+<div class="o">
+      
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+			<a class="lp" href="/1/hi/in_depth/middle_east/2002/conflict_with_iraq/default.stm">THE STRUGGLE FOR IRAQ</a>
+			
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="5" alt="" border="0" vspace="0" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+			
+			KEY STORIES
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	
+    
+
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/1/hi/world/middle_east/7191234.stm">
+			
+			
+			
+			Woman bomber kills eight in Iraq
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/1/hi/world/middle_east/7185602.stm">
+			
+			
+			
+			Bush praises Baathist law
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/1/hi/world/middle_east/7183194.stm">
+			
+			
+			
+			Hope returning, says Bush
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/1/hi/world/middle_east/7180055.stm">
+			
+			
+			
+			Study says 151,000 Iraqi dead
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="203" height="1" alt="" border="0" vspace="3" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+			
+			BACKGROUND AND ANALYSIS
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+		<a href="/1/hi/world/middle_east/7185276.stm"><img src="http://newsimg.bbc.co.uk/media/images/44351000/jpg/_44351783_sunnimilitia66x66afp.jpg" align="left" width="66" height="66" alt="A  Sunni Arab member mans a checkpoint in Baghdad's Adhamiya district." border="0" vspace="3" hspace="0"></a>
+		<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" align="left" width="5" height="66" alt="" border="0" vspace="0" hspace="0">
+		
+		
+	
+		<a href="/1/hi/world/middle_east/7185276.stm">
+			<b>
+			
+			
+			Mistake corrected
+			</b>
+		</a>
+		
+			<br />
+		
+	
+
+		
+	
+	
+	
+		<a href="/1/hi/world/middle_east/7185276.stm">
+			
+			Baathist rehabilitation was overdue - but Shias resisted
+			<br clear="all" />
+		</a>
+			
+
+
+	
+	
+	
+
+            
+                
+                    
+                
+            
+	
+	
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/1/hi/world/middle_east/7178422.stm">
+			
+			
+			
+			Middle East tour diary
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/1/hi/world/middle_east/7165244.stm">
+			
+			
+			
+			Iraqis ignore Saddam anniversary
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/1/hi/world/middle_east/7153990.stm">
+			
+			
+			
+			Trauma and mistakes
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/1/hi/world/middle_east/7145597.stm">
+			
+			
+			
+			Uncertainty follows Basra exit
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/1/hi/world/middle_east/7147162.stm">
+			
+			
+			
+			Iraqi demands for better life
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/1/hi/in_depth/629/629/7036068.stm">
+			
+			
+			
+			Iraq violence in figures
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="203" height="1" alt="" border="0" vspace="3" hspace="0"><br />
+    
+
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+			
+			ANDREW NORTH DIARY
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+
+			
+
+
+	
+        
+        
+            
+        
+        
+            <table border="0" cellpadding="0" cellspacing="0"><form method="post" action="http://www.bbc.co.uk/cgi-bin/openurl.pl"><tr><td>
+            <select name="link" class="formatStyle" onchange="if (this.options[selectedIndex].value != '') location.href=this.options[selectedIndex].value">
+                
+                
+        
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/7000259.stm">
+                            Surface security
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6901235.stm">
+                            Media as target
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6669773.stm">
+                            Living in fear
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6477949.stm">
+                            The two Ramadis
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6465847.stm">
+                            Anbar hotspot
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6446959.stm">
+                            Relative lull
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6336195.stm">
+                            Extreme risks
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6287997.stm">
+                            Hi-tech at war
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6192815.stm">
+                            Another planet
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6205968.stm">
+                            Finding the exit
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6125936.stm">
+                            Joy over Saddam
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6076928.stm">
+                            Afghan solution?
+                        </option>
+                    
+                        <option value="http://news.bbc.co.uk/1/hi/world/middle_east/6032909.stm">
+                            Route to nowhere
+                        </option>
+                    
+                
+
+
+            </select>&nbsp;<input value="GO" type="image" border="0" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/go_button.gif">
+            </td></tr></form></table>
+        
+	
+
+
+
+
+
+
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="203" height="1" alt="" border="0" vspace="3" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+			
+			VOICES FROM IRAQ
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/1/hi/talking_point/7094285.stm">
+			
+			
+			
+			Improved security in Baghdad
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="203" height="1" alt="" border="0" vspace="3" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+			
+			VIDEO AND AUDIO
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+
+			
+
+<div class="miitb">
+	
+                
+
+                
+			<a href="http://search.bbc.co.uk/cgi-bin/search/results.pl?q=iraq&edition=d&scope=all&tab=av&recipe=all">
+				
+				
+					<img height="13" hspace="0" align="left" vspace="0" border="0" width="57" alt="watch" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_text.gif" />
+					TV reports on Iraq
+				
+			</a>
+                
+
+                <br clear="all" />
+	
+</div>
+
+
+
+
+
+
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="203" height="1" alt="" border="0" vspace="3" hspace="0"><br />
+    
+
+    
+
+    
+
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+			
+			HAVE YOUR SAY
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="http://newsforums.bbc.co.uk/nol/thread.jspa?forumID=4048&amp;edition=1">
+			
+			
+			
+			Curbs lifted: Your views
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="203" height="1" alt="" border="0" vspace="3" hspace="0"><br />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="http://news.bbc.co.uk/2/hi/in_depth/middle_east/2002/conflict_with_iraq/default.stm">
+			
+			
+			
+			In depth: Struggle for Iraq
+			
+		</a>
+		
+			<br />
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="203" height="2" alt="" border="0" vspace="3" hspace="0"><br />
+    
+
+</div>
+
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br /></div>
+
+
+        
+        
+
+        
+
+
+        
+        	
+
+			
+
+    
+        
+		
+                    
+                        <div class="topStoryH">
+                            <a class="lp" href="/1/hi/uk/default.stm">TOP UK STORIES</a>
+                        </div>
+                    
+                    
+                        
+                            <div class="arr">
+	
+		<a href="/1/hi/england/suffolk/7190318.stm">
+			
+			
+			
+			Prosecutors presents murder case
+			
+		</a>
+		
+			<br />
+		
+	
+</div>
+                        
+                            <div class="arr">
+	
+		<a href="/1/hi/uk/7190983.stm">
+			
+			
+			
+			Fears of further flooding misery
+			
+		</a>
+		
+			<br />
+		
+	
+</div>
+                        
+                            <div class="arr">
+	
+		<a href="/1/hi/business/7191012.stm">
+			
+			
+			
+			House price fall 'at 1990s rates'
+			
+		</a>
+		
+			<br />
+		
+	
+</div>
+                        
+			<script language="JavaScript">getRssUrlStory('/rss/newsonline_uk_edition/uk/rss.xml')</script>
+                    
+		
+        
+
+	
+    
+
+
+
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br />
+        
+        
+        <div id="nav1">
+<div id="popStory">
+<h4><a href="/1/shared/bsp/hi/live_stats/html/map.stm" class="lp">MOST POPULAR STORIES NOW</a></h4>
+
+</div>
+</div>
+
+<script>
+	function liveStatsTabs(newTab,oldTab) {
+	
+	if (document.getElementById)
+	{
+		document.getElementById(newTab).style.display = "inline";
+		document.getElementById(oldTab).style.display = "none";
+		return false;
+	}
+	else if (document.all)
+	{
+		document.all[oldTab].style.display = "none";
+		document.all[newTab].style.display = "inline";
+		return false;
+	}
+	else {
+		return true;
+	}
+	}
+</script>
+
+<div id="livestats1451" class="statsStory">	
+	<ul id="tabpopStory">
+		<li id="livestats2451" class="tabpopHead">MOST E-MAILED</li>
+		<li id="livestats2452"><a href="/1/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats1450','livestats1451')">MOST READ</a></li>
+	</ul>
+<ul
+  class="popstoryList">
+  <li
+    class="mp1">
+    <a
+      href="http://news.bbc.co.uk/1/hi/technology/7191264.stm">Facebook asked to pull Scrabulous</a>
+  </li>
+  <li
+    class="mp2">
+    <a
+      href="http://news.bbc.co.uk/1/hi/business/7191012.stm">House price fall 'at 1990s rates'</a>
+  </li>
+  <li
+    class="mp3">
+    <a
+      href="http://news.bbc.co.uk/1/hi/technology/7188849.stm">Apple announces ultra-thin laptop</a>
+  </li>
+  <li
+    class="mp4">
+    <a
+      href="http://news.bbc.co.uk/1/hi/sci/tech/7189341.stm">Gigantic fossil rodent discovered</a>
+  </li>
+  <li
+    class="mp5">
+    <a
+      href="http://news.bbc.co.uk/1/hi/world/europe/7189773.stm">Profile: Carla Bruni</a>
+  </li>
+</ul>
+<a href="/1/shared/bsp/hi/live_stats/html/map.stm" class="arr">Most popular now, in detail</a>
+</div>
+<div id="livestats1450" class="statsStory">
+<ul id="tabpopStory">
+		<li id="livestats2451"><a href="/1/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats1451','livestats1450')">MOST E-MAILED</a></li>
+		<li id="livestats2452" class="tabpopHead">MOST READ</li>
+	</ul>
+<ul
+  class="popstoryList">
+  <li
+    class="mp1">
+    <a
+      href="http://news.bbc.co.uk/1/hi/technology/7191264.stm">Facebook asked to pull Scrabulous</a>
+  </li>
+  <li
+    class="mp2">
+    <a
+      href="http://news.bbc.co.uk/1/hi/england/suffolk/7190318.stm">Prosecutors presents murder case</a>
+  </li>
+  <li
+    class="mp3">
+    <a
+      href="http://news.bbc.co.uk/1/hi/business/7191012.stm">House price fall 'at 1990s rates'</a>
+  </li>
+  <li
+    class="mp4">
+    <a
+      href="http://news.bbc.co.uk/1/hi/scotland/highlands_and_islands/7189168.stm">Cycling star dies after collision</a>
+  </li>
+  <li
+    class="mp5">
+    <a
+      href="http://news.bbc.co.uk/1/hi/world/americas/7191248.stm">The world's most wanted cyber-jihadist</a>
+  </li>
+</ul>
+<a href="/1/shared/bsp/hi/live_stats/html/map.stm" class="arr">Most popular now, in detail</a>
+</div>
+<div class="clear"></div>
+<br/>
+<script>
+	liveStatsTabs('livestats1450','livestats1451');
+</script>
+<!--mod: 04.12.2007 | 04.12.2007 | 172.31.42.91-->
+
+                    </td>
+                </tr>
+                 <tr><td colspan="3"> 
+<div class="o">
+      
+    
+        
+        
+	
+            
+            
+		
+            
+            <div><img src="http://newsimg.bbc.co.uk/media/images/41755000/gif/_41755376_story_foot_shadow.gif" width="629" height="7" alt="" border="0"></div>
+            
+                
+                    
+                
+            
+	
+	
+    
+<img src="http://newsimg.bbc.co.uk/shared/img/ffffff.gif" width="629" height="10" alt="" border="0"><br />
+    
+        <div class="nwfiller2">
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+			
+			FEATURES, VIEWS, ANALYSIS
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	</div>
+    
+
+    
+
+  <table cellspacing="0" border="0" cellpadding="0" width="629">
+    <tr>
+      <td valign="top" width="203">
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+
+			
+
+
+
+
+<div class="pb">
+<div class="o">
+
+		<a class="pbl" href="/1/hi/world/americas/7191248.stm">
+			<img src="http://newsimg.bbc.co.uk/media/images/44359000/jpg/_44359181_tsouli_puff.jpg" align="left" width="66" height="66" alt="Younes Tsouli" border="0" vspace="0" class="imvr" hspace="0">
+			
+            
+				<b>Internet terror</b>
+				<br />The London cyber expert who spun a web for al-Qaeda
+				
+			
+		</a>
+		<br clear="all" />
+
+</div>
+</div>
+
+
+            
+                
+                    
+                
+            
+	
+	
+    
+</td><td valign="top" class="gpromo" width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td><td valign="top" width="203">
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+
+			
+
+
+
+
+<div class="pb">
+<div class="o">
+
+		<a class="pbl" href="/1/hi/uk/7191150.stm">
+			<img src="http://newsimg.bbc.co.uk/media/images/44359000/jpg/_44359188_forced_marriage_66puff.jpg" align="left" width="66" height="66" alt="Frorced marriage poster" border="0" vspace="0" class="imvr" hspace="0">
+			
+            
+				<b>Her cousin's bride</b>
+				<br />How a teenager's Pakistan holiday ended in a forced marriage
+				
+			
+		</a>
+		<br clear="all" />
+
+</div>
+</div>
+
+
+            
+                
+                    
+                
+            
+	
+	
+    
+</td><td valign="top" class="gpromo" width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td><td valign="top" width="203">
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+
+			
+
+
+
+
+<div class="pb">
+<div class="o">
+
+		<a class="pbl" href="http://www.bbc.co.uk/blogs/nickrobinson">
+			<img src="http://newsimg.bbc.co.uk/media/images/41905000/gif/_41905052_nick_new_6666.gif" align="left" width="66" height="66" alt="BBC political editor Nick Robinson" border="0" vspace="0" class="imvr" hspace="0">
+			
+            
+				<b>Nick Robinson</b>
+				<br />Stand by to see if Gordon Brown uses the 'N word'
+				
+			
+		</a>
+		<br clear="all" />
+
+</div>
+</div>
+
+
+            
+                
+                    
+                
+            
+	
+	
+    
+</td>
+    </tr>
+  </table>
+<img src="http://newsimg.bbc.co.uk/shared/img/ffffff.gif" width="629" height="10" alt="" border="0"><br />
+  <table cellspacing="0" border="0" cellpadding="0" width="629">
+    <tr>
+      <td valign="top" class="gffffff" width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td><td valign="top" class="gffffff" width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+    </tr>
+  </table>
+
+</div> </td></tr> 
+            </table>
+        </td>
+    </tr>
+</table>
+
+	
+        <div class="serviceStripStory2">
+	<h4><a href="http://news.bbc.co.uk/1/hi/help/products_and_services/default.stm" class="lp">PRODUCTS &amp; SERVICES</a></h4>
+	<ul>
+		<li class="emailnews"><a href="http://newsvote.bbc.co.uk/go/news/int/story/services/-/email/news">E-mail news</a></li>
+		<li class="mobiles"><a href="http://news.bbc.co.uk/go/news/int/story/services/-/1/hi/help/6207366.stm">Mobiles</a></li>
+		<li class="alerts"><a href="http://news.bbc.co.uk/go/news/int/story/services/-/1/hi/help/4735697.stm">Alerts</a></li>
+		<li class="newsfeeds"><a href="http://news.bbc.co.uk/go/news/int/story/services/-/1/hi/help/3223484.stm">News feeds</a></li>
+		<li class="itv"><a href="http://news.bbc.co.uk/go/news/int/story/services/-/1/hi/help/5092618.stm">Interactive TV</a></li>
+		<li class="podcast"><a href="http://www.bbc.co.uk/radio/podcasts/directory/genre/newscurrentaffairs/">Podcasts</a></li>
+	</ul>
+	<div class="clear"></div>
+</div>
+        
+        <div id="ad3" class="ad3"></div>
+<div id="footer1">
+	<ul id="serviceBar">
+		<li class="copyright2"><div class="logo"><a href="http://news.bbc.co.uk/1/hi/help/3281849.stm">BBC Copyright Notice</a></div><div class="copyrightdate">MMVIII</div></li>
+		<script language="JavaScript">
+<!--
+
+function randomLiveStats(){
+var liveStatsFacts=new Array()
+
+liveStatsFacts[0]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most read story in the UK is: <a href=http://news.bbc.co.uk/1/hi/england/suffolk/7190318.stm>Prosecutors presents murder case</a>";
+liveStatsFacts[1]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most read story in Africa is: <a href=http://news.bbc.co.uk/1/hi/world/africa/7190777.stm>Kenya police fire warning shots</a>";
+liveStatsFacts[2]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most read story in Europe is: <a href=http://news.bbc.co.uk/1/hi/world/south_asia/7189898.stm>The last of Nepal's Dura speakers</a>";
+liveStatsFacts[3]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most read story in North America is: <a href=http://news.bbc.co.uk/1/hi/technology/7191264.stm>Facebook asked to pull Scrabulous</a>";
+liveStatsFacts[4]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most read story in Australasia is: <a href=http://news.bbc.co.uk/1/hi/world/south_asia/7191200.stm>Militants overrun Pakistan fort</a>";
+liveStatsFacts[5]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most e-mailed story right now is: <a href=http://news.bbc.co.uk/1/hi/technology/7191264.stm>Facebook asked to pull Scrabulous</a>";
+liveStatsFacts[6]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | <a href=/1/shared/bsp/hi/live_stats/html/map.stm>Traffic to this site is currently 26% above normal</a>";
+liveStatsFacts[7]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | <a href=/1/shared/bsp/hi/live_stats/html/map.stm>59,557 pages were read in the last minute.</a>";
+liveStatsFacts[8]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | <a href=/1/shared/bsp/hi/live_stats/html/map.stm>96,043 people are reading stories on the site right now.</a>";
+
+document.write('<li class="footermostpop">' + liveStatsFacts[Math.floor(Math.random()*liveStatsFacts.length)] + '</li>');
+}
+randomLiveStats()
+//-->
+</script>
+
+<noscript>
+<li class="footermostpop"><a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | <a href=/1/shared/bsp/hi/live_stats/html/map.stm>59,557 pages were read in the last minute.</a></li>
+</noscript>
+		<li class="footertotop"><a href="#top">Back to top ^^</a></li>
+	</ul>
+	<ul id="footList">
+		<li><a href="http://news.bbc.co.uk/1/hi/help/default.stm">Help</a></li>
+		<li><a href="http://www.bbc.co.uk/privacy/">Privacy and cookies policy</a></li>
+		<li><a href="http://news.bbc.co.uk/1/hi/help/3281815.stm">News sources</a></li>
+		<li><a href="http://www.bbc.co.uk/info/">About the BBC</a></li>
+		<li><a href="http://news.bbc.co.uk/newswatch/ukfs/hi/feedback/default.stm"  class="none" >Contact us</a></li>		
+		
+	</ul>
+</div>
+
+
+<map name="world_map" id="world_map">
+<area alt="Americas" coords="0,0,34,53" href="/1/hi/world/americas/default.stm" />
+<area alt="Africa" shape="poly" coords="37,25,37,51,52,51,52,33,48,33,48,31,40,31" href="/1/hi/world/africa/default.stm" />
+<area alt="Europe" shape="poly" coords="35,2,66,2,66,12,56,12,56,20,37,20" href="/1/hi/world/europe/default.stm" />
+<area alt="Middle East" shape="poly" coords="44,24,57,24,58,50,55,50,55,31,52,28,44,28" href="/1/hi/world/middle_east/default.stm" />
+<area alt="South Asia" coords="60,24,67,49" href="/1/hi/world/south_asia/default.stm" />
+<area alt="Asia Pacific" shape="poly" coords="71,2,89,3,88,51,69,51,69,20,62,20,62,16,71,16" href="/1/hi/world/asia-pacific/default.stm" />
+</map>
+
+    <br />
+	
+
+<script language="JavaScript">
+<!--
+var gmt = "<img src=\"http://newsimg.bbc.co.uk/sol/shared/img/timezone/x.zzz\" width=\"0\" height=\"0\" />";
+var not_gmt = "<img src=\"http://newsimg.bbc.co.uk/sol/shared/img/timezone/y.zzz\" width=\"0\" height=\"0\" />";
+function showContent(d,c){for(var x=0;x<d.length;x++){if(d[x].className==c)d[x].style.display = "block";}}
+function doDocWrite(img){document.write(img);}
+if(document.getElementById){
+var d = document.getElementsByTagName("span");
+if(new Date().getTimezoneOffset()<=0&&new Date().getTimezoneOffset()>=-60){showContent(d,"t1");}else{showContent(d,"t2");}
+}
+//-->
+</script>
+
+
+   
+    <br />
+<div id="ad2" class="ad2"></div>
+<div id="bbccomWebBug" class="bbccomWebBug"></div>
+
+        <br />
+	
+
+</body>
+</html>

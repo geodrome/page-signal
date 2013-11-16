@@ -1,0 +1,860 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="title" content="Welcome to The London Free Press in London, Ontario Canada -- News, Sports, Business, Opinion, Ente 'londonfreepress';
+			this.sectionLevel2 = 'sports';
+			this.sectionLevel3 = 'sports_hockey';
+			this.sectionLevel4 = '';
+			this.sectionLevel5 = '';
+			this.sectionLevel6 = '';
+			this.language = 'en';
+			this.division = 'smc';	
+			this.networkid = 'can';
+            this.SwitchCgi = true;
+			this.trackExternalLinks= 'true';
+			this.pageType = '';
+			this.srcsite = 'portal';
+			this.s_account = 'cnolfpresscanoecaprod,cnocanoeglobalprod';
+			this.linkInternalFilters = 'javascript:,canoe.ca';
+			this.linkExternalFilters = '';			
+			this.linkTrackVars = 'server';
+			this.linkTrackEvents = 'None';			
+ 			this.linkLeaveQueryString = 'false';					
+			this.prop22 = 'sports';	          
+		    this.server = this.networkid + '.' + this.language + '.' + this.division + '.' + this.mainsection;
+			
+			this.type = '';
+            //check to see if the page is a home page or an article page 
+              var theurl=document.location.href;
+              var mainurla=theurl.indexOf('home.html');
+              var mainurlb=theurl.charAt(theurl.length -1);
+              var mainurlc=theurl.indexOf('home.php');
+                  if ((mainurla!=-1) || (mainurlb=='/') || (mainurlc!=-1)){
+                      var pagen='home';
+                     }
+                     else {
+                      var pagen='article';
+                     }
+            //check to see if the page is an archive page 	
+		    
+			
+			      if (archiveurla!=-1) {
+			         this.articlename = 'sports' + ' archive';
+  			         }
+			      else {
+			         this.articlename = 'Slammer for Rammer';
+			         }
+             //setting the page name
+			 
+               if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 !='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+this.sectionLevel5+':'+this.sectionLevel6+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+this.sectionLevel5+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 =='') && (this.sectionLevel4 =='') &&  (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                       if (this.sectionLevel2 =='homepage') {
+							this.pageName= this.mainsection+':'+pagen;
+						  }
+							else {	  
+                                  this.pageName= this.mainsection+':'+this.sectionLevel2+':'+pagen;
+								 }
+                 }
+                 else {
+				      if (this.pageType!='errorPage') {
+                          this.pageName= this.mainsection+':'+pagen;
+                          }
+						  else {
+						  this.pageName='';
+				          }
+				 }
+			this.prop1 ='';
+			this.prop2 ='';
+				if (this.sectionLevel2=='homepage') {
+			this.prop3 = '';
+					}
+				else {
+			this.prop3 = this.sectionLevel2;
+				}
+				if (this.sectionLevel3!='') {
+			this.prop4 = this.sectionLevel3;
+				}
+				else {
+			this.prop4 = '';
+				}
+				if (this.sectionLevel4!='') {
+			this.prop5 = this.sectionLevel4;
+				}
+				else {
+			this.prop5 = '';
+				}
+				if (this.sectionLevel5!='') {
+			this.prop6 = this.sectionLevel5;
+				}
+				else {
+			this.prop6 = '';
+				}
+        	this.prop7 ='smc';
+			this.prop11 = theurl.slice(7);
+		     
+		
+		//check to see if a page is an article if so, pass its headline to prop12
+		
+			if ((pagen=='article') && (this.pageType!='errorPage')) {
+			this.prop12   = this.mainsection+':'+this.articlename;
+				}
+				else {
+			this.prop12   = '';
+				}
+				
+			if (this.type=='print') {
+			 this.prop18  = theurl.slice(7);
+			   }
+			   else {
+			 this.prop18  ='';  
+			   }	
+				
+			this.prop20 = 'sun';
+			this.prop23 = 'en';
+				if (this.sectionLevel6!='') {
+			this.prop36 = this.sectionLevel6;
+				}
+				else {
+			this.prop36 = '';
+				}
+	
+               if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 !='')){
+            this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5+'|'+this.sectionLevel6;
+            this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+ this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5+'|'+this.sectionLevel6;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+ this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') &&  (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+ this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3;
+                 }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 =='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                     if (this.sectionLevel2 =='homepage') {
+		   this.hier1= this.mainsection;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection;
+					  }
+			  	     else {
+		   this.hier1= this.mainsection+'|'+this.sectionLevel2;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2;
+                       }
+                 }
+                 else {
+           this.hier1= this.mainsection;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection;
+                  }
+		   this.hier3= this.prop22+'|'+this.language+'|'+this.division;	
+		}
+		var MyOmnitureVariables  = new OmnitureVariables();
+		// ]]> --></script>
+		
+		
+		<script type="text/javascript"><!-- // <![CDATA[
+		function DfpVariables(){
+			this.mainsection = 'londonfreepress';
+			this.sectionLevel2 = 'sports';
+			this.sectionLevel3 = 'sports_hockey';
+			this.sectionLevel4 = '';
+			this.sectionLevel5 = '';
+			this.language = 'en';
+			this.division = 'smc';	
+			this.networkid = 'can';
+ 			this.affiliate = '';          	
+			this.tile = 1;
+			this.rand_num = Math.floor(Math.random()*8999999999)+1000000000;
+			this.prov = '';
+			
+			this.SwitchLang = this.language;
+			this.de_site = 'sun_media';
+			this.de_vchannel = 'londonfreepress';
+			this.de_category = this.sectionLevel3;
+			this.de_subcategory = '';	
+			this.de_subchannel = this.sectionLevel2;
+			this.de_hchannel = 'news';
+	       
+		    this.theurl=document.location.href;
+            this.mainurl1=this.theurl.indexOf('home.html');
+            this.mainurl2=this.theurl.charAt(this.theurl.length -1);
+            this.mainurl3=this.theurl.indexOf('home.php');
+             
+			// code to check if a page is a home page of level 3 and below. hp=1 means homepage is true
+			if ((this.sectionLevel4=='') && ((this.mainurl1!=-1) || (this.mainurl2=='/') || (this.mainurl3!=-1))){
+				this.hp='1';
+			} else {
+				this.hp='0';
+			}
+		}
+		var MyGenericTagVar  = new DfpVariables();
+		// ]]> --></script>
+		
+	    <script type="text/javascript" src="/newsstand/generix/js/generix.js"></script>		
+		<script type="text/javascript" src="/newsstand/generix/js/GenFonction.js"></script>	
+		<script type="text/javascript" src="/newsstand/generix/dfp/papers/londonfreepress/TagDfpSection.js"></script>
+		<script type="text/javascript" src="/newsstand/generix/dfp/TagDfpEngine.js"></script>
+		
+		
+	<SCRIPT LANGUAGE="JavaScript1.2" SRC="/Includes/sendit.js"></SCRIPT>	
+
+	 <link href="/Includes/lfp_style.css" rel="STYLESHEET" type="text/css"> 
+</head>
+
+<body bgcolor="#ffffff" topmargin=0 marginwidth=0 leftmargin=0 marginheight=0> 
+<center>
+<!-- BANNER AD BEGINS -->
+<table width="100%" cellpadding=0 cellspacing=0 border=0 bgcolor="#000000">
+	   <tr bgcolor="#000000">
+	 	<td valign=center width=294><img src="http://www.canoe.ca/lfpress_2003Images/canoe_net2.gif" border="0" USEMAP="#canoe_net2.gif"></td>		
+		<td width=20 bgcolor="#000000"><img src="http://www.canoe.ca/NewHomeImages/invisible.gif" width=65 height=1><br><script type="text/javascript">var nwb_type = 'dflt';</script><script type="text/javascript" src="http://static.search.canoe.ca/s-toile/img/js/network_searchbar/network_searchbar_en.js"></script></td>
+	<td align=right width=150><FORM name="guidecanoe" style="margin:0; padding:0; display:inline;"><SCRIPT LANGUAGE="JavaScript1.2" src="http://www.canoe.ca/Canoe/Includes/options.js"></SCRIPT></td>
+<td bgcolor="#000000" width="100%"></form>&nbsp;</td>
+	   </tr>
+	  </table>
+<MAP NAME="canoe_net2.gif">
+<AREA SHAPE="RECT" COORDS="5,1,109,13" HREF="http://www.canoe.ca/" ALT="CANOE Your Internet Network">
+<AREA SHAPE="RECT" COORDS="120,0,190,13" HREF="http://cnews.canoe.ca/" ALT="CNEWS">
+</MAP>
+<!-- BANNER AD ENDS -->
+<!-- TOP MAIN BANNER BEGINS -->
+<table width=766 celpadding=0 cellspacing=0 border=0>
+ <tr><td colspan=3 align=center><img src="/Images_2005/invisible.gif" width=766 height=4><bR>
+<!-- AdSpace site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=superbanner&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=superbanner&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace --></td></tr>
+ <tr>
+  <td width="343"><A href="/home.html"><img src="/Images_2005/LFPlogo.gif" width="343" height="72" alt="The London Free Press" border="0"></a></td>
+  <td valign=top align=right width=421><!-- sponsorship spot begins --><!-- BEGIN THIS WEEK IN LFP -->
+<br>
+<div align="right"><table width="423" border="0"  bgcolor="#3277a2" cellspacing="1" cellpadding="1"><tr><td bgcolor="white">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td valign="top" width="100%">
+<img src="/images/thisweek/saturdays_paper.gif" width="290" height="20" border="0">
+<div id="smtext">
+<span class="mainheadline">Loads of laughs! City columnist Ian Gillespie helps your prepare for the most depressing day of the year</span>
+</div>
+</td>
+<td width="120" bgcolor="white" valign="absmiddle" align="center">
+<a href="/cgi-bin/publish.cgi?search=advertiser&x=powerpage_advertiser&s=blank&s_category=&s_keywords=&s_category_type=powerpage" class="mainheadline"><img src="/images/thisweek/shoppingsmart.gif" width="120" height="60" border="0" alt="Shopping Smart Advertiser pages"></a>
+</td></tr>
+</table></td>
+</tr>
+</table>
+</div>
+<!-- END THIS WEEK IN LFP -->	
+<!-- sponsorship spot ends --></td>
+  <td width=2><img src="/Images_2005/invisible.gif" width=2 height=2></td>
+ </tr>
+ <tr><td colspan=3><img src="/Images_2005/invisible.gif" width=10 height=2></td></tr> 
+</table>
+<table width=766 cellpadding=0 cellspacing=0 border=0>
+  <tr>
+  <td colspan=6><img src="/Images_2005/bluebar.gif" width="766" height="6" alt="" border="0"></td>
+ </tr>
+ <tr bgcolor="#3277a2">
+  <td width=230><font color="#ffffff"><div id=date>&nbsp;<!--Date automatically generated by Timestamp-->
+Sunday, 20 January, 2008
+</div></font></td>
+  
+<td><span class="class="toplinks"">
+<a href="http://www.lfpress.ca/cgi-bin/publish.cgi?s=customerservice&h=subscribe" class="toplinks">
+Subscribe
+</a>
+</span></td>
+<td><span class="class="toplinks"">
+<a href="http://www.lfpress.ca/cgi-bin/comments.cgi?c=archive" class="toplinks">
+News Research Centre
+</a>
+</span></td>
+<td><span class="class="toplinks"">
+<a href="https://secure.lfpress.com/adnet" class="toplinks">
+Place a Classified Ad
+</a>
+</span></td>
+<td><span class="class="toplinks"">
+<a href="http://www.lfpress.ca/advertising/index.html" class="toplinks">
+Advertise
+</a>
+</span></td>
+
+ </tr>
+</table>
+
+<!-- TOP MAIN BANNER ENDS -->
+
+
+<table width=766 cellpadding=0 cellspacing=0 border=0>
+ <tr>
+  <td width=140 valign=top bgcolor="#3277a2">
+  <!-- LEFT NAV BEGINS -->
+    <!-- WEATHER BLOC BEGINS-->
+  <table width=140 cellpadding=4 cellspacing=0 border=0>
+   <tr bgcolor="#ffffff">
+       <td><TABLE border=0 cellspacing=0 cellpadding=0 width=100%>
+  <TR>
+    <TD><a href="http://weather.canoe.ca/Weather/CityLondonON.html" target="new"><img alt="" border=0 src="http://www.canoe.ca/NewWeather/iv.gif" width="42"><img src="http://www.canoe.ca/NewHomeImages/invisible.gif" height=1 border=0 width=10></a></TD>
+    <TD valign=top><a href="http://weather.canoe.ca/Weather/CityLondonON.html" Class="weatherlink" target="new">Light flurries<BR>-12<sup>o</sup>C</a></TD>
+  </TR></TABLE>
+
+</td>
+   </tr>
+   <tr bgcolor="#ffffff"><td align="center"><b><a href="http://weather.canoe.ca/Weather/CityLondonON.html" class=fs>FULL CONDITIONS</a></b></td></tr>
+<tr bgcolor="#ffffff">
+   <td align="center"><SCRIPT language=JavaScript1.1 src="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=londonfreepress&position=sponsorship_1&HChannel=news">
+</SCRIPT></td>
+   </tr>  
+ </table><!-- WEATHER BLOC ENDS-->
+  
+  <table width=140 cellpadding=4 cellspacing=0 border=0>
+   <tr bgcolor="#d8d8d8">
+    <td valign=top><b>
+	 <a href="/home.html" class="leftnavb">Home</a><br>
+	 <a href="/newsstand/News/" class="leftnavb">News</a><br>
+	 <a href="/opinion/" class="leftnavb">Opinion</a><br>
+         <a href="/newsstand/Opinion/Columnists/" class="leftnavb">Columnists</a><br>
+	 <a href="/newsstand/CityandRegion/" class="leftnavb">City & Region</a><br>
+         <a href="/newsstand/Today/" class="leftnavb">Today</a><br>
+	 <a href="/newsstand/Sports/" class="leftnavb">Sports</a><br>	
+ &nbsp;<a href="/newsstand/Sports/Index/" class="leftnavblue">Sport Index</a><br>
+
+<!-- &nbsp;<a href="/sport/curling.html" class="leftnavblue">Curling</a><br> -->
+         &nbsp;<a href="/recreation/golf.html" class="leftnavblue">Golf Guide</a><br> 
+	<!-- &nbsp;<a href="/sport/footballconfidential.html" class="leftnavblue">Football Confidential</a><br> -->
+	 &nbsp;<a href="/newsstand/Sports/HighSchoolSports/" class="leftnavblue">High School Sports</a><br>	 
+	 &nbsp;<a href="/newsstand/Sports/Hockey/" class="leftnavblue">Hockey</a><br>
+         &nbsp;<a href="/knights/index.html" class="leftnavblue">London Knights</a><br>
+	 &nbsp;<a href="/newsstand/Sports/Motorsports/" class="leftnavblue">Motorsports</a><br>
+         
+
+	 &nbsp;<a href="/newsstand/Sports/Soccer/" class="leftnavblue">Soccer</a><br>	 	 
+	&nbsp;<a href="/sport/mustangs.html" class="leftnavblue">Western Mustangs</a><br>	
+         &nbsp;<a href="/newsstand/Sports/OtherSports/" class="leftnavblue">Other Sports</a><br>  
+	 <a href="/newsstand/Business/" class="leftnavb">Business</a><br>
+         <a href="/classifieds" class="leftnavb">Classifieds</a><br>
+<a href="/gallery" class="leftnavb">Photo Galleries</a><br>
+
+        	 	<span class="leftnavb"><b>WEEKLY</b></span><br>
+     	<a href="/wheels"   class="leftnavb">Wheels Auto Seller</a><br>
+     	<a href="/careers"   class="leftnavb">Careers</a><br>
+     	<a href="/homes"   class="leftnavb">Homes</a><br>
+     	<a href="http://www2.lfpress.com/classifieds/listcat.asp?pg=HMSL"   class="leftnavb">Home Seller</a><br>
+     	<a href="/travel/index.html"   class="leftnavb">Travel</a><br>
+        	 	<span class="leftnavb"><b>FEATURED</b></span><br>
+     	<a href="/specialreports/top5onweb.html"   class="leftnavb">Top 5 on Web</a><br>
+     	<a href="/specialreports/podcasts.html"   class="leftnavb">Podcasts</a><br>
+     	<a href="/blogs/index.html"   class="leftnavb">Blogs</a><br>
+     	<a href="/newsstand/Videos/"   class="leftnavb">Videos</a><br>
+     	<a href="/cgi-bin/babies.cgi?d=babies&x=babies2007"   class="leftnavb">Contest -- Babies of 2007</a><br>
+     	<a href="http://www.lfpress.com/perl-bin/contest.cgi?x=londonknights"   class="leftnavb">Contest -- Win tickets to see a London Knights game</a><br>
+
+	 	 	 
+	 </b></td>
+   </tr>
+   </table>
+    <!-- SuperPages.ca Form Begins -->
+
+
+<!--superpages-->
+<center><br>
+<script type="text/javascript" src="http://static.canoe.ca/toile/js/canoe_411/canoe_411_london_en.js"></script>
+</center>
+
+
+
+
+<!-- SuperPages.ca Form Ends -->
+   <table width=140 cellpadding=4 cellspacing=0 border=0>
+    <tr>
+     <td width=140 valign=top><div id=smtext>
+<!-- AdSpace site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=button_1&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=button_1&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+<br>
+<script language='JavaScript1.1' SRC="http://www.lfpress.com/scripts/build_js/powerhome.js"></script>
+<br>
+
+        	 	<span class="leftnavw"><b>ABOUT YOU</b></span><br>
+     	<a href="/perl-bin/publish.cgi?search=aboutyou&x=aboutyou&s=health&s_category=&s_category_type=aboutyouhealth"   class="leftnavw">Health</a><br>
+        	 	<span class="leftnavw"><b> </b></span><br>
+        	 	<span class="leftnavw"><b>SPECIAL SECTIONS</b></span><br>
+     	<a href="/specialsections/lifestyles.html"   class="leftnavw">Lifestyle Home Show</a><br>
+     	<a href="/cgi-bin/babies.cgi?d=babies&x=babies2007"   class="leftnavw">Babies of 2007</a><br>
+     	<a href="/specialsections/community_spotlight.html"   class="leftnavw">Community Spotlight - East</a><br>
+     	<a href="/specialsections/communityspotlight_south.html"   class="leftnavw">Community Spotlight - South</a><br>
+     	<a href="/specialsections/communityspotlight_west.html"   class="leftnavw">Community Spotlight - West</a><br>
+     	<a href="/specialsections/mmagazine.html"   class="leftnavw">M Magazine</a><br>
+
+
+	 <br>
+	 <!-- AdSpace site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=button_2&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=button_2&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+
+	 <br>
+
+        	 	<span class="leftnavw"><b>OUR SERVICES</b></span><br>
+     	<a href="https://secure.lfpress.com/adnet"   class="leftnavw">Place an Ad </a><br>
+     	<a href="/contactus.html"   class="leftnavw">Contact Us</a><br>
+     	<a href="/cgi-bin/publish.cgi?s=customerservice&h=subscribe"   class="leftnavw">Subscribe</a><br>
+     	<a href="/cgi-bin/comments.cgi?c=carrier"   class="leftnavw">Become a Carrier</a><br>
+     	<a href="/nie"   class="leftnavw">Newspapers in Education</a><br>
+     	<a href="/customerservice"   class="leftnavw">Your Newspaper</a><br>
+     	<a href="/cgi-bin/comments.cgi?c=general_editorial_lfp"   class="leftnavw">General Comments</a><br>
+     	<a href="/cgi-bin/publish.cgi?s=contactus&h=terms"   class="leftnavw">Terms and Conditions</a><br>
+     	<a href="/cgi-bin/publish.cgi?s=contactus&h=privacy"   class="leftnavw">Privacy Statement</a><br>
+     	<a href="/customerservice/contest_rules.html"   class="leftnavw">General Contest Rules</a><br>
+
+	 
+ <br>
+
+        	 	<span class="leftnavw"><b>ON CANOE.CA</b></span><br>
+					     	<a href="http://www.canoe.ca/Fun/home.html" target="_blank" class="leftnavw">Horoscopes</a><br>
+					     	<a href="http://cnews.canoe.ca/CNEWS/Lotteries/" target="_blank" class="leftnavw">Lotteries</a><br>
+     	<a href="http://ecards.canoe.ca/home.html"   class="leftnavw">E-Cards</a><br>
+					     	<a href="http://lifewise.canoe.ca/Puzzles/" target="_blank" class="leftnavw">Crosswords</a><br>
+					     	<a href="http://tvlistings3.zap2it.com/partners/zipcode.asp?partner_id=097" target="_blank" class="leftnavw">TV Listings</a><br>
+     	<a href="http://auctions.canoe.ca/"   class="leftnavw">Canoe Auctions</a><br>
+
+
+
+ <!-- AdSpace site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=popup&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=popup&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+
+</div>
+	 </td>
+	</tr>
+   </table>
+   
+  <!-- LEFT NAV ENDS -->
+ 
+  </td>
+  <td width=7><img src="/Images_2005/invisible.gif" width=7 height=2></td>
+  <td width=448 valign=top>
+
+<div class="article_body">
+    <a href="/newsstand/Sports/Hockey/"><img src="/Images_2005/h_sports_hockey.gif" width="448" height="54" alt="" border="0" vspace=5></a><br> 
+    <table width=448 cellpadding=0 cellspacing=0 border=0>
+   <tr>
+    <td><div class="article_body"><div class="article_headline"><b>Slammer for Rammer</b><br></div>
+	    Fri, January 18, 2008<br>
+		        <div class="article_overtitle"><FONT color="#3277a2"><B>Judge sets example in handing out four-year sentence</B></FONT><br></div>
+        		        <div class="article_credit"><B>By CP</B><br></div>
+                
+		        </div>
+	</td>
+	<td width=48 valign=top><a href="javascript:void(open('http://www.facebook.com/sharer.php?op=add&u=http://lfpress.ca/newsstand/Sports/Hockey/2008/01/18/4779852-sun.html&t=Slammer for Rammer','ToolbarPopUp','scrollbars=yes,resizable=yes,width=800,height=600'));" title="Add to Facebook"><img src="http://lfpress.ca/Images_2005/lfp_facebook.gif" alt="Add to Facebook" border="0" class="addTo" style="padding-bottom:4px; border:0" /></a><A href="javascript:sendit();" ></a></td>
+	<td width=48 valign=top><A href="javascript:sendit();"><img src="/Images_2005/email.gif" width=48 height=46 border=0 NAME="email"></a></td>
+	<td width=43 valign=top><A href="pf-4779852.html"><img src="/Images_2005/print.gif" width=43 height=46 border=0 NAME="print"></a></td>
+	<td width=44 valign=top><A href="http://rapids.canoe.ca/cgi-bin/reg/NR-cust_service.pl?MODE=CUSTOMER_SERVICE&LOOK=LFPRESS"><img src="/Images_2005/write.gif" width=44 height=46 border=0 NAME="rite"></a></td>
+   </tr>
+  </table>
+
+
+                                                <br>
+                <table border=0 cellpadding=0 cellspacing=0 align="right" style="clear:right">
+                  <tr>
+                    <td><table bgcolor="#efefef" align="right" cellpadding="2" border=0 width="200" height="224">
+                        <tr>
+                          <td><img src="http://lfpress.ca/newsstand/Sports/Hockey/2008/01/18/lonsports.jpg" height="224" width="200"></td>
+                        </tr>
+                        <tr>
+                          <td><div class="CaptionFont" style="margin:5px;">
+                              Former Toronto Maple Leaf captain Rob Ramage enters Newmarket court with his wife Dawn  prior to being sentenced to four years in prison for an impaired driving accident that killed ex-Chicago Blackhawks player Keith Magnuson. (MARK O'NEILL, Sun Media)                              </div></td>
+                        </tr>
+                      </table></td>
+                  </tr>
+                                  </table>
+                                                <p>NEWMARKET -- Rob Ramage's reputation as an "exemplary citizen" was trumped by a judge's desire to send a strong message of deterrence against drunk driving as the former NHL player was sentenced yesterday to four years in prison for a crash that killed his friend, former NHLer Keith Magnuson.
+                                <p> Magnuson's death on Dec. 15, 2003, was "tragic and senseless" and occurred under circumstances far too common on the nation's roads and highways, Ontario Superior Court Justice Alexander Sosna said in passing sentence.
+                                <p> "The carnage on our roads caused by impaired drivers continues unabated," Sosna said.
+                                <p> Ramage's case bore "the hallmarks of too many events, done by too many drivers, culminating in too much pain," he said.
+                                <p> Ramage's wife wept as the judge sentenced her husband to prison for impaired driving causing death, among other offences, and banned him from driving for five years after his release.
+                                <br clear="right">
+                <br clear="right">
+                                                <br clear="right">
+                <table align="right" cellpadding="2" border=0 >
+                  <tr>
+                    <td><!-- BIG BOX HERE -->
+                      <!-- AdSpace site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=bigbox&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=bigbox&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+
+                    </td>
+                  </tr>
+                </table>
+                                                                <p> The Ontario Court of Appeal decided that Ramage, 49, will be allowed to appeal his conviction.
+                                <p> Shortly after the court's decision, Ramage was released on bail pending his appeal. He left the Newmarket court where he was sentenced and stepped into an SUV with his family.
+                                <p> While his appeal is being processed, the court ordered Ramage to reside at his home in St. Louis, abstain from alcohol and to not operate a motor vehicle.
+                                <p> At the sentencing hearing in December, Magnuson's family said they have forgiven Ramage and requested he be spared jail time. They asked he be sentenced to travel North America telling high school athletes about the dangers of drunk driving.
+                                <p> "The Magnuson family . . . I thank them for their forgiveness," Ramage told the court before sentence was passed.
+                                <p> "Keith Magnuson was a dear friend and mentor. I can only imagine what a loving husband and father he was."
+                                <p> Ramage played 15 seasons as an NHL defenceman with eight teams, winning Stanley Cup rings with Calgary and Montreal. He also played for Colorado, St. Louis, Toronto, Minnesota, Tampa Bay and Philadelphia.
+                                <p> Ramage retired after the 1993-94 season.
+                                <p> Magnuson was a rugged defenceman who played his entire 11-season NHL career with the Blackhawks, retiring after the 1979-80 campaign. He also coached the team for a season and a half.
+                                <p> Although the judge called Ramage an "exemplary citizen" who has expressed true remorse and wouldn't pose a danger to the community if released, he said the "serious crime" demanded a sentence that would deter others from drinking and driving.
+                                <p> Andrew Murie, chief executive officer of Mothers Against Drunk Driving Canada, called the sentence "appropriate."
+                                <p> "I think a lot has to do with Ramage himself," he said. "He showed tremendous remorse to the Magnuson family, the Magnuson family asked for no jail time. Also, Ramage has accepted publicly his ill-advised behaviour and has accepted the consequences to some degree that go with it."
+                                <p> Magnuson, 56, was killed when a rental car driven by Ramage slammed head-on into another vehicle, driven by Michelle Pacheco, just north of Toronto. Ramage and Magnuson had just left a funeral reception for another former NHL player, Keith McCreary.
+                                <p> Pacheco, who was in court Thursday, suffered a broken heel and upper body injuries.
+                                <p> Last October, a jury found Ramage guilty on all five charges he faced.
+                                <p> Yesterday, the judge stayed one of the counts -- having excess blood alcohol -- on the mutual suggestion of the defence and Crown.
+                                <p> The prosecution, which had sought a sentence of three to five years, said evidence showed Ramage had up to four times the legal blood-alcohol limit at the time of the crash, although none of the hundreds of people at the funeral reception could say he had a single drink.
+                                <p> The defence, which had asked for a conditional sentence to be served in the community, claimed blood and urine tests were flawed and that any smell of alcohol came from beer cans that exploded in the accident.
+                                <p> Ramage's appeal states the judge was in error when he admitted evidence of the alcohol concentration of urine samples, seized without a warrant and without consent.
+                                                                                								
+	
+		
+					<div id=headline><b>Sports Headlines</b><br></div>
+									
+		
+ 	
+ Slammer for Rammer<br>
+ 		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/Hockey/2008/01/18/4779851-sun.html"  class="article_link">Toskala gets first shootout win</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/Motorsports/2008/01/18/4779853-sun.html"  class="article_link">Ban of leaded fuels killer blow to drag racing</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/Hockey/2008/01/18/4779854-sun.html"  class="article_link">Friday Knight</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/Hockey/2008/01/18/4779855-sun.html"  class="article_link">Knights seek zip for their power play</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/Golf/2008/01/18/4779856-sun.html"  class="article_link">Win keeps Lyle rink in hunt</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/HighSchoolSports/2008/01/18/4779857-sun.html"  class="article_link">Jaguars lock up playoff berth</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/UniversitySports/2008/01/18/4779858-sun.html"  class="article_link">Mustangs pay for penalties</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/Hockey/2008/01/18/4779859-sun.html"  class="article_link">NHL Notes</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/Hockey/2008/01/18/4779860-sun.html"  class="article_link">Yesterday's highlights</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/Hockey/2008/01/18/4779861-sun.html"  class="article_link">No justice for 'other' victim</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/OtherSports/2008/01/18/4779862-sun.html"  class="article_link">NFL Notes</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/OtherSports/2008/01/18/4779863-sun.html"  class="article_link">Favre, Strahan play down 'phantom' sack</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/OtherSports/2008/01/18/4779864-sun.html"  class="article_link">Frozen tundra also tough on TV crew</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/OtherSports/2008/01/18/4779866-sun.html"  class="article_link">Randall the Handle</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/OtherSports/2008/01/18/4779865-sun.html"  class="article_link">Patriots veterans know to stay wary</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/Golf/2008/01/18/4779867-sun.html"  class="article_link">Trahan, Gamez on top at Hope</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/OtherSports/2008/01/18/4779868-sun.html"  class="article_link">Sportsbriefs</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/OtherSports/2008/01/18/4779869-sun.html"  class="article_link">Baseball Notes</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/OtherSports/2008/01/18/4779870-sun.html"  class="article_link">McHale delivered Expos to Canada</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/OtherSports/2008/01/18/4779871-sun.html"  class="article_link">Chan carries Canada's fortunes</a><br>
+		
+ 			
+<a href="http://lfpress.ca/newsstand/Sports/OtherSports/2008/01/18/4779872-sun.html"  class="article_link">Henin, Sharapova collision on track</a><br>
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+				
+				
+								 
+  <br>
+ <!-- CNEWS Box -->
+<table width="448" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td colspan="3" bgcolor="E8E8E8"><img src="/Images_2005/invisible.gif" width="1" height="1" alt=""></td>
+	</tr>
+	<tr>
+		<td bgcolor="E8E8E8"><img src="/Images_2005/invisible.gif" width="1" height="1" alt=""></td>
+		<td width="448" bgcolor="F6F6F6">			
+			<div id="smtext" >
+				<b>SPORTS NEWS</b>
+			</div>
+			<table width="100%" border="0" cellspacing="0" cellpadding="5">
+				<tr valign="top" width="55%">
+					<td class="CanoeLinks">
+						<div id=smtext>
+							<a href="http://slam.canoe.ca/Slam/FigureSkating/2008/01/20/4783779-cp.html" class="CanoeLinks"><b>Rochette retains women's Canadian title </b></a><br>
+							Joannie Rochette survived a fall in the long program but managed to retain her women's singles title at the BMO Canadian Figure Skating Championships on Sunday.
+
+<br>
+							<a href="http://slam.canoe.ca/Slam/FigureSkating/2008/01/20/4783779-cp.html" class="fs">FULL STORY</a>&nbsp;&nbsp;<a href="http://slam.canoe.ca" class="fs">More at SLAM!</a><br>
+						</div>
+					</td>
+					<td width="45%">													
+						<table cellpadding="0" cellspacing=0 border=0>														
+													<tr valign="top">
+								<td valign=top><li class="CanoeLinksBullet"></td>
+								<td valign=top><a href="http://slam.canoe.ca/Slam/Basketball/NBA/2008/01/20/4783776-ap.html" class="CanoeLinks">Hawks' Johnson suspended for flagrant foul</a></td>
+							</tr>
+													<tr valign="top">
+								<td valign=top><li class="CanoeLinksBullet"></td>
+								<td valign=top><a href="http://slam.canoe.ca/Slam/Soccer/2008/01/20/4783670-ap.html" class="CanoeLinks">Everton beats Wigan</a></td>
+							</tr>
+													<tr valign="top">
+								<td valign=top><li class="CanoeLinksBullet"></td>
+								<td valign=top><a href="http://slam.canoe.ca/Slam/Soccer/2008/01/20/4783675-ap.html" class="CanoeLinks">Rangers wins late</a></td>
+							</tr>
+													<tr valign="top">
+								<td valign=top><li class="CanoeLinksBullet"></td>
+								<td valign=top><a href="http://slam.canoe.ca/Slam/Tennis/AustralianOpen/2008/01/20/4783668-ap.html" class="CanoeLinks">Long matches play havoc with schedule</a></td>
+							</tr>
+												</table>
+					</td>
+				</tr>
+			</table>
+			<div align="right"><a href="http://www.canoe.ca"><img src="/Images_2005/credit_canoe.gif" alt="Canoe.ca" border="0"></a></div>
+		</td>
+		<td bgcolor="E8E8E8"><img src="/Images_2005/invisible.gif" width="1" height="1" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3" bgcolor="E8E8E8"><img src="/Images_2005/invisible.gif" width="1" height="1" alt=""></td>
+	</tr>
+</table>
+<!-- CNEWS Box -->
+
+<br>
+<div style="width:448px;">
+<script> 
+<!-- 
+show_power(); 
+// --> 
+</script> 
+</div>
+  <br>
+  
+  
+  
+ </div>
+ 
+  </td>
+  <td width=10><img src="/Images_2005/invisible.gif" width=10 height=2></td>
+  <td width=161 valign=top>
+  <center><a href="http://lfpress.com"><img src="/Images_2005/lfpresscom.gif" width="161" height="48" alt="" border="0"></a><br>
+
+<!-- AdSpace site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=button_3&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=button_3&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+
+<br>
+<!-- AdSpace site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=button_7&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=button_7&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+
+<br>
+
+<!-- AdSpace site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=button_4&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=londonfreepress&SubChannel=sports&position=button_4&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+
+<br /><br />
+<script type="text/javascript" src="http://www.canoeklix.com/ads/js/encode?src=lfp:gen&n=5&ie=detect&oe=detect&lg=en&bw=1&hl=1&wh=160"></script>
+</center>
+  </td>
+ </tr>
+ <tr>
+  <td bgcolor="#3277a2"></td>
+  <td></td>
+  <td align=center><br><!-- BEGIN LINK-LIST COMPONENT -->
+<div align="center"> 
+
+                              
+                                	                	<a href="/home.html" class="horiz_text_nav">Home</a>
+  |               
+
+
+ 
+
+                              
+                                	                	<a href="/newsstand/News/" class="horiz_text_nav"> News</a>
+  |               
+
+
+ 
+
+                              
+                                	                	<a href="/newsstand/Opinion/" class="horiz_text_nav">Opinion</a>
+  |               
+
+
+ 
+
+                              
+                                	                	<a href="/newsstand/Today/" class="horiz_text_nav">Today</a>
+  |               
+
+
+ 
+
+                              
+                                	                	<a href="/newsstand/Sports/" class="horiz_text_nav">Sports</a>
+  |               
+
+
+ 
+
+                              
+                                	                	<a href="/newsstand/Business/" class="horiz_text_nav">Business</a>
+  |               
+
+
+ 
+
+                              
+                                	                	<a href="/classifieds" class="horiz_text_nav">Classifieds  </a>
+               
+
+		<br><br>
+
+ 
+
+                              
+                               	 <a href="https://secure.lfpress.com/adnet" class="horiz_text_nav">Place an Ad</a>
+  |               
+
+
+ 
+
+                              
+                                	                	<a href="/cgi-bin/publish.cgi?s=customerservice&h=subscribe" class="horiz_text_nav">Subscribe</a>
+  |               
+
+
+ 
+
+                              
+                                	                	<a href="/cgi-bin/comments.cgi?c=carrier" class="horiz_text_nav">Become a Carrier</a>
+  |               
+
+
+ 
+
+                              
+                                	                	<a href="/customerservice" class="horiz_text_nav">Your Newspaper</a>
+               
+
+		<br><br>
+
+ 
+</div>
+<!-- END LINK-LIST COMPONENT -->
+<br><table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr><td>
+			<table border="0" cellspacing="2" cellpadding="3" style="border: 1px solid #ededed">
+				<tr>
+					<td><img src="http://www.canoe.ca/Canoe/SunMedia/logo_sunmedia.gif" alt="Sun Media Corporation" border="0" vspace="3" /></td>
+					<form name="newspapers">
+					<td>
+						<img src="/Images_2005/invisible.gif" width="1" height="3" alt="" /><br />
+						<SELECT name="navigator" onChange="window.location=document.newspapers.navigator.options[document.newspapers.navigator.selectedIndex].value">
+							<OPTION SELECTED value="javascript:void(0)">Newspapers</option>
+<option value="http://www.torontosun.com/">- Toronto Sun 
+<option value="http://www.calgarysun.com/">- Calgary Sun
+<option value="http://www.ottawasun.com">- Ottawa Sun
+<option value="http://www.edmontonsun.com">- Edmonton Sun
+<option value="http://www.winnipegsun.com">- Winnipeg Sun
+<option value="http://www.lfpress.com/">- London Free Press
+<option value="http://toronto.24hrs.ca">- 24 Hours Toronto
+<option value="http://vancouver.24hrs.ca">- 24 Hours Vancouver
+<option value="http://montreal.24heures.ca/">- 24 Heures Montreal
+<option value="http://www.recorder.ca">- Brockville Recorder & Times
+<option value="http://www.fortmcmurraytoday.com/">- Fort McMurray Today
+<option value="http://www.dailyheraldtribune.com/">- Grande Prairie Daily Herald-Trib.
+<option value="http://www.kenoradailyminerandnews.com/">- Kenora Daily Miner & News
+<option value="http://www.portagedailygraphic.com/">- Portage la Prairie Daily Graphic
+<option value="http://www.stthomastimesjournal.com/">- St. Thomas Times Journal
+<option value="http://www.simcoereformer.ca/">- Simcoe Reformer
+<option value="http://www.stratfordbeaconherald.com">- Stratford Beacon Herald
+<option value="http://www.woodstocksentinelreview.com">- Woodstock Sentinel-Review
+<OPTION VALUE="http://jobboomcc.canoe.ca/">- Jobboom Career Connection
+<OPTION value="javascript:void(0)">------------
+<option value="http://www.bowesnet.com">BOWES PUBLISHERS
+<option value="http://www2.bowesnet.com/results.php?prov=AB&action=website">- Alberta
+<option value="http://www2.bowesnet.com/results.php?prov=SK&action=website">- Saskatchewan
+			   				<option value="http://www2.bowesnet.com/results.php?prov=MB&action=website">- Manitoba
+			   				<option value="http://www2.bowesnet.com/results.php?prov=ON&action=website">- Ontario
+			   				<option value="http://www2.bowesnet.com/results.php?prov=QC&action=website">- Quebec  									
+						</select>										
+					</td>				
+					</form>		
+				</tr>
+			</table><br>
+			<div id=smtext><center><a href="http://www.lfpress.ca/cgi-bin/comments.cgi?c=letters_editor" class=fs>Send a Letter to the Editor</a><br>
+			<a href="http://www.canoe.ca" class=fs>CANOE</a> home | We welcome your <a href="http://rapids.canoe.ca/cgi-bin/reg/NR-cust_service.pl?MODE=CUSTOMER_SERVICE&LOOK=LFPRESS" class=fs>feedback.</a><br>
+			<a href="http://www.canoe.ca/Canoe/copyright.html" target="_blank" class=fs>Copyright</a> &#169; 2006, <a href="http://www.canoe.com" class=fs>Canoe Inc.</a> All rights reserved.
+
+		 <br><br>
+Proprietor and Publisher - The London Free Press, <br>P.O. Box 2280, 369 York Street, London Ontario Canada N6A 4G1
+
+	
+		  </center></div></td>
+	</tr>
+</table>
+
+<script type="text/javascript" src="/newsstand/generix/omniture/TagOmnitureEngine.js"></script>
+		
+
+ <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-423171-20";
+urchinTracker();
+</script></td>
+<td colspan=2></td>
+ </tr>
+ </table>
+</body>
+</html>

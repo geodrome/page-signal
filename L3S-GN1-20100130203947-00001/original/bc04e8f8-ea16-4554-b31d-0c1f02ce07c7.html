@@ -1,0 +1,798 @@
+<html><head> 
+<title>Coverity Venture With U.S. Department of Homeland Security Resolves Quality Issues and Potential Security Vulnerabilities in 11 Major Open-Source Projects @ SYS-CON Media</title>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.sys-con.com/index.rss"/>
+<meta name="keywords" content="http://www.sys-con.com/, http://www.sys-con.tv/, http://jdj.sys-con.com/, http://linux.sys-con.com/, http://linuxbusinessnews.sys-con.com/, http://webservices.sys-con.com/, http://dotnet.sys-con.com/, http://issj.sys-con.com"/>
+<meta name="description" content="Coverity, Inc., the leader in improving software quality and security, today announced that as a result of its contract with U.S. Department of Homeland Security (DHS), potential security and quality defects in 11 popular open source software projects were identified and fixed."/>
+<meta name="copyright" content="Copyright 2008 www.sys-con.com"/>
+<script language="JavaScript" src="/common/syscon.js"></script>
+<link rel="stylesheet" type="text/css" href="/common/css/globalcss.htm"/>
+<link rel="stylesheet" type="text/css" href="/common/css.htm"/>
+<meta name="verify-v1" content="a6NjDzvT46KkJQB8r1nBOpeVO3qvaLPNnWqYp6ARi9U=" />
+<meta name="verify-v1" content="tm4pHX4k+u107UsSwZzPKSKjn/7eJZOlrt4pkPHPoKE=" />
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head><body><div id="pageheader"><Table width=100% cellspacing=0 cellpadding=0><tr><td>
+<style type="text/css">
+&lt;!--
+.style331 {	font-size: 12px;
+	font-weight: bold;
+}
+.style365 {font-size: 12px}
+.style370 {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	font-style: italic;
+}
+.style371 {color: #FFFFFF; font-family: Verdana, Arial, Helvetica, sans-serif;}
+--&gt;
+</style><table width="100%" height="100" cellspacing="0" cellpadding="0" border="0" >
+  <tbody><tr>
+    <td background="http://res.sys-con.com/section/72/top-bannerL.gif">&nbsp;</td>
+    <td width="986"><table width="986" cellspacing="0" cellpadding="0" border="0">
+      <tbody><tr>
+        <td width="307" height="100" rowspan="3"><a href="/"><img width="307" height="100" border="0" src="http://res.sys-con.com/section/72/maglogo.gif" alt=""/></a></td>
+        <td width="679" height="39" background="http://res.sys-con.com/section/72/dropmenubackground.gif" align="right"><table width="679" height="39" cellspacing="0" cellpadding="0" border="0" align="right">
+          <tbody><tr valign="middle"><td><!-- SiteSearch Google -->
+<form method="get" action="http://www.google.com/custom" TARGET="_new" style="margin-bottom:0; display: inline;padding:0; border:0; margin:0">
+
+<input type="hidden" name="domains" value="sys-con.com"></input>
+<input type="text" name="q" size="20" maxlength="255" value=""></input>
+<input type="submit" name="sa" value="Search"></input>
+<!--
+<img src="http://client.alexa.com/common/images/powered-google.gif" align=middle>-->
+<input type="hidden" name="sitesearch" value="sys-con.com"></input>
+<input type="hidden" name="client" value="pub-7009308985980740"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="ISO-8859-1"></input>
+<input type="hidden" name="oe" value="ISO-8859-1"></input>
+<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;"></input>
+<input type="hidden" name="hl" value="en"></input>
+
+</form>
+<!-- SiteSearch Google --></td>
+
+<td align="right">
+	<div align="right" style="z-index: 0;">
+	<select onchange="MM_jumpMenu('parent',this,0)" name="select2">
+	<option selected="selected">Jump to a SYS-CON Magazine</option>
+<option value="http://dotnet.sys-con.com">.NET Developer's Journal</option>
+<option value="http://apache.sys-con.com">Apache.SYS-CON.com</option>
+<option value="http://ajax.sys-con.com">AjaxWorld Magazine - AWM</option>
+<option value="http://cms.sys-con.com">CMS.SYS-CON.com</option>
+<option value="http://coldfusion.sys-con.com">ColdFusion Developer's Journal</option>
+<option value="http://crm.sys-con.com">CRM.SYS-CON.com</option>
+<option value="http://eclipse.sys-con.com">Eclipse Developer's Journal</option>
+<option value="http://opensource.sys-con.com">Enterprise Open Source Magazine</option>
+<option value="http://flex.sys-con.com">Flex Developer's Journal - Flex</option>
+<option value="http://hp.sys-con.com">HP.SYS-CON.com</option>
+<option value="http://internetvideo.sys-con.com">Internet Video - iTV</option>
+<option value="http://iphone.sys-con.com">iPhone Developer's Journal - iPHONE</option>
+<option value="http://itsolutions.sys-con.com">IT Solutions Guide</option>
+<option value="http://jdj.sys-con.com">Java Developer's Journal</option>
+<option value="http://linux.sys-con.com">Linux.SYS-CON.com</option>
+<option value="http://openwebdeveloper.sys-con.com">Open Web Developer's Journal</option>
+<option value="http://oracle.sys-con.com">Oracle.SYS-CON.com</option>
+<option value="http://perl.sys-con.com">Perl.SYS-CON.com</option>
+<option value="http://php.sys-con.com">PHP.SYS-CON.com</option>
+<option value="http://pbdj.sys-con.com">PowerBuilder Developer's Journal</option>
+<option value="http://python.sys-con.com">Python.SYS-CON.com</option>
+<option value="http://redhat.sys-con.com">RedHat.SYS-CON.com</option>
+<option value="http://ruby.sys-con.com">Ruby.SYS-CON.com</option>
+<option value="http://search.sys-con.com">SEO/SEM (Search) Journal</option>
+<option value="http://silverlight.sys-con.com">Silverlight Developer's Journal</option>
+<option value="http://saas.sys-con.com">SaaS.SYS-CON.com</option>
+<option value="http://sap.sys-con.com">SAP.SYS-CON.com</option>
+<option value="http://soa.sys-con.com">SOAWorld Magazine - SWM</option>
+<option value="http://symbian.sys-con.com">Symbian Developer's Journal</option>
+<option value="http://virtualization.sys-con.com">Virtualization.SYS-CON.com</option>
+<option value="http://web2.sys-con.com">Web 2.0 Journal</option>
+<option value="http://weblogic.sys-con.com">WebLogic Journal</option>
+<option value="http://websphere.sys-con.com">WebSphere Journal</option>
+<option value="http://wireless.sys-con.com">Wireless Business & Technology</option>
+<option value="http://xml.sys-con.com">XML Journal</option>
+
+	</select>
+	</div>
+</td>
+
+          </form>
+        </tr></tbody></table>
+      </td>
+      <tr>
+        <td height="25"><table width="679" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td><a href="http://www.sys-con.com"><img width="46" height="25" border="0" name="Image2" src="http://res.sys-con.com/section/72/home.gif" alt=""/></a></td>
+            <td><a href="http://www.sys-con.com/general/subscribe.htm"><img width="74" height="25" border="0" name="Image3" src="http://res.sys-con.com/section/72/sub.gif" alt=""/></a></td>
+            <td><a href="http://www.sys-con.com/general/advertise.htm" target="_blank"><img width="71" height="25" border="0" name="Image4" src="http://res.sys-con.com/section/72/advertise.gif" alt=""/></a></td>
+            <td><a href="http://www.sys-con.com/general/newslettersub.htm"><img width="119" height="25" border="0" name="Image5" src="http://res.sys-con.com/section/72/newsletters.gif" alt=""/></a></td>
+            <td><a href="http://www.sys-con.tv"><img width="76" height="25" border="0" name="Image6" src="http://res.sys-con.com/section/72/tv.gif" alt=""/></a></td>
+            <td><a href="http://events.sys-con.com"><img width="84" height="25" border="0" name="Image7" src="http://res.sys-con.com/section/72/blog.gif" alt=""/></a></td>
+            <td><a href="http://webcast.sys-con.com"><img width="64" height="25" border="0" name="Image8" src="http://res.sys-con.com/section/72/webcast.gif" alt=""/></a></td>
+            <td><a href="http://education.sys-con.com"><img width="76" height="25" border="0" name="Image9" src="http://res.sys-con.com/section/72/education.gif" alt=""/></a></td>
+            <td><a href="http://www.books.sys-con.com"><img width="69" height="25" border="0" name="Image10" src="http://res.sys-con.com/section/72/research.gif" alt=""/></a></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td height="36" background="http://res.sys-con.com/section/72/signinbackground.gif"><table width="679" height="36" cellspacing="0" cellpadding="0" border="0" align="center">
+          <tbody><tr valign="bottom">
+            <td align="left"><div align="left" class="style370"><span class="style331"> <b>The i-Technology Media!</b></span></div></td>
+            <td align=right><div class='profile'><a href='/profile/'>Sign-In</a> | <a href='/profile/'>Register</a></div></td>
+          </tr>
+          <tr valign="bottom">
+            <td height="5" align="left">&nbsp;</td>
+            <td height="5">&nbsp;</td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+    </tr></tbody></table>
+    <td background="http://res.sys-con.com/section/72/top-bannerR.gif">&nbsp;</td>
+  </td>
+</tr></tbody></table>
+<center>
+<Table width=984 bgcolor=ffffff  border=0 cellspacing=0 cellpadding=0><tr>
+<td>
+
+
+ <table width="990" height="95" border="0" align="center" cellpadding="2" cellspacing="0" bgcolor=ffffff>
+           <tr>
+             <td width="732" height="90" align="left" valign="top"><div align="left">
+<iframe id='a63eae93' name='a63eae93' src='http://banners.sys-con.com/phpAdsNew-2.0/adframe.php?n=a63eae93&amp;what=zone:88&amp;target=_blank' framespacing='0' frameborder='no' scrolling='no' width='728' height='90'><a href='http://banners.sys-con.com/phpAdsNew-2.0/adclick.php?n=a63eae93' target='_blank'><img src='http://banners.sys-con.com/phpAdsNew-2.0/adview.php?what=zone:88&amp;n=a63eae93' border='0' alt=''></a></iframe>
+</div></td>
+
+              <td width="16" align="center" valign="top"><img src="http://res.sys-con.com/section/1/black-pixel.gif" width="1" height="90" /></td>
+             <td width="242" align="right" valign="top"><div align="right">
+<a href="http://events.sys-con.com/"><img src="http://res.sys-con.com/section/113/rotating-242x160.gif" border=0></a>
+</div></td>
+           </tr></table>
+
+
+<center>
+<table><tr><td></td></tr></table>
+
+<style type="text/css">
+a.mainhead{font-family:arial;font-size:7pt;text-decoration:none;}
+.mainhead{font-family:arial;font-size:7pt;text-decoration:none;}
+</style>
+
+<span class="mainhead">
+  <a href="http://dotnet.sys-con.com" class="mainhead">.NET</a> &nbsp;&middot;&nbsp;
+	<a href="http://ajax.sys-con.com" class="mainhead"><strong>AJAX</strong></a> &nbsp;&middot;&nbsp;
+	<a href="http://eclipse.sys-con.com" class="mainhead">ECLIPSE</a> &nbsp;&middot;&nbsp;
+	<a href="http://flex.sys-con.com" class="mainhead">FLEX</a> &nbsp;&middot;&nbsp;
+	<a href="http://openwebdeveloper.sys-con.com" class="mainhead"><strong>OPEN WEB</strong></a> &nbsp;&middot;&nbsp;
+	<a href="http://iPhone.sys-con.com" class="mainhead"><strong>iPHONE</strong></a> &nbsp;&middot;&nbsp; 
+	<a href="http://java.sys-con.com" class="mainhead">JAVA</a> &nbsp;&middot;&nbsp;
+	<a href="http://linux.sys-con.com" class="mainhead">LINUX</a> &nbsp;&middot;&nbsp;
+	<a href="http://opensource.sys-con.com" class="mainhead">OPEN SOURCE</a> &nbsp;&middot;&nbsp;
+	<a href="http://oracle.sys-con.com" class="mainhead">ORACLE</a> &nbsp;&middot;&nbsp;
+	<a href="http://pbdj.sys-con.com" class="mainhead">PBDJ</a> &nbsp;&middot;&nbsp;
+	<a href="http://search.sys-con.com" class="mainhead">SEARCH</a> &nbsp;&middot;&nbsp;
+	<a href="http://silverlight.sys-con.com" class="mainhead">SILVERLIGHT</a> &nbsp;&middot;&nbsp;
+	<a href="http://soa.sys-con.com" class="mainhead"><strong>SOA</strong></a> &nbsp;&middot;&nbsp;
+	<a href="http://internetvideo.sys-con.com" class="mainhead">VIDEO</a> &nbsp;&middot;&nbsp; 
+	<a href="http://virtualization.sys-con.com" class="mainhead"><strong>VIRTUALIZATION</strong></a> &nbsp;&middot;&nbsp;	
+	<a href="http://web2.sys-con.com" class="mainhead">WEB 2.0</a> &nbsp;&middot;&nbsp;
+  <a href="http://wireless.sys-con.com" class="mainhead">WIRELESS</a> &nbsp;&middot;&nbsp;
+	<a href="http://xml.sys-con.com" class="mainhead">XML</a>	
+</span>
+
+<table><tr><td></td></tr></table>
+</center></div>
+<table cellspacing="5" align="center" id="#panelTable"> 
+<tr height="1"> 
+	<td rowspan="2" valign="top" style="width: 160px;" id="#panel1"> 
+		
+
+		
+
+		<div class="portletsmallfeedback"><div class='portlettitlesmall'>YOUR FEEDBACK</div><table border='0' cellpadding='2' cellspacing='0' width='99%'><tr><td><div class='story'><a href='http://flex.sys-con.com/read/485520.htm'><div class='storytitle'>Rich Internet 
+Applications: 2008 is the 
+Year the RIA Category 
+Accelerates </div></a><div class='storysummary'>Peter Barber wrote: &gt; 
+WebKit is the basis of 
+Mac OS X's Safari web 
+brow...</div><div class='storytagline'>Jan. 15, 2008 10:42 AM</div></div></td></tr></table></div><div class=""><a href="http://www.ajaxworld.com/"><div class=textlinktiny><b>AJAXWorld $200 "Gold Pass" Savings Expire January 18 - Register Today!</b></div></a>
+
+<table><tr><td></td></tr></table></div><div class=""><iframe id='a5a78b67' name='a5a78b67' src='http://banners.sys-con.com/phpAdsNew-2.0/adframe.php?n=a5a78b67&amp;clientid=2163' framespacing='0' frameborder='no' scrolling='no' width='160' height='74'><a href='http://banners.sys-con.com/phpAdsNew-2.0/adclick.php?n=a5a78b67' target='_blank'><img src='http://banners.sys-con.com/phpAdsNew-2.0/adview.php?clientid=2163&amp;n=a5a78b67' border='0' alt=''></a></iframe>
+<table><tr><td></td></tr></table></div><div class=""><style type="text/css">
+.textlinktiny
+{
+font-family: Verdana,Arial,Helvetica,sans-serif;
+color: #000099;
+    font-size: 9px;
+    margin-top: 0px;
+    padding-bottom: 3px;
+}
+</style>
+
+
+<a href="http://www.sys-con.com"><div class=textlinktiny>Did you read today's <b>front page stories</b> & breaking news?</a></b><br><br></div><div class=""><center><iframe id='a3ebff22' name='a3ebff22' src='http://banners.sys-con.com/phpAdsNew-2.0/adframe.php?n=a3ebff22&amp;clientid=2414' framespacing='0' frameborder='no' scrolling='no' width='160' height='160'><a href='http://banners.sys-con.com/phpAdsNew-2.0/adclick.php?n=a3ebff22' target='_blank'><img src='http://banners.sys-con.com/phpAdsNew-2.0/adview.php?clientid=2414&amp;n=a3ebff22' border='0' alt=''></a></iframe></center>
+
+<table><tr><td></td></tr></table></div><div class=""><a href="http://news.google.com/news?as_scoring=d&hl=en&q=site%3Asys-con.com&btnG=Search">
+  <div class="textlinktiny"><b>Live Google News</b> by <b>SYS-CON!</b></div>
+</a>
+
+<table><tr><td></td></tr></table></div><div class=""><iframe id='aeaa3861' name='aeaa3861' src='http://banners.sys-con.com/phpAdsNew-2.0/adframe.php?n=aeaa3861&amp;clientid=2484' framespacing='0' frameborder='no' scrolling='no' width='160' height='160'><a href='http://banners.sys-con.com/phpAdsNew-2.0/adclick.php?n=aeaa3861' target='_blank'><img src='http://banners.sys-con.com/phpAdsNew-2.0/adview.php?clientid=2484&amp;n=aeaa3861' border='0' alt=''></a></iframe>
+
+<table><tr><td></td></tr></table></div><div class=""><IFRAME src="http://banners.sys-con.com/IFrames/syscon_main_160.php" frameBorder=0 width=160 scrolling=no height=600></IFRAME><p></div>
+
+	</td>
+	<td rowspan="2" style="width: 468px;" id="#mainpanel" valign="top"> 
+		
+
+		
+
+		<div class=""><!-- google_ad_region_start --></div><div class="portletsmall"><div class='portlettitlesmall'>TOP THREE LINKS YOU MUST CLICK ON</div><iframe width="468" scrolling="no" height="63" frameborder="0" src="http://banners.sys-con.com/IFrames/JDJ_toptextlinks.php"></iframe></div><div class=""><script language='JavaScript' type='text/javascript' src='http://banners.sys-con.com/phpAdsNew-2.0/adx.js'></script>
+<script language='JavaScript' type='text/javascript'>
+<!--
+   if (!document.phpAds_used) document.phpAds_used = ',';
+   phpAds_random = new String (Math.random()); phpAds_random = phpAds_random.substring(2,11);
+   
+   document.write ("<" + "script language='JavaScript' type='text/javascript' src='");
+   document.write ("http://banners.sys-con.com/phpAdsNew-2.0/adjs.php?n=" + phpAds_random);
+   document.write ("&amp;what=zone:214");
+   document.write ("&amp;exclude=" + document.phpAds_used);
+   if (document.referrer)
+      document.write ("&amp;referer=" + escape(document.referrer));
+   document.write ("'><" + "/script>");
+//-->
+</script><noscript><a href='http://banners.sys-con.com/phpAdsNew-2.0/adclick.php?n=a15a5cc6' target='_blank'><img src='http://banners.sys-con.com/phpAdsNew-2.0/adview.php?what=zone:214&amp;n=a15a5cc6' border='0' alt=''></a></noscript></div><div class=""><table><tr><td></td></tr></table>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7009308985980740";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+google_color_border = "999999";
+google_color_bg = "FDFFCA";
+google_color_link = "000066";
+google_color_url = "000066";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br></div>
+
+	
+		
+
+
+
+
+<div class="storybody">
+
+
+<a href="/read/wires/5726.htm"><div class="storycategory">From the Wires</div></a>
+
+<div class="storytitle">Coverity Venture With U.S. Department of Homeland Security Resolves Quality Issues and Potential Security Vulnerabilities in 11 Major Open-Source Projects</div>
+
+	<div class="storyminortitle">New Version of Coverity Prevent at Coverity Scan Site to Provide Open Source Projects with Access to Advanced New Static Analysi</div>
+
+
+<p/><div class="writtenby">By: <a href="/read/wires/5726.htm">PR Newswire</a></div>
+
+<div class="storydatetime">Jan. 9, 2008 11:10 AM</div>
+
+<a href="javascript:location.href='http://digg.com/submit?phase=3&#038;url='+encodeURIComponent(location.href)+'&#038;title='+encodeURIComponent(document.title)+'&#038;bodytext=A SYS-CON.com Story&#038;category=17'">Digg This!</a>
+
+
+	<div class="toolbar"><table width="100%"><tr>
+	<td><a onMouseOver="window.status='';return true" href="/read/483058.htm"><img src="http://res.sys-con.com/section/1/read.gif" style="border: 0px;"/></a></td>
+  <td><a title="print this story" onMouseOver="window.status='';return true" href="#" onclick="windowPopup('Print Story','/read/483058_p.htm'); return false;"><img src="http://res.sys-con.com/section/1/print.gif" style="border: 0px;"/></a></td>
+  
+  <td><a title="alert someone to this story" onMouseOver="window.status='';return true" href="#" onclick="windowPopup('Email this Story','/read/483058_e.htm'); return false;"><img src="http://res.sys-con.com/section/1/email.gif" style="border: 0px;"/></a></td>
+  <td align="right"><a title="blog/write about this story" onMouseOver="window.status='';return true" href="#" onclick="windowPopup('Blog about this Story','/read/483058_b.htm'); return false;"><img src="http://res.sys-con.com/section/1/blog(1).gif" style="border: 0px;"/></a></td>
+  </tr></table></div>
+
+
+<img align="left" src="http://res.sys-con.com/author/5726/prnewswire100.jpg" hspace="5" vspace="5" style="border:1px solid black;"/>
+
+
+
+<p>SAN FRANCISCO, Jan. 9  /PRNewswire/ -- Coverity, Inc., the leader in improving software quality and security, today announced that as a result of its contract with U.S. Department of Homeland Security (DHS), potential security and quality defects in 11 popular open source software projects were identified and fixed.</p>
+<p>The 11 projects are Amanda, NTP, OpenPAM, OpenVPN, Overdose, Perl, PHP, Postfix, Python, Samba, and TCL.</p>
+<p>All of these projects eliminated multiple classes of potential security vulnerabilities and quality defects from their code at the Coverity Scan site (http://www.scan.coverity.com/). Because of their efforts to proactively ensure application integrity and security, organizations and consumers can now select these open source applications with even greater confidence.</p>
+<p>"Addressing security concerns will require a concerted effort on the part of the entire open source ecosystem to assuage enterprise concerns about security of open source software," according to analyst Michael Goulde in his 2007 Forrester report 'Enterprises View Open Source As A Key Tactic For Strategic Software Initiatives.'</p>
+<p>Based on these results, Coverity will advance these 11 projects to 'rung 2' of its open source security ladder, where they will benefit from access to new, advanced product capabilities, including the base technology which will enable access to the company's patent-pending application of Boolean satisfiability in static analysis.</p>
+<p>Coverity's technology creates a bit-accurate representation of a software system, where every relevant software operation is translated into Boolean values (true and false) and Boolean operators (such as and, not, or). This bit accurate representation enables SAT-based Solvers to analyze source code for the first time in commercial computer programming.</p>
+<p>The Coverity Scan site was developed with support from the U.S. Department of Homeland Security as part of the federal government's 'Open Source Hardening Project.' In addition to the 11 projects, additional open-source projects are poised for advancing to rung 2 over the next months. For more information on advancement criteria for Coverity's Scan ladder, visit: http://scan.coverity.com/ladder.html</p>
+<p>Projects at rung 2 of the Scan ladder have access to a significant upgrade of Coverity Prevent. The first projects to use these new capabilities report a significant increase in the number of identified defects, with some finding as many as 100 new hard-to-find defects than identified in rung 1 of the Scan ladder.</p>
+<p>"We applaud the developers responsible for the 11 open source projects that have advanced to the second rung of code security and quality at the Coverity Scan site," said David Maxwell, open source strategist for Coverity. "By progressively enabling new features and functionality in Coverity Prevent as security and quality defects are eliminated, we provide easy-to-manage sets of defects for participants while creating an incentive for them to continue to improve their code."</p>
+<p>Open source projects analyzed at the site include some of the worlds most widely used applications, including the Apache web server, the Linux operating system, the Firefox browser and the Samba file and printer sharing system.</p>
+<p>The Coverity Scan site currently analyzes 50 million lines of software in more than 250 projects and has helped fix over 7,500 software defects since the site's launch in March of 2006. Hundreds of open source developers have integrated the use of Coverity's technology into their open source development process to improve software quality and security. New features available to rung 2 projects at the site include:</p>
+<p>  -- Major enhancement to the core analysis engine to find more defects with
+     a low false positive rate
+  -- Infrastructure installed for use of Coverity's breakthrough Boolean
+     satisfiability (SAT) engine
+  -- Trend analysis features with graphs and customized queries to show
+     historical states and defect density by component or person
+  -- Ability to organize a code base into components by grouping directories
+     to easily identify troublesome sections in the codebase
+
+
+</p>
+<p>The Coverity Scan site is freely available to qualified open source projects at: http://scan.coverity.com/</p>
+<p>About Coverity Scan</p>
+<p>The Coverity Scan site was developed by Coverity with support from the U.S. Department of Homeland Security as part of the federal government's 'Open Source Code Hardening Project.' The site divides open source projects into rungs based on the progress each project makes in resolving defects. Projects at higher rungs receive access to additional analysis capabilities and configuration options. Projects are promoted as they resolve the majority of defects identified at their current rung.</p>
+<p>About Coverity</p>
+<p>Coverity (http://www.coverity.com/), the leader in improving software quality and security, is a privately held company headquartered in San Francisco. Coverity's groundbreaking technology removes the barriers to writing and delivering complex software by automatically finding and helping to fix critical software defects and security vulnerabilities as software is written. More than 350 leading companies choose Coverity because it scales to tens of millions of lines of code, has the lowest false positive rate while providing 100 percent path and value coverage. Companies like Juniper Networks, Symantec, McAfee, Synopsys, NASA, Palm and Wind River rely on Coverity's tools to find and eliminate critical defects from their mission-critical code.</p>
+<p>Coverity is a registered trademark, and Coverity Extend and Coverity Prevent are trademarks of Coverity, Inc. All other company and product names are the property of their respective owners. </p>Coverity, Inc.
+<blockquote>
+<p>CONTACT:  Media, Jim Shissler, Director, Public Relations of Coverity,<br>Inc., +1-415-694-5342, jshissler@coverity.com; or Steve Eisenstadt of Page One<br>PR, +1-919-781-8096, steve@pageonepr.com, for Coverity, Inc.</p>
+</blockquote>
+<blockquote>
+<p>Web site:  http://www.coverity.com/</p>
+</blockquote>
+
+<div class="storyfooter">
+Published Jan. 9, 2008
+
+ &mdash; Reads 118
+
+<br/>Copyright &copy; 2008 SYS-CON Media. All Rights Reserved.
+</div>
+
+
+	<div class="toolbar"><table width="100%"><tr>
+	<td><a onMouseOver="window.status='';return true" href="/read/483058.htm"><img src="http://res.sys-con.com/section/1/read.gif" style="border: 0px;"/></a></td>
+  <td><a title="print this story" onMouseOver="window.status='';return true" href="#" onclick="windowPopup('Print Story','/read/483058_p.htm'); return false;"><img src="http://res.sys-con.com/section/1/print.gif" style="border: 0px;"/></a></td>
+  
+  <td><a title="alert someone to this story" onMouseOver="window.status='';return true" href="#" onclick="windowPopup('Email this Story','/read/483058_e.htm'); return false;"><img src="http://res.sys-con.com/section/1/email.gif" style="border: 0px;"/></a></td>
+  <td align="right"><a title="blog/write about this story" onMouseOver="window.status='';return true" href="#" onclick="windowPopup('Blog about this Story','/read/483058_b.htm'); return false;"><img src="http://res.sys-con.com/section/1/blog(1).gif" style="border: 0px;"/></a></td>
+  </tr></table></div>
+
+
+<div class="authorbio"><strong><a href="/read/wires/5726.htm">About PR Newswire</a></strong><br/>Copyright © 2007 PR Newswire. All rights reserved. Republication or redistribution of PRNewswire content is expressly prohibited without the prior written consent of PRNewswire. PRNewswire shall not be liable for any errors or delays in the content, or for any actions taken in reliance thereon.<br/><br/</div>
+
+
+</div>
+
+
+  	
+	   
+		
+
+		
+
+		<div class=""><table><tr><td></td></tr></table>
+
+<script language='JavaScript' type='text/javascript' src='http://banners.sys-con.com/phpAdsNew-2.0/adx.js'></script>
+<script language='JavaScript' type='text/javascript'>
+<!--
+   if (!document.phpAds_used) document.phpAds_used = ',';
+   phpAds_random = new String (Math.random()); phpAds_random = phpAds_random.substring(2,11);
+   
+   document.write ("<" + "script language='JavaScript' type='text/javascript' src='");
+   document.write ("http://banners.sys-con.com/phpAdsNew-2.0/adjs.php?n=" + phpAds_random);
+   document.write ("&amp;what=zone:212");
+   document.write ("&amp;exclude=" + document.phpAds_used);
+   if (document.referrer)
+      document.write ("&amp;referer=" + escape(document.referrer));
+   document.write ("'><" + "/script>");
+//-->
+</script><noscript><a href='http://banners.sys-con.com/phpAdsNew-2.0/adclick.php?n=a7d14c11' target='_blank'><img src='http://banners.sys-con.com/phpAdsNew-2.0/adview.php?what=zone:212&amp;n=a7d14c11' border='0' alt=''></a></noscript>
+
+<table><tr><td></td></tr></table></div><div class="portletsmallpadding"><div class='portlettitle'>SUBSCRIBE TO THE WORLD'S MOST POWERFUL NEWSLETTERS</div><iframe width="468" scrolling="no" height="500" frameborder="0"  MARGINWIDTH="0" MARGINHEIGHT="0" src="http://www2.sys-con.com/newslettersub.cfm"></iframe></div><div class="portletsmallpadding"><div class='portlettitlesmall'>SUBSCRIBE TO OUR RSS FEEDS & GET YOUR SYS-CON NEWS LIVE!</div><table><tr><Td></TD></tr></table>
+<TAble width="468" border="0"><tr><Td>
+<font face=verdana size=-2>
+<center> 
+
+
+
+<Font face=verdana size=-2>
+<a href="http://www.sys-con.com/general/aboutfeeds.htm"><img src="http://res.sys-con.com/imgz/rss.gif" border="0"></a> Click to Add our RSS Feeds to the Service of Your Choice:<br>
+<TAble><Tr><Td></td></tr></table>
+
+<a href="http://www.sys-con.com/index.rss" title="Subscribe to my feed"><img src="http://www2.sys-con.com/rssgraphics/xml.gif" style="border: 0pt none ;" border="2" hspace="0" vspace="0"></a> 
+   <a href="http://fusion.google.com/add?feedurl=http://www.sys-con.com/index.rss"><img src="http://www2.sys-con.com/rssgraphics/google-all.gif" alt="Google Reader or Homepage" border="0" hspace="0" vspace="0"></a> 
+   <a href="http://add.my.yahoo.com/rss?url=http://www.sys-con.com/index.rss"><img src="http://www2.sys-con.com/rssgraphics/yahoo.gif" alt="Add to My Yahoo!" border="0" hspace="0" vspace="0"></a>
+   <a href="http://www.bloglines.com/sub/http://www.sys-con.com/index.rss"><img src="http://www2.sys-con.com/rssgraphics/bloglines.gif" alt="Subscribe with Bloglines" border="0" hspace="0" vspace="0"></a>
+   <a href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http://www.sys-con.com/index.rss"><img src="http://www2.sys-con.com/rssgraphics/newsgator.gif" alt="Subscribe in NewsGator Online" border="0" hspace="0" vspace="0"></a><br>
+   <a href="http://my.msn.com/addtomymsn.armx?id=rss&amp;ut=http://www.sys-con.com/index.rss&amp;ru=http://www.sys-con.com/index.rss"><img src="http://www2.sys-con.com/rssgraphics/msn.gif" border="0" hspace="0" vspace="0"></a>
+   <a href="http://www.feedster.com/myfeedster.php?action=addrss&amp;rssurl=http://www.sys-con.com/index.rss&amp;confirm=no"><img src="http://www2.sys-con.com/rssgraphics/addmyfeedster.gif" alt="myFeedster" border="0" hspace="0" vspace="0"></a>
+
+   <a href="http://feeds.my.aol.com/add.jsp?url=http://www.sys-con.com/index.rss"><img src="http://www2.sys-con.com/rssgraphics/aol.gif" alt="Add to My AOL" border="0" hspace="0" vspace="0"></a>
+
+   <a href="http://www.rojo.com/add-subscription?resource=http://www.sys-con.com/index.rss"><img src="http://www2.sys-con.com/rssgraphics/rojo.gif" alt="Subscribe in Rojo" style="border: 0pt none ;" border="2" hspace="0" vspace="0"></a>
+   <a href="http://www.newsburst.com/Source/?add=http://www.sys-con.com/index.rss"><img src="http://www2.sys-con.com/rssgraphics/newsburst.gif" alt="Add 'Hugg' to Newsburst from CNET News.com" style="border: 0pt none ;" border="2" hspace="0" vspace="0"></a>
+   <a href="http://www.kinja.com/checksiteform.knj?pop=y&amp;add=http://www.sys-con.com/index.rss"><img src="http://www2.sys-con.com/rssgraphics/addkinja.gif" alt="Kinja Digest" border="0" hspace="0" vspace="0"></a>
+ <a href="http://www.sys-con.com/general/aboutfeeds.htm"><b>View Additional SYS-CON Feeds</b></a>
+
+</TD></tr></TABLE>
+
+<table cellspacing=3 cellpadding=3><tr><td></td></tr></table>
+
+<center><b>Publish Your Article!</b> Please send it to editorial(at)sys-con.com! </center> <br>
+
+<center><b>Advertise on this site!</b> Contact advertising(at)sys-con.com! 201 802-3021</center> <p>
+
+<table><tr><td></td></tr></table></div>
+
+	</td>
+	<td style="width: 336px;"  colspan="2" valign="top" id="#panel6"> 
+		
+
+		
+
+		<div class=""><table width="336" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width='336' height='256'>
+				<DIV STYLE="z-index: 0; position:relative">
+				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="336" height="256" id="load" align="middle">
+				<param name="allowScriptAccess" value="sameDomain" />
+				<param name="movie" value="http://res.sys-con.com/video/commercials/splash046/load046_noadd.swf" />
+				<param name="quality" value="high" />
+				<param name="bgcolor" value="#ffffff" />
+				<param name="wmode" value="transparent" />
+				<embed src="http://res.sys-con.com/video/commercials/splash046/load046_noadd.swf" wmode="transparent" quality="high" bgcolor="#ffffff" width="336" height="256" name="load" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+				</object>
+				</DIV>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<iframe src='http://banners.sys-con.com/IFrames/systvnew.php'
+			framespacing='0' frameborder='no' scrolling='No' width='336' height='72' allowtransparency="true"></iframe>
+		</td>
+	</tr>
+</table></div><div class=""><table><Tr><td></td></tr></table>
+<table cellspacing=0 cellpadding=0 border=0 width=336><tr><td><iframe width=336 scrolling="no" height="20" frameborder="0" src="http://www2.sys-con.com/masterscroll.cfm?mag=jdj"></iframe></td></tr></table><table><tr><td></td></tr></table>
+<table><Tr><td></td></tr></table></div><div class="336"><table border=0 cellspacing=0 cellpadding=0 width=336><tr><td>
+<iframe id='a88cbef6' name='a88cbef6' src='http://banners.sys-con.com/phpAdsNew-2.0/adframe.php?n=a88cbef6&amp;what=zone:90&amp;target=_blank' framespacing='0' frameborder='no' scrolling='no' width='336' height='280'><a href='http://banners.sys-con.com/phpAdsNew-2.0/adclick.php?n=a88cbef6' target='_blank'><img src='http://banners.sys-con.com/phpAdsNew-2.0/adview.php?what=zone:90&amp;n=a88cbef6' border='0' alt=''></a></iframe>
+</td></tr></table><br></div><div class="portletsmall"><table border='0' cellpadding='2' cellspacing='0' width='99%'><tr><td align='center'><img src='http://res.sys-con.com/portlet/428/SYS-CON_News.jpg' border='0'></td></tr><tr><td><div class='story'><a href='http://www.sys-con.com/read/filter/latestnews.htm'><div class='storytitle'>SOA World Magazine Opens 
+Nominations for Its 6th 
+Annual Readers' Choice 
+Awards </div></a><div class='storyauthor'>By SOA World Magazine News Desk</div><div class='storysummary'>SOA World Magazine 
+announced today that 
+nomination </div><div class='storytagline'>Jan. 15, 2008 02:00 PM</div></div></td></tr><tr><td><div class='story'><a href='http://www.sys-con.com/read/filter/latestnews.htm'><div class='storytitle'>To Infinity, and 
+Beyond... </div></a><div class='storyauthor'>By Sean Rhody</div><div class='storysummary'>At the end of the year, 
+it's always interesting 
+to </div><div class='storytagline'>Jan. 15, 2008 01:00 PM</div></div></td></tr><tr><td><div class='story'><a href='http://www.sys-con.com/read/filter/latestnews.htm'><div class='storytitle'>Rich Semantic Internet 
+Applications with Flex</div></a><div class='storyauthor'>By Holger Knublauch</div><div class='storysummary'>Rich Internet 
+Applications (RIAs) run 
+inside web b</div><div class='storytagline'>Jan. 15, 2008 12:30 PM</div></div></td></tr><tr><td><div class='story'><a href='http://www.sys-con.com/read/filter/latestnews.htm'><div class='storytitle'>Zend Studio for Eclipse</div></a><div class='storyauthor'>By Peter MacIntyre</div><div class='storysummary'>In my many years of 
+programming, almost 20 
+years n</div><div class='storytagline'>Jan. 15, 2008 12:00 PM</div></div></td></tr><tr><td><div class='story'><a href='http://www.sys-con.com/read/filter/latestnews.htm'><div class='storytitle'>Tokiva Launches Open 
+Mobile Communications 
+Platform </div></a><div class='storyauthor'>By Wireless News Desk</div><div class='storysummary'>Tokiva announced the 
+public beta launch of its 
+Mob </div><div class='storytagline'>Jan. 15, 2008 10:45 AM</div></div></td></tr><tr><td><div class='story'><a href='http://www.sys-con.com/read/filter/latestnews.htm'><div class='storytitle'>Moka5 Lets Mac Users 
+Bring Their Virtual 
+Desktop Anywhere</div></a><div class='storyauthor'>By Virtualization News Desk</div><div class='storysummary'>Moka5 announced the beta 
+release of Moka5 for Mac </div><div class='storytagline'>Jan. 15, 2008 10:30 AM</div></div></td></tr></table></div><div class="portletsmall"><a href="http://www.google.com"><div class="portlettitle">ADS BY GOOGLE</div></a>
+<table width=336 cellspacing=0 cellpadding=2><tr><td>
+<style>
+.sponsors {BACKGROUND-COLOR:#E6E6E6;PADDING:5px 0px 10px 0px;}
+.sponsors ul{CLEAR:both;MARGIN:0px 0px 0px 2px;PADDING:0px;}
+.sponsors ul li{list-style:outside;list-style-type:none;background-image: url(http://www2.sys-con.com/arrow.gif); 
+background-repeat: no-repeat; background-position: 0px 2px;padding:0px 0px 0px 8px;vertical-align:top;
+margin: 0px 0px 3px 0px;}
+.sponsors p{FONT-FAMILY:verdana,arial;FONT-SIZE:10px;font-weight: normal;}
+.sponsors a{FONT-FAMILY:verdana,arial;FONT-SIZE:10px;COLOR:#000099;TEXT-DECORATION:none;}
+.sponsors a:hover{TEXT-DECORATION:none;}
+.sponsors img.left_ad_image{MARGIN:0px 0px 0px 20px;FLOAT:left;}
+.sponsors img.left_ad_type_image{MARGIN:0px 0px 5px 20px;FLOAT:left;clear:left;}
+.sponsors p.right_text{FLOAT:right;MARGIN:3px 3px 0px 0px;}
+.sponsors p.sponsor_text {MARGIN:0px 0px 0px 8px;}
+.sponsors p.sponsor_header {MARGIN:0px 0px 0px 8px;}
+.sponsors ul.sponsor_links a{MARGIN:0px 0px 2px 8px;}
+.sponsors ul.intel_links a{MARGIN:0px 0px 2px 8px;}
+</style>
+<script language="JavaScript">  
+<!--
+function ws(w){window.status=w;return true;}
+function google_ad_request_done(google_ads) 
+{var i; document.write('<div class="sponsors">' + '<ul>');		
+for(i = 0; i < google_ads.length; ++i) {document.write('<li><p class="sponsor_header">'); document.write('<b><a href="' + google_ads[i].url + '" onMouseOver="return ws(\'' + google_ads[i].visible_url + '\')">' +
+google_ads[i].line1 + '</b></p>'); document.write('<p class="sponsor_text">' + '<a href="' +  google_ads[i].url + '" onMouseOver="return ws(\'' + google_ads[i].visible_url + '\')" STYLE="text-decoration: none"><font color=#333333>' + google_ads[i].line2 + ' ' + google_ads[i].line3 +  '</font></a>' + '</p></li>');} document.write('</ul></div></div>');
+} 
+// -->
+</script>
+<script language="JavaScript">
+<!--         
+google_ad_client = "pub-7009308985980740";       
+google_ad_output = 'js';         
+google_max_num_ads = 5;                 
+google_safe = 'high';
+-->
+</script><script language="JavaScript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+</td></tr></TABLE></div><div class=""><!-- google_ad_region_end --></div><div class=""><script src="http://res.sys-con.com/video/other/peelad/peel/rotatingpeels.js" type="text/javascript"></script></div>
+
+	</td>
+</tr>
+<tr>
+	<td style="width: 160px;" id="#panel3" valign="top"></td>
+	<td style="width: 160px;" id="#panel4" valign="top"></td>
+</tr>
+</table>
+
+
+	<div id="pagefooter"><style type="text/css">
+<!--
+.footermenu {
+	color: #000099;
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+}
+.style260 {color: #000099}
+.style266 {font-family: Verdana,Arial, Helvetica, sans-serif; font-size: 9px; color: #000099; }
+.style72 {color: #333333}
+.style73 {font-family: Verdana,Arial, Helvetica, sans-serif; font-size: 9px; }
+.copyright {
+	color: #333333;
+	font-size: 9px;
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+	line-height: 15px;
+}
+.style77 {color: #000000}
+.style78 {color: #333333; font-weight: bold; }
+.style79 {color: #666666}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.terms {
+	font-family: Verdana,Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000099;
+	line-height: 25px;
+}
+-->
+</style>
+
+</td>
+</tr>
+</table>
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center" valign="top">
+<hr align="center" width="986" size="1" noshade color="#666666" />
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top" class="footermenu">
+	<a href="http://www5.sys-con.com/general/advertise.htm"><span class="footermenu">ADVERTISE</span></a>
+	&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+	<a href="http://www5.sys-con.com/general/subscribe.htm"><span class="footermenu">MAGAZINE SUBSCRIPTIONS</span></a>
+	&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+	<a href="http://www.sys-con.com/general/newslettersub.htm"><span class="footermenu">FREE BREAKING-NEWSLETTERS!</span></a>
+	&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+	<a href="http://www.sys-con.tv"><span class="footermenu">SYS-CON.TV</span></a>
+	&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+	<a href="http://www.blog-n-play.com"><span class="footermenu">BLOG-N-PLAY!</span></a>
+	&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+	<a href="http://webcast.sys-con.com"><span class="footermenu">WEBCAST</span></a>
+	&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+	<a href="http://education.sys-con.com"><span class="footermenu">EDUCATION</span></a>
+	&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+	<a href="http://research.sys-con.com"><span class="footermenu">RESEARCH</span></a>
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top">
+<hr align="center" width="986" size="1" noshade color="#666666" />
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top" class="footermenu">
+<a href="http://dotnet.sys-con.com/"><span class="footermenu"><strong>.NET Developer's Journal</strong> - .NETDJ</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://coldfusion.sys-con.com/"><span class="footermenu"><strong>ColdFusion Developer's Journal</strong> - CFDJ</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://eclipse.sys-con.com"><span class="footermenu"><strong>Eclipse Developer's Journal</strong> - EDJ</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://opensource.sys-con.com"><span class="footermenu"><strong>Enterprise Open Source Magazine</strong> - EOS</span></a>
+<br>
+
+<a href="http://googledeveloper.sys-con.com/"><span class="footermenu"><strong>Open Web Developer's Journal</strong> - OPENWEB</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://iphone.sys-con.com/"><span class="footermenu"><strong>iPhone Developer's Journal</strong> - iPHONE</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://virtualization.sys-con.com/"><span class="footermenu"><strong>Virtualization</strong> - Virtualization</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://java.sys-con.com"><span class="footermenu"><strong>Java Developer's Journal</strong> - JDJ</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://linux.sys-con.com"><span class="footermenu"><strong>Linux</strong>.SYS-CON.com</span></a>
+<br>
+
+<a href="http://pbdj.sys-con.com/"><span class="footermenu"><strong>PowerBuilder Developer's Journal</strong> - PBDJ</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://search.sys-con.com/"><span class="footermenu"><strong>SEO / SEM Journal</strong> - SJ</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://soa.sys-con.com/"><span class="footermenu"><strong>SOAWorld Magazine</strong> - SOAWM</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://itsolutions.sys-con.com/"><span class="footermenu"><strong>IT Solutions Guide</strong> - ITSG</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://symbian.sys-con.com"><span class="footermenu"><strong>Symbian Developer's Journal</strong> - SDJ</span></a>
+<br>
+
+<a href="http://weblogic.sys-con.com"><span class="footermenu"><strong>WebLogic Developer's Journal</strong> - WLDJ</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://websphere.sys-con.com/"><span class="footermenu"><strong>WebSphere Journal</strong> - WJ</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://wireless.sys-con.com/"><span class="footermenu"><strong>Wireless Business & Technology</strong> - WBT</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://xml.sys-con.com"><span class="footermenu"><strong>XML-Journal</strong> - XMLJ</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://internetvideo.sys-con.com"><span class="footermenu"><strong>Internet Video</strong> - iTV</span></a>
+<br>
+
+<a href="http://flex.sys-con.com/"><span class="footermenu"><strong>Flex Developer's Journal</strong> - Flex</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://ajax.sys-con.com"><span class="footermenu"><strong>AJAXWorld Magazine</strong> - AWM</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://Silverlight.sys-con.com/"><span class="footermenu"><strong>Silverlight Developer's Journal</strong> - SLDJ</span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://php.sys-con.com/"><span class="footermenu"><strong>PHP.SYS-CON.com</strong></span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://web2.sys-con.com/"><span class="footermenu"><strong>Web 2.0 Journal</strong> - WEB2</span></a>
+<br>
+
+<a href="http://apache.sys-con.com/"><span class="footermenu"><strong>Apache</strong></span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://cms.sys-con.com"><span class="footermenu"><strong>CMS</strong></span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://crm.sys-con.com/"><span class="footermenu"><strong>CRM</strong></span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://hp.sys-con.com/"><span class="footermenu"><strong>HP</strong></span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://oracle.sys-con.com/"><span class="footermenu"><strong>Oracle Journal</strong></span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://Perl.sys-con.com"><span class="footermenu"><strong>Perl</strong></span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://Python.sys-con.com"><span class="footermenu"><strong>Python</strong></span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://RedHat.sys-con.com"><span class="footermenu"><strong>Red Hat</strong></span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://Ruby.sys-con.com"><span class="footermenu"><strong>Ruby on Rails</strong></span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://SAP.sys-con.com"><span class="footermenu"><strong>SAP</strong></span></a>
+&nbsp;&nbsp;<span class="style79">|</span>&nbsp;&nbsp;
+<a href="http://SaaS.sys-con.com"><span class="footermenu"><strong>SaaS</strong></span></a>
+
+
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top">
+<hr align="center" width="986" size="1" noshade color="#666666" />
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top" class="footermenu">
+<span class="style72"><span class="style266"><span class="style73">
+<span class="style78">SYS-CON MEDIA</span>: &nbsp;
+<a href="http://www5.sys-con.com/general/aboutus.htm"><span class="footermenu">ABOUT US</span></a>
+&nbsp;&nbsp;<span class="style266"><span class="style72">|</span></span>&nbsp;&nbsp;
+<a href="http://www5.sys-con.com/general/contactus.htm"><span class="footermenu">CONTACT US</span></a>
+&nbsp;&nbsp;<span class="style266"><span class="style72">|</span></span>&nbsp;&nbsp;
+<a href="http://www5.sys-con.com/read/category/277.htm"><span class="footermenu">COMPANY NEWS</span></a>
+&nbsp;&nbsp;<span class="style266"><span class="style72">|</span></span>&nbsp;&nbsp;
+<a href="http://www5.sys-con.com/general/careers.htm"><span class="footermenu">CAREERS</span></a>
+&nbsp;&nbsp;<span class="style266"><span class="style72">|</span></span>&nbsp;&nbsp;
+<a href="http://www5.sys-con.com/general/sitemap.htm"><span class="footermenu">SITE MAP</span></a>
+</span></span></span>
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top" class="footermenu">
+<span class="style72">
+
+<span class="style266"><a href="http://events.sys-con.com/"><span class="style78">SYS-CON EVENTS</span></a>:&nbsp;</span>
+
+<span class="style73">&nbsp;|&nbsp;&nbsp;<span class="style260"><a href="http://www.ajaxworld.com/"><span class="footermenu">AJAXWorld Conference & Expo</span></a></span></span>
+
+<span class="style73">&nbsp;|&nbsp;&nbsp;<span class="style260"><a href="http://www.iphonedevsummit.com/"><span class="footermenu">iPhone Developer Summit</span></a></span></span>
+
+<span class="style73">&nbsp;|&nbsp;&nbsp;<span class="style260"><a href="http://www.openwebdevsummit.com/"><span class="footermenu">OpenWeb Developer Summit</span></a></span></span>
+
+<span class="style73">&nbsp;|&nbsp;&nbsp;<span class="style260"><a href="http://www.soaworld2008.com/"><span class="footermenu">SOA World Conference & Expo</span></a></span></span>
+
+<span class="style73">&nbsp;|&nbsp;&nbsp;<span class="style260"><a href="http://www.virtualizationconference.com/"><span class="footermenu">Virtualization Conference & Expo</span></a></span></span>
+
+</span>
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top" class="footermenu">
+<span class="style72"><span class="style266">
+<span class="style78">INTERNATIONAL SITES:</span> &nbsp;
+<a href="http://in.sys-con.com"><span class="footermenu">India</span></a>
+&nbsp;<span class="style72">|</span>&nbsp;
+<a href="http://uk.sys-con.com"><span class="footermenu">U.K.</span></a>
+&nbsp;<span class="style72">|</span>&nbsp;
+<a href="http://ca.sys-con.com"><span class="footermenu">Canada</span></a>
+&nbsp;<span class="style77">|</span>&nbsp;
+<a href="http://de.sys-con.com"><span class="footermenu">Germany</span></a>
+&nbsp;<span class="style72">|</span>&nbsp;
+<a href="http://fr.sys-con.com"><span class="footermenu">France</span></a>
+&nbsp;<span class="style72">|</span>&nbsp;
+<a href="http://au.sys-con.com"><span class="footermenu">Australia</span></a>
+&nbsp;<span class="style72">|</span>&nbsp;
+<a href="http://it.sys-con.com"><span class="footermenu">Italy</span></a>
+&nbsp;<span class="style72">|</span>&nbsp;
+<a href="http://es.sys-con.com"><span class="footermenu">Spain</span></a>
+&nbsp;<span class="style72">|</span>&nbsp;
+<a href="http://ne.sys-con.com"><span class="footermenu">Netherlands</span></a>
+&nbsp;<span class="style72">|</span>&nbsp;
+<a href="http://br.sys-con.com"><span class="footermenu">Brazil</span></a>
+&nbsp;<span class="style72">|</span>&nbsp;
+<a href="http://be.sys-con.com"><span class="footermenu">Belgium</span></a>
+</span></span>
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top"><img src="http://res.sys-con.com/section/72/white-pixel.gif" width="1" height="10" /></td>
+</tr>
+<tr>
+<td align="center" valign="top" bgcolor="#CCCCCC"><font size=+0>&nbsp;</font><a href="http://www5.sys-con.com/general/terms.htm"><span class="terms">Terms of Use &amp; Our Privacy Statement</span></a>&nbsp;&nbsp;&nbsp; <img src="http://res.sys-con.com/section/72/xml.gif" width="36" height="14" align="middle" />&nbsp;<a href="http://www5.sys-con.com/general/aboutfeeds.htm"><span class="terms">About Newsfeeds / Video Feeds</span></a></td>
+</tr>
+<tr>
+<td align="center" valign="top" bgcolor="#CCCCCC"><span class="copyright">Copyright &copy;1994-2008 SYS-CON Publications, Inc. All Rights Reserved. All marks are trademarks of SYS-CON Media.</span></td>
+</tr>
+<tr>
+<td align="center" valign="top" bgcolor="#CCCCCC"><span class="copyright">Reproduction in whole or in part in any form or medium without express written permission of SYS-CON Publications, Inc. is prohibited. </span></td>
+</tr>
+<tr>
+<td align="center" valign="top" bgcolor="#CCCCCC" class="copyright">&nbsp;</td>
+</tr>
+</table>
+
+</td></tr></table></div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">_uacct = "UA-271410-1"; urchinTracker(); </script>
+
+
+
+
+</body></html>

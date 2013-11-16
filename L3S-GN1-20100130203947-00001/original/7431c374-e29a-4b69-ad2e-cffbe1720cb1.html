@@ -1,0 +1,1912 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-" type="text/javascript"></script> 
+<!--end newsi library-->
+<script src="http://newsimg.bbc.co.uk/nol/shared/js/nol4.js?v2" language="JavaScript" type="text/javascript"></script>
+<script src="http://newsimg.bbc.co.uk/nol/shared/js/livestats_v1_1.js?v2" language="JavaScript" type="text/javascript"></script>
+<script src="http://newsimg.bbc.co.uk/nol/ukfs_news/js/av.js?v2" language="JavaScript" type="text/javascript"></script> 
+<script src="http://www.bbc.co.uk/radio/aod/radioplayer.js" type="text/javascript"></script>
+<script src="http://newsimg.bbc.co.uk/js/app/bookmark/bookmark.js" language="JavaScript" type="text/javascript"></script>
+
+	
+		
+
+
+
+
+	<script type="text/javascript">
+		if(typeof(newsi) == "object"){
+			newsi.setIsIpAdvertiseCombined(true);
+		}
+	</script>
+
+	<!-- ad stylesheets -->
+	<link type="text/css" rel="stylesheet" href="/css/screen/shared/ads.css" />
+
+
+	
+
+	
+
+
+	
+
+
+
+	<!-- configuration block for external URLs to break them out of stub class -->
+	<script type="text/javascript">
+	
+	/**
+	 * instantiate the bbccom namespace
+	 */
+	newsi.bbccom = {};
+	
+	/**
+	 * @classDescription Simple config class to provide storage of JSOD URL's
+	 */
+	newsi.bbccom.AdConfigurator = function(){
+		this._zoneFile = "/js/app/bbccom/zonefile.js?2";
+		this._analyticsFile = "/js/app/bbccom/adanalytics.js";
+		this._appFile = "/js/app/bbccom/app.js";
+		this._adSlots = new Object(	{	ad1:{id:1, name:"ad1",size:"728x90"},
+							ad2:{id:2, name:"ad2",size:"160x600"},
+							ad3:{id:3, name:"ad3",size:"468x60"},
+							ad4:{id:4, name:"ad4",size:"120x240"} } );
+		this._adBugElement = "adWebBug";
+		this._timerInterval = 3000;
+		
+		this._fiddleredition = 'international';
+		this._document_uri = this._url = '/2/hi/asia-pacific/7164089.stm';
+
+		switch(this._document_uri){
+			case "/":
+				this._url = (this._fiddleredition == "domestic") ? "/1/hi/default.stm" : "/2/hi/default.stm";
+				break;
+			case "/sport":
+				this._url = (this._fiddleredition == "domestic") ? "/sport1/hi/default.stm" : "/sport2/hi/default.stm";
+				break;
+			case "/sport/":
+				this._url = (this._fiddleredition == "domestic") ? "/sport1/hi/default.stm" : "/sport2/hi/default.stm";
+				break;
+		}
+		
+	}
+	
+		
+	
+	/**
+	 * Expose the props to the Stub Class
+	 * @param {Object} name
+	 * @return {String} Path to the property
+	 */
+	newsi.bbccom.AdConfigurator.prototype.getPropPath = function(name){
+		return this[name];
+	}
+	</script>
+
+<script type="text/javascript" src="/js/app/bbccom/stub.js"></script>
+
+
+
+
+</head>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+<a name="top" id="top"></a>
+<!-- START TOOLBAR -->	
+	<div id="ift-toolbar" class="ift-news">
+	<div id="ift-wrap">
+	<div id="ift-accesskeys"><a href="#startcontent" accesskey="2"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" alt="Skip to main content" border="0" /></a><a href="http://www.bbc.co.uk/accessibility/accesskeys/keys.shtml" accesskey="0"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" alt="Access keys help" border="0" /></a><a href="http://www.bbc.co.uk/a-z/" accesskey="3">
+	<!--- start live stats logic --->
+	
+	
+	
+	
+	
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="1" alt="" alt="A-Z index" />
+	
+	
+	<!--- end live stats logic ---></a></div>
+		<div id="ift-logo"><a href="http://www.bbc.co.uk/go/toolbar/i/-/home/i/" accesskey="1"><img src="http://newsimg.bbc.co.uk/shared/img/toolbar_logo.gif" alt="BBC logo" /></a></div>
+		<div id="ift-tabs"><ul><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/text/-/home/i/">Home</a></div></li><li id="ift-current"><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/news/2/hi/">News</a></div></li><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/news/sport2/hi/">Sport</a></div></li><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/radio/i/">Radio</a></div></li><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/tv/i/">TV</a></div></li><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/weather/i/">Weather</a></div></li><li><div><a href="http://www.bbc.co.uk/go/toolbar/i/-/worldservice/languages/">Languages</a></div></li></ul><br class="ift-clear" /></div>
+		<div id="ift-search">
+	<form action="http://search.bbc.co.uk/cgi-bin/search/results.pl" accept-Charset="UTF-8">
+	<input type="hidden" name="scope" value="all" />	
+	<input type="hidden" name="edition" value="i" /> 
+	<input type="text" id="ift-searchbox" name="q" size="10" title="BBC Search" accesskey="4"/>
+	<input type="image" id="ift-searchbutton" src="http://newsimg.bbc.co.uk/shared/img/v3_tb/search_button.gif" name="go" value="go" alt="Search"/>
+</form>
+		</div><br class="ift-clear" />
+	</div>
+</div>
+<!-- END TOOLBAR -->
+<div id="ad1" class="ad1"></div>
+
+<script language="JavaScript" type="text/javascript">
+function showForm() {
+if(document.getElementById){
+	   document.getElementById('d_rb').innerHTML='<form action="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl" name="ifhForm" method="get"><input type="hidden" name="qs" value="http://news.bbc.co.uk/2/hi/asia-pacific/7164089.stm" /><input type="hidden" name="content" value="nol" /><input name="dest" type="radio" value="Domestic" onclick="submitForm();" id="dfh" /><label for="dfh" class="uk" style="">UK version</label><input name="dest" type="radio" value="International" id="ifh" onclick="submitForm();" checked /><label for="ifh" class="int" style="font-weight:bold;">International version</label></form>';}
+}
+var site;
+function submitForm() {
+			document.ifhForm.submit();
+}
+</script>
+
+<div id="ift-banner" class="ift-news">
+<div id="ift-extra" style="padding:2px 0 0 0;height:1.5em;width:760px;">
+	<div class="fl">
+			<span id="d_rb"><span class="domestic"><a href="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl?qs=http://news.bbc.co.uk/2/hi/asia-pacific/7164089.stm&amp;content=nol&dest=Domestic">UK version</a></span><span class="int"><a href="http://newswm.bbc.co.uk/cgi-bin/change_edition.pl?qs=http://news.bbc.co.uk/2/hi/asia-pacific/7164089.stm&amp;content=nol&amp;dest=International">International version</a></span></span><script type="text/javascript" language="JavaScript">showForm();</script><span class="pipe">|</span><a href="http://www.bbc.co.uk/iftoolbar/versions.html" onclick="window.open('http://www.bbc.co.uk/iftoolbar/versions.html', 'aboutversion', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=488,height=305,left=280,top=200'); return false;" class="extraLink">About the versions</a>
+	</div>
+	<div class="fr">
+<a href="http://news.bbc.co.uk/text_only.stm" class="extraLink" onClick="goToOtherBandwidth(this);return false;">Low graphics</a><span class="pipe">|</span><a href="http://www.bbc.co.uk/accessibility/" class="extraLink">Accessibility help</a>
+	</div>
+</div>
+<div class="clear"></div>
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0" width="760">
+	<tr>
+		<td width="121" valign="top">
+		<a href="http://news.bbc.co.uk/"><img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/bbc_logo.gif" width="121" height="64" border="0" alt="BBC News" /></a></td>
+		<td width="436" valign="top">
+
+		<table cellpadding="0" cellspacing="0" border="0" width="100%">
+		<tr>
+		<td valign="middle" class="banmain">
+		<a href="http://www.bbc.co.uk/mediaselector/check/player/nol/newsid_6900000/newsid_6903100?redirect=6903113.stm&amp;news=1&amp;nbram=1&amp;nbwm=1&amp;bbwm=1&amp;bbram=1&amp;asb=1" onClick="javascript:newsi.utils.av.launch({el:this});return false;">
+	<img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_text.gif" align="left" width="57" height="13" alt="watch" border="0" vspace="0" hspace="0" />
+					One-Minute World News
+</a><br clear="all" />
+		</td>
+		</tr>
+		</table>
+
+		</td>
+		<td width="203" valign="top">
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+			<td valign="middle" class="banaddition">
+			<div>
+			<a href="http://news.bbc.co.uk/go/news/int/banner/story/services/-/2/hi/help/products_and_services/default.stm">
+				<img height="50" hspace="0" align="right" vspace="0" border="0" width="50" alt="mobiles" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/services_gen.gif" />
+					<b>News services</b>
+					<br />Your news when you want it
+			</a>
+			<br clear="all" />
+			</div>
+
+			</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="760">
+    <tr>
+        <td width="121" valign="top">
+
+			
+
+<div class="lhs">
+	
+		
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/default.stm">News Front Page</a>
+				</div>
+				<div class="o">
+					<img src="http://newsimg.bbc.co.uk/nol/shared/img/nav/v3_map_asia_pac_rb.gif" width="92" height="54" alt="" border="0" usemap="#world_map">
+				</div>
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/africa/default.stm">Africa</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/americas/default.stm">Americas</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+				<div class="lhssqs">
+					
+					<a href="/2/hi/asia-pacific/default.stm">Asia-Pacific</a>
+				</div>
+				
+				
+
+			
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/europe/default.stm">Europe</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/middle_east/default.stm">Middle East</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/south_asia/default.stm">South Asia</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/uk_news/default.stm">UK</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/business/default.stm">Business</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/health/default.stm">Health</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/science/nature/default.stm">Science/Nature</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/technology/default.stm">Technology</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/entertainment/default.stm">Entertainment</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsb">
+					
+					<a href="/2/hi/also_in_the_news/default.stm">Also in the news</a>
+				</div>
+				
+			
+			<div class="lhsdl">-----------------</div>
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsl">
+					
+					<a href="/2/hi/video_and_audio/default.stm">Video and Audio</a>
+				</div>
+				
+			
+			<div class="lhsdl">-----------------</div>
+			
+			<div id="ad4" class="ad4"></div>
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsl">
+					
+					<a href="/2/hi/talking_point/default.stm">Have Your Say</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsl">
+					
+					<a href="/2/hi/in_pictures/default.stm">In Pictures</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsl">
+					
+					<a href="/2/hi/country_profiles/default.stm">Country Profiles</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+		
+			
+			
+				<div class="lhsl">
+					
+					<a href="/2/hi/in_depth/default.stm">Special Reports</a>
+				</div>
+				
+			
+			
+			
+			
+		
+		
+	
+	
+	
+
+
+
+
+	
+	
+	
+	
+
+
+
+
+
+	
+</div>
+
+
+
+
+		<div class="lhsad"><script language="JavaScript">getRssUrl()</script></div>
+<div class="lhsad">
+<div class="lhsnlp">RELATED BBC SITES</div>
+<ul id="lhsOtherSites">
+	<li><a href="http://news.bbc.co.uk/sport1/hi/default.stm" title="Home of BBC Sport on the internet" class="relatedSitesLink">SPORT</a></li>
+	<li><a href="http://www.bbc.co.uk/weather/i/" title="Weather information from around the world" class="relatedSitesLink">WEATHER</a></li>
+	<li><a href="http://www.bbc.co.uk/onthisday" title="BBC On This Day" class="relatedSitesLink">ON THIS DAY</a></li>
+	<li><a href="http://www.bbc.co.uk/blogs/theeditors/" title="Editors' Blog" class="relatedSitesLink">EDITORS' BLOG</a></li>	
+</ul>
+</div>
+
+	
+		<div class="lang">LANGUAGES</div>
+<ul id="languages">
+	<li id="chineseLoz"><a href="http://www.bbc.co.uk/chinese" title="BBCChinese.com">Chinese</a></li>
+	<li id="vietnameseLoz"><a href="http://www.bbc.co.uk/vietnamese" title="BBCVietnamese.com">Vietnamese</a></li>
+	<li id="indonesianLoz"><a href="http://www.bbc.co.uk/indonesian" title="BBCIndonesian.com">Indonesian</a></li>
+	<li id="burmeseLoz"><a href="http://www.bbc.co.uk/burmese" title="BBCBurmese.com">Burmese</a></li>
+	<!-- <li id="thaiLoz"><a href="http://www.bbc.co.uk/thai" title="BBCThai.com">Thai</a></li> -->	
+	<li id="moreLoz"><a href="http://www.bbc.co.uk/worldservice/languages/" title="More languages from the BBC">More</a></li>	
+</ul>
+<img height="1" width="1" src="http://switch.atdmt.com/action/agencyrep_bbc_usa_asia_pacific_home" />
+<img alt="" id="livestats" src="http://stats.bbc.co.uk/o.gif?~RS~s~RS~News~RS~t~RS~HighWeb_Story~RS~i~RS~7164089~RS~p~RS~45341~RS~a~RS~International~RS~u~RS~/2/hi/asia-pacific/7164089.stm~RS~r~RS~http://news.google.com/foobar~RS~q~RS~~RS~z~RS~11~RS~"/></td>
+        <td width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+        <td width="629" valign="top">
+            <table width="629" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="top" width="629">
+			
+                        
+                        
+<a name="startcontent"></a><span class="ds"><span class="lu">Last Updated: </span>Saturday, 29 December 2007, 14:55 GMT</span>
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="2" height="2" alt="" border="0" vspace="0" hspace="0">
+<div class="mvb"><img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/dot_629.gif" width="629" height="1" alt="" border="0" vspace="0" hspace="0"></div>
+
+	
+
+
+                        
+    
+        <div class="mvtb"><table cellspacing="0" width="416" border="0" cellpadding="0"><tr>
+            <td width="213"><a class="epl" onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/asia-pacific/7164089.stm','status=no,scrollbars=yes,resizable=yes,width=370,height=445','Mailer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/asia-pacific/7164089.stm" target="Mailer">
+                <img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/email.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+                E-mail this to a friend
+            </a></td>
+            <td width="203"><a class="epl" onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/asia-pacific/7164089.stm','status=no,scrollbars=yes,toolbar=yes,resizable=yes,menubar=yes,width=600,height=445','Printer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/asia-pacific/7164089.stm" target="Printer">
+	       	<img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/print.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+	 	Printable version
+            </a></td>
+        </tr></table></div>
+    
+    
+
+
+                        
+                    </td>
+                </tr>
+            </table>
+            <table width="629" border="0" cellpadding="0" cellspacing="0">
+		
+                
+		<tr>
+		<td colspan="3">
+			
+			<div class="mxb">
+				<div class="sh">
+					Ball game at China-Japan summit
+				</div>
+			</div>
+		</td>
+		</tr>
+    		
+		
+
+                <tr>
+                    <td valign="top" width="416">
+                        
+	
+		
+                    	<font size="2">
+		
+			<!-- S BO -->
+<!-- S IIMA -->
+	
+		<table border="0" cellspacing="0" align="right" width="203" cellpadding="0">
+			<tr><td>
+			<div>
+				<img src="http://newsimg.bbc.co.uk/media/images/44325000/jpg/_44325904_wen_fukuda_afp203b.jpg" width="203" height="152" alt="Chinese Premier Wen Jiabao (L) and Japanese Prime Minister Yasuo Fukuda (R) during their game of catch" border="0" vspace="0" hspace="0">
+				<div class="cap">The two men also reached agreement on trade co-operation</div>
+			</div>
+			</td></tr>
+		</table>
+		
+	
+
+	
+<!-- E IIMA -->
+<!-- S SF -->
+<B>Japan's Prime Minister Yasuo Fukuda has played a game of catch with his Chinese counterpart Wen Jiabao, during talks to improve Sino-Japanese relations.</B>
+<P>
+The two leaders also played a ball game last April, when Mr Wen visited Japan.
+<P>
+Such scenes would have been unthinkable two years ago when Japan's attitude to its military past soured relations.
+<P>
+Correspondents say the talks have been hailed as a success by both sides, although there is still no agreement on a disputed East China Sea gas-field.
+<!-- E SF -->
+<P>
+The two leaders donned their baseball uniforms after three days of talks in Beijing. 
+<P>
+"I have asked prime minister Wen to play catch with me," Japanese officials quoted Mr Fukuda as saying.
+<P>
+"I'm glad to play with you whenever," Mr Wen is reported to have replied.
+<P>
+<B>Thawing relations</B>
+<P>
+The two men agreed to co-operate on climate change and trade, and to increase youth exchanges between the two countries.
+<P>
+But despite 11 previous rounds of talks, no agreement was reached on the two countries' territorial dispute over lucrative gas fields in the East China Sea.
+<P>
+China does not accept the maritime border which Japan has proposed as a starting point for negotiations.
+<P>
+The two leaders agreed only to raise discussions to vice-ministerial level.
+<P>
+Earlier in his trip, Mr Fukuda visited the ancestral home of the Chinese philosopher Confucius, and toured a Toyota car factory in the city of Tianjin.
+<P>
+Relations between the two countries grew frosty between 2001 and 2006, when Junichiro Koizumi was prime minister of Japan.
+<P>
+Mr Koizumi's decision to visit a controversial shrine dedicated to Japan's war dead - including war criminals responsible for atrocities in China - was greeted with anger in China. 
+<P>
+His successors - Shinzo Abe and now Mr Fukuda - have chosen not to visit the shrine, and as a result Beijing has decided to re-start high-level contact with Japanese officials.
+<P>
+<P><!-- E BO -->
+		
+                    	</font>
+		
+	
+	
+<br /><br clear="all" />
+                        
+    
+        <div class="mvtb"><table cellspacing="0" width="416" border="0" cellpadding="0"><tr>
+            <td width="213"><a class="epl" onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/asia-pacific/7164089.stm','status=no,scrollbars=yes,resizable=yes,width=370,height=445','Mailer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/asia-pacific/7164089.stm" target="Mailer">
+                <img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/email.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+                E-mail this to a friend
+            </a></td>
+            <td width="203"><a class="epl" onClick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/asia-pacific/7164089.stm','status=no,scrollbars=yes,toolbar=yes,resizable=yes,menubar=yes,width=600,height=445','Printer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/asia-pacific/7164089.stm" target="Printer">
+	       	<img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/print.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3">
+	 	Printable version
+            </a></td>
+        </tr></table></div>
+    
+    
+
+
+                        <div id="socialBookMarks" class="sharesb"> 
+<h3>Bookmark with:</h3> 
+<ul>
+<li class="delicious"> 
+<a id="delicious" title="Post this story to Delicious" href="http://del.icio.us/post?url=http://news.bbc.co.uk/2/hi/asia-pacific/7164089.stm&amp;title=Ball game at China-Japan summit">Delicious</a> 
+</li>
+<li class="digg"> 
+<a id="digg" title="Post this story to Digg" href="http://digg.com/submit?url=http://news.bbc.co.uk/2/hi/asia-pacific/7164089.stm&amp;title=Ball game at China-Japan summit">Digg</a> 
+</li>
+<li class="reddit"> 
+<a id="reddit" title="Post this story to reddit" href="http://reddit.com/submit?url=http://news.bbc.co.uk/2/hi/asia-pacific/7164089.stm&amp;title=Ball game at China-Japan summit">reddit</a> 
+</li>
+<li class="facebook"> 
+<a id="facebook" title="Post this story to Facebook" href="http://www.facebook.com/sharer.php?u=http://news.bbc.co.uk/2/hi/asia-pacific/7164089.stm">Facebook</a> 
+</li>
+<li class="stumbleupon"> 
+<a id="stumbleupon" title="Post this story to StumbleUpon" href="http://www.stumbleupon.com/submit?url=http://news.bbc.co.uk/2/hi/asia-pacific/7164089.stm&amp;title=Ball game at China-Japan summit">StumbleUpon</a> 
+</li>
+</ul>
+<p><a href="http://news.bbc.co.uk/1/hi/help/6915817.stm">What are these?</a></p>
+</div>
+<script language="JavaScript">
+<!--
+var bm = new BookMark({site:'News',storyid:7164089,sectionid:45341,url:'/2/hi/asia-pacific/7164089.stm',edition:'International'});
+//-->
+</script>
+                    </td>
+                    <td width="10" valign="top"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+                    <td width="203" valign="top">
+			
+			
+                        
+        
+
+        <div class="puffbox">
+
+			
+
+	<div class="o">
+      
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="mph1">
+		
+                    
+                    ASIAN GIANTS' TROUBLED TIES
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="5" alt="" border="0" vspace="0" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+                    
+                    KEY STORIES
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="5" alt="" border="0" vspace="0" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/2/hi/asia-pacific/6547199.stm">
+			
+			
+			
+			China PM seeks war reconciliation
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/2/hi/asia-pacific/6209283.stm">
+			
+			
+			
+			Japan-China talks on shared past
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/2/hi/asia-pacific/5405066.stm">
+			
+			
+			
+			First China visit for Japan's Abe
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="203" height="1" alt="" border="0" vspace="3" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+                    
+                    BACKGROUND
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="5" alt="" border="0" vspace="0" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+		<a href="http://news.bbc.co.uk/2/shared/spl/hi/asia_pac/05/china_japan/html/introduction.stm"><img src="http://newsimg.bbc.co.uk/media/images/41050000/jpg/_41050875_child_6649.jpg" align="left" width="66" height="49" alt="" border="0" vspace="3" hspace="0"></a>
+		<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" align="left" width="5" height="49" alt="" border="0" vspace="0" hspace="0">
+		
+		
+	
+		<a href="http://news.bbc.co.uk/2/shared/spl/hi/asia_pac/05/china_japan/html/introduction.stm">
+			<b>
+			
+			
+			Uneasy neighbours
+			</b>
+		</a>
+		
+			<br />
+		
+	
+
+		
+	
+	
+	
+		<a href="http://news.bbc.co.uk/2/shared/spl/hi/asia_pac/05/china_japan/html/introduction.stm">
+			
+			History and analysis of China and Japan's difficult relationship
+			<br clear="all" />
+		</a>
+			
+
+
+	
+	
+	
+
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="5" alt="" border="0" vspace="0" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/2/hi/asia-pacific/1330223.stm">
+			
+			
+			
+			Japan's controversial shrine
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/2/hi/asia-pacific/6545085.stm">
+			
+			
+			
+			Schoolchildren's views
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/2/hi/asia-pacific/6530197.stm">
+			
+			
+			
+			Japan's 'comfort women' fund
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="/2/hi/asia-pacific/223038.stm">
+			
+			
+			
+			The Rape of Nanjing
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="203" height="1" alt="" border="0" vspace="3" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+                    
+                    IN PICTURES
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="5" alt="" border="0" vspace="0" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+    
+
+			
+
+
+	
+                
+
+                
+                        <a href="/1/shared/spl/hi/pop_ups/05/asia_pac_chinese_views_on_japan/html/1.stm" onclick="window.open('/1/shared/spl/hi/pop_ups/05/asia_pac_chinese_views_on_japan/html/1.stm', '1113569898', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=500,height=400,left=280,top=100'); return false;"><img height="13" hspace="0" align="left" vspace="2" border="0" width="54" alt="" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/opennews_rb.gif" />Beijing voices</a>
+                
+
+                <br clear="all" />
+	
+
+
+
+
+
+    
+
+
+            
+                
+                    
+                
+            
+	
+	
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+    
+
+			
+
+
+	
+                
+
+                
+                        <a href="/1/shared/spl/hi/pop_ups/05/asia_pac_japanese_views_on_china/html/1.stm" onclick="window.open('/1/shared/spl/hi/pop_ups/05/asia_pac_japanese_views_on_china/html/1.stm', '1113901518', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=500,height=400,left=280,top=100'); return false;"><img height="13" hspace="0" align="left" vspace="2" border="0" width="54" alt="" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/opennews_rb.gif" />Views from Japan</a>
+                
+
+                <br clear="all" />
+	
+
+
+
+
+
+    
+
+
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif" width="203" height="1" alt="" border="0" vspace="3" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+                    
+                    HAVE YOUR SAY
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="5" alt="" border="0" vspace="0" hspace="0"><br />
+    
+
+    
+        
+        
+	
+            
+            
+		
+            
+            <div class="arr">
+	
+		<a href="http://newsforums.bbc.co.uk/nol/thread.jspa?threadID=6033&amp;edition=2&amp;ttl=20070411104338">
+			
+			
+			
+			New dawn for China-Japan?
+			
+		</a>
+		
+	
+</div>
+            
+                
+                    
+                
+            
+	
+	<img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/line_hyper.gif" width="203" height="2" alt="" border="0" vspace="3" hspace="0"><br />
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br /></div>
+
+
+        
+        
+
+        
+
+
+        
+        	
+
+			
+
+    
+        
+		
+                    
+                        <div class="topStoryH">
+                            <a class="lp" href="/2/hi/asia-pacific/default.stm">TOP ASIA-PACIFIC STORIES</a>
+                        </div>
+                    
+                    
+                        
+                            <div class="arr">
+	
+		<a href="/2/hi/asia-pacific/7192391.stm">
+			
+			
+			
+			Uzbek president Karimov sworn in
+			
+		</a>
+		
+			<br />
+		
+	
+</div>
+                        
+                            <div class="arr">
+	
+		<a href="/2/hi/asia-pacific/7190957.stm">
+			
+			
+			
+			Stand-off over whaling activists
+			
+		</a>
+		
+			<br />
+		
+	
+</div>
+                        
+                            <div class="arr">
+	
+		<a href="/2/hi/asia-pacific/7191107.stm">
+			
+			
+			
+			Seoul 'may shut N Korea ministry'
+			
+		</a>
+		
+			<br />
+		
+	
+</div>
+                        
+			<script language="JavaScript">getRssUrlStory('/rss/newsonline_world_edition/asia-pacific/rss.xml')</script>
+                    
+		
+        
+
+	
+    
+
+
+
+<img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br />
+        
+        
+        <div id="nav1">
+<div id="popStory">
+<h4><a href="/2/shared/bsp/hi/live_stats/html/map.stm" class="lp">MOST POPULAR STORIES NOW</a></h4>
+
+</div>
+</div>
+
+<script>
+	function liveStatsTabs(newTab,oldTab) {
+	
+	if (document.getElementById)
+	{
+		document.getElementById(newTab).style.display = "inline";
+		document.getElementById(oldTab).style.display = "none";
+		return false;
+	}
+	else if (document.all)
+	{
+		document.all[oldTab].style.display = "none";
+		document.all[newTab].style.display = "inline";
+		return false;
+	}
+	else {
+		return true;
+	}
+	}
+</script>
+
+<div id="livestats1451" class="statsStory">	
+	<ul id="tabpopStory">
+		<li id="livestats2451" class="tabpopHead">MOST E-MAILED</li>
+		<li id="livestats2452"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats1450','livestats1451')">MOST READ</a></li>
+	</ul>
+<ul
+  class="popstoryList">
+  <li
+    class="mp1">
+    <a
+      href="http://news.bbc.co.uk/2/hi/uk_news/england/norfolk/7047536.stm">Swearing at work can 'cut stress'</a>
+  </li>
+  <li
+    class="mp2">
+    <a
+      href="http://news.bbc.co.uk/2/hi/americas/3298443.stm">'Miserable failure' links to Bush</a>
+  </li>
+  <li
+    class="mp3">
+    <a
+      href="http://news.bbc.co.uk/2/hi/africa/7189385.stm">'Rebel reporter' in Niger court</a>
+  </li>
+  <li
+    class="mp4">
+    <a
+      href="http://news.bbc.co.uk/2/hi/technology/7191264.stm">Facebook asked to pull Scrabulous</a>
+  </li>
+  <li
+    class="mp5">
+    <a
+      href="http://news.bbc.co.uk/2/hi/asia-pacific/7192391.stm">Uzbek president Karimov sworn in</a>
+  </li>
+</ul>
+<a href="/2/shared/bsp/hi/live_stats/html/map.stm" class="arr">Most popular now, in detail</a>
+</div>
+<div id="livestats1450" class="statsStory">
+<ul id="tabpopStory">
+		<li id="livestats2451"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats1451','livestats1450')">MOST E-MAILED</a></li>
+		<li id="livestats2452" class="tabpopHead">MOST READ</li>
+	</ul>
+<ul
+  class="popstoryList">
+  <li
+    class="mp1">
+    <a
+      href="http://news.bbc.co.uk/2/hi/science/nature/7190107.stm">'Darkest ever' material created</a>
+  </li>
+  <li
+    class="mp2">
+    <a
+      href="http://news.bbc.co.uk/2/hi/entertainment/7193080.stm">Ike Turner 'overdosed on cocaine'</a>
+  </li>
+  <li
+    class="mp3">
+    <a
+      href="http://news.bbc.co.uk/2/hi/entertainment/7191355.stm">Cruise scientology video leaked</a>
+  </li>
+  <li
+    class="mp4">
+    <a
+      href="http://news.bbc.co.uk/2/hi/africa/7192958.stm">Odinga denies 'ethnic cleansing'</a>
+  </li>
+  <li
+    class="mp5">
+    <a
+      href="http://news.bbc.co.uk/2/hi/science/nature/7192479.stm">Mercury's unseen side is revealed</a>
+  </li>
+</ul>
+<a href="/2/shared/bsp/hi/live_stats/html/map.stm" class="arr">Most popular now, in detail</a>
+</div>
+<div class="clear"></div>
+<br/>
+<script>
+	liveStatsTabs('livestats1450','livestats1451');
+</script>
+
+
+
+                    </td>
+                </tr>
+                 <tr><td colspan="3"> 
+<div class="o">
+      
+    
+        
+        
+	
+            
+            
+		
+            
+            <div><img src="http://newsimg.bbc.co.uk/media/images/41756000/gif/_41756614_story_foot_shadow.gif" width="629" height="7" alt="" border="0"></div>
+            
+                
+                    
+                
+            
+	
+	
+    
+<img src="http://newsimg.bbc.co.uk/shared/img/ffffff.gif" width="629" height="10" alt="" border="0"><br />
+    
+        <div class="nwfiller2">
+        
+	
+            
+            
+		
+            
+            
+	<div class="nlp">
+		
+			
+			FEATURES, VIEWS, ANALYSIS
+		
+	</div>
+
+            
+                
+                    
+                
+            
+	
+	</div>
+    
+
+    
+
+  <table cellspacing="0" border="0" cellpadding="0" width="629">
+    <tr>
+      <td valign="top" width="203">
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+
+			
+
+
+
+
+<div class="pb">
+<div class="o">
+
+		<a class="pbl" href="/2/hi/in_pictures/7191638.stm">
+			<img src="http://newsimg.bbc.co.uk/media/images/44360000/jpg/_44360620_photograph_promo_ap.jpg" align="left" width="66" height="66" alt="A Holocaust survivor holds a picture of his father in Tel Aviv, Israel" border="0" vspace="0" class="imvr" hspace="0">
+			
+            
+				<b>Day in pictures</b>
+				<br />Some of the most striking images from around the world
+				
+			
+		</a>
+		<br clear="all" />
+
+</div>
+</div>
+
+
+            
+                
+                    
+                
+            
+	
+	
+    
+</td><td valign="top" class="gpromo" width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td><td valign="top" width="203">
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+
+			
+
+
+
+
+<div class="pb">
+<div class="o">
+
+		<a class="pbl" href="/2/hi/uk_news/politics/7192044.stm">
+			<img src="http://newsimg.bbc.co.uk/media/images/44360000/jpg/_44360160_lugovoi66ap.jpg" align="left" width="66" height="66" alt="Andrei Lugovoi" border="0" vspace="0" class="imvr" hspace="0">
+			
+            
+				<b>Secret evidence</b>
+				<br />Why Britain refuses to reveal its case against Andrei Lugovoi
+				
+			
+		</a>
+		<br clear="all" />
+
+</div>
+</div>
+
+
+            
+                
+                    
+                
+            
+	
+	
+    
+</td><td valign="top" class="gpromo" width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td><td valign="top" width="203">
+    
+        
+        
+	
+            
+            
+		
+            
+            
+	
+
+			
+
+
+
+
+<div class="pb">
+<div class="o">
+
+		<a class="pbl" href="/2/hi/middle_east/7191453.stm">
+			<img src="http://newsimg.bbc.co.uk/media/images/44359000/jpg/_44359447_headshot_ap66puff.jpg" align="left" width="66" height="66" alt="George Bush, 13 January 2008" border="0" vspace="0" class="imvr" hspace="0">
+			
+            
+				<b>Mid-East mission</b>
+				<br />Is George Bush's belief enough to inspire change?
+				
+			
+		</a>
+		<br clear="all" />
+
+</div>
+</div>
+
+
+            
+                
+                    
+                
+            
+	
+	
+    
+</td>
+    </tr>
+  </table>
+<img src="http://newsimg.bbc.co.uk/shared/img/ffffff.gif" width="629" height="10" alt="" border="0"><br />
+  <table cellspacing="0" border="0" cellpadding="0" width="629">
+    <tr>
+      <td valign="top" class="gffffff" width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td><td valign="top" class="gffffff" width="10"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+    </tr>
+  </table>
+
+</div> </td></tr> 
+            </table>
+        </td>
+    </tr>
+</table>
+
+	
+        <!-- START of footer for story strip -->
+<div class="serviceStripStory2">
+	<h4><a href="http://news.bbc.co.uk/1/hi/help/products_and_services/default.stm" class="lp">PRODUCTS &amp; SERVICES</a></h4>
+	<ul>
+		<li class="emailnews"><a href="http://newsvote.bbc.co.uk/go/news/int/story/services/-/email/news">E-mail news</a></li>
+		<li class="mobiles"><a href="http://news.bbc.co.uk/go/news/int/story/services/-/1/hi/help/6358397.stm">Mobiles</a></li>
+		<li class="alerts"><a href="http://news.bbc.co.uk/go/news/int/story/services/-/1/hi/help/4735697.stm">Alerts</a></li>
+		<li class="newsfeeds"><a href="http://news.bbc.co.uk/go/news/int/story/services/-/1/hi/help/3223484.stm">News feeds</a></li>		
+		<li class="podcast"><a href="http://www.bbcworldservice.com/podcasts">Podcasts</a></li>
+	</ul>
+	<div class="clear"></div>
+</div>
+        
+        <div id="ad3" class="ad3"></div>
+<div id="footer1">
+	<ul id="serviceBar">
+		<li class="copyright2"><div class="logo"><a href="http://news.bbc.co.uk/1/hi/help/3281849.stm">BBC Copyright Notice</a></div><div class="copyrightdate">MMVIII</div></li>
+		<script language="JavaScript">
+<!--
+
+function randomLiveStats(){
+var liveStatsFacts=new Array()
+
+liveStatsFacts[0]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most read story in the UK is: <a href=http://news.bbc.co.uk/1/hi/health/7192605.stm>£5m hospital bug payout for Ash</a>";
+liveStatsFacts[1]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most read story in Africa is: <a href=http://news.bbc.co.uk/1/hi/world/africa/7192958.stm>Odinga denies 'ethnic cleansing'</a>";
+liveStatsFacts[2]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most read story in Europe is: <a href=http://news.bbc.co.uk/1/hi/entertainment/7193080.stm>Ike Turner 'overdosed on cocaine'</a>";
+liveStatsFacts[3]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most read story in North America is: <a href=http://news.bbc.co.uk/1/hi/sci/tech/7190107.stm>'Darkest ever' material created</a>";
+liveStatsFacts[4]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most read story in Australasia is: <a href=http://news.bbc.co.uk/1/hi/entertainment/7191355.stm>Cruise scientology video leaked</a>";
+liveStatsFacts[5]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | The most e-mailed story right now is: <a href=http://news.bbc.co.uk/1/hi/england/norfolk/7047536.stm>Swearing at work can 'cut stress'</a>";
+liveStatsFacts[6]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | <a href=/1/shared/bsp/hi/live_stats/html/map.stm>Traffic to this site is currently 7% above normal</a>";
+liveStatsFacts[7]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | <a href=/1/shared/bsp/hi/live_stats/html/map.stm>25,486 pages were read in the last minute.</a>";
+liveStatsFacts[8]="<a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | <a href=/1/shared/bsp/hi/live_stats/html/map.stm>55,043 people are reading stories on the site right now.</a>";
+
+document.write('<li class="footermostpop">' + liveStatsFacts[Math.floor(Math.random()*liveStatsFacts.length)] + '</li>');
+}
+randomLiveStats()
+//-->
+</script>
+
+<noscript>
+<li class="footermostpop"><a href=/1/shared/bsp/hi/live_stats/html/map.stm>Most Popular Now</a> | <a href=/1/shared/bsp/hi/live_stats/html/map.stm>25,486 pages were read in the last minute.</a></li>
+</noscript>
+		<li class="footertotop"><a href="#top">Back to top ^^</a></li>
+	</ul>
+	<ul id="footList">
+		<li><a href="http://news.bbc.co.uk/1/hi/help/default.stm">Help</a></li>
+		<li><a href="http://www.bbc.co.uk/privacy/">Privacy and cookies policy</a></li>
+		<li><a href="http://news.bbc.co.uk/1/hi/help/3281815.stm">News sources</a></li>
+		<li><a href="http://www.bbc.co.uk/info/">About the BBC</a></li>
+		<li><a href="http://news.bbc.co.uk/newswatch/ukfs/hi/feedback/default.stm" >Contact us</a></li>		
+		
+		<li><a href="http://www.bbc.co.uk/bbc.com/furtherinformation/" class="none">Advertise with us</a></li>
+		
+	</ul>
+</div>
+
+
+<map name="world_map" id="world_map">
+<area alt="Americas" coords="0,0,34,53" href="/2/hi/americas/default.stm" />
+<area alt="Africa" shape="poly" coords="37,25,37,51,52,51,52,33,48,33,48,31,40,31" href="/2/hi/africa/default.stm" />
+<area alt="Europe" shape="poly" coords="35,2,66,2,66,12,56,12,56,20,37,20" href="/2/hi/europe/default.stm" />
+<area alt="Middle East" shape="poly" coords="44,24,57,24,58,50,55,50,55,31,52,28,44,28" href="/2/hi/middle_east/default.stm" />
+<area alt="South Asia" coords="60,24,67,49" href="/1/hi/world/south_asia/default.stm" />
+<area alt="Asia Pacific" shape="poly" coords="71,2,89,3,88,51,69,51,69,20,62,20,62,16,71,16" href="/2/hi/asia-pacific/default.stm" />
+</map>
+
+<script language="JavaScript">
+<!--
+var gmt = "<img src=\"http://newsimg.bbc.co.uk/sol/shared/img/timezone/x.zzz\" width=\"0\" height=\"0\" />";
+var not_gmt = "<img src=\"http://newsimg.bbc.co.uk/sol/shared/img/timezone/y.zzz\" width=\"0\" height=\"0\" />";
+function showContent(d,c){for(var x=0;x<d.length;x++){if(d[x].className==c)d[x].style.display = "block";}}
+function doDocWrite(img){document.write(img);}
+if(document.getElementById){
+var d = document.getElementsByTagName("span");
+if(new Date().getTimezoneOffset()<=0&&new Date().getTimezoneOffset()>=-60){showContent(d,"t1");}else{showContent(d,"t2");}
+}
+//-->
+</script>
+
+
+<!--  Code for :bbc -->
+<!-- START NetRatings Measurement V5.1 -->
+<!-- COPYRIGHT 2003 NetRatings Limited -->
+<script language="JavaScript" type="text/javascript">
+<!--
+var _rsCI="bbc";
+var _rsCG="0";
+var _rsDT=1;
+var _rsDU=0;
+var _rsDO=0;
+var _rsX6=0;
+var _rsSI=escape(window.location);
+var _rsLP=location.protocol.indexOf('https')>-1?'https:':'http:';
+var _rsRP=escape(document.referrer);
+var _rsND=_rsLP+'//secure-uk.imrworldwide.com/';
+
+ if (parseInt(navigator.appVersion)>=4)
+ {
+     var _rsRD=(new Date()).getTime();
+     var _rsSE=1;    
+     var _rsSV="";
+     var _rsSM=1.0;
+     _rsCL='<scr'+'ipt language="JavaScript" type="text/javascript" src="'+_rsND+'v51.js"><\/scr'+'ipt>';
+ }
+ else
+ {
+     _rsCL='<img src="'+_rsND+'cgi-bin/m?ci='+_rsCI+'&cg='+_rsCG+'&si='+_rsSI+'&rp='+_rsRP+'">';
+ }
+ document.write(_rsCL);
+//-->
+</script>
+<noscript>
+ <img src="//secure-uk.imrworldwide.com/cgi-bin/m?ci=bbc&amp;cg=0" alt=""/>
+</noscript>
+<!-- END RedMeasure V5.1 -->
+
+
+
+
+
+
+<br />
+   
+<div id="ad2" class="ad2"></div>
+<div id="bbccomWebBug" class="bbccomWebBug"></div>
+
+        <br />
+	
+
+</body>
+</html>

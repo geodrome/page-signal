@@ -1,0 +1,1646 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>ESPNsoccernet - England - Speculation mounts after Redknapp stays silent</title>
+
+
+<script language="javascript">
+//WEB MONKEY*******************************************************************************
+/*
+WM_setCookie(), WM_readCookie(), WM_killCookie()
+A set of functions that eases the pain of using cookies.
+
+Source: Webmonkey Code Library
+(http://www.hotwired.com/webmonkey/javascript/code_library/)
+
+Author: Nadav Savio
+Author Email: nadav@wired.com
+*/
+
+
+// This next little bit of code tests whether the user accepts cookies.
+var WM_acceptsCookies = false;
+if(document.cookie == '') {
+    document.cookie = 'WM_acceptsCookies=yes'; // Try to set a cookie.
+    if(document.cookie.indexOf('WM_acceptsCookies=yes') != -1) {
+	WM_acceptsCookies = true; 
+    }// If it succeeds, set variable
+} else { // there was already a cookie
+  WM_acceptsCookies = true;
+}
+
+
+function WM_setCookie (name, value, hours, path, domain, secure) {
+    if (WM_acceptsCookies) { // Don't waste your time if the browser doesn't accept cookies.
+	var not_NN2 = (navigator && navigator.appName 
+		       && (navigator.appName == 'Netscape') 
+		       && navigator.appVersion 
+		       && (parseInt(navigator.appVersion) == 2))?false:true;
+
+	if(hours && not_NN2) { // NN2 cannot handle Dates, so skip this part
+	    if ( (typeof(hours) == 'string') && Date.parse(hours) ) { // already a Date string
+		var numHours = hours;
+	    } else if (typeof(hours) == 'number') { // calculate Date from number of hours
+		var numHours = (new Date((new Date()).getTime() + hours*3600000)).toGMTString();
+	    }
+	}
+	document.cookie = name + '=' + escape(value) + ((numHours)?(';expires=' + numHours):'') + ((path)?';path=' + path:'') + ((domain)?';domain=' + domain:'') + ((secure && (secure == true))?'; secure':''); // Set the cookie, adding any parameters that were specified.
+    }
+} // WM_setCookie
+
+function WM_readCookie(name) {
+    if(document.cookie == '') { // there's no cookie, so go no further
+	return false; 
+    } else { // there is a cookie
+	var firstChar, lastChar;
+	var theBigCookie = document.cookie;
+	firstChar = theBigCookie.indexOf(name);	// find the start of 'name'
+	var NN2Hack = firstChar + name.length;
+	if((firstChar != -1) && (theBigCookie.charAt(NN2Hack) == '=')) { // if you found the cookie
+	    firstChar += name.length + 1; // skip 'name' and '='
+	    lastChar = theBigCookie.indexOf(';', firstChar); // Find the end of the value string (i.e. the next ';').
+	    if(lastChar == -1) lastChar = theBigCookie.length;
+	    return unescape(theBigCookie.substring(firstChar, lastChar));
+	} else { // If there was no cookie of that name, return false.
+	    return false;
+	}
+    }	
+} // WM_readCookie
+
+function WM_killCookie(name, path, domain) {
+  var theValue = WM_readCookie(name); // We need the value to kill the cookie
+  if(theValue) {
+      document.cookie = name + '=' + theValue + '; expires=Fri, 13-Apr-1970 00:00:00 GMT' + ((path)?';path=' + path:'') + ((domain)?';domain=' + domain:''); // set an already-expired cookie
+  }
+} // WM_killCookie
+
+//END WEBMONKEY***********************************************************************************
+// -->
+</script>
+<script language="JavaScript">
+if (WM_acceptsCookies){
+    var theArgument = '5739';
+    var theCookie = new String();
+    theCookie = WM_readCookie('COREG');
+    if (theCookie == ''){
+        var encodedReturn = new String();
+        var returnURL = new String();
+        encodedReturn = '' + escape("news/story?id=497114") + '';
+        returnURL = "/origin?cameFrom=" + encodedReturn;
+        if (document.layers) {
+			window.location.href = returnURL;
+		} else {
+        	self.location.replace(returnURL);
+		}
+    } else if (theCookie == theArgument){
+        document.write('');
+    } else if (theCookie != theArgument){
+        var tempString = new String();
+        tempString = '/news/story?id=497114&cc=' + theCookie;
+        if (document.layers) {
+			window.location.href = tempString;
+		} else {
+        	self.location.replace(tempString);
+		}
+    }
+} else if ('5739' != '5901'){
+	if (document.layers) {
+		window.location.href = '/news/story?id=497114&' + 'cc=5901';
+	} else {
+    	self.location.replace('/news/story?id=497114&' + 'cc=5901');
+	}
+}
+</script>
+<meta name="description" content="Newcastle were today closing in on their man as they stepped up efforts to lure Harry Redknapp to St James' Park.">
+<meta name="keywords" content="English Premier League, Newcastle, Portsmouth, Soccer, Football">
+
+<meta name="date" content="2008-01-11">
+<meta name="page" content="news">
+<style type="text/css">
+@import url(http://soccernet-akamai.espn.go.com/design05/insertfiles/css/sportstory2005.css);
+@import url(http://soccernet-akamai.espn.go.com/design05/insertfiles/css/login.css);
+@import url(http://soccernet-akamai.espn.go.com/design05/insertfiles/css/horizNav.css);
+@import url(http://soccernet-akamai.espn.go.com/design05/insertfiles/css/master_tables.css);
+.stathead {background: #CC0000;}
+
+	#dcm{background: #CC0000;}
+	#dcm a:link, #dcm a:visited{background: #CC0000; border: 1px solid #CC0000;}
+	#dcm a:hover{background:#9C830C; border: 1px solid #CCC; border-bottom-color: #000; border-right-color: #000;}
+	#LTwoNavBar{background: #CC0000;}
+	.i{background: #CC0000; background-image: url(http://soccernet-akamai.espn.go.com/design05/i/horizNav/eng_nav.gif);}
+
+</style>
+
+<script language="Javascript" src="http://soccernet-akamai.espn.go.com/design05/insertfiles/javascript/flash.js" type="text/javascript"></script>
+<script language="Javascript" src="http://soccernet-akamai.espn.go.com/design05/insertfiles/javascript/motion.js" type="text/javascript"></script>
+<script language="Javascript" src="http://soccernet-akamai.espn.go.com/design05/insertfiles/javascript/horizNav.js" type="text/javascript"></script>
+<script language="Javascript" src="http://soccernet-akamai.espn.go.com/design05/insertfiles/javascript/ua.js" type="text/javascript"></script>
+
+<script language="Javascript" type="text/javascript">
+<!--
+// BROWSER CHECK
+	browser = navigator.appName;
+	appVer = parseInt(navigator.appVersion);
+	ie = "Microsoft Internet Explorer";
+	ns = "Netscape";
+	if (navigator.appVersion.indexOf("Macintosh") != -1) {
+		isMac = true;
+	} else {
+		isMac = false;
+	}
+//-->
+</script>
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function setCookie(name, value) {
+  var curCookie = name + "=" + escape(value) + "; expires=Wed, 07-Jun-2023 11:07:25 GMT; path=/; domain=go.com";
+  document.cookie = curCookie;
+  window.location.href = window.location.href;
+}
+
+function setFontCookie(name, value) {
+  var curCookie = name + "=" + escape(value) + "; expires=Wed, 07-Jun-2023 11:07:25 GMT; path=/; domain=go.com";
+  document.cookie = curCookie;
+  window.location.href = window.location.href;
+}
+
+function getCookie(name) {
+  var dc = document.cookie;
+  var prefix = name + "=";
+  var begin = dc.indexOf("; " + prefix);
+  if (begin == -1) {
+	begin = dc.indexOf(prefix);
+	if (begin != 0) return null;
+  } else
+	begin += 2;
+  var end = document.cookie.indexOf(";", begin);
+  if (end == -1)
+	end = dc.length;
+  return unescape(dc.substring(begin + prefix.length, end));
+}
+if (getCookie('fontsize') == null) {
+	var fontsize = 11;
+} else {
+	var fontsize = getCookie('fontsize');
+}
+function changeFontSize (fontsize) {
+	setFontCookie('fontsize',fontsize);
+}
+document.write('<style type="text/css">');
+document.write('.text11 {font-size:'+fontsize+'px;line-height: 150%;font-family: Verdana, sans-serif;15px;color: #000;padding: 0px 0 30px 0px;}');
+document.write('<\/style>');
+
+//-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+var img1 = new Image();
+img1.src = "http://soccernet-akamai.espn.go.com/design05/i/story/print_off.gif";
+var img2 = new Image();
+img2.src = "http://soccernet-akamai.espn.go.com/design05/i/story/send_over.gif";
+var img3 = new Image();
+img3.src = "http://soccernet-akamai.espn.go.com/design05/i/story/page_iconf00.gif";
+//-->
+</script><script src="http://soccernet-akamai.espn.go.com/design05/insertfiles/javascript/slnav.js" type="text/javascript"></script>
+
+	<!--WEBSIDESTORY CODE HBX1.0 (Universal)-->
+	<!--COPYRIGHT 1997-2005 WEBSIDESTORY,INC. ALL RIGHTS RESERVED. U.S.PATENT No. 6,393,479B1. MORE INFO:http://websidestory.com/privacy-->
+	<script type="text/javascript">
+	var _hbEC=0,_hbE=new Array;function _hbEvent(a,b){b=_hbE[_hbEC++]=new Object();b._N=a;b._C=0;return b;}
+	var hbx=_hbEvent("pv");hbx.vpc="HBX0100u";hbx.gn="ehg-dig.hitbox.com";
+	var isLoggedIn=false;
+	var accessLevel = "";
+	var hc2 = "";
+	var pagePath = "";
+
+	function params(wut,qp,dflt){
+		dflt=(dflt==null)?'':dflt; try{r=unescape(wut.match(new RegExp(qp+"=+([^&;]*)"))[1]);}catch(qp){r=dflt;} return r;
+	}
+
+	if (typeof sLoginState != 'undefined' && typeof pLoginState != 'undefined') {
+		if (sLoginState == true || pLoginState == true) {
+			isLoggedIn = true;
+		}
+	}
+
+	if (accessLevel == "anonymous" && isLoggedIn == true) {
+		hc2 = "registered"+pagePath;
+	}
+
+	//BEGIN EDITABLE SECTION
+	//CONFIGURATION VARIABLES
+	hbx.acct="DM5104164EAE95EN3;DM5010177GVA95EN3;DM5103083LCA38EN3";//ACCOUNT NUMBER(S)
+	hbx.pn="497114+-+speculation+mounts+after+redknapp+stays+silent";//PAGE NAME(S)
+	hbx.mlc="/5739/england/eng.1/story;/SOCCERNET/england/eng.1/story;*";//MULTI-LEVEL CONTENT CATEGORY
+	hbx.pndef="title";//DEFAULT PAGE NAME
+	hbx.ctdef="full";//DEFAULT CONTENT CATEGORY
+
+	//OPTIONAL PAGE VARIABLES
+	//ACTION SETTINGS
+	hbx.fv="";//FORM VALIDATION MINIMUM ELEMENTS OR SUBMIT FUNCTION NAME
+	hbx.lt="auto";//LINK TRACKING
+	hbx.dlf="n";//DOWNLOAD FILTER
+	hbx.dft="n";//DOWNLOAD FILE NAMING
+	hbx.elf="n";//EXIT LINK FILTER
+
+	//SEGMENTS AND FUNNELS
+	hbx.seg="*;*;*";//VISITOR SEGMENTATION
+	hbx.fnl="";//FUNNELS
+
+	//CUSTOM VARIABLES
+	hbx.ci=params(document.cookie,"SWID","null");//CUSTOMER ID
+	hbx.hc1="";//COLUMNISTS
+	hbx.hc2=hc2;//PREMIUM ACCESS LEVEL
+	hbx.hc3="edit|/england/eng.1/story/497114+-+speculation+mounts+after+redknapp+stays+silent";//EDITORIAL VS. AUTOMATED
+	hbx.hc4="";//CUSTOM 4
+	hbx.hrf="";//CUSTOM REFERRER
+	hbx.pec="";//ERROR CODES
+
+	//INSERT CUSTOM EVENTS
+	var ev1 = new _hbEvent("search"); // required definition to create custom event
+ 	ev1.keywords=""; // required value
+ 	ev1.results=""; // optional value, any integer number of result
+ 	ev1.attr1=""; // Category
+ 	ev1.attr2=""; // Sub Category if one exists
+ 	ev1.attr3=""; // optional, can be any string search attribute
+ 	ev1.attr4=""; // optional, can be any string search attribute
+	//END EDITABLE SECTION
+
+	//REQUIRED SECTION. CHANGE "YOURSERVER" TO VALID LOCATION ON YOUR WEB SERVER (HTTPS IF FROM SECURE SERVER)
+	</script><script type="text/javascript" defer="defer" src="http://soccernet-akamai.espn.go.com/design05/insertfiles/javascript/hbx.js"></script>
+	<!--END WEBSIDESTORY CODE-->
+
+	<!--begin revenueScience-->
+
+
+<!--end revenueScience-->
+
+<!-- ajax stuff -->
+<script type="text/javascript" src="http://tredir.go.com/capmon/GetDE?set=j&param=country&param=continent"></script>
+<script type="text/javascript">
+	var oReg = country;
+</script>
+<script language="Javascript" type="text/javascript">
+var http = createRequestObject();
+function createRequestObject() {
+	var ro;
+	var abrowser = navigator.appName;
+	if (abrowser == "Microsoft Internet Explorer") {
+		ro = new ActiveXObject("Microsoft.XMLHTTP");
+	} else {
+		ro = new XMLHttpRequest();
+	}
+	return ro;
+}
+
+function sndReq(kioskType) {
+	http.open('GET', '/inc/kiosks?pageType='+kioskType+'&league=eng.1&region=' + oReg + '&cc=5739', true);
+	http.onreadystatechange = handleResponse;
+	http.send(null);
+}
+
+function handleResponse() {
+	if (http.readyState == 4) {
+		try {
+			var xml = http.responseText;
+			if (xml != ' ') {	// can ajax handle empty responses, or is this necessary?
+				document.getElementById('akiosks').innerHTML = '<div id="kiosks" style="width:160px;"><div id="adslug" style="width:160px; height:12px; right: 20px; display: block; visibility: visible; vertical-align: top; position: relative; padding:0 0 3px 0;"><img src="http://soccernet-akamai.espn.go.com/design05/i/betting.gif"></div>' + xml + '</div>';
+			}
+		} catch ( e ) { alert ( e.message ) ; }
+	}
+}
+</script>
+<!-- end ajax stuff -->
+
+<script language="javascript" type="text/javascript">
+    var adHeaderLogo=null;
+    var adHeaderText=null;
+    var inlineAdText=null;
+</script>
+
+
+
+</head>
+<body>
+
+<!-- begin main div -->
+<div id="main">
+
+
+<!-- format/design06/login -->
+<style type="text/css" media="screen">
+	/* login*/
+	@import url(http://espn.go.com/insertfiles/css/design06/universalLogin2.css);
+</style>
+
+<script type="text/javascript">
+var returnURL = document.location.href;
+</script>
+<div id="login" ><ul class="universalLogin">
+	<script language="Javascript">
+
+	function getLinksMarkUp(uN, fN, lG) {
+		var links = "";
+		if (lG == 1 || lG == "1" || lG == 0 || lG =="0") {
+			links ='| <a href="https://r.espn.go.com/espn/memberServices">Member Services</a>';
+
+			if (lG==0 || lG=="0") {
+				if (fN!=null && fN!="null"){
+							links = links + ' | <a href="http://r.espn.go.com/espn/logout?appRedirect=' + encodeURIComponent(returnURL) + '">Not '+fN+'?</a>'
+				}
+				links = links+' | <a href="http://r.espn.go.com/espn/memberservices/resetPassword">Forgot Password?</a> ';
+			}
+		} else {
+			links = '| <a href="https://r.espn.go.com/espn/memberservices/register?registrationFormId=soccernet&sourceName=header">Register</a> | <a href="http://r.espn.go.com/espn/memberservices/resetPassword">Forgot Password?</a> ';
+		}
+
+
+		return links;
+	}
+
+	</script>
+	<li class="left"><a href="http://soccernet.espn.go.com">ESPNsoccernet</a> <span id="unilinks"></span></li><li class="right">
+<div id="login-wrapper">
+</div>
+<script language="JavaScript" type="text/javascript">
+
+	function getLoginFormMarkUp(uN, fN, lG) {
+	
+	if (lG == 1 || lG == "1")
+  {
+  		var loginForm = 'Welcome, '+fN+' | '
+			loginForm = loginForm + '<a href="http://r.espn.go.com/espn/logout?appRedirect='+returnURL+'">Sign Out</a>';
+
+  } else {
+			var loginForm = '<form method="post" action="https://r.espn.go.com/espn/insider/login">';
+			loginForm = loginForm + '<input type="hidden" name="failedAttempts" value="2" />';
+			loginForm = loginForm + '<input type="hidden" name="SUBMIT" value="1" />';			
+			loginForm = loginForm + '<input type="hidden" name="aff_code" value="espn_insider" />';
+			loginForm = loginForm + '<input type="hidden" name="appRedirect" value="' + returnURL + '">';
+			loginForm = loginForm + '<input type="hidden" name="failedLocation" value="https://r.espn.go.com/espn/sportsnation/login?SUBMIT=failed&appRedirect=' + encodeURIComponent(returnURL) + '">';
+			loginForm = loginForm + '<input type="hidden" name="cookieDomain" value=".go.com" />';
+			loginForm = loginForm + '<input type="hidden" name="multipleDomains" value="true" />';			
+			if (lG == 0 || lG == "0"){
+				loginForm = loginForm + '<span class="ul_fieldLabel">Welcome, '+fN+' | </span>'					
+				loginForm = loginForm + '<input type="hidden" name="username"  value="' + uN + '" />';
+			} else {
+								loginForm = loginForm + '<span class="ul_fieldLabel">Member Name:</span> <input class="field" name="username" type="text" value="" />';				
+			}
+			
+			loginForm = loginForm + '<span class="ul_fieldLabel"> Password:</span> <input class="field" name="password" type="password" value="" />';
+			loginForm = loginForm + '<input class="ul_submit" type="submit" value="Log In" />';
+			loginForm = loginForm + '</form>';
+	}		
+	
+
+	return loginForm;
+	}
+</script>
+
+</li></ul></div>
+	<script type="text/javascript">
+	//<![CDATA
+    var cookies = document.cookie.split("; ");
+	var pLoginState = false;
+	var sLoginState = false;
+	var regReq = null;
+	var regURL = 'http://r.espn.go.com/espn/preferences/passiveLogin?appRedirect=http%3A%2F%2Fespn-ak.starwave.com%2Fi%2Fblank.gif';
+	var returnURL = document.location.href;
+	var xmlURL = 'http://' + document.location.hostname + '/espn/unilogin/loggedIn';
+	var appRedirect = 'null';
+	var unilinks = document.getElementById('unilinks');
+	var loginwrapper = document.getElementById('login-wrapper');
+	var ak = returnURL.indexOf('sports-ak');
+
+	if (appRedirect != '' && appRedirect != 'null')
+	{
+		returnURL = appRedirect;
+	}
+
+	if (returnURL.indexOf("univLogin02", 0) == -1)
+	{
+		if (returnURL.indexOf("?",0) == -1)
+		{
+			returnURL = returnURL + "?univLogin02=stateChanged";
+		} else {
+			returnURL = returnURL + "&univLogin02=stateChanged";
+		}
+	}
+
+  function getCookie(name) {
+  	for (var i=0; i < cookies.length; i++) {
+  		cookie = cookies[i].split("=");
+  		if (cookie[0] == name)
+  			return cookie[1];
+  		}
+  	return null;
+  }
+
+	function getMarkup(uN,fN,lG){
+		loginFormMarkup = getLoginFormMarkUp(uN, fN, lG);
+		links = getLinksMarkUp(uN, fN, lG);
+
+		loginwrapper.innerHTML = loginFormMarkup;
+		unilinks.innerHTML = links;
+  }
+
+	function doLoginCheck() {
+		var myImage = new Image();
+		myImage.onload = checkLoginState;
+		myImage.src = regURL;
+	}
+
+	function callLoginCheck(evt)
+	{
+		setTimeout('doLoginCheck();', 1500);
+	}
+
+	function checkLoginState() {
+		try {
+			regReq = null;
+
+			if (window.XMLHttpRequest) {
+				regReq = new XMLHttpRequest();
+				regReq.onreadystatechange = processRegResp;
+				regReq.open("GET", xmlURL, true);
+				regReq.send(null);
+			} else if (window.ActiveXObject) {
+				regReq = new ActiveXObject("Microsoft.XMLHTTP");
+				regReq.onreadystatechange = processRegResp;
+				regReq.open("GET", xmlURL, true);
+				regReq.send();
+			}
+		} catch(e) { showmessage(e.message); }
+	}
+
+	function showmessage(message) {
+		window.status = message;
+	}
+
+	function processRegResp(){
+		if (regReq.readyState == 4) {
+			if (regReq.status == 200 && regReq.responseXML!=null) {
+				var markup = null;
+				debug = regReq.responseXML;
+				var fN = regReq.responseXML.getElementsByTagName("FirstName");
+				var lN = regReq.responseXML.getElementsByTagName("LastName");
+				var uN = regReq.responseXML.getElementsByTagName("Username");
+				var lG = regReq.responseXML.getElementsByTagName("Active");
+				getMarkup(uN[0].childNodes[0].nodeValue, fN[0].childNodes[0].nodeValue, lG[0].childNodes[0].nodeValue);
+			}
+		}
+	}
+
+  swid = getCookie("SWID");
+  green = getCookie("GREEN");
+
+	if (green != null && green != "") {
+		if ("" == 1) {
+			sLoginState = true;
+		} else {
+			pLoginState = true;
+		}
+
+	} else if ((green == null || green == "") && (swid != null && swid != "")) {
+		if (swid.indexOf("{")==0 && swid.indexOf("}")==swid.length-1) {
+			pLoginState = true;
+		}
+	}
+	if ((sLoginState == false && pLoginState == false) || ak>0) {
+			getMarkup(null,null, null);
+	} else if (sLoginState == false && pLoginState == true && ak<0) {
+		if (green != null && green != "" && "" == "0") {
+			getMarkup('', '', 0);
+
+		} else {
+			if (document.location.hostname == "insider.espn.go.com")
+			{
+				document.location.href = "http://r.espn.go.com/espn/preferences/passiveLogin?appRedirect=" + encodeURIComponent(returnURL);
+			} else {
+				if (window.attachEvent)
+				{
+					window.attachEvent("onload", callLoginCheck);
+				} else {
+					doLoginCheck();
+				}
+			}
+		}
+
+	} else if (sLoginState == true) {
+			getMarkup('','', 1);
+	}
+//]]>
+</script>
+
+
+<!-- end uni login -->
+		<div id="upperad" style="width: 772px; background-image: url('http://soccernet-akamai.espn.go.com/design05/i/ad_bgd.gif'); background-repeat: repeat;">
+		<table width="728" border="0" cellspacing="0" cellpadding="0" height="90" align="center" style="position: relative; top:'+banTop+'px; z-index: 3000;">
+		<tr><td valign="top"><!-- new alias 5/30 = EU_england_728x90 -->
+<!-- new key 5/30 = 361+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=eng1;kvclub=361;kvaid=497114;grp=2887942 -->
+
+				<!-- JavaScript Tag // Tag for network 605.1: ESPN TN // Website: ESPN SC Keyword Site // Page: All // Placement: 728 X 90 (225) -->
+				<script language="javascript" type="text/javascript"><!--
+				document.write('<scr'+'ipt language="javascript1.1" src="http://ad.dc2.adtech.de/addyn|3.0|605.1|1287938|0|225|alias=EU_england_eng1_361_story_728x90;loc=100;target=_blank;key=361+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=eng1;kvclub=361;kvaid=497114;grp=2887942;misc='+new Date().getTime()+'"></scri'+'pt>');
+				//--></script><noscript><a href="http://ad.dc2.adtech.de/adlink|3.0|605.1|1287938|0|225|alias=EU_england_eng1_361_story_728x90;loc=300;361+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=eng1;kvclub=361;kvaid=497114;grp=2887942" target="_blank"><img src="http://ad.dc2.adtech.de/adserv|3.0|605.1|1287938|0|225|alias=EU_england_eng1_361_story_728x90;loc=300;key=361+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=eng1;kvclub=361;kvaid=497114;grp=2887942" border="0" width="728" height="90"></a></noscript>
+				<!-- End of JavaScript Tag -->
+				</td></tr>
+		</table>
+		</div>
+		<!-- league = eng.1 root: england pageType: story -->
+
+
+	<div id="flashHeader">
+		<script language="javascript">
+		<!--
+		var flashHeader="http://soccernet-akamai.espn.go.com/design05/swf/headers/baseHeader_07s.swf?h=90&header=http://soccernet-akamai.espn.go.com/design05/swf/headers/eng_hdr.swf&sport=England&sportindex=http%3A%2f%2fsoccernet.espn.go.com%2fsection%3Fid%3Dengland%26cc%3D5739&scolor=CC0000";
+		
+			if (adHeaderText!=null) {
+				flashHeader=flashHeader + adHeaderText;
+			}
+			if (adHeaderLogo!=null) {
+			   flashHeader= flashHeader + adHeaderLogo;
+			//} else if ('5739' == '3436') {
+			//	flashHeader = flashHeader + "&logo1url=http://soccernet-akamai.espn.go.com/ad/nike/nike_presby2.swf&clicktag=http://nikefootball.nike.com/nikefootball/siteshell/index.jsp?promoID=20061005_B2F_AU_spg";
+			//} else if ('5739' == '4716' && ('England' == 'Euro 2008' || 'England' == 'England')) {
+			//	flashHeader = flashHeader + "&logo1url=http://soccernet-akamai.espn.go.com/ad/celcom/20070808/celcom_EPL_home.swf&clicktag=http://203.82.65.248/live/main.php";
+			}
+		
+		var SOB = new flashObj();
+		SOB.flashFile = flashHeader;
+		SOB.width = "772";
+		SOB.height = "90";
+		SOB.scale = "noScale";
+		SOB.salign="lt";
+		SOB.wmode = "transparent";  // Window Mode
+		SOB.DenyIEdl = "TRUE";
+		SOB.FlashVer = 6;
+		SOB.cabVersion = "6,0,48,0";
+		SOB.altTxt = "<a href=\"http://soccernet.espn.go.com/section?id=england&cc=5739\"><img src=\"http://soccernet-akamai.espn.go.com/design05/i/headers/eng.jpg\" width=\"772\" height=\"90\" border=\"0\" alt=\"England\"></a>";
+		SOB.ID = "headerswf";
+		SOB.render(true);
+		//-->
+		</script>
+	</div>
+
+
+<!-- begin global nav -->
+
+<style>.navItem, .anchorItem { padding:7px 4px 7px 5px; }</style>
+
+
+
+<div id="topNav" class="navBar">
+
+
+
+<!-- 1st anchor (ESPN) -->
+<div class="collapsed">
+	<div class="navItem" style="background-image: url(http://soccernet-akamai.espn.go.com/design05/i/horizNav/ESPNsoccernetLogo.gif); background-repeat: no-repeat; padding-right:105px;" onclick="goTo('http://soccernet.espn.go.com/index?cc=5739');">&nbsp;</div>
+	<div class="dropContainer">
+		<div class="anchorDropMenu">
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/index?cc=5739'>ESPNsoccernet Home Page</a></div>
+			<div class="dropItem"><a href='http://espn.go.com'>ESPN.com Home Page</a></div>
+			<div class="dropItem"><a href='http://www.cricinfo.com/?CMP=LEC-ESPN' target="_blank">Cricinfo.com</a></div>
+			<div class="dropItem"><a href='http://www.scrum.com/' target="_blank">Scrum.com</a></div>
+			<div class="dropItem"><a href='http://espndeportes.espn.go.com'>ESPNdeportes.com</a></div>
+			<div class="dropItem" style="padding-top: 2px; padding-bottom: 2px;">ESPN TV/Tune In <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2ArrowAnchor.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tv/listing?cc=5739'>TV Listings</a></div>
+					<div class="dropItem"><a href='http://sports.espn.go.com/sports/tvlistings/index'>ESPN Network</a></div>
+					<div class="dropItem"><a href='http://www.espnclassic.com'>ESPN Classic</a></div>
+					<div class="rule"></div>
+					<div class="dropItem"><a href='http://sports.espn.go.com/sports/tvlistings/index'>USA</a></div>
+					<div class="dropItem"><a href='http://www.espnclassicsport.fr/fs.asp?l=2&page=/mTV_Guide.asp'>French</a></div>
+					<div class="dropItem"><a href='http://www.espnclassicsport.it/fs.asp?l=3&page=/mTV_Guide.asp'>Italian</a></div>
+					<div class="dropItem"><a href='http://www.espnclassicsport.com/fs.asp?l=1&page=/mTV_Guide.asp'>English</a></div>
+					<div class="dropItem"><a href='http://sports.espn.go.com/sports/tvlistings/schedule?network=8'>Pacific Rim</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tv/listing?cc=5739'>Global</a></div>
+				</div>
+			</div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://www.espnsoccernet.de'>ESPNsoccernet - Deutsch</a></div>
+			<div class="dropItem"><a href='http://www.espnsoccernet.fr'>ESPNsoccernet - Français</a></div>
+			<div class="dropItem"><a href='http://www.espnsoccernet.it'>ESPNsoccernet - Italiano</a></div>
+			<div class="dropItem"><a href='http://www.espnsoccernet.es'>ESPNsoccernet - Español</a></div>
+		</div>
+	</div>
+</div>
+<!-- end anchor -->
+
+<!-- Scores -->
+<div class="collapsed">
+	<div class="navItem" style="background-image: none; color: #ff0000;" onclick="goTo('http://soccernet-akamai.espn.go.com/scoreboard?league=all&cc=5739');">Live Scores</div>
+	<div class="dropContainer">
+		<div class="dropMenu">
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=all&cc=5739'>All Scores</a></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard/vidiprinter?cc=5739'>Vidiprinter</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=eng.1&cc=5739'>England</a> <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=eng.1&cc=5739'>Premier League</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=eng.2&cc=5739'>Championship</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=eng.3&cc=5739'>League One</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=eng.4&cc=5739'>League Two</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=eng.5&cc=5739'>Non-League</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=eng.fa&cc=5739'>FA Cup</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=eng.worthington&cc=5739'>Carling Cup</a></div>
+				</div>
+			</div>
+			<div class="dropItem">Europe <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=esp.1&cc=5739'>Spanish La Liga</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=esp.2&cc=5739'>Spanish Segunda</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=ita.1&cc=5739'>Italian Serie A</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=ita.2&cc=5739'>Italian Serie B</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=ger.1&cc=5739'>German Bundesliga 1</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=ger.2&cc=5739'>German Bundesliga 2</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=fra.1&cc=5739'>French Ligue 1</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=fra.2&cc=5739'>French Ligue 2</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=sco.1&cc=5739'>Scottish Premier League</a>  <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+						<div class="dropMenu2">
+							<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=sco.2&cc=5739'>Scottish Division One</a></div>
+							<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=sco.3&cc=5739'>Scottish Division Two</a></div>
+							<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=sco.4&cc=5739'>Scottish Division Three</a></div>
+						</div>
+					</div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=ned.1&cc=5739'>Dutch Eredivisie</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=ned.2&cc=5739'>Dutch Eerste Divisie</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=por.1&cc=5739'>Portuguese Liga</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=rus.1&cc=5739'>Russian Premier</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=tur.1&cc=5739'>Turkey</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=gre.1&cc=5739'>Greece</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=bel.1&cc=5739'>Belgium</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=aut.1&cc=5739'>Austria</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=den.1&cc=5739'>Denmark</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=sui.1&cc=5739'>Switzerland</a></div>
+				</div>
+			</div>
+			<div class="dropItem">South America <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=arg.1&cc=5739'>Argentina</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=bra.1&cc=5739'>Brazil</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=chi.1&cc=5739'>Chile</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=uru.1&cc=5739'>Uruguay</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=col.1&cc=5739'>Colombia</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=per.1&cc=5739'>Peru</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=par.1&cc=5739'>Paraguay</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=ecu.1&cc=5739'>Ecuador</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=ven.1&cc=5739'>Venezuela</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=bol.1&cc=5739'>Bolivia</a></div>
+				</div>
+			</div>
+			<div class="dropItem">CONCACAF <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=mex.1&cc=5739'>Mexico</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=usa.1&cc=5739'>USA</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=crc.1&cc=5739'>Costa Rica</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=slv.1&cc=5739'>El Salvador</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=gua.1&cc=5739'>Guatemala</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=hon.1&cc=5739'>Honduras</a></div>
+				</div>
+			</div>
+			<div class="dropItem">Other Leagues <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=jpn.1&cc=5739'>Japan</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=aus.1&cc=5739'>Australia</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=rsa.1&cc=5739'>South Africa Premier</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=rsa.2&cc=5739'>South Africa Mvela</a></div>
+				</div>
+			</div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=uefa.champions&cc=5739'>Champions League</a></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=uefa.uefa&cc=5739'>UEFA Cup</a></div>
+			<div class="dropItem">2010 World Cup qualifying <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=fifa.worldq.conmebol&cc=5739'>South America</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=fifa.worldq.afc&cc=5739'>Asia</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=fifa.worldq.caf&cc=5739'>Africa</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=fifa.worldq.ofc&cc=5739'>Oceania</a></div>
+				</div>
+			</div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=uefa.euroq&cc=5739'>Euro 2008</a></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=fifa.friendly&cc=5739'>Internationals</a></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=afc.champions&cc=5739'>AFC Champions League</a></div>
+		</div>
+	</div>
+</div>
+
+<!-- ENGLAND -->
+<div class="collapsed">
+	<div class="navItem" onclick="goTo('http://soccernet.espn.go.com/section?id=england&cc=5739');">England</div>
+	<div class="dropContainer">
+		<div class="dropMenu">
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=england&cc=5739'>England Front Page</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/team?id=448&cc=5739'>National Team</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/clubs?league=eng.1&cc=5739'>Clubs</a></div>
+
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=eng.fa&cc=5739'>Cup Competitions</a> <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=eng.fa&cc=5739'>FA Cup</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=eng.worthington&cc=5739'>Carling Cup</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=eng.trophy&cc=5739'>Football League Trophy</a></div>
+				</div>
+			</div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/news/more?section=england&cc=5739'>News Archive</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=eng.1&cc=5739'>Scores</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/fixtures?league=eng.1&cc=5739'>Fixtures</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=eng.1&cc=5739'>Tables</a> <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=eng.1&cc=5739'>Premier League</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=eng.2&cc=5739'>Championship</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=eng.3&cc=5739'>League One</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=eng.4&cc=5739'>League Two</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=eng.5&cc=5739'>Conference</a></div>
+				</div>
+			</div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/grid?league=eng.1&cc=5739'>Results Grid</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/stats?league=eng.1&cc=5739'>Statistics</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/players?league=eng.1&cc=5739'>Players</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/managers?root=england&cc=5739'>Managers</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/et/managers?cc=5739'>Manager Rating</a></div>
+			<div class="dropItem" style="padding-top: 2px; padding-bottom: 2px;">SoccerNation <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://boards.espn.go.com/boards/mb/mb?sport=espn&id=index#soccernet'>Message Boards</a></div>
+					<!--<div class="dropItem"><a href=''>Web Chat</a></div>-->
+					<div class="rule"></div>
+					<div class="dropItem"><a href='https://r.espn.go.com/espn/memberservices/register?registrationFormId=soccernet'>Registration</a></div>
+					<div class="dropItem"><a href='https://r.espn.go.com/espn/memberservices/index'>Member Services</a></div>
+				</div>
+			</div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/et/corr/correspondents?league=eng.1&cc=5739'>Correspondents</a></div>
+			<!--
+			<div class="dropItem"><a href='http://soccernet0506.fantasyleague.com'>Fantasy Premiership</a></div>
+			<div class="dropItem"><a href='http://soccernetauction.fantasyleague.com'>Fantasy Auction</a></div>
+			-->
+		</div>
+	</div>
+</div>
+
+<!-- Europe -->
+<div class="collapsed">
+	<div class="navItem" onclick="goTo('http://soccernet.espn.go.com/section?id=europe&cc=5739');">Europe</div>
+	<div class="dropContainer">
+		<div class="dropMenu">
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=europe&cc=5739'>Europe Front Page</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/clubs?league=esp.1&cc=5739'>Clubs</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/news/more?section=europe&cc=5739'>News Archive</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=esp.1&cc=5739'>Spanish La Liga</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=esp.2&cc=5739'>Spanish Segunda</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=ita.1&cc=5739'>Italian Serie A</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=ita.2&cc=5739'>Italian Serie B</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=ger.1&cc=5739'>German Bundesliga 1</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=ger.2&cc=5739'>German Bundesliga 2</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=fra.1&cc=5739'>French Ligue 1</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=fra.2&cc=5739'>French Ligue 2</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=sco.1&cc=5739'>Scottish Premier League</a> <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=sco.2&cc=5739'>Scottish Division One</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=sco.3&cc=5739'>Scottish Division Two</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=sco.4&cc=5739'>Scottish Division Three</a></div>
+				</div>
+			</div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=ned.1&cc=5739'>Dutch Eredivisie</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=ned.2&cc=5739'>Dutch Eerste Divisie</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=por.1&cc=5739'>Portuguese Liga</a></div>
+			<div class="dropItem">Other Leagues <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=rus.1&cc=5739'>Russia</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=tur.1&cc=5739'>Turkey</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=gre.1&cc=5739'>Greece</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=bel.1&cc=5739'>Belgium</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=aut.1&cc=5739'>Austria</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=den.1&cc=5739'>Denmark</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=sui.1&cc=5739'>Switzerland</a></div>
+				</div>
+			</div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=eng.fa&cc=5739'>Cup Competitions</a> <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=esp.copa_del_rey&cc=5739'>Spanish Copa Del Rey</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=ita.coppa_italia&cc=5739'>Coppa Italia</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=ger.dfb_pokal&cc=5739'>Germany DFB Pokal</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=sco.tennents&cc=5739'>Scottish FA Cup</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=sco.cis&cc=5739'>Scottish League Cup</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=sco.challenge&cc=5739'>Scottish Challenge Cup</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=ned.cup&cc=5739'>Dutch Amstel Cup</a></div>
+				</div>
+			</div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=uefa.uefa&cc=5739'>UEFA Cup</a></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=uefa.euro_u21&cc=5739'>Euro U21 Champs</a></div>
+		</div>
+	</div>
+</div>
+
+<!-- UCL -->
+<div class="collapsed">
+	<div class="navItem" onclick="goTo('http://soccernet.espn.go.com/section?id=uefachampionsleague&cc=5739');">
+	Champions League
+	</div>
+	<div class="dropContainer">
+		<div class="dropMenu">
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=uefachampionsleague&cc=5739'>UCL Front Page</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/news/more?section=uefachampionsleague&cc=5739'>News Archive</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=uefa.champions&cc=5739'>Scores</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/fixtures?league=uefa.champions&cc=5739'>Fixtures</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=uefa.champions&stageId=2744&cc=5739'>Tables</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=uefa.champions&cc=5739'>Groups</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/stats?league=uefa.champions&cc=5739'>Statistics</a></div>
+			
+			<!--
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernetchampions.fantasyleague.com/Index.aspx'>Fantasy UCL</a></div>
+			-->
+		</div>
+	</div>
+</div>
+
+<!-- Euro 2008 -->
+<div class="collapsed">
+	<div class="navItem" onclick="goTo('http://soccernet.espn.go.com/section?id=euro2008&cc=5739');">Euro 2008</div>
+	<div class="dropContainer">
+		<div class="dropMenu">
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=euro2008&cc=5739'>Euro 2008 Front Page</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/draw/euro2008?cc=5739' onclick="javascript:window.open('http://soccernet.espn.go.com/draw/euro2008?cc=5739','euro2008_draw','width=728,height=501,scrollbars=no,noresize');return false;" onmouseover="window.status='Euro 2008 Draw';return true" onmouseout="window.status='';return true">Draw</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/news/more?section=euro2008&cc=5739'>News Archive</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=uefa.euroq&cc=5739'>Scores</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/fixtures?league=uefa.euroq&cc=5739'>Fixtures</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=uefa.euroq&cc=5739'>Tables/Groups</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/stats?league=uefa.euroq&cc=5739'>Statistics</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=uefa.euroq&stageId=uefa.euroq.group1.2008&cc=5739'>Group A</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=uefa.euroq&stageId=uefa.euroq.group2.2008&cc=5739'>Group B</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=uefa.euroq&stageId=uefa.euroq.group3.2008&cc=5739'>Group C</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=uefa.euroq&stageId=uefa.euroq.group4.2008&cc=5739'>Group D</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=uefa.euroq&stageId=uefa.euroq.group5.2008&cc=5739'>Group E</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=uefa.euroq&stageId=uefa.euroq.group6.2008&cc=5739'>Group F</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=uefa.euroq&stageId=uefa.euroq.group7.2008&cc=5739'>Group G</a></div>
+			<div class="rule"></div>
+			<div class="dropItem" style="padding-top: 2px; padding-bottom: 2px;">SoccerNation <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2">
+					<div class="dropItem"><a href='http://boards.espn.go.com/boards/mb/mb?sport=espn&id=index#soccernet'>Message Boards</a></div>
+					<div class="rule"></div>
+					<div class="dropItem"><a href='https://r.espn.go.com/espn/memberservices/register?registrationFormId=soccernet'>Registration</a></div>
+					<div class="dropItem"><a href='https://r.espn.go.com/espn/memberservices/index'>Member Services</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- US Section -->
+<div class="collapsed">
+	<div class="navItem" onclick="goTo('http://soccernet.espn.go.com/section?id=us&cc=5739');">
+	USA
+	</div>
+	<div class="dropContainer">
+		<div class="dropMenu">
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=us&cc=5739'>US Soccer Home Page</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/news/more?section=soccernet&ver=us&cc=5739'>News Archive</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=mls&cc=5739'>MLS</a><!-- <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">-->
+				<!--
+				<div class="dropMenu2" style="left: -171px;">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=mls&cc=5739'>MLS Front Page</a></div>
+					<div class="rule"></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=usa.1&cc=5739'>Scores</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/fixtures?league=usa.1&cc=5739'>Fixtures</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=usa.1&cc=5739'>Tables</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/stats/leaders?league=usa.1&cc=5739'>Statistics</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/clubs?league=usa.1&cc=5739'>Clubs</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/players?league=usa.1&cc=5739'>Players</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/draft?league=usa.1&type=reg&cc=5739'>Draft</a></div>
+				</div>
+				-->
+			</div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=ncaa&cc=5739'>NCAA | High School</a><!-- <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">-->
+				<!--
+				<div class="dropMenu2" style="left: -171px;">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=ncaa&cc=5739'>NCAA Front Page</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/fixtures?league=usa.ncaa.1&cc=5739'>Scores</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/rankings?league=usa.ncaa.1&cc=5739'>Rankings</a></div>
+					<div class="rule"></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/news/story?id=322071&cc=5739'>All-Americans</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/news/story?id=321771&cc=5739'>Recruiting</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/news/story?id=325380&cc=5739'>Youth Clubs</a></div>
+				</div>
+				-->
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<!-- Global -->
+<div class="collapsed">
+	<div class="navItem" onclick="goTo('http://soccernet.espn.go.com/section?id=global&cc=5739');">Global</div>
+	<div class="dropContainer">
+		<div class="dropMenu">
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=global&cc=5739'>Global Front Page</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/news/more?section=global&cc=5739'>News Archive</a></div>
+			<div class="rule"></div>
+			<div class="dropItem">South America <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2" style="left: -171px;">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=arg.1&cc=5739'>Argentina</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=bra.1&cc=5739'>Brazil</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=chi.1&cc=5739'>Chile</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=uru.1&cc=5739'>Uruguay</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=col.1&cc=5739'>Colombia</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=per.1&cc=5739'>Peru</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=par.1&cc=5739'>Paraguay</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=ecu.1&cc=5739'>Ecuador</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=ven.1&cc=5739'>Venezuela</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=bol.1&cc=5739'>Bolivia</a></div>
+				</div>
+			</div>
+			<div class="dropItem">CONCACAF <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2" style="left: -171px;">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=mex.1&cc=5739'>Mexico</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=usa.1&cc=5739'>USA</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=crc.1&cc=5739'>Costa Rica</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=slv.1&cc=5739'>El Salvador</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=gua.1&cc=5739'>Guatemala</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=hon.1&cc=5739'>Honduras</a></div>
+				</div>
+			</div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=jpn.1&cc=5739'>Japan</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=AUS.1&cc=5739'>Australia A-League</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=rsa.1&cc=5739'>South Africa PSL</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=rsa.2&cc=5739'>South Africa Mvela</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=FIFA.CWC&cc=5739'>Club World Cup</a></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=conmebol.libertadores&cc=5739'>Copa Libertadores</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=afc.champions&cc=5739'>AFC Champions League</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/round?league=concacaf.superliga&cc=5739'>North American SuperLiga</a></div>
+			<div class="rule"></div>
+				<div class="dropItem">World Cup <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2" style="left: -171px;">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=worldcup2010&cc=5739'>World Cup 2010</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=worldcup&cc=5739'>World Cup 2006</a></div>
+					<div class="dropItem"><a href='http://worldcup.espnsoccernet.com/index?lang=en'>World Cup 2002</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=fifa.world.u20&cc=5739'>World Cup U20</a></div>
+					<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=fifa.world.u17&cc=5739'>World Cup U17</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=wwc07&cc=5739'>Women's World Cup 2007</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/wwc/index'>Women's World Cup 2003</a></div>
+				</div>
+			</div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=CONMEBOL.AMERICA&cc=5739'>Copa America</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=CAF.NATIONS&cc=5739'>African Nations Cup</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/league?id=AFC.CUP&cc=5739'>AFC Asian Cup</a></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=fifa.confederations&cc=5739'>Confederations Cup</a></div>
+			<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=concacaf.gold&cc=5739'>CONCACAF Gold Cup</a></div>
+		</div>
+	</div>
+</div>
+
+<!-- World Cup 2010 -->
+<div class="collapsed">
+	<div class="navItem" onclick="goTo('http://soccernet.espn.go.com/section?id=worldcup2010&cc=5739');">
+	World Cup
+	</div>
+	<div class="dropContainer">
+		<div class="dropMenu">
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=worldcup2010&cc=5739'>2010 World Cup Front Page</a></div>
+			<div class="rule"></div>
+			<!--<div class="dropItem"><a href='http://soccernet-akamai.espn.go.com/scoreboard?league=fifa.worldq&cc=5739'>Scores</a></div>-->
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/news/more?section=worldcup2010&cc=5739'>News Archive</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/feature?id=468907&cc=5739'>Qualifying Overview</a></div>
+
+			<div class="dropItem">South America <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2" style="left: -171px;">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/scoreboard?league=fifa.worldq.conmebol&cc=5739'>Scores</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/fixtures?league=fifa.worldq.conmebol&cc=5739'>Fixtures</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=fifa.worldq.conmebol&cc=5739'>Standings</a></div>
+				</div>
+			</div>
+
+			<div class="dropItem">Asia <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2" style="left: -171px;">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=fifa.worldq.afc&stageId=fifa.worldq.caf.stage1.2010&cc=5739'>First Round</a></div>
+					<div class="rule"></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/scoreboard?league=fifa.worldq.afc&cc=5739'>Scores</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/fixtures?league=fifa.worldq.afc&cc=5739'>Fixtures</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=fifa.worldq.afc&cc=5739'>Standings</a></div>
+				</div>
+			</div>
+
+			<div class="dropItem">Africa <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2" style="left: -171px;">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=fifa.worldq.caf&stageId=fifa.worldq.preliminary.2010&cc=5739'>Preliminary Round</a></div>
+					<div class="rule"></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/scoreboard?league=fifa.worldq.caf&cc=5739'>Scores</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/fixtures?league=fifa.worldq.caf&cc=5739'>Fixtures</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=fifa.worldq.caf&cc=5739'>Standings</a></div>
+				</div>
+			</div>
+
+			<div class="dropItem">Oceania <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2" style="left: -171px;">
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=fifa.worldq.ofc&stageId=fifa.worldq.ofc.stage1.playoffs.final.2010&cc=5739'>First Stage</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/group?league=fifa.worldq.ofc&stageId=fifa.worldq.ofc.stage2.2010&cc=5739'>Second Stage</a></div>
+					<div class="rule"></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/scoreboard?league=fifa.worldq.ofc&cc=5739'>Scores</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/fixtures?league=fifa.worldq.ofc&cc=5739'>Fixtures</a></div>
+					<div class="dropItem"><a href='http://soccernet.espn.go.com/tables?league=fifa.worldq.ofc&cc=5739'>Standings</a></div>
+				</div>
+			</div>
+
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=worldcup&cc=5739'>2006 World Cup</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/section?id=worldcup&cc=5739'>2002 World Cup</a></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/history?league=fifa.world&cc=5739'>World Cup History</a></div>
+		</div>
+	</div>
+</div>
+
+<!-- wwc07 -->
+<!--
+<div class="collapsed">
+	<div class="navItem" onclick="goTo('http://soccernet.espn.go.com/section?id=wwc07');">
+	WWC
+	</div>
+	<div class="dropContainer">
+		<div class="dropMenu">
+			<div class="dropItem"><a href="/section?id=wwc07&cc=5739">Women's World Cup Front Page</a></div>
+			<div class="dropItem"><a href="/news/more?section=wwc07&cc=5739">News Archive</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href="/scoreboard?league=fifa.wwc&cc=5739">Scores</a></div>
+			<div class="dropItem"><a href="/fixtures?league=fifa.wwc&cc=5739">Fixtures</a></div>
+			<div class="dropItem"><a href="/tables?league=fifa.wwc&cc=5739">Tables</a></div>
+			<div class="dropItem"><a href="/stats?league=fifa.wwc&cc=5739">Stats</a></div>
+			<div class="dropItem"><a href="/clubs?league=fifa.wwc&cc=5739">Teams</a></div>
+		</div>
+	</div>
+</div>
+-->
+
+<!-- fantasy -->
+<div class="collapsed">
+	<div class="navItem" onclick="goTo('http://fantasy.soccernet.com');">Fantasy</div>
+	<div class="dropContainer">
+		<div class="dropMenu" style="left: -113px;">
+			<div class="dropItem"><a href='http://fantasy.soccernet.com'>Fantasy Front Page </a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://championsfantasy.soccernet.com'>Champions League </a></div>
+			<div class="dropItem"><a href='http://premierfantasy.soccernet.com'>Premier League </a></div>
+			<div class="dropItem"><a href='http://laligafantasy.soccernet.com'>La Liga</a></div>
+			<div class="dropItem"><a href='http://serieafantasy.soccernet.com'>Serie A</a></div>
+			<div class="dropItem"><a href='http://ligue1fantasy.soccernet.com'>Ligue 1</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://championsfantasia.soccernet.es'>Champions League (En Español) </a></div>
+			<div class="dropItem"><a href='http://fantasiapremier.soccernet.es'>Premier Lge (En Español)</a></div>
+			<div class="dropItem"><a href='http://fantasia.soccernet.es'>La Liga (En Español)</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://fantachampions.soccernet.it'>Champions League (In Italiano)</a></div>
+			<div class="dropItem"><a href='http://fantasy.soccernet.it'>Serie A (In Italiano)</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://championsfantasy.soccernet.fr'>Champions League (En Francais)</a></div>
+			<div class="dropItem"><a href='http://fantasy.soccernet.fr'>Ligue 1 (En Francais)</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://desafiofutmex.espndeportes.com/'>Mexico (En Español)</a></div>
+		</div>
+	</div>
+</div>
+
+<!-- shop -->
+<div class="collapsed">
+	<div class="navItem" onclick="goTo('http://soccernetstore.com/index.html');">Store</div>
+	<div class="dropContainer">
+		<div class="dropMenu" style="left: -126px;">
+			<div class="dropItem"><a href='http://soccernetstore.com/index.html'>Storefront</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernetstore.com/shop-by-team.html'>Shop by Team</a></div>
+			<div class="dropItem"><a href='http://soccernetstore.com/shop-by-country.html'>Shop by Country</a></div>
+			<div class="dropItem"><a href='http://soccernetstore.com/shop-by-league.html'>Shop by League</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernetstore.com/departments-new-arrivals.html'>New Arrivals</a></div>
+			<div class="dropItem"><a href='http://soccernetstore.com/departments-sale.html'>Sale</a></div>
+			<div class="dropItem"><a href='http://soccernetstore.com/departments-footwear.html'>Footwear</a></div>
+			<div class="dropItem"><a href='http://soccernetstore.com/departments-kids-soccer.html'>Kids</a></div>
+			<div class="dropItem"><a href='http://soccernetstore.com/departments-womens.html'>Womens</a></div>
+		</div>
+	</div>
+</div>
+
+<!-- more[+] -->
+<div class="collapsed"
+	style="position: absolute; left: 722px;">
+	<div class="navItem">More +</div>
+	<div class="dropContainer">
+		<div class="dropMenu" style="left: -120px;">
+			<div class="dropItem"><a href="http://soccernet.espn.go.com/feature?id=376144&cc=5739" name="&lpos=wcnav&lid=gn_sn_WC+mobile">ESPNsoccernet Mobile</a></div><div class="rule"></div>
+			<div class="dropItem" style="padding-top: 2px; padding-bottom: 2px;">Message Boards <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2" style="left: -171px;">
+					<div class="dropItem"><a href='http://boards.espn.go.com/boards/mb/mb?sport=espn&id=index#soccernet'>Message Boards</a></div>
+					<div class="rule"></div>
+					<div class="dropItem"><a href='https://r.espn.go.com/espn/memberservices/register?registrationFormId=soccernet'>Registration</a></div>
+					<div class="dropItem"><a href='https://r.espn.go.com/espn/memberservices/index'>Member Services</a></div>
+				</div>
+			</div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/et/corr/correspondents?league=eng.1&cc=5739'>Correspondents</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href="http://soccernet.espn.go.com/feature?id=376252&cc=5739">Podcast</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/news/story?id=252531&cc=5739'>Press Pass</a></div>
+			<div class="rule"></div>
+			<div class="dropItem"><a href='http://soccernet.espn.go.com/reviews'>Reviews</a></div>
+			<div class="rule"></div>	<div class="dropItem"><a href="http://soccernet.espn.go.com/zoneindex?cc=5739">Betting Zone</a></div>
+			<div class="rule"></div>
+			<div class="dropItem" style="padding-top: 2px; padding-bottom: 2px;">Downloads <img class="tier2Arrow" src="http://soccernet-akamai.espn.go.com/design05/i/horizNav/tier2Arrow.gif" width="7" height="9" border="0">
+				<div class="dropMenu2" style="left: -171px;">
+					<div class="dropItem"><a href='http://assets.espn.go.com/motion/download.html?CMP=ILC-Motion_DWNLD_LHN_Text'>Motion Video</a></div>
+					<div class="dropItem"><a href='http://sports.espn.go.com/espn/news/story?id=1777617'>ESPN Toolbar</a></div>
+					<div class="dropItem"><a href="http://www.espn360.com">ESPN360</a></div>
+					<div class="dropItem"><a href='http://espn.go.com/bottomline/'>Bottomline</a></div>
+					<div class="dropItem"><a href='http://sports.espn.go.com/espn/news/story?page=rssinfo'>RSS Feeds</a></div>
+					<div class="dropItem"><a href="http://soccernet.espn.go.com/feature?id=376252&cc=5739">Podcast</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end last anchor -->
+<script type="text/javascript">setNav();</script>
+</div>
+<!-- end global nav -->
+		<!-- begin sub nav -->
+		<div id="LTwoNavBar">
+		  <div class="i">
+		  Premier League:&nbsp;&nbsp;&nbsp;<a href="/scoreboard?league=eng.1&cc=5739">Scores</a> | <a href="/fixtures?league=eng.1&cc=5739">Fixtures</a> | <a href="/tables?league=eng.1&cc=5739">Tables</a> | <a href="/grid?league=eng.1&cc=5739">Results Grid</a> | <a href="/stats?league=eng.1&cc=5739">Stats</a> | <a href="/clubs?league=eng.1&cc=5739">Clubs</a> | <a href="/players?league=eng.1&cc=5739">Players</a> | <a href="/news/more?section=england&cc=5739">News Archive</a>
+		  </div>
+		</div>
+		<!-- end sub nav -->
+		
+
+<!-- begin wrapper div -->
+<div class="whitepage">
+<!-- begin mainthing div -->
+<div id="mainthing">
+
+
+<!-- nbtest eng.1 --><!-- nbtest england --><!-- nbtest ENG.NEWCASTLE --><!-- nbtest Newcastle --><!-- clubStringForAdTag: 361;385 --><!-- leagueStringForAdTag: england -->
+<!-- adTechKeys: English_Premier_League|Newcastle|Portsmouth -->
+
+	<style type="text/css">
+	@import url(http://soccernet-akamai.espn.go.com/design05/insertfiles/css/sportstory2005_poster.css);
+	</style>
+
+
+<!-- begin page title -->
+<div class="pagetitle">
+
+<!-- begin page date -->
+<div class="pagedate">
+Updated: Jan. 11, 2008
+</div>
+<!-- end page date -->
+
+<h1>Speculation mounts after Redknapp stays silent</h1>
+
+</div>
+<!-- end pagetitle -->
+
+
+<br clear=all>
+
+<!-- begin text11 div -->
+<div class="text11" style="background: #fff;">
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tr>
+
+<td valign="top">
+<!-- begin left column -->
+<p>Newcastle were today closing in on their man as they stepped up efforts to
+lure Harry Redknapp to St James' Park.
+<p><table width=300 border=0 cellspacing=0 cellpadding=5 align=right><tr><td><!-- new alias 5/30 = EU_england_300x250 -->
+<!-- new key 5/30 = 361;385+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=england;kvclub=361;385;kvaid=497114;grp=2887942 -->
+
+				<!-- JavaScript Tag // Tag for network 605.1: ESPN TN // Website: ESPN SC Keyword Site // Page: All // Placement: 300 X 250 (170) -->
+				<script language="javascript" type="text/javascript"><!--
+				document.write('<scr'+'ipt language="javascript1.1" src="http://ad.dc2.adtech.de/addyn|3.0|605.1|1287936|0|170|alias=EU_england_england_story_300x250;loc=100;target=_blank;key=361;385+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=england;kvclub=361;385;kvaid=497114;grp=2887942;misc='+new Date().getTime()+'"></scri'+'pt>');
+				//--></script><noscript><a href="http://ad.dc2.adtech.de/adlink|3.0|605.1|1287936|0|170|alias=EU_england_england_story_300x250;loc=300;361;385+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=england;kvclub=361;385;kvaid=497114;grp=2887942" target="_blank"><img src="http://ad.dc2.adtech.de/adserv|3.0|605.1|1287936|0|170|alias=EU_england_england_story_300x250;loc=300;key=361;385+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=england;kvclub=361;385;kvaid=497114;grp=2887942" border="0" width="300" height="250"></a></noscript>
+				<!-- End of JavaScript Tag -->
+				</td></tr></table>
+Redknapp did not attend Portsmouth's scheduled pre-match press conference,
+leaving the club's training as the media gathered amid mounting speculation over
+the Magpies' interest in him.
+<p></p>
+PA Sport understands the Tyneside club were preparing to formalise their
+interest in the 60-year-old today by making an approach to Pompey for permission
+to speak to him.
+<p></p>
+Neither club was either confirming or denying that contact has been made this
+afternoon.
+<p></p>
+However, Redknapp's impromptu departure and the fact that Newcastle chairman
+Chris Mort was away from his desk - club owner Mike Ashley is currently in Hong
+Kong - added fuel to the fire as the former West Ham boss was backed down to an
+overwhelming 1/7 favourite with Ladbrokes.
+<p></p>
+Portsmouth moved quickly last night to make their position clear, insisting
+Redknapp was happy where he was and committed to the club's future.
+<p></p>
+But the word from the south coast today was that there is a growing acceptance
+that his days at Fratton Park could be numbered amid rumours that talks over a
+compensation package are already under way.
+<p></p>
+Redknapp, who was driven away from the training ground by chief executive
+officer Peter Storrie, had earlier played his cards close to his chest,
+re-iterating yesterday's insistence that he had heard nothing.
+<p></p>
+The manager, whose side are due to head north to face the Magpies arch-rivals
+Sunderland on Sunday, told the Portsmouth News: 'To say a deal has already been
+done is absolute rubbish.
+<p></p>
+'I couldn't say anything else because that's the situation.
+<p></p>
+'There has been no approach. All I'm doing is trying to get a couple of
+players in before the Sunderland game, but I haven't got anywhere with that.
+<p></p>
+'Nobody from Newcastle has contacted me and in any case, that wouldn't be
+allowed. Nobody has contacted Peter Storrie.'
+<p></p>
+However, the signs are that things have progressed rapidly since then with
+Newcastle hoping to install Sam Allardyce's replacement in plenty of time to
+make an impact in the January transfer window, with Ashley ready to loosen the
+purse strings.
+<p></p>
+Tyneside woke this morning to read headlines suggesting Redknapp could be
+flown to and from his south coast home by private jet on a daily basis, although
+that has been played down.
+<p></p>
+But events appear to have moved on significantly since then and the city is
+waiting with bated breath for further news.
+<p></p>
+The vacancy at St James' has been described in some quarters as a poisoned
+chalice since Allardyce's demise, but one of its former incumbents believes it
+is one of the biggest jobs in the domestic game.
+<p></p>
+Jim Smith, a close friend of Redknapp, said: 'Age is not a problem - Harry's
+a spring chicken.
+<p></p>
+'Sir Alex Ferguson has got seven years on him and he is still going strong,
+so there's no danger on that front.
+<p></p>
+'I haven't spoken to him yet and it is a fantastic opportunity, but it is a
+big ask.
+<p></p>
+'Newcastle is a big club too. It is one of the biggest jobs in English
+football - in fact, it is one of the biggest jobs in European football.
+<p></p>
+'It will be interesting to see what happens. I don't know if Harry will go up
+to Newcastle.
+<p></p>
+'It's a long, long way from Bournemouth and Portsmouth are doing really
+well.
+<p></p>
+'The thing is, he is doing a really good job at Portsmouth and people will
+notice that.'
+<p></p>
+Redknapp's favouritism saw Blackburn counterpart Mark Hughes slip in the
+betting after making a strong showing yesterday, although he was quick to
+express his satisfaction with his lot at Ewood Park today.
+<p></p>
+He said: 'There is always speculation when any big job comes up. I seem to be
+talked about in good terms and I'm appreciative of that, but it's just
+recognition of the work myself and my staff do here.
+<p></p>
+'I have not spoken to anyone from Newcastle. I spoke to my chairman last
+night and he has had no contact, and I don't think there will be any contact.'
+<p></p>
+In the meantime, there is the little matter of the Magpies' Barclays Premier
+League trip to Manchester United tomorrow evening with which to contend.
+<p></p>
+Coach Nigel Pearson has the task of preparing the team which left Tyneside
+this afternoon as they attempt to end a run of three successive league defeats.
+<p></p>
+He will at least have James Milner and Emre back from illness and an ankle
+injury respectively, while Stephen Carr could rejoin the squad following a
+hamstring problem.</p><br /><br /><i>Your views on this story?  <a href="mailto:newsdesk@soccernet.com"><b>Email newsdesk@soccernet.com</b></a></i><br /><b><a href="http://boards.espn.go.com/boards/mb/mb?sport=soccernet&id=361">Join the discussion on our Message Boards</a></b><br />
+
+<!-- end left column -->
+</td>
+
+
+<td width="15"><spacer type=block width="15" height="1"></td>
+<td valign="top" width="195" class="rightcell" style="padding: 0px;">
+<!-- begin rightcol -->
+<div id="kiosks" style="width:160px;"><div id="adslug" style="width:160px; height:12px; right: 20px; display: block; visibility: visible; vertical-align: top; position: relative; padding:0 0 3px 0;"><img src="http://soccernet-akamai.espn.go.com/design05/i/betting.gif"></div>
+	<table width="160" border="0" cellspacing="0" cellpadding="0">
+	<tr><td><div class="console1" style="padding:0 0 5px 0"><iframe allowtransparency='true' src='http://ff.connextra.com/Bet365/selector/client?client=Bet365&placement=Soccernet_Geotargeted_160x90' width='160' height='90' scrolling='no' frameborder='no' style='border-width:0'></iframe></div></td></tr>
+	<tr><td><div class="console2" style="padding:0 0 5px 0"></div></td></tr>
+	<tr><td><div class="console3"></div></td></tr>
+	</table>
+	</div>
+
+<!-- begin ad -->
+
+	<div id="ad_Poster">
+		<div id="adslug" style="width:160px; height:12px; display: block; visibility: visible; vertical-align: top; position: relative;"><iframe src="http://adsatt.espn.go.com/ad/sponsors/utilities/espn/adslug_120_160.html" width="160" height="12" frameBorder="0" marginwidth="0" marginheight="0" scrolling="No" align="center"></iframe></div>
+		<div id="ad" style="width:160px; display: block; visibility: visible; vertical-align: top;">
+		<center><!-- new alias 5/30 = EU_england_160x600 -->
+<!-- new key 5/30 = 361;385+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=england;kvclub=361;385;kvaid=497114;grp=2887942 -->
+
+				<!-- JavaScript Tag // Tag for network 605.1: ESPN TN // Website: ESPN SC Keyword Site // Page: All // Placement: 160 X 600 (154) -->
+				<script language="javascript" type="text/javascript"><!--
+				document.write('<scr'+'ipt language="javascript1.1" src="http://ad.dc2.adtech.de/addyn|3.0|605.1|1287937|0|154|alias=EU_england_england_story_160x600;loc=100;target=_blank;key=361;385+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=england;kvclub=361;385;kvaid=497114;grp=2887942;misc='+new Date().getTime()+'"></scri'+'pt>');
+				//--></script><noscript><a href="http://ad.dc2.adtech.de/adlink|3.0|605.1|1287937|0|154|alias=EU_england_england_story_160x600;loc=300;361;385+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=england;kvclub=361;385;kvaid=497114;grp=2887942" target="_blank"><img src="http://ad.dc2.adtech.de/adserv|3.0|605.1|1287937|0|154|alias=EU_england_england_story_160x600;loc=300;key=361;385+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=england;kvclub=361;385;kvaid=497114;grp=2887942" border="0" width="160" height="600"></a></noscript>
+				<!-- End of JavaScript Tag -->
+				</center>
+		</div>
+	</div>
+
+<!-- end ad -->
+
+<div id="kiosks" style="width:160px;">
+	<table width="160" border="0" cellspacing="0" cellpadding="0">
+	<tr><td><div class="console1" style="padding:0 0 5px 0"></div></td></tr>
+	<tr><td><div class="console2" style="padding:0 0 5px 0"><a href="http://soccernetstore.com/index.html " target="_blank"><img src="http://soccernet-akamai.espn.go.com/ad/store/soccernet_gen_160x90.gif" width="160" height="90" border="0" alt="Soccernet Store" /></a></div></td></tr>
+	<tr><td><div class="console3"></div></td></tr>
+	</table>
+	</div>
+	<!-- begin club pages -->
+	<div class="tabholder">
+	<div class="tab1">
+	<div class="tab2">
+	<span class="tabname">Club Pages</span>
+	<img src="http://soccernet-akamai.espn.go.com/design05/i/story/tab_center.gif" alt="" width="10" height="24" hspace="0" vspace="0" border="0">
+	</div>
+	</div>
+	<div class="tabbedbox">
+	<div class="tabbedbox2">
+	<a href="/team?tag=ENG.NEWCASTLE&cc=5739">Newcastle</a>
+	
+		<br />
+		<br />
+		<a href="/team?tag=ENG.PORTSMOUTH&cc=5739">Portsmouth</a>
+		
+	<br />
+	</div>
+	</div>
+	</div>
+	<!-- end club pages -->
+	
+
+<br clear=all>
+<br />
+<!-- begin MarketingLogo -->
+<!--REMOVED UNTIL SOLD
+<div id="ad_MarketingLogo"><div id="ad" style="width:195:px; display: block; visibility: visible; vertical-align: top;">
+<img src="http://soccernet.espn.go.com/design05/i/mockups/mini_promo_box.gif" width="195" height="101">
+</div></div>-->
+<!-- end MarketingLogo -->
+
+
+
+<!-- start font tool -->
+<div class="ftool">
+<div class="ft1">
+
+Adjust Font Size:<br />
+<script language="JavaScript" type="text/javascript">
+
+
+	document.write('<!-- fontsize=' + fontsize + '-->')
+
+	if (fontsize == 10) {
+		document.write('<div class="ft2at"><a href="#" onClick="changeFontSize(10); return false;"><img src="http://soccernet-akamai.espn.go.com/design05/i/story/small_A.gif" alt="small_A.gif" width="16" height="16" hspace="1" vspace="1" border="0" \/><\/a><\/div>');
+	} else {
+		document.write('<div class="ft2"><a href="#" onClick="changeFontSize(10); return false;"><img src="http://soccernet-akamai.espn.go.com/design05/i/story/small_A.gif" alt="small_A.gif" width="16" height="16" hspace="1" vspace="1" border="0" \/><\/a><\/div>');
+	}
+
+	if (fontsize == 11) {
+		document.write('<div class="ft2at"><a href="#" onClick="changeFontSize(11); return false;"><img src="http://soccernet-akamai.espn.go.com/design05/i/story/medium_A.gif" alt="small_A.gif" width="16" height="16" hspace="1" vspace="1" border="0" \/><\/a><\/div>');
+	} else {
+		document.write('<div class="ft2"><a href="#" onClick="changeFontSize(11); return false;"><img src="http://soccernet-akamai.espn.go.com/design05/i/story/medium_A.gif" alt="small_A.gif" width="16" height="16" hspace="1" vspace="1" border="0" \/><\/a><\/div>');
+	}
+
+	if (fontsize == 14) {
+		document.write('<div class="ft2at"><a href="#" onClick="changeFontSize(14); return false;"><img src="http://soccernet-akamai.espn.go.com/design05/i/story/big_A.gif" alt="small_A.gif" width="16" height="16" hspace="1" vspace="1" border="0" \/><\/a><\/div>');
+	} else {
+		document.write('<div class="ft2"><a href="#" onClick="changeFontSize(14); return false;"><img src="http://soccernet-akamai.espn.go.com/design05/i/story/big_A.gif" alt="small_A.gif" width="16" height="16" hspace="1" vspace="1" border="0" /\><\/a><\/div>');
+	}
+
+	if (fontsize == 20) {
+		document.write('<div class="ft2at"><a href="#" onClick="changeFontSize(20); return false;"><img src="http://soccernet-akamai.espn.go.com/design05/i/story/real_big_A.gif" alt="small_A.gif" width="16" height="16" hspace="1" vspace="1" border="0" \/><\/a><\/div>');
+	} else {
+		document.write('<div class="ft2"><a href="#" onClick="changeFontSize(20); return false;"><img src="http://soccernet-akamai.espn.go.com/design05/i/story/real_big_A.gif" alt="small_A.gif" width="16" height="16" hspace="1" vspace="1" border="0" \/><\/a><\/div>');
+	}
+
+</script>
+</div>
+</div>
+<!-- end font tool-->
+
+<!-- end right column -->
+</td>
+
+</tr></table>
+</div>
+<!-- end text11 div -->
+
+
+<!-- Kitbag footer starts -->
+<div style="padding:0 0 0 215px; height:20px; list-style-type: none; background: url(http://soccernet-akamai.espn.go.com/design05/i/soccernetStore.gif) no-repeat 5px 0;">
+<span class="text11">
+
+	<a href="http://soccernetstore.com/shop-by-team-newcastle-united.html">Click here to visit the Newcastle Team Store</a>
+
+
+
+</span>
+</div>
+<!-- kitbag footer ends -->
+<div style="border: 0px solid #080; float: left; width: 100%; height: 1px;">&nbsp;</div>
+<!-- begin page turns url = story?id=497114-->
+<br clear="all">
+<div id="pout"><div id="pageturns">
+
+<div id="senddiv"><a href="#" onClick="openWin=window.open('http://sendtofriend.espn.go.com/sendtofriend/soccernet/SendToFriendSoccernet?URL=http://soccernet.espn.go.com/news/story?id=497114&title=Speculation%20mounts%20after%20Redknapp%20stays%20silent&id=497114','sendtofriend','noresizable,noscrollbars,width=345,height=470');return false;"></a></div>
+
+	<div id="printdiv"><a href="/print?id=497114&type=story&cc=5739"></a></div>
+	</div></div>
+<br clear="all">
+<!-- end page turns -->
+
+
+<!-- start spl -->
+
+
+<!-- <script id="OT1" type="text/javascript" src="http://cmhtml.uk.overture.com/d/search/p/standard/eu/js/ctxt/rlb/?mkt=uk&Partner=soccernet_js_uk_ctxt_soccernet&adultFilter=any&maxCount=2&catMaps=soccernet_uk_multi&accountFilters=soccernet_uk&ctxtId=soccernet_uk_general"></script> -->
+
+<!-- new format 5/11/07 -->
+<script id="OT1" type="text/javascript" src="http://cm.uk.overture.com/js_flat_1_0/?mkt=uk&source=soccernet_js_uk_ctxt_soccernet&config=3501963853&maxCount=2&ctxtId=soccernet_uk_general"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+if (zSr == null) {
+	document.getElementById("OT1").src = "http://63.163.102.34/d/search/p/espn/js/ctxt/?ctxtId=soccer&Partner=soccernet_xml_uk_ctxt&type=Article&mkt=uk";
+}
+//]]>
+</script>
+
+<script type="text/javascript">
+var logdata = "";
+function writeLinkURL(link) {
+	document.write(link);
+}
+
+function writeLogging(link) {
+}
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+propNames = new Array('subHead', 'b', 'link', 'linkText', 'site', 'f');
+var tempArray = new Object();
+var linkArray = new Array();
+var rank = 0;
+for (var i in zSr) {
+	tempArray[propNames[i%6]] = zSr[i];
+	if (i%6 == 5) {
+		if( rank++ == 0 ) continue;
+		linkArray[linkArray.length] = tempArray;
+		var tempArray = new Object();
+	}
+}
+
+if (linkArray.length > 0) {
+	document.write('<div id="splinks" style="background-color: #FFFFFF; border: 0px; "><div id="splinks">');
+	for (var i in linkArray) {
+		
+		if(!linkArray[i]["link"]) continue;
+		logdata += "s" + i + ":" + linkArray[i]["site"] + "|";
+		if ( i == 0 ) {
+			document.write('<div class="splinksinner">');
+			document.write('<a target="_new" class="sp_links" href="');
+			writeLinkURL(linkArray[i]["link"]);
+			document.write('"><b><font color="#009933"><span class="spLinkHead">' + linkArray[i]["linkText"] + '</span></font></b>');
+			document.write('<br>' + linkArray[i]["subHead"] + '</a>');
+			document.write(' <i>(' + linkArray[i]["site"] + ')</i><br><br>');
+			document.write('</div>');
+		} else if ( i == 1 ) {
+			document.write('<div class="splinksinner">');
+			document.write('<a target="_new" class="sp_links" href="');
+			writeLinkURL(linkArray[i]["link"]);
+			document.write('"><b><font color="#009933"><span class="spLinkHead">' + linkArray[i]["linkText"] + '</span></font></b>');
+			document.write('<br>' + linkArray[i]["subHead"] + '</span></a>');
+			document.write(' <i>(' + linkArray[i]["site"] + ')</i><br><br>');
+			document.write('</div>');
+
+		} else {
+			document.write('<div class="splinksinner">');
+			document.write('<a target="_new" class="sp_links" href="');
+			writeLinkURL(linkArray[i]["link"]);
+			document.write('"><b><font color="#009933"><span class="spLinkHead">' + linkArray[i]["linkText"] + '</span></font></b>');
+			document.write('<br>' + linkArray[i]["subHead"] + '</span></a>');
+			document.write(' <i>(' + linkArray[i]["site"] + ')</i><br><br>');
+			document.write('</div>');
+		}
+	}
+	document.write('</div></div>');
+}
+
+writeLogging(logdata)
+//]]>
+</script>
+
+<!-- end spl -->
+
+
+
+
+
+<!-- begin headlines -->
+<div class="related" style="margin: 4px 0px 12px 0px;">
+<div class="r_left">
+<strong>England Headlines</strong>
+<br />
+&#8226;&nbsp;<a href="/news/story?id=498457&cc=5739">AZ defender Steinsson closes on Bolton move</a><br />&#8226;&nbsp;<a href="/news/story?id=498554&cc=5739">Newcastle chief will not rule out foreign manager</a><br />&#8226;&nbsp;<a href="/news/story?id=498637&cc=5739">Rescue package for Luton Town given thumbs up</a><br />&#8226;&nbsp;<a href="/news/story?id=498643&cc=5739">Bournemouth sink closer to administration</a><br />&#8226;&nbsp;<a href="/news/story?id=498483&cc=5739">Arsenal deal not yet done for starlet Freeman</a><br /></div><div class="r_right1">
+<strong>ESPNsoccernet's Top Headlines</strong><br />
+&#8226;&nbsp;<a href="/news/story?id=498401&cc=5739">Houllier gets go-ahead for Newcastle talks</a><br />&#8226;&nbsp;<a href="/news/story?id=498624&cc=5739">Chelsea agree terms with Lokomotiv for Ivanovic</a><br />&#8226;&nbsp;<a href="/news/story?id=498628&cc=5739">Blatter hails 'momentous' FIFA deal on G14</a><br />&#8226;&nbsp;<a href="/news/story?id=498537&cc=5739">Everton capture Plymouth youngster Gosling</a><br />&#8226;&nbsp;<a href="/news/story?id=498437&cc=5739">Sunderland sign France Under-19 defender Mvoto</a><br /></div>
+<div class="r_right2">
+<strong>Most Sent Stories</strong><br><strong>1.</strong> <a href="http://soccernet.espn.go.com/gallery?id=497937&cc=%">Premier League weekend gallery 20080113</a>
+<br><strong>2.</strong> <a href="http://soccernet.espn.go.com/news/story?id=498636&cc=%">Galaxy add FC Dallas star Ruiz to potent offense</a>
+<br><strong>3.</strong> <a href="http://soccernet.espn.go.com/news/story?id=498334&cc=%">Wenger: Goodison more intimidating than Anfield</a>
+<br><a href="http://sendtofriend.espn.go.com/sendtofriend/soccernet/MostSentSoccernet">More...</a><br clear=all /></div>
+</div>
+<!-- end headlines -->
+
+<br />
+<!-- begin lower search -->
+<div id="search1" style="float: left; padding: 0 0 10px 0">
+
+
+<form method="get" name="search" action="http://search.espn.go.com/keyword/search" />
+<div class="sbholder">
+<div class="search1">
+<div class="search2"><span style="float: left;"><img src="http://soccernet-akamai.espn.go.com/design05/i/search/search_arrow.gif" alt="Search Arrow" width="23" height="24" hspace="0" vspace="0" border="0" align="left" /></span>
+<div class="search3">
+
+<input type="radio" name="searchType" value="0" style="display:inline;" checked />ESPNsoccernet&nbsp;
+<input type="radio" name="searchType" value="1" style="display:inline;" />Web
+<input type="text" style="margin-left:5px; width:390px;" name="searchString" class="searcht"/>
+<input type="image" border="0" style="margin-left:3px;" align="top" src="http://soccernet-akamai.espn.go.com/design05/i/search/search_button.gif" name="Find" alt="Search" vspace="2" width="45" height="15" />
+<input type="hidden" name="page" value="soccernet">
+<input type="hidden" name="location" value="uk">
+<input type="hidden" name="source" value="b_story_england">
+
+</div></div></div>
+<div class="s_lastrow"><div class="s_lastrowa">
+
+</div></div>
+</div>
+</form>
+<br />
+</div>
+<!-- end lower search -->
+
+
+</div>
+<!-- end mainthing div -->
+</div>
+<!-- end wrapper div -->
+</div>
+<!-- end main div -->
+
+<!-- begin footer -->
+<div id="footer" style="clear:left;float:left;"><div class="footer1"><a href="http://soccernet.espn.go.com/"><img src="http://soccernet-akamai.espn.go.com/design05/i/footer_logo3.gif" alt="ESPNsoccernet Logo" width="153" height="32" hspace="0" vspace="0" border="0" /></a><div class="footer3">
+
+<strong>ESPNsoccernet:</strong>  <a href="http://sports.espn.go.com/espn/news/story?page=help/index">Help</a> | <a href="http://www.espncms.com/index.aspx?id=107">Media Kit</a> |
+<script>
+var link = window.location;
+document.write('<a href="#" onClick="window.open(\'http://dynamic.espn.go.com/espn/bugs?url=' + escape(link) + '\', \'Bugs\',\'noresizable,noscrollbars,height=500,width=380\');">Report a Bug</a> | ');
+</script>
+<a href="http://sports.espn.go.com/espn/news/story?page=contact/index">Contact Us</a> | <a href="http://sports.espn.go.com/espn/sitemap">Site Map</a> | <a href="http://sports.espn.go.com/espn/news/story?page=tools/index">Tools</a> | <a href="http://www.joinourteam.espn.com">Jobs at ESPN</a> | <A href="http://corporate.disney.go.com/corporate/sourcing.html"><font color="666666"><b>Supplier Information</b></font></a> |
+Copyright &copy;2008 ESPN Internet Ventures. <a href="http://disney.go.com/corporate/legal/terms.html"><span style="font-weight:bold;">Terms of Use</span></a>, and <a href="http://disney.go.com/corporate/privacy/pp_espn.html">Privacy Policy and Safety Information/Your California Privacy Rights</a> are applicable to you.  All rights reserved.<br /><br /><!-- new alias 5/30 = EU_england_1x1 -->
+<!-- new key 5/30 = 361+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=eng1;kvclub=361;kvaid=497114;grp=2887942 -->
+<!--JavaScript Tag // Tag for network 605.1: ESPN TN // Website: ESPN SC Keyword Site // Page: All // Placement: 1 X 1 (16) --><script language="javascript" type="text/javascript"><!--document.write('<scr'+'ipt language="javascript1.1" src="http://ad.dc2.adtech.de/addyn|3.0|605.1|0|0|16|alias=EU_england_eng1_361_story_1x1;loc=100;target=_blank;key=361+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=eng1;kvclub=361;kvaid=497114;grp=2887942;misc='+new Date().getTime()+'"></scri'+'pt>');//--></script><noscript><a href="http://ad.dc2.adtech.de/adlink|3.0|605.1|0|0|16|alias=EU_england_eng1_361_story_1x1;loc=300;361+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=eng1;kvclub=361;kvaid=497114;grp=2887942" target="_blank"><img src="http://ad.dc2.adtech.de/adserv|3.0|605.1|0|0|16|alias=EU_england_eng1_361_story_1x1;loc=300;key=361+story;kvpagetype=story;kvcc=EU;kvsection=england;kvleague=eng1;kvclub=361;kvaid=497114;grp=2887942" border="0" width="1" height="1"></a></noscript><!-- End of JavaScript Tag -->
+					<!-- Tangozebra tracking, advertiser = Soccernet, goal = Landing Page, type=javascript -->
+					<script type="text/javascript">
+					//<![CDATA[
+					document.write('<scr'+'ipt type="text/javascript" src="http://ad.uk.tangozebra.com/goals/00001992/g.js?'+Math.random()+'">'+'</scr'+'ipt>');
+					//]]>
+					</script>
+					<noscript>
+					<div style='display:none'><img width='1' height='1' alt='' src='http://ad.uk.tangozebra.com/goals/00001992/g.php?TIMESTAMP' /></div>
+					</noscript>
+					<img src="http://servedby.advertising.com/site=703223/mnum=1516/bins=1/rich=0/logs=0/betr=A2725=[+]LP" width="1" height="1">
+					</div></div></div>
+
+<!-- end footer -->
+
+</body>
+</html>

@@ -1,0 +1,865 @@
+<!--section:entertainment--->         
+
+		<script type="text/javascript"><!-- // <![CDATA[
+		var archiveurl=document.location.href;
+        var archiveurla=archiveurl.indexOf('archive.html');
+		
+		function OmnitureVariables(){
+			this.mainsection = 'edmontonsun';
+			this.sectionLevel2 = 'entertainment';
+			this.sectionLevel3 = 'entertainment_otherentertainment';
+			this.sectionLevel4 = '';
+			this.sectionLevel5 = '';
+			this.sectionLevel6 = '';
+			this.language = 'en';
+			this.division = 'smc';	
+			this.networkid = 'can';
+            this.SwitchCgi = true;
+			this.trackExternalLinks= 'true';
+			this.pageType = '';
+			this.srcsite = 'portal';
+			this.s_account = 'cnoedmontonsuncomprod,cnocanoeglobalprod';
+			this.linkInternalFilters = 'javascript:,edmontonsun.com, edmontonsun.ca, edmsun.canoe.ca, edmontonsun.canoe.ca';
+			this.linkExternalFilters = '';			
+			this.linkTrackVars = 'server';
+			this.linkTrackEvents = 'None';			
+ 			this.linkLeaveQueryString = 'false';					
+			this.prop22 = 'entertainment';	          
+		    this.server = this.networkid + '.' + this.language + '.' + this.division + '.' + this.mainsection;
+			
+			this.type = '';
+            //check to see if the page is a home page or an article page 
+              var theurl=document.location.href;
+              var mainurla=theurl.indexOf('home.html');
+              var mainurlb=theurl.charAt(theurl.length -1);
+              var mainurlc=theurl.indexOf('home.php');
+                  if ((mainurla!=-1) || (mainurlb=='/') || (mainurlc!=-1)){
+                      var pagen='home';
+                     }
+                     else {
+                      var pagen='article';
+                     }
+            //check to see if the page is an archive page 	
+		    
+			
+			      if (archiveurla!=-1) {
+			         this.articlename = 'entertainment' + ' archive';
+  			         }
+			      else {
+			         this.articlename = 'From our writers&amp;#39; mail bags...';
+			         }
+             //setting the page name
+			 
+               if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 !='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+this.sectionLevel5+':'+this.sectionLevel6+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+this.sectionLevel5+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 =='') && (this.sectionLevel4 =='') &&  (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                       if (this.sectionLevel2 =='homepage') {
+							this.pageName= this.mainsection+':'+pagen;
+						  }
+							else {	  
+                                  this.pageName= this.mainsection+':'+this.sectionLevel2+':'+pagen;
+								 }
+                 }
+                 else {
+				      if (this.pageType!='errorPage') {
+                          this.pageName= this.mainsection+':'+pagen;
+                          }
+						  else {
+						  this.pageName='';
+				          }
+				 }
+			this.prop1 ='';
+			this.prop2 ='';
+				if (this.sectionLevel2=='homepage') {
+			this.prop3 = '';
+					}
+				else {
+			this.prop3 = this.sectionLevel2;
+				}
+				if (this.sectionLevel3!='') {
+			this.prop4 = this.sectionLevel3;
+				}
+				else {
+			this.prop4 = '';
+				}
+				if (this.sectionLevel4!='') {
+			this.prop5 = this.sectionLevel4;
+				}
+				else {
+			this.prop5 = '';
+				}
+				if (this.sectionLevel5!='') {
+			this.prop6 = this.sectionLevel5;
+				}
+				else {
+			this.prop6 = '';
+				}
+        	this.prop7 ='smc';
+			this.prop11 = theurl.slice(7);
+		     
+		
+		//check to see if a page is an article if so, pass its headline to prop12
+		
+			if ((pagen=='article') && (this.pageType!='errorPage')) {
+			this.prop12   = this.mainsection+':'+this.articlename;
+				}
+				else {
+			this.prop12   = '';
+				}
+				
+			if (this.type=='print') {
+			 this.prop18  = theurl.slice(7);
+			   }
+			   else {
+			 this.prop18  ='';  
+			   }	
+				
+			this.prop20 = 'sun';
+			this.prop23 = 'en';
+				if (this.sectionLevel6!='') {
+			this.prop36 = this.sectionLevel6;
+				}
+				else {
+			this.prop36 = '';
+				}
+	
+               if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 !='')){
+            this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5+'|'+this.sectionLevel6;
+            this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+ this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5+'|'+this.sectionLevel6;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+ this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') &&  (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+ this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3;
+                 }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 =='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                     if (this.sectionLevel2 =='homepage') {
+		   this.hier1= this.mainsection;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection;
+					  }
+			  	     else {
+		   this.hier1= this.mainsection+'|'+this.sectionLevel2;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2;
+                       }
+                 }
+                 else {
+           this.hier1= this.mainsection;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection;
+                  }
+		   this.hier3= this.prop22+'|'+this.language+'|'+this.division;	
+		}
+		var MyOmnitureVariables  = new OmnitureVariables();
+		// ]]> --></script>
+		
+		
+		<script type="text/javascript"><!-- // <![CDATA[
+		function DfpVariables(){
+			this.mainsection = 'edmontonsun';
+			this.sectionLevel2 = 'entertainment';
+			this.sectionLevel3 = 'entertainment_otherentertainment';
+			this.sectionLevel4 = '';
+			this.sectionLevel5 = '';
+			this.language = 'en';
+			this.division = 'smc';	
+			this.networkid = 'can';
+ 			this.affiliate = '';          	
+			this.tile = 1;
+			this.rand_num = Math.floor(Math.random()*8999999999)+1000000000;
+			this.prov = '';
+			
+			this.SwitchLang = this.language;
+			this.de_site = 'sun_media';
+			this.de_vchannel = 'edmontonsun';
+			this.de_category = this.sectionLevel3;
+			this.de_subcategory = '';	
+			this.de_subchannel = this.sectionLevel2;
+			this.de_hchannel = 'news';
+	       
+		    this.theurl=document.location.href;
+            this.mainurl1=this.theurl.indexOf('home.html');
+            this.mainurl2=this.theurl.charAt(this.theurl.length -1);
+            this.mainurl3=this.theurl.indexOf('home.php');
+             
+			// code to check if a page is a home page of level 3 and below. hp=1 means homepage is true
+			if ((this.sectionLevel4=='') && ((this.mainurl1!=-1) || (this.mainurl2=='/') || (this.mainurl3!=-1))){
+				this.hp='1';
+			} else {
+				this.hp='0';
+			}
+		}
+		var MyGenericTagVar  = new DfpVariables();
+		// ]]> --></script>
+		
+	    <script type="text/javascript" src="/generix/js/generix.js"></script>		
+		<script type="text/javascript" src="/generix/js/GenFonction.js"></script>	
+		<script type="text/javascript" src="/generix/dfp/papers/edmontonsun/TagDfpSection.js"></script>
+		<script type="text/javascript" src="/generix/dfp/TagDfpEngine.js"></script>
+		
+		<html>
+<head>
+<title>edmontonsun.com -
+Other Entertainment-
+From our writers' mail bags...</title>
+<link rel="stylesheet" href="/Includes/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/Includes/sIFR-screen.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/Includes/sIFR-print.css" type="text/css" media="print" />
+<meta name="title" content="Edmonton Sun">
+
+<meta name="description" content="Edmonton's definitive guide to
+entertainment and events. Includes movie reviews, shopping and recreation
+guides, as well as local, national and international news. An all inclusive
+look at Edmonton's finest. ">
+<meta name="keywords" content="Edmonton, food, drink, bar, music, dance,
+fun, kids, sports, games, entertainment, movie, movies, restaurant,
+restaurants, shopping, guide, Edmonton guide, music, news, local, world,
+Alberta, newspaper, events">
+<!--
+<meta name="description" content="Edmonton's definitive guide to entertainment and events. Includes movie reviews, shopping and recreation guides. An all inclusive look at Edmonton's finest. ">
+<meta name="keywords" content="Edmonton, food, drink, bar, music, dance, fun, kids, sports, games, entertainment, movie, movies, restaurant, restaurants, shopping, guide, Edmonton guid, music">
+-->
+
+<meta name="language" content="english">
+<META NAME="ROBOTS" CONTENT="NOARCHIVE">
+ <META NAME="msnbot" CONTENT="nocache">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="Mon, 04 Dec 1999 00:00:01 GMT">
+
+
+<script src="/Includes/sifr.js" type="text/javascript"></script>
+<script src="/Includes/sifr-addons.js" type="text/javascript"></script>
+<script src="/Includes/sendit.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://www.canoe.ca/Canoe/Includes/flashobject.js"></script>
+</head>
+<body bgcolor="#404040" text="#000000" link="#FF0000" vlink="#FF0000" alink="#FF0000">
+<div align="center">
+  <table width="750" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+    <tr>
+      <td bgcolor="000000"><table width=750 cellpadding=0 cellspacing=0 border=0>
+ <tr>
+  <td width=750 valign=top align=center>
+<table width="750" cellpadding=0 cellspacing=0 border=0 bgcolor="#000000">
+  <tr bgcolor="#000000">
+	<td valign=center width=150><img src="http://www.canoe.ca/lfpress_2003Images/canoe_net2.gif"  border=0 USEMAP="#canoe_net2"><br>
+
+	<MAP NAME="canoe_net2">
+		<AREA SHAPE="RECT" COORDS="0,0,102,14" HREF="http://www.canoe.ca" ALT="CANOE">
+		<AREA SHAPE="RECT" COORDS="130,0,180,14" HREF="http://cnews.canoe.ca" ALT="CNEWS">
+	</MAP>
+	
+	</td>   
+	<td bgcolor="#000000">	
+<script type="text/javascript">var nwb_type = 'dflt';</script><script type="text/javascript" src="http://static.search.canoe.ca/s-toile/img/js/network_searchbar/network_searchbar_en.js"></script></td>
+	<td align=right bgcolor="#000000"><FORM name="guidecanoe" style="margin:0; padding:0; display:inline;"><SCRIPT LANGUAGE="JavaScript1.2" SRC="http://www.canoe.ca/Canoe/Includes/options.js"></SCRIPT></td><td></form>
+	</td>
+  </tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+    </tr>
+    <tr>
+      <td bgcolor="000000" align="center"><!-- BANNER -->
+        <script type="text/javascript">
+     fctAdTag("superbanner",MyGenericTagVar,1);
+</script>
+      </td>
+    </tr>
+    <tr>
+      <td background="/Images/bg_top.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="top">
+		<td width="248">
+			<map name="masthead">
+				<area shape="rect" coords="1,0,166,103" href="http://www.edmontonsun.com" />
+				<area shape="rect" coords="178,10,229,71" href="http://24hrs.ca/edmonton/cover.pdf" />
+			</map>
+			<img src="http://www.edmontonsun.com/Images/logo_sun3.gif" alt="edmontonsun.com" width="248" height="104" border="0" usemap="#masthead">
+		</td>
+		<td width="75" valign="top" align="center" style="padding-top:11px;">
+				<a href="/FrontPage/2008/01/15/4773416.html"><img src="/FrontPage/2008/01/15/edsuncover2.jpg" alt="Today's Cover" id="coverTop"></a>
+<br>
+		</td>
+		<td width="427">													
+			<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><img src="/Images/navheader_services.gif" width="73" height="21" alt="" border="0" /></td>
+		<td><a href="http://www.edmontonsun.com/circulation.html"><img src="/Images/navfooter_subscribe.gif" width="53" height="20" alt="" border="0" /></a></td>
+		<td><a href="http://www.edmontonsun.jobboom.com/mod-bin/prod/jbr_rep_offre_employeur.pl?no_grp_client=G238823"><img src="/Images/navfooter_employment.gif" width="67" height="20" alt="" border="0" /></a></td>
+		<td><a href="http://www.edmontonsun.com/research.html"><img src="/Images/navfooter_newsresearch.gif" width="110" height="20" alt="" border="0" /></a></td>
+		<td><a href="http://www.4445454.com/"><img src="/Images/navfooter_classifieds.gif" width="60" height="20" alt="" border="0" /></a></td>
+		<td><a href="http://www.edmontonsun.com/advertising.html"><img src="/Images/navfooter_advertising.gif" width="64" height="20" alt="" border="0" /></a></td>
+	</tr>
+</table>
+			<img src="http://www.canoe.ca/images/clear.gif" width="1" height="2" alt="" /><br>
+			<table width="422" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td colspan="3" bgcolor="970412"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+	</tr>
+	<tr bgcolor="000000">
+		<td width="1" bgcolor="970412"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="69" border="0"></td>
+		<td width="420">
+			<table width="420" border="0" cellspacing="2" cellpadding="1" bgcolor="ffffff">
+				<tr valign="top">
+						
+					<td>&nbsp;</td>
+					<td>
+						<h3>In Tomorrow's Paper</h3>
+													<!--<b>Check out what's cooking in tomorrow's Eat column.<a href="/Lifestyle/Food/home.html"> Take a l...</b><br>-->
+							
+							<b>Check out what's cooking in tomorrow's Eat column.<a href="/Lifestyle/Food/home.html"> Take a look at our food section here.</a></b><br>
+											</td>
+					<td>									 	
+					 	<!--
+<a href="/Promos/ContestsEvents/home.html"><img src="/Includes/Ads/new_SunFun.gif" width="121" height="63" border="0"></a><br>
+-->
+<a href="/Promos/ContestsEvents/home.html"><img src="/Includes/Ads/bt_contests.gif" width="120" height="60" border="0"></a><br><!-- 117x68 -->
+							 	
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td width="1" bgcolor="970412"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="69" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="3" bgcolor="970412"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+	</tr>
+</table>
+
+		</td>
+	</tr>
+</table>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="E9E9E9"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" alt="" /></td>
+    </tr>
+  </table>
+  <table width="750" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+    <tr valign="top">
+      <!-- left nav -->
+      <td bgcolor="E9E9E9" width="125">        <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>						
+		<td bgcolor="ffffff">			
+			<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" border=0><br>
+			<div class="Weather" align="center">Current Conditions</div>
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" border=0><br>
+			<TABLE border=0 cellspacing=0 cellpadding=0 width=100%>
+  <TR>
+    <TD><a href="http://weather.canoe.ca/Weather/CityEdmontonAB.html" target="new"><img alt="" border=0 src="http://www.canoe.ca/NewWeather/icn.gif" width="42"><img src="http://www.canoe.ca/NewHomeImages/invisible.gif" height=1 border=0 width=10></a></TD>
+    <TD valign=top><a href="http://weather.canoe.ca/Weather/CityEdmontonAB.html" Class="weatherlink" target="new">Clear<BR>-8<sup>o</sup>C</a></TD>
+  </TR></TABLE>
+
+
+<div class="Weather" align="center"><a href="http://weather.canoe.ca/Weather/CityEdmontonAB.html" class="Weather" target="newwindow">Full Forecast</a></div>
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" border="0"><br>
+
+</td>
+		<td bgcolor="cccccc"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	<tr><td colspan="3" bgcolor="cccccc"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td></tr>
+</table>
+ <img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" border="0"><br>
+
+
+<!-- line divider -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="FFFFFF"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="929191"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+</table>
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="3" border="0"><br>
+<!-- line divider -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="FFFFFF"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="929191"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="D4D3D3">
+	<tr>
+		<td>
+<!-- Menu Space -->
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" alt="" /><br>
+
+<!--nav-->
+<div class="LeftNav"><a href="http://www.edmontonsun.com" class="LeftNav">Home</a></div>
+<div class="LeftNav"><a href="http://www.edmontonsun.com/News/home.html" class="LeftNav">News</a></div>
+<div class="LeftNav"><a href="http://www.edmontonsun.com/Entertainment/home.html" class="LeftNav">Entertainment</a></div>
+<!-- SubNav --->
+<div class="SubNav" style="margin-left:10px;">
+<a href="http://www.edmontonsun.com/Entertainment/Showbiz/home.html" class="SubNav">Showbiz</a><br>
+<a href="http://www.edmontonsun.com/Entertainment/MovieNews/home.html" class="SubNav">Movie News</a><br>
+<a href="http://www.edmontonsun.com/Entertainment/MovieReviews/home.html" class="SubNav">Movie Reviews</a><br>
+<a href="http://www.edmontonsun.com/Entertainment/Television/home.html" class="SubNav">Television</a><br>
+<a href="http://www.edmontonsun.com/Entertainment/Music/home.html" class="SubNav">Music</a><br>
+<a href="http://www.edmontonsun.com/Entertainment/VideoGames/home.html" class="SubNav">Video Games</a><br>
+<a href="http://www.edmontonsun.com/Entertainment/OtherEntertainment/home.html" class="SubNav">Other Entertainment</a><br>
+<a href="http://www.edmontonsun.com/OutThere/home.html" class="SubNav">Out There</a><br>
+</div>
+<div class="LeftNav"><a href="http://www.edmontonsun.com/Sports/home.html" class="LeftNav">Sports</a></div>
+<div class="LeftNav"><a href="http://www.edmontonsun.com/Photos/index.html" class="LeftNav">Photo Galleries</a></div>
+<div class="LeftNav"><a href="http://www.edmontonsun.com/Comment/home.html" class="LeftNav">Opinion/Comment</a></div>
+<div class="LeftNav"><a href="http://www.edmontonsun.com/Columnists/home.html" class="LeftNav">Columnists</a></div>
+<div class="LeftNav"><a href="http://www.edmontonsun.com/Lifestyle/home.html" class="LeftNav">Lifestyle</a></div>
+<div class="LeftNav"><a href="http://www.edmontonsun.com/Business/home.html" class="LeftNav">Business</a></div>
+<div class="LeftNav"><a href="http://www.edmontonsun.com/Promos/home.html" class="LeftNav">Contests & More</a></div>
+<div class="LeftNav"><a href="http://edmsun.canoe.ca/VideoBeta/" class="LeftNav">Video</a></div>
+<div class="LeftNav"><a href="http://www.edmontonsun.com/Dating/home.html" class="LeftNav">Dating</a></div>
+
+</td>
+	</tr>
+</table>
+
+<!-- line divider -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="FFFFFF"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="929191"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+</table>
+
+<!-- Menu Space -->
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" alt="" /><br>
+                <!--superpages-->
+<!--include virtual="/Includes/yp.html"-->
+<!--superpages end-->
+ <script type="text/javascript" src="http://static.canoe.ca/toile/js/canoe_411/canoe_411_edmsun_en.js"></script>
+<!-- Menu Space -->
+
+<!-- line divider -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="FFFFFF"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="929191"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="D4D3D3">
+<tr><td>
+
+
+
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="7" alt="" /><br>
+<div class="LeftNavMed">
+<img src="http://www.edmontonsun.com/Images/navtitle_featured.gif" border="0">
+</div>
+<img src="http://www.canoe.ca/images/clear.gif" width="20" height="4" alt="" />
+
+<div class="LeftNav"><a href="/HotClicks/hotclicks.html" class="LeftNavMed">Hot Clicks</a></div>
+<div class="LeftNav"><a href="http://www.edmontontrafficcam.com/cams.php" target="_blank"  class="LeftNavMed">Traffic Cameras</a></div>
+<div class="LeftNav"><a href="http://www.edmontonsun.com/Comment/blog_index.html" class="LeftNavMed">Blogs</a></div>
+<div class="LeftNav"><a href="/Series/series_index.html" class="LeftNavMed">Feature Series</a></div>
+
+
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" alt="" /><br>
+
+
+<!-- Menu Space -->
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" alt="" /><br>
+<center>
+<!-- AdSpace site=sun_media&VChannel=edmontonsun&SubChannel=specialsectionspromo&position=special_1&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=edmontonsun&SubChannel=specialsectionspromo&position=special_1&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+</center>
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="7" alt="" /><br>
+<div class="LeftNavMed">
+<img src="http://www.edmontonsun.com/Includes/Navs/navtitle_specialsections.gif" border="0">
+</div>
+<img src="http://www.canoe.ca/images/clear.gif" width="20" height="4" alt="" />
+
+<div class="LeftNavMed"><a href="/SpecialSections/SnowScene/home.html" class="LeftNavMed"><b>Snow Scene</b></a></div>
+<div class="LeftNavMed"><a href="/SpecialSections/WAG/home.html" class="LeftNavMed">WAG</a></div>
+<div class="LeftNavMed"><a href="/SpecialSectionMP/TruckTime/home.html" class="LeftNavMed">Truck Time</a></div>
+<div class="LeftNavMed"><a href="/SpecialSections/ValueDriven/home.html" class="LeftNavMed">Value Driven</a></div>
+<div class="LeftNavMed"><a href="/SpecialSectionMP/CollegeUniversities/home.html" class="LeftNavMed">Colleges & Uni's</a></div>
+<div class="LeftNavMed"><a href="/SpecialSections/HomesForSale/home.html" class="LeftNavMed">Homes for Sale</a></div>
+<div class="LeftNavMed"><a href="/SpecialSections/IndustryTrades/home.html" class="LeftNavMed">Industry & Trades</a></div>
+<div class="LeftNavMed"><a href="http://www.edmontonsun.com/SpecialSections/LookAndFeel/home.html" class="LeftNavMed">Feel Your Best</a></div>
+<div class="LeftNavMed"><a href="http://www.edmontonsun.com/SpecialSections/Neighbourhoods/home.html" class="LeftNavMed">Neighbourhoods</a></div>
+<div class="LeftNavMed"><a href="http://www.edmontonsun.com/Photos/07SummerSwimsuit.html" class="LeftNavMed"><b>Summer Swimsuits</b></a></div>
+<div class="LeftNavMed"><a href="/SpecialSectionMP/BuildingDreams_0907/home.html" class="LeftNavMed">Building Dreams</a></div>
+<div class="LeftNavMed"><a href="http://www.edmontonsun.com/SpecialSections/ActiveEdmonton/home.html" class="LeftNavMed"><b>Active Edmonton</b></a></div>
+<div class="LeftNavMed"><a href="http://www.edmontonsun.com/SpecialSections/HighSchoolReport/home.php" class="LeftNavMed">School Report</a></div>
+<div class="LeftNavMed"><a href="http://www.edmontonsun.com/SpecialSections/Envirovision/home.html" class="LeftNavMed">Envirovision</a></div>
+<div class="LeftNavMed"><a href="http://www.edmontonsun.com/SpecialSections/ForeGolf/home.html" class="LeftNavMed">Fore Golf</a></div>
+<div class="LeftNavMed"><a href="http://www.edmontonsun.com/SpecialSectionMP/08_AutoPreview/home.html" class="LeftNavMed"><b>2008 Auto Preview</b></a></div>
+<div class="LeftNavMed"><a href="http://www.edmontonsun.com/SpecialSections/PetsOnParade/home.html" class="LeftNavMed">Pets On Parade</a></div>
+
+<div class="LeftNavMed"><a href="http://www.edmontonsun.com/News/PoliceBeat/home.html" class="LeftNavMed">Police Beat</a></div>
+
+
+<div class="LeftNavMed"><a href="http://www.autonet.ca/SunDrive/Edmonton/" class="LeftNavMed">Autonet Section</a></div>
+</td></tr>
+</table>
+
+<!-- line divider -->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="FFFFFF"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="929191"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+</table>
+<br>
+        <!-- nav button 1 -->
+                <div align="center">
+<!-- AdSpace site=sun_media&VChannel=edmontonsun&SubChannel=entertainment&position=button_1&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=edmontonsun&SubChannel=entertainment&position=button_1&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+</div>
+                <table width="110" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="d4d3d3">
+  <tr>
+    <td bgcolor="ffffff" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+  <tr>
+    <td bgcolor="ffffff" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+    <td width="108"><div class="LeftNavMed">&nbsp;<img src="/Images/navtitle_classifieds.gif" alt="" width="85" height="14" vspace="4" border="0"><br>
+      </div>
+      <div class="LeftNavMed"><a href="http://www.4445454.com/" class="LeftNavMed" TARGET="_blank">Classified Extra</a></div>
+
+
+<div class="LeftNavMed">
+<form name="searchfrm" style="margin:0px;" action="http://www.classifiedextra.ca/cgi-bin/search/index.cgi" method="post"><input type="hidden" name="ucoord" value="Edmonton, AB"><input type="hidden" name="udist" value="50"><input type="hidden" name="q" value="Keyword"><input type="hidden" name="head_userf" value="7387fef788eccffc8e126684e4d0be3a"><input type="hidden" name="userf" value="lg:en"><input type="hidden" name="head_search_frm" value="1"><a  class="LeftNavMed" href="http://www.classifiedextra.ca/cgi-bin/search/index.cgi" onclick="javascript:document.searchfrm.submit(); return false;">Obituaries</a>
+</form>
+</div>
+
+      <div class="LeftNavMed"><a href="http://edmontonsun.jobboom.com" class="LeftNavMed" TARGET="_blank">Jobboom </a></div>
+      <div class="LeftNavMed"><a href="http://www.autonet.ca/" class="LeftNavMed" TARGET="_blank">Autonet</a></div>
+      <div class="LeftNavMed" TARGET="_blank"><a href="http://ads5.canoe.ca/event.ng/Type=click&FlightID=41061&AdID=71575&TargetID=7563&Segments=2371,4176,4833,4952,4953,5075,6039,6683,7437,8508,8759,9315,9998,10482,10608,10850,10911,11006,11078,11097,11134,11152,11209,11226,11263,11277,11289,11316,11476&Targets=439,6697,7267,7380,7413,7563&Values=25,31,43,51,60,72,84,91,100,110,150,152,213,224,264,332,334,347,379,380,396,490,493,1105,1282,1315,1444,1467,1542,1545,1549,1551,1567,1570,1620,1946,2293,2307,2326,2526,2553,2670,2686,2698,2700,2702,2703,2788,2932,3070,3079,3121,3452,3562,3621,3718,3719,3720,3733,3832,3993,4308,4345,4346,4347,4883,4928,4994,4995,5242,5243,5263&RawValues=USERID%2C7f000001-28621-1166730224-2&Redirect=http://dating.canoe.ca" class="LeftNavMed" TARGET="new">Dating</a></div></td>
+    <td bgcolor="929191" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+  <tr>
+    <td bgcolor="929191" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+</table>
+<br>
+<!-- SunShine Girl --->
+<!-- SunShine Girl --->
+<table width="110" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td colspan=3 bgcolor="BCBABB"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td bgcolor="BCBABB" width="1"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+		<td bgcolor="CECCCD" width="109"><div class="SunshineGirl"><a href="http://www.edmontonsun.com/SUNshineGirl/home.html" class="LeftNav">SUNshine Girl</a></div></td>
+		<td bgcolor="BCBABB" width="1"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td colspan=3 bgcolor="BCBABB"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+	</tr>
+			<tr>
+			<td colspan=3><a href="http://www.edmontonsun.com/SUNshineGirl/home.html"><img src="http://sunshinegirl.canoe.ca/Tuesday/2008/01/15/01s.jpg" width="110" alt="" border="0"/></a></td>
+		</tr>
+		
+</table>
+<!-- SunShine Girl --->
+<br>
+<table width="110" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="d4d3d3">
+  <tr>
+    <td bgcolor="ffffff" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+  <tr>
+    <td bgcolor="ffffff" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+    <td width="108"><div class="LeftNavMed">&nbsp;<img src="/Images/navtitle_oncanoe.gif" alt="" width="75" height="13" vspace="4" border="0"><br>
+      </div>
+	  <div class="LeftNavMed"><a href="http://chealth.canoe.ca/columnist.asp?show=detail&columnistid=11&relation_id=0" class="LeftNavMed" TARGET="_new">Health & Fitness</a></div>
+      <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/Style/Trends/home.html" class="LeftNavMed" TARGET="_new">Trends</a></div>
+      <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/FoodDrink/Eat/" class="LeftNavMed" TARGET="_new">Eat</a></div>
+      <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/SexRomance/SexFiles/" class="LeftNavMed" TARGET="_new">Sex Files</a></div>
+      <div class="LeftNavMed"><a href="http://homeandgarden.canoe.ca/Renovation/Ruffman/home.html" class="LeftNavMed" TARGET="_new">DIY</a></div>
+      <div class="LeftNavMed"><a href="http://technology.canoe.ca/Gadgets/" class="LeftNavMed" TARGET="_new">Gadgets</a></div>
+      <div class="LeftNavMed"><a href="http://cnews.canoe.ca/CNEWS/Lotteries/" class="LeftNavMed" TARGET="_new">Lotteries</a></div>
+      <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/Comics/" class="LeftNavMed" TARGET="_new">Comics</a></div>
+      <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/Puzzles/" class="LeftNavMed" TARGET="_new">Crossword</a></div>
+      <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/Horoscopes/" class="LeftNavMed" TARGET="_new">Horoscopes</a></div>
+      <div class="LeftNavMed"><a href="http://tvlistings4.zap2it.com/partners/zipcode.asp?partner_id=097" class="LeftNavMed" TARGET="_new">TV Listings</a></div>
+      <div class="LeftNavMed"><a href="http://jam.canoe.ca/Movies/Listings/" class="LeftNavMed" TARGET="_new">Movie Listings</a></div></td>
+    <td bgcolor="929191" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+  <tr>
+    <td bgcolor="929191" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+</table>
+<br>
+
+        <!-- nav button 2 -->
+                <div align="center">
+<!-- AdSpace site=sun_media&VChannel=edmontonsun&SubChannel=entertainment&position=button_2&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=edmontonsun&SubChannel=entertainment&position=button_2&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+</div>
+                <br>
+<table width="110" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="d4d3d3">
+	<tr>
+		<td bgcolor="ffffff" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td bgcolor="ffffff" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>		
+		<td width="108">
+			<div class="LeftNavMed">&nbsp;<img src="/Images/navtitle_services.jpg" alt="" width="65" height="14" vspace="4" border="0"><br></div>
+
+<!--			<div class="LeftNavMed"><a href="http://www.edmontonsun.com/TrueTones/home.html" class="LeftNavMed">Mobile</a></div>
+-->
+
+<div class="LeftNavMed"><a href="http://www.whatsonedmonton.com" target="_blank" class="LeftNavMed">Events:<br>&nbsp;&nbsp;<span style="font-size: 9px;">whatsonEdmonton.com</span></a></div>
+
+			<div class="LeftNavMed"><a href="http://rapids.canoe.ca/cgi-bin/reg/NR-register.pl?FORM_ID=EDMONTONSUN_UNDERGROUND_EMAIL_CLUB&MODE=SUBSCRIBE" class="LeftNavMed">Sun Underground</a></div>
+			<div class="LeftNavMed"><a href="http://www.edmontonsun.com/circulation.html" class="LeftNavMed">Subscriptions</a></div>
+			<div class="LeftNavMed"><a href="http://www.edmontonsun.com/advertising.html" class="LeftNavMed">Advertising</a></div>
+			<div class="LeftNavMed"><a href="http://www.edmontonsun.com/research.html" class="LeftNavMed">News Research</a></div>
+			<div class="LeftNavMed"><a href="http://www.edmontonsun.com/about.html" class="LeftNavMed">About Us</a></div>
+<!--
+			<div class="LeftNavMed"><a href="http://www.edmontonsun.com/Employment/home.html" class="LeftNavMed">Employment</a></div>
+-->
+			<div class="LeftNavMed"><a href="http://www.jobboom.com/mod-bin/prod/jbr_rep_offre_employeur.pl?no_grp_client=G238823" class="LeftNavMed">Employment</a></div>
+<!--
+			<div class="LeftNavMed"><a href="http://www.edmontonsun.com/contact.html" class="LeftNavMed">Contact Us</a></div>
+-->
+			<div class="LeftNavMed"><a href="http://www.edmontonsun.com/privacy.html" class="LeftNavMed">Privacy Policy</a></div>
+		</td>
+		<td bgcolor="929191" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>		
+	</tr>
+	<tr>
+		<td bgcolor="929191" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+	</tr>
+</table>
+<br>
+        <!-- this is the bottom of the menu -->
+      </td>
+      <!-- gutter -->
+      <td><img src="http://www.canoe.ca/images/clear.gif" width="7" height="1" alt=""></td>
+      <td width="618"><!-- content begin -->
+        <!-- Section Header -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top">
+			                            <img src="/Images/Headers/section_entertainment_otherentertainment.gif" border="0"><br>
+                          </td>
+          </tr>
+        </table>
+                <!-- Section Header -->
+        <!-- Sectional BreadCrumb --->
+                <!-- story -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr valign="top">
+            <td width="450"><!-- story starts here -->
+                            <div align="right"> <b>
+                Sun, January  6, 2008                </b><br>
+              </div>
+                            <h5>
+                From our writers' mail bags...              </h5>
+              								<b>By  </B><br><br>
+							  <a href="javascript:void(open('http://www.facebook.com/sharer.php?op=add&u=http://www.edmontonsun.com/Entertainment/OtherEntertainment/2008/01/06/4755029-sun.html&t=From our writers' mail bags...','ToolbarPopUp','scrollbars=yes,resizable=yes,width=800,height=600'));" title="Add to Facebook"></a>
+              <table style="float: right; clear:both">
+                <tr>
+                  <td width=48 valign=top><a href="javascript:void(open('http://www.facebook.com/sharer.php?op=add&u=http://www.edmontonsun.com/Entertainment/OtherEntertainment/2008/01/06/4755029-sun.html&t=From our writers' mail bags...','ToolbarPopUp','scrollbars=yes,resizable=yes,width=800,height=600'));" title="Add to Facebook"><img src="http://torsun.canoe.ca/Images/button_facebook.gif" alt="Add to Facebook" border="0" class="addTo" style="padding-bottom:4px; border:0" /></a><A href="javascript:sendit();" ></a></td>
+                  <td width=48 valign=top><A href="javascript:sendit();" ><img src="/Images/button_email.gif" width=48 height=46 border=0 NAME="button1"></a></td>
+                  <td width=43 valign=top><A href="pf-4755029.html"><img src="/Images/button_print.gif" width=43 height=46 border=0 NAME="button2"></a></td>
+                  <td width=44 valign=top><A href="http://rapids.canoe.ca/cgi-bin/reg/NR-cust_service.pl?MODE=CUSTOMER_SERVICE&LOOK=EDMSUN"><img src="/Images/button_write.gif" width=44 height=46 border=0 NAME="button3"></a></td>
+                  <td width=44 valign=top><A href="mailto:mailbag@edmsun.com"><img src="/Images/button_editor.gif" width=42 height=42 border=0 NAME="button4"></a></td>
+                </tr>
+              </table>
+                                                                      <p> TO KEVIN WILLIAMSON
+                            <p> RE 'All in good crap' (Dec. 21, movie review of National Treasure: Book of Secrets): Dude, it's a movie, not a film. If you want art, go to a museum, or wait until the Oscar committee nominates its yearly parade of pretentious/serious/important/mind-numbingly dull/ripped-from-today's-headlines ... think pieces aimed at the Oscar committee claptrap that someone who loves movies finds self-indulgent and boring beyond belief. 
+                            <p> I haven't even seen this film yet, but I already know it's going to ask me to suspend my disbelief in the name of entertainment, and then ... entertain me. Kind of like when Bush asks us all to suspend our disbelief in the name of whatever weird script he's following, which always results in terrifying consequences instead of two hours of popcorn-filled escape. 
+                            <p> If you want to dis a movie, might I suggest the pant-load of current pap that obscures the good stuff by claiming to be comedies, horror films, and family fare, when, in fact, they seem to exist for no other reason than to make people like me wince in pain.
+                            <p> BOB SEGARINI
+                            <br clear="right">
+              <br clear="right">
+                                          <br clear="right">
+              <table align="right" cellpadding="2" border=0 >
+                <tr>
+                  <td><script type="text/javascript">
+     fctAdTag("bigbox",MyGenericTagVar,1);
+</script>
+                  </td>
+                </tr>
+              </table>
+                                                        <p> RE 'All in good crap' (Dec. 21, movie review of National Treasure: Book of Secrets): I just read your review and even though I have not seen the movie yet, I must say that you only pointed out the negative. I think your readers would benefit greatly if you gave both opinions.
+                            <p> ROLAND MUCHA
+                            <p> TO BILL HARRIS
+                            <p> RE 'Costello, Krall go solo' (Dec. 20, article about The Hour's Christmas music special): Question: How many nerds have written you to remind you that What's So Funny 'Bout Peace, Love & Understanding is a Nick Lowe song, not an Elvis Costello song? Answer: At least one!
+                            <p> CRAIG PINHEY
+                            <p> (Editor's note: Mr. Harris was well aware of that, being a Class-A nerd himself!)
+                                                                                    <!-- got a news tip -->
+                            <!-- got a news tip -->
+              <!-- Next and Previous stories -->
+              <br clear="all">
+              <br>
+                                                                      <b>Previous story:</b>
+              <a href="/Entertainment/OtherEntertainment/2008/01/09/4759980-sun.html" >Lindsay off wagon, hops on crazy train with Britney</a>              <BR>
+                                          <b>Next story:</b>
+              <a href="/Entertainment/OtherEntertainment/2008/01/06/4755030-sun.html" >2008: Make-it or break-it</a>              <BR>
+                                                        <!-- story end here -->
+            </td>
+            <td width="3"><img src="http://www.canoe.ca/images/clear.gif" width="3" height="1" alt="" /></td>
+                        <td width="160" align="center"><!-- nav button 3 -->
+                            <div align="center">
+<!-- AdSpace site=sun_media&VChannel=edmontonsun&SubChannel=entertainment&position=button_3&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=edmontonsun&SubChannel=entertainment&position=button_3&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+</div>
+
+<!-- POPUP -->
+<!-- AdSpace site=sun_media&VChannel=edmontonsun&SubChannel=entertainment&position=popup&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=edmontonsun&SubChannel=entertainment&position=popup&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+<br>
+                            <script type="text/javascript">
+     fctAdTag("skyscraper",MyGenericTagVar,1);
+</script>
+              <br>
+              <br>
+                            <script type="text/javascript" src="http://www.canoeklix.com/ads/js/encode?src=edmsun:entertainment&n=5&ie=detect&oe=detect&lg=en&bw=1&hl=1&wh=160"></script>
+                          </td>
+            <td width="2"><img src="http://www.canoe.ca/images/clear.gif" width="2" height="1" alt="" /></td>
+                      </tr>
+        </table>
+        <!-- content end -->
+      </td>
+    </tr>
+    <tr>
+      <td><a href="http://www.edmontonsun.com"><img src="/Images/logo_sun-footer.gif" width="123" height="68" alt="" border="0"/></a></td>
+      <!-- gutter -->
+      <td><img src="http://www.canoe.ca/images/clear.gif" width="7" height="1" alt=""></td>
+      <td><!--include virtual="SunMedia/footer_sun_media.html"-->
+
+<br>
+<table width="100%" border="0" cellspacing="2" cellpadding="3">
+	<tr>
+		<td>
+			<table border="0" cellspacing="2" cellpadding="3" style="border: 0px solid #000000">
+				<tr>
+					<td><img src="http://www.canoe.ca/Canoe/SunMedia/logo_sunmedia.gif" alt="Sun Media Corporation" border="0" vspace="3" /></td>
+					<form name="newspapers">
+					<td>
+						<img src="http://www.canoe.ca/images/clear.gif" width="1" height="3" alt="" /><br />
+						<SELECT name="navigator" onChange="window.location=document.newspapers.navigator.options[document.newspapers.navigator.selectedIndex].value">
+<OPTION SELECTED value="javascript:void(0)">Newspapers 
+<option value="http://www.torontosun.com/">- Toronto Sun 
+<option value="http://www.calgarysun.com/">- Calgary Sun
+<option value="http://www.ottawasun.com">- Ottawa Sun
+<option value="http://www.edmontonsun.com">- Edmonton Sun
+<option value="http://www.winnipegsun.com">- Winnipeg Sun
+<option value="http://www.lfpress.com/">- London Free Press
+<option value="http://toronto.24hrs.ca">- 24 Hours Toronto
+<option value="http://vancouver.24hrs.ca">- 24 Hours Vancouver
+<option value="http://montreal.24heures.ca/">- 24 Heures Montreal
+<option value="http://www.recorder.ca">- Brockville Recorder & Times
+<option value="http://www.fortmcmurraytoday.com/">- Fort McMurray Today
+<option value="http://www.dailyheraldtribune.com/">- Grande Prairie Daily Herald-Trib.
+<option value="http://www.kenoradailyminerandnews.com/">- Kenora Daily Miner & News
+<option value="http://www.portagedailygraphic.com/">- Portage la Prairie Daily Graphic
+<option value="http://www.stthomastimesjournal.com/">- St. Thomas Times Journal
+<option value="http://www.simcoereformer.ca/">- Simcoe Reformer
+<option value="http://www.stratfordbeaconherald.com">- Stratford Beacon Herald
+<option value="http://www.woodstocksentinelreview.com/">- Woodstock Sentinel-Review
+<OPTION VALUE="http://jobboomcc.canoe.ca/">- Jobboom Career Connection
+<OPTION value="javascript:void(0)">------------
+<option value="http://www.bowesnet.com">BOWES PUBLISHERS
+<option value="http://www2.bowesnet.com/results.php?prov=AB&action=website">- Alberta
+<option value="http://www2.bowesnet.com/results.php?prov=SK&action=website">- Saskatchewan
+<option value="http://www2.bowesnet.com/results.php?prov=MB&action=website">- Manitoba
+<option value="http://www2.bowesnet.com/results.php?prov=ON&action=website">- Ontario
+<option value="http://www2.bowesnet.com/results.php?prov=QC&action=website">- Quebec  									</select>										
+					</td>				
+					</form>		
+				</tr>
+			</table>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td class="CaptionFont">
+			This site is updated by 4:00 a.m. MST each day and includes stories and columns from the day's print edition of The Edmonton Sun. 
+		</td>
+	</tr>
+</table>
+
+      </td>
+    </tr>
+  </table>
+  <img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /><br>
+  <table width="750" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td bgcolor="#EF0E20" align="right">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><a href="http://www.edmontonsun.com/circulation.html"><img src="/Images/navfooter_subscribe.gif" width="53" height="20" alt="" border="0" /></a></td>
+					<td><a href="http://www.edmontonsun.jobboom.com/mod-bin/prod/jbr_rep_offre_employeur.pl?no_grp_client=G238823" target="_blank"><img src="/Images/navfooter_employment.gif" width="67" height="20" alt="" border="0" /></a></td>
+					<td><a href="http://www.edmontonsun.com/research.html"><img src="/Images/navfooter_newsresearch.gif" width="110" height="20" alt="" border="0" /></a></td>
+					<td><a href="http://www.4445454.com/"><img src="/Images/navfooter_classifieds.gif" width="60" height="20" alt="" border="0" /></a></td>
+					<td><a href="http://www.edmontonsun.com/advertising.html"><img src="/Images/navfooter_advertising.gif" width="64" height="20" alt="" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>			
+	</tr>
+	<tr>
+		<td bgcolor="#000000"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="20" alt="" /></td>
+	</tr>
+</table>
+
+
+<table width="750" border="0" cellspacing="2" cellpadding="2" bgcolor="ffffff">
+	<tr>
+		<td align="center">
+<a href="mailto:mailbag@edmsun.com">Send a Letter to the Editor</a><br>
+			<a href="http://www.canoe.ca">CANOE</a> home | We welcome your <a href="http://www.canoe.ca/cgi-bin/reg/NR-cust_service.pl?MODE=CUSTOMER_SERVICE&LOOK=EDMSUN">feedback.</a><br>
+			<a href="http://www.canoe.ca/Canoe/copyright.html" target="_blank">Copyright</a> &#169; 2007, <a href="http://www.canoe.com">Canoe Inc.</a> All rights reserved.	
+<a href="javascript:sIFR.rollback();"><font color=ffffff>Test</font></a>
+		</td>
+	</tr>
+</table>
+
+
+
+<!-- CODE TO SWAP TEXT WITH FLASH EMBEDDED TEXT --->
+<script type="text/javascript">
+//<![CDATA[
+/* Replacement calls. Please see documentation for more information. */
+
+if(typeof sIFR == "function"){
+
+// This is the preferred "named argument" syntax
+	sIFR.replaceElement(named({sSelector:"h1", sFlashSrc:"/Fonts/swiss.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#FFFFFF", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	sIFR.replaceElement(named({sSelector:"h2", sFlashSrc:"/Fonts/swiss.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#FFFFFF", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	sIFR.replaceElement(named({sSelector:"h3", sFlashSrc:"/Fonts/swiss.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#FFFFFF", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	sIFR.replaceElement(named({sSelector:"h4", sFlashSrc:"/Fonts/swiss.swf", sColor:"#ffffff", sLinkColor:"#ffffff", sBgColor:"#000000", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	sIFR.replaceElement(named({sSelector:"h5", sFlashSrc:"/Fonts/swiss.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#ffffff", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	sIFR.replaceElement(named({sSelector:"h6", sFlashSrc:"/Fonts/swiss.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#FFFFFF", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	//sIFR.replaceElement(named({sSelector:".LeftNav", sFlashSrc:"Fonts/helvetica_neue.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#E9E9E9", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetLeft=0"}));	
+
+//sIFR.replaceElement(named({sSelector:".SunshineGirl", sFlashSrc:"/Fonts/helvetica_neue.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#CECCCD", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetLeft=0"}));	
+
+};
+//]]>
+</script>
+<!-- END / CODE TO SWAP TEXT WITH FLASH EMBEDDED TEXT --->
+
+
+
+
+
+<script type="text/javascript" src="/generix/omniture/TagOmnitureEngine.js"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-423171-18";
+urchinTracker();
+</script>
+</div>
+</body>
+</html>

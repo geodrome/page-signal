@@ -1,0 +1,1103 @@
+<!--section:sports--->         
+
+		<script type="text/javascript"><!-- // <![CDATA[
+		var archiveurl=document.location.href;
+        var archiveurla=archiveurl.indexOf('archive.html');
+		
+		function OmnitureVariables(){
+			this.mainsection = 'winnipegsun';
+			this.sectionLevel2 = 'sports';
+			this.sectionLevel3 = 'sports_othersports';
+			this.sectionLevel4 = '';
+			this.sectionLevel5 = '';
+			this.sectionLevel6 = '';
+			this.language = 'en';
+			this.division = 'smc';	
+			this.networkid = 'can';
+            this.SwitchCgi = true;
+			this.trackExternalLinks= 'true';
+			this.pageType = '';
+			this.srcsite = 'portal';
+			this.s_account = 'cnowinnipegsuncomprod,cnocanoeglobalprod';
+			this.linkInternalFilters = 'javascript:,winnipegsun.com, winnipegsun.ca, winsun.canoe.ca, winnipegsun.canoe.ca';
+			this.linkExternalFilters = '';			
+			this.linkTrackVars = 'server';
+			this.linkTrackEvents = 'None';			
+ 			this.linkLeaveQueryString = 'false';					
+			this.prop22 = 'sports';	          
+		    this.server = this.networkid + '.' + this.language + '.' + this.division + '.' + this.mainsection;
+			
+			this.type = '';
+            //check to see if the page is a home page or an article page 
+              var theurl=document.location.href;
+              var mainurla=theurl.indexOf('home.html');
+              var mainurlb=theurl.charAt(theurl.length -1);
+              var mainurlc=theurl.indexOf('home.php');
+                  if ((mainurla!=-1) || (mainurlb=='/') || (mainurlc!=-1)){
+                      var pagen='home';
+                     }
+                     else {
+                      var pagen='article';
+                     }
+            //check to see if the page is an archive page 	
+		    
+			
+			      if (archiveurla!=-1) {
+			         this.articlename = 'sports' + ' archive';
+  			         }
+			      else {
+			         this.articlename = 'Podium for Canuck';
+			         }
+             //setting the page name
+			 
+               if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 !='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+this.sectionLevel5+':'+this.sectionLevel6+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+this.sectionLevel5+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+this.sectionLevel4+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                this.pageName= this.mainsection+':'+this.sectionLevel2+':'+this.sectionLevel3+':'+pagen;
+                }
+                else if ((this.sectionLevel2 !='') && (this.sectionLevel3 =='') && (this.sectionLevel4 =='') &&  (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                       if (this.sectionLevel2 =='homepage') {
+							this.pageName= this.mainsection+':'+pagen;
+						  }
+							else {	  
+                                  this.pageName= this.mainsection+':'+this.sectionLevel2+':'+pagen;
+								 }
+                 }
+                 else {
+				      if (this.pageType!='errorPage') {
+                          this.pageName= this.mainsection+':'+pagen;
+                          }
+						  else {
+						  this.pageName='';
+				          }
+				 }
+			this.prop1 ='';
+			this.prop2 ='';
+				if (this.sectionLevel2=='homepage') {
+			this.prop3 = '';
+					}
+				else {
+			this.prop3 = this.sectionLevel2;
+				}
+				if (this.sectionLevel3!='') {
+			this.prop4 = this.sectionLevel3;
+				}
+				else {
+			this.prop4 = '';
+				}
+				if (this.sectionLevel4!='') {
+			this.prop5 = this.sectionLevel4;
+				}
+				else {
+			this.prop5 = '';
+				}
+				if (this.sectionLevel5!='') {
+			this.prop6 = this.sectionLevel5;
+				}
+				else {
+			this.prop6 = '';
+				}
+        	this.prop7 ='smc';
+			this.prop11 = theurl.slice(7);
+		     
+		
+		//check to see if a page is an article if so, pass its headline to prop12
+		
+			if ((pagen=='article') && (this.pageType!='errorPage')) {
+			this.prop12   = this.mainsection+':'+this.articlename;
+				}
+				else {
+			this.prop12   = '';
+				}
+				
+			if (this.type=='print') {
+			 this.prop18  = theurl.slice(7);
+			   }
+			   else {
+			 this.prop18  ='';  
+			   }	
+				
+			this.prop20 = 'sun';
+			this.prop23 = 'en';
+				if (this.sectionLevel6!='') {
+			this.prop36 = this.sectionLevel6;
+				}
+				else {
+			this.prop36 = '';
+				}
+	
+               if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 !='')){
+            this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5+'|'+this.sectionLevel6;
+            this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+ this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5+'|'+this.sectionLevel6;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') && (this.sectionLevel5 !='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+ this.sectionLevel3+'|'+this.sectionLevel4+'|'+this.sectionLevel5;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 !='') &&  (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+ this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3+'|'+this.sectionLevel4;
+                }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 !='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+           this.hier1= this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2+'|'+this.sectionLevel3;
+                 }
+               else if ((this.sectionLevel2 !='') && (this.sectionLevel3 =='') && (this.sectionLevel4 =='') && (this.sectionLevel5 =='') && (this.sectionLevel6 =='')){
+                     if (this.sectionLevel2 =='homepage') {
+		   this.hier1= this.mainsection;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection;
+					  }
+			  	     else {
+		   this.hier1= this.mainsection+'|'+this.sectionLevel2;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection+'|'+this.sectionLevel2;
+                       }
+                 }
+                 else {
+           this.hier1= this.mainsection;
+           this.hier2= this.division+'|'+this.language+'|'+this.prop22+'|'+this.mainsection;
+                  }
+		   this.hier3= this.prop22+'|'+this.language+'|'+this.division;	
+		}
+		var MyOmnitureVariables  = new OmnitureVariables();
+		// ]]> --></script>
+		
+		
+		<script type="text/javascript"><!-- // <![CDATA[
+		function DfpVariables(){
+			this.mainsection = 'winnipegsun';
+			this.sectionLevel2 = 'sports';
+			this.sectionLevel3 = 'sports_othersports';
+			this.sectionLevel4 = '';
+			this.sectionLevel5 = '';
+			this.language = 'en';
+			this.division = 'smc';	
+			this.networkid = 'can';
+ 			this.affiliate = '';          	
+			this.tile = 1;
+			this.rand_num = Math.floor(Math.random()*8999999999)+1000000000;
+			this.prov = '';
+			
+			this.SwitchLang = this.language;
+			this.de_site = 'sun_media';
+			this.de_vchannel = 'winnipegsun';
+			this.de_category = this.sectionLevel3;
+			this.de_subcategory = '';	
+			this.de_subchannel = this.sectionLevel2;
+			this.de_hchannel = 'news';
+	       
+		    this.theurl=document.location.href;
+            this.mainurl1=this.theurl.indexOf('home.html');
+            this.mainurl2=this.theurl.charAt(this.theurl.length -1);
+            this.mainurl3=this.theurl.indexOf('home.php');
+             
+			// code to check if a page is a home page of level 3 and below. hp=1 means homepage is true
+			if ((this.sectionLevel4=='') && ((this.mainurl1!=-1) || (this.mainurl2=='/') || (this.mainurl3!=-1))){
+				this.hp='1';
+			} else {
+				this.hp='0';
+			}
+		}
+		var MyGenericTagVar  = new DfpVariables();
+		// ]]> --></script>
+		
+	    <script type="text/javascript" src="/generix/js/generix.js"></script>		
+		<script type="text/javascript" src="/generix/js/GenFonction.js"></script>	
+		<script type="text/javascript" src="/generix/dfp/papers/winnipegsun/TagDfpSection.js"></script>
+		<script type="text/javascript" src="/generix/dfp/TagDfpEngine.js"></script>
+		
+		
+<html>
+<head><title>winnipegsun.com - Other Sports - Podium for Canuck</title>
+
+
+
+<link rel="stylesheet" href="/Includes/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/Includes/sIFR-screen.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/Includes/sIFR-print.css" type="text/css" media="print" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="title" content="Winnipeg Sun">
+<meta name="description" content="Winnipeg's definitive guide to entertainment and events. Includes movie reviews, shopping and recreation guides. An all inclusive look at Winnipeg's finest. Need to know what's playing or where to eat? What to buy or where to shop? fyiwinnipeg.com has the answers. ">
+<meta name="keywords" content="winnipeg, food, drink, bar, music, dance, fun, kids, sports, games, entertainment, movie, movies, restaurant, restaurants, shopping, guide, winnipeg guid, fyiwinnipeg, fyi winnipeg, music">
+<meta name="language" content="english">
+<meta name="author" content="winnipeg sun">
+<meta name="copyright" content="winnipeg sun 2004">
+<meta name="revisit-after" content="1 days">
+<meta name="reply-to" content="&#99;&#111;&#109;&#109;&#101;&#110;&#116;&#115;&#64;&#102;&#121;&#105;&#119;&#105;&#110;&#110;&#105;&#112;&#101;&#103;&#46;&#99;&#111;&#109;">
+<meta name="document-class" content="Published">
+<meta name="document-classification" content="Entertainment - Information">
+<meta name="document-rights" content="Public">
+<meta name="document-type" content="Public">
+<meta name="document-rating" content="Safe for Kids">
+<meta name="document-state" content="Dynamic">
+<META NAME="ROBOTS" CONTENT="NOARCHIVE"> 
+<META NAME="msnbot" CONTENT="nocache">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<script src="/Includes/sifr.js" type="text/javascript"></script>
+<script src="/Includes/sifr-addons.js" type="text/javascript"></script>
+<script src="/Includes/sendit.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://www.canoe.ca/Canoe/Includes/flashobject.js"></script>
+
+</head>
+
+<body bgcolor="#404040" text="#000000" link="#FF0000" vlink="#FF0000" alink="#FF0000">
+
+<div align="center">
+	<table width="750" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+		<tr>
+			<td bgcolor="000000"><table width=750 cellpadding=0 cellspacing=0 border=0>
+ <tr>
+  <td width=750 valign=top align=center>
+<table width="750" cellpadding=0 cellspacing=0 border=0 bgcolor="#000000">
+  <tr bgcolor="#000000">
+	<td valign=center width=150><img src="http://www.canoe.ca/lfpress_2003Images/canoe_net2.gif"  border=0 USEMAP="#canoe_net2"><br>
+
+	<MAP NAME="canoe_net2">
+		<AREA SHAPE="RECT" COORDS="0,0,102,14" HREF="http://www.canoe.ca" ALT="CANOE">
+		<AREA SHAPE="RECT" COORDS="130,0,180,14" HREF="http://cnews.canoe.ca" ALT="CNEWS">
+	</MAP>
+	
+	</td>   
+	<td bgcolor="#000000">	
+<script type="text/javascript">var nwb_type = 'dflt';</script><script type="text/javascript" src="http://static.search.canoe.ca/s-toile/img/js/network_searchbar/network_searchbar_en.js"></script></td>
+	<td align=right bgcolor="#000000"><FORM name="guidecanoe" style="margin:0; padding:0; display:inline;"><SCRIPT LANGUAGE="JavaScript1.2" SRC="http://www.canoe.ca/Canoe/Includes/options.js"></SCRIPT></td><td></form>
+	</td>
+  </tr>
+</table>
+</td>
+</tr>
+</table>
+</td>		
+		</tr>
+		<tr>
+			<td bgcolor="000000" align="center">
+<script type="text/javascript">
+     fctAdTag("superbanner",MyGenericTagVar,1);
+</script>				</td>		
+		</tr>
+		<tr>
+			<td bgcolor="F0000D">
+				<!-- masthead-->
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">	
+	<tr valign="top">
+		<td width="115" align="center">
+			<a href="/home.html"><img src="/Images/top_pic_logo.gif" alt="" width="115" height="132" border="0" img=""></a><br>
+		</td>
+		<td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr><td colspan="5" bgcolor="C4C4C4"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="8" border="0"></td></tr>
+				<tr><td colspan="5" bgcolor="6A6D70"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+				<tr valign="top">
+					<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><img src="http://www.canoe.ca/images/clear.gif" alt="" width="15" height="103" border="0"></td>
+								<td>
+									<table width="60" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td colspan="3" bgcolor="000000"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td width="1" bgcolor="000000"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+		<td bgcolor="ffffff" align="center"><a href="/FrontPage/2008/01/15/4773169.html"><img src="/FrontPage/2008/01/15/winsuncoversmall.jpg" alt="" hspace="4" vspace="4" border="0"></a></td>
+		<td width="1" bgcolor="000000"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="3" bgcolor="000000"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+	</tr>
+</table>
+								</td>
+								<td><img src="http://www.canoe.ca/images/clear.gif" alt="" width="5" height="1" border="0"></td>
+								<td class="top">
+									<div style="margin-left:4px;margin-top:4px">
+										<b><!--Date automatically generated by Timestamp-->
+Tuesday<br> January 15<br> 2008
+</b><br><br>										
+										<img img src="/Images/top_pic_arrow.gif" alt="" width="6" height="7" border="0" align="middle"> Click to enlarge<br><br>
+										<a href="mailto:letters@wpgsun.com"><img img src="/Images/button_emailus.gif" alt="" width="54" height="11" border="0"></a>
+									</div>
+								</td>
+								<td align="right">
+									<table width="418" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><img src="/Images/top_pic_services.gif" width="54" height="9" alt="" border="0" /></td>
+		<td><a href="/subscribe.html"><img src="/Images/top_button_subscribe.gif" width="58" height="8" alt="" border="0" /></a></td>
+<td><a href="http://winnipegsun.jobboom.com/mod-bin/prod/jbr_rep_offre_employeur.pl?no_grp_client=G238824"><img src="/Images/top_button_employment.gif" width="71" height="8" alt="" border="0" /></a></td>
+		<td><a href="/library.html"><img src="/Images/top_button_newsresearch.gif" width="116" height="8" alt="" border="0" /></a></td>
+		<td><a href="http://www.winnipegsunclassified.ca/"><img src="/Images/top_button_classifieds.gif" width="63" height="9" alt="" border="0" /></a></td>
+		<td><a href="/advertising.html"><img src="/Images/top_button_advertising.gif" width="56" height="9" alt="" border="0" /></a></td>
+	</tr>
+</table>
+									<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" alt="" /><br>
+									<table width="422" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td colspan="3" bgcolor="970412"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td width="1" bgcolor="970412"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="69" border="0"></td>
+		<td width="420" bgcolor="ffffff">
+			<table width="420" border="0" cellspacing="2" cellpadding="1" bgcolor="ffffff">
+				<tr valign="top">
+						
+					<td>&nbsp;</td>
+					<td>
+						<img src="/Images/pic_tomorrowspaper.gif" alt="" vspace="5" border="0"><br>
+													<!--<b>Special pooch: We feature an autism dog trained to help special needs kids....</b><br>-->
+							
+							<b>Special pooch: We feature an autism dog trained to help special needs kids.</b><br>
+											</td>
+					<td>									 	
+					 	<!-- generic button 
+<a href="http://66.38.153.26/BargainAlerts.asp"><img src="http://www.winnipegsun.com/Images/button_breakingbargains.gif" width="120" height="60" border="0"></a><br> --->
+
+<a href="http://www.winnipegsun.com/E-edition/login.php"><img src="http://www.winnipegsun.com/Images/button_eedition.gif" width="120" height="60" border="0"></a><br>
+
+							 	
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td width="1" bgcolor="970412"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="69" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="3" bgcolor="970412"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+	</tr>
+</table>
+
+								</td>
+								<td>&nbsp;&nbsp;</td>
+							</tr>						
+						</table>
+					</td>
+				</tr>				
+				<tr><td colspan="5" bgcolor="6A6D70"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+				<tr><td colspan="5" bgcolor="C4C4C4"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="19" border="0"></td></tr>
+			</table>
+		</td>
+	</tr>
+</table>		
+				<!-- END OF masthead-->
+			</td>
+		</tr>
+	</table>
+	<table width="750" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+		<tr valign="top">
+			<!-- left nav -->
+			<td bgcolor="E9E9E9" width="125">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>						
+		<td bgcolor="ffffff">			
+			<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" border=0><br>
+			<div class="Weather" align="center">Current Conditions</div>
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" border=0><br>
+			<TABLE border=0 cellspacing=0 cellpadding=0 width=100%>
+  <TR>
+    <TD><a href="http://weather.canoe.ca/Weather/CityWinnipegMB.html" target="new"><img alt="" border=0 src="http://www.canoe.ca/NewWeather/ibn.gif" width="42"><img src="http://www.canoe.ca/NewHomeImages/invisible.gif" height=1 border=0 width=10></a></TD>
+    <TD valign=top><a href="http://weather.canoe.ca/Weather/CityWinnipegMB.html" Class="weatherlink" target="new">Partly cloudy<BR>-9<sup>o</sup>C</a></TD>
+  </TR></TABLE>
+
+
+<div class="Weather" align="center"><a href="http://weather.canoe.ca/Weather/CityWinnipegMB.html" class="Weather" target="newwindow">Full Forecast</a></div>
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" border="0"><br>
+</td>
+		<td bgcolor="cccccc"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+	</tr>
+</table>
+<!-- line divider -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="FFFFFF"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="929191"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+</table>
+
+<div align="center">
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="5"><br>
+</div>
+<!-- line divider -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="FFFFFF"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="929191"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="D4D3D3">
+	<tr>
+		<td>
+<!-- Menu Space -->
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" alt="" /><br>
+
+<!--nav-->
+<!--nav-->
+<div class="LeftNav"><a href="/home.html" class="LeftNav">Home</a></div>
+<div class="LeftNav"><a href="/News/home.html" class="LeftNav">News</a></div>
+<!-- <div class="LeftNav"><a href="/News/WebExtra/home.html" class="LeftNav">Web Extra</a></div> -->
+<div class="LeftNav"><a href="/Sports/home.html" class="LeftNav">Sports</a></div>
+<!-- SubNav --->
+<div class="SubNav" style="margin-left:10px;">
+<a href="/Sports/Amateur/home.html" class="SubNav">University-Amateur</a><br>
+<a href="/Sports/Baseball/home.html" class="SubNav">Baseball</a><br>
+<a href="/Sports/Columnists/home.html" class="SubNav">Columnists</a><br>
+<a href="/Sports/Curling/home.html" class="SubNav">Curling</a><br>
+<a href="/Sports/FanFare/home.html" class="SubNav">FanFare</a><br>
+<a href="/Sports/Football/home.html" class="SubNav">Football</a><br>
+<a href="/Sports/Golf/home.html" class="SubNav">Golf</a><br>
+<a href="/Sports/Hockey/home.html" class="SubNav">Hockey</a><br>
+<!-- <a href="http://winnipegsun.hockeydraft.ca/entry_submit.aspx" target="_newwindow" class="SubNav">Fantasy Hockey Pool</a><br> -->
+<!-- <a href="/Sports/HorseRacing/home.html" class="SubNav">Horse Racing</a><br> -->
+<!-- <a href="http://www.winnipegsunhometurf.com/" target="_newwindow" class="SubNav">Home Turf</a><br> -->
+<a href="/Sports/Motorsports/home.html" class="SubNav">Motorsports</a><br>
+<a href="/Sports/OtherSports/home.html" class="SubNav">Other Sports</a><br><br>
+
+<a href="/Sports/Top10/home.html" class="SubNav">Top 10</a><br>
+<a href="/Series/AthleteDebate/home.html" target="_blank" class="SubNav">Athlete Debate</a><br>
+<a href="/Series/ThisAndTat/home.html" target="_blank" class="SubNav">This And Tat</a><br>
+<a href="/Series/BeyondDreams/home.html" target="_blank" class="SubNav">Beyond Their Wildest Dreams</a><br>
+<a href="/Series/FantasyWorld/home.html" target="_blank" class="SubNav">Fantasy World</a><br>
+<a href="/Sports/Juiced/home.html" class="SubNav">Juiced</a><br>
+<a href="/Sports/StockingFund/home.html" class="SubNav">Empty Stocking Fund</a><br>
+
+
+<!--<a href="http://www.winnipegsun.com/BestOfTheBest/home.html" target="_blank">Best of the Best </a><br>-->
+<a href="http://66.38.153.26/boss.asp" target="_blank">You Be The Boss </a><br>
+</div> <br>
+
+<div class="LeftNav"><a href="/Entertainment/home.html" class="LeftNav">Entertainment</a></div>
+<div class="LeftNav"><a href="/Comment/home.html" class="LeftNav">Opinion/Comment</a></div>
+<div class="LeftNav"><a href="/Columnists/home.html" class="LeftNav">Columnists</a></div>
+<div class="LeftNav"><a href="/Lifestyle/home.html" class="LeftNav">Lifestyle</a></div>
+<div class="LeftNav"><a href="/Business/home.html" class="LeftNav">Business</a></div>
+<div class="LeftNav"><a href="/Series/home.html" class="LeftNav">Series</a></div>
+<div class="LeftNav"><a href="/Dating/home.html" class="LeftNav">Dating</a></div>
+<!-- <div class="LeftNav"><a href="/SundayFocus/home.html" class="LeftNav">Sunday Focus</a></div> -->
+<div class="LeftNav"><a href="/Photos/home.html" class="LeftNav">Photo Galleries</a></div>
+<div class="LeftNav"><a href="/AutoMarket/home.html" class="LeftNav">Autonet</a></div>
+<div class="LeftNav"><a href="http://www.canoe.ca/Canoe/Blogs/home.html" target="_blank" class="LeftNav">Blogs</a></div>
+<div class="LeftNav"><a href="http://www.winnipegsun.com/MyWinnipegSun/home.html" class="LeftNav">MyWinnipegSun</a></div>
+<div class="LeftNav"><a href="http://www.winnipegsun.com/News/SunSpeaks/home.html" class="LeftNav">Sun Speaks</a></div>
+<div class="LeftNav"><a href="http://www.winnipegsun.com/Video/home.html" class="LeftNav">Video</a></div>
+<div class="LeftNav"><a href="http://66.38.153.26/sunclub.asp" target="_newwindow"class="LeftNav">Breaking News Alerts Sign Up</a></div>
+<div class="LeftNav"><a href="/E-edition/login.php" class="LeftNav">E-Edition</a></div>
+
+
+                </td>
+	</tr>
+</table>
+
+<!-- line divider -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="FFFFFF"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="929191"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+</table>
+<!-- Menu Space -->
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" alt="" /><br>
+								
+				
+				<!--superpages-->
+<script type="text/javascript" src="http://static.canoe.ca/toile/js/canoe_411/canoe_411_winsun_en.js"></script>
+<!--
+<table width=123 cellpadding=0 cellspacing=0 border=0>
+ <tr><td><form action="http://www.canoe.com/cgi-bin/redirect/superpages_form_redirect_en.cgi" method="get" name="ypform" id="ypform">
+<input type="hidden" name="stype" value="si" />
+<input type="hidden" name="search" value="search" /></td></tr>
+ <tr>
+  <td><img src="http://www.canoe.ca/Canoe/SunMedia/Images/yp_top.gif" border="0" width=123></td>
+ </tr>
+ <tr>
+  <td  align=center class="superpages" background="http://www.canoe.ca/Canoe/SunMedia/Images/yp_middle_bg.gif">
+  Name <input name="what" class="form" style="margin:1px; font-size:11px;" tabindex="1" type="search" value="" size=11><br>	
+  City&nbsp;&nbsp;&nbsp;&nbsp;<input style="margin:2px; font-size:11px;" name="where" class="form"  tabindex="1" type="search" value="Winnipeg" size=11><br>
+  <input name="Find It"  type="image" src="http://www.canoe.ca/Canoe/SunMedia/Images/yp_findit.gif" value="Find It" width=55 height=17 vspace="2"><br>
+  </td>
+ </tr>
+ <tr>
+  <td><a HREF="http://www2.canoe.com/cgi-bin/redirect/superpages_lien_redirect_en.cgi" target="new" class="superpages"><img src="http://www.canoe.ca/Canoe/SunMedia/Images/yp_bottom.gif" border="0" width=123></a></td>
+ </tr>
+ <tr><td></form></td></tr>
+</table>-->
+<!--superpages ends-->
+
+
+<!-- Menu Space -->
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" alt="" /><br>
+<!-- line divider -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="FFFFFF"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="929191"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="D4D3D3">
+<tr><td>
+
+<!-- Menu Space -->
+<img src="http://www.canoe.ca/images/clear.gif" width="1" height="4" alt="" /><br>
+<center>
+<!-- AdSpace site=sun_media&VChannel=winnipegsun&SubChannel=specialsectionspromo&position=special_1&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=winnipegsun&SubChannel=specialsectionspromo&position=special_1&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+</center>
+
+<br>
+<div class="LeftNavMed">&nbsp;<img src="/Images/navtitle_specialsections.gif" alt="" width="99" height="17" vspace="4" border="0"><br></div>
+<div class="LeftNavMed"><a href="/Promos/home.html" class="LeftNavMed">Contests</a></div>
+<div class="LeftNavMed">
+<a href="http://www.winnipegsun.com/News/Page6/home.html" class="LeftNavMed">Page 6</a></div>
+<a href="http://www.winnipegsun.com/swimsuit2007/home.html" class="LeftNavMed">Summer Swimsuit Edition</a></div>
+<div class="LeftNavMed"> 
+<!-- <a href="http://www.winnipegsun.com/SpecialSections/LettersToSanta/home.html" target="_blank" class="LeftNavMed">Letters to Santa </a></div> --> 
+<div class="LeftNavMed"> 
+<a href="http://www.winnipegsun.com/SpecialSections/CrimeStoppers/home.html" target="_blank" class="LeftNavMed"> CrimeStoppers Wanted </a></div> 
+<div class="LeftNavMed"><a href="/SpecialSections/CaughtOnTape/home.html" class="LeftNavMed">Caught On Tape</a></div>
+<div class="LeftNavMed"> 
+<!--<a href="http://www.winnipegsun.com/Video/2007/11/19/4668476.html" target="_blank" class="LeftNavMed"> CrimeStoppers Video </a></div> --> 
+<div class="LeftNavMed"> 
+<div class="LeftNav"><a href="/LifesIssues/home.html" class="LeftNav">Life's Issues</a></div>
+<div class="LeftNav"><a href="http://www.winnipegsun.com/News/PSA/2007/05/02/4148224.html" class="LeftNav">PSAs</a></div>
+
+<!-- <div class="LeftNavMed">  <a href="http://66.38.153.26/SOngSheets.htm" target="_blank"> Christmas Song Sheets </a> </div> -->
+<div class="LeftNavMed"> <a href="http://66.38.153.107/Biz_Index.htm" target="_blank" class="LeftNavMed">Celebration of Business Excellence</a></div>
+<div class="LeftNavMed"> <a href="http://66.38.153.29/BusinessExcellence.htm" target="_blank" class="LeftNavMed">Manitoba Profiles in Business Excellence</a></div> 
+<div class="LeftNavMed"><a href="/Photos/CalendarSearch07/home.html" class="LeftNavMed">Calendar Search '07</a></div>
+<div class="LeftNavMed"> <a href="http://www.winnipegsunclassified.ca/winnipegsun/home.jsp?tab=Personals&QueryZip=no_orig015&cat=7&col=&nocat=015&link_to=B-3000"  class="LeftNavMed" target="_blank"> Obits </a> </div>
+<!-- <div class="LeftNavMed"><a href="http://canoe.ca/RewardYourselfSummer2006/" class="LeftNavMed">Reward Yourself</a></div> -->
+
+
+<div class="LeftNavMed"><a href="/SpecialSections/ChamberCommerce/home.html" class="LeftNavMed">MB Chambers of Commerce</a></div> 
+
+</td></tr>
+</table>
+
+<!-- line divider -->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="FFFFFF"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+<tr><td bgcolor="929191"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td></tr>
+</table>
+<br>
+
+<!-- SunShine Girl --->
+<!-- SunShine Girl --->
+<table width="110" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td colspan=3 bgcolor="BCBABB"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td bgcolor="BCBABB" width="1"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+		<td bgcolor="CECCCD" width="109"><div class="SunshineGirl"><a href="http://www.winnipegsun.com/SUNshineGirl/home.html" class="LeftNav">SUNshine Girl</a></div></td>
+		<td bgcolor="BCBABB" width="1"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td colspan=3 bgcolor="BCBABB"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+	</tr>
+			<tr>
+			<td colspan=3><a href="http://www.winnipegsun.com/SUNshineGirl/home.html"><img src="http://sunshinegirl.canoe.ca/Tuesday/2008/01/15/01s.jpg" width="110" alt="" border="0"/></a></td>
+		</tr>
+		
+</table>
+<!-- SunShine Girl --->
+<br>
+				
+				<!-- nav button 1 -->
+									<div align="center">
+<!-- AdSpace site=sun_media&VChannel=winnipegsun&SubChannel=sports&position=button_1&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=winnipegsun&SubChannel=sports&position=button_1&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+
+</div>
+								
+				<table width="110" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="d4d3d3">
+  <tr>
+    <td bgcolor="ffffff" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+  <tr>
+    <td bgcolor="ffffff" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+    <td width="108"><div class="LeftNavMed">&nbsp;<img src="/Images/navtitle_classifieds.jpg" alt="" width="84" height="15" vspace="4" border="0"><br>
+      </div>
+      <div class="LeftNavMed"><a href="http://www.autonet.ca/Home.cfm?Region=3" class="LeftNavMed">Autonet</a></div>
+      <div class="LeftNavMed"><a href="http://www.winnipegsunclassified.ca/" class="LeftNavMed">Classified Extra</a></div>
+      <div class="LeftNavMed"><a href="http://winnipegsun.jobboom.com" class="LeftNavMed">Jobboom</a></div>
+      <div class="LeftNavMed"><a href="http://ads5.canoe.ca/event.ng/Type=click&FlightID=41061&AdID=71577&TargetID=7563&Segments=2371,4176,4833,4952,4953,5075,6039,6683,7437,8508,8759,9315,9998,10482,10608,10911,11006,11078,11097,11134,11152,11209,11226,11263,11277,11289,11316,11476&Targets=439,6697,7267,7380,7413,7563&Values=25,31,43,51,60,72,84,91,100,110,150,152,213,224,264,332,334,347,379,380,396,490,493,1105,1282,1315,1444,1467,1542,1545,1549,1551,1567,1570,1620,1946,2293,2307,2326,2526,2553,2670,2686,2698,2700,2702,2703,2788,3070,3079,3121,3452,3562,3621,3719,3720,3733,3832,3993,4308,4345,4346,4347,4773,4801,4883,4931,4994,5242,5243,5263&RawValues=USERID%2C7f000001-28621-1166730224-2&Redirect=http://dating.canoe.ca" class="LeftNavMed" target=new>Dating</a></div></td>
+    <td bgcolor="929191" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+  <tr>
+    <td bgcolor="929191" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+</table>
+<br>
+<table width="110" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="d4d3d3">
+  <tr>
+    <td bgcolor="ffffff" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+  <tr>
+    <td bgcolor="ffffff" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+    <td width="108"><div class="LeftNavMed">&nbsp;<img src="/Images/navtitle_oncanoe.jpg" alt="On Canoe" width="67" height="14" vspace="4" border="0"><br>
+      </div>
+	  <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/Comics/" class="LeftNavMed">Comics</a></div>
+      <div class="LeftNavMed"><a href="http://cnews.canoe.ca/CNEWS/Lotteries/" class="LeftNavMed">Lotteries</a></div>
+      <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/Puzzles/" class="LeftNavMed">Crossword</a></div>
+      <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/Horoscopes/" class="LeftNavMed">Horoscopes</a></div>
+      <div class="LeftNavMed"><a href="http://tvlistings4.zap2it.com/partners/grid.asp?partner_id=097" class="LeftNavMed">TV Listings</a></div>
+      <div class="LeftNavMed"><a href="http://jam.canoe.ca/Movies/Listings/" class="LeftNavMed">Movie Listings</a></div>
+      <div class="LeftNavMed"><a href="http://chealth.canoe.ca/columnist.asp?show=detail&columnistid=11&relation_id=0" class="LeftNavMed">Health & Fitness</a></div>
+      <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/Style/Trends/home.html" class="LeftNavMed">Trends</a></div>
+      <div class="LeftNavMed"><a href="http://cnews.canoe.ca/CNEWS/Science/Discovery/home.html" class="LeftNavMed">Discovery</a></div>
+      <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/FoodDrink/Eat/" class="LeftNavMed">Eat</a></div>
+      <div class="LeftNavMed"><a href="http://lifewise.canoe.ca/SexRomance/SexFiles/" class="LeftNavMed">Sex Files</a></div>
+      <div class="LeftNavMed"><a href="http://cnews.canoe.ca/CNEWS/TechNews/Gadgets/" class="LeftNavMed">Gadgets</a></div>
+      <div class="LeftNavMed"><a href="http://homeandgarden.canoe.ca/Renovation/Ruffman/home.html" class="LeftNavMed">DIY</a></div></td>
+    <td bgcolor="929191" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+  <tr>
+    <td bgcolor="929191" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+  </tr>
+</table>
+<br>
+
+				
+				<!-- nav button 2 -->
+									<div align="center">
+<!-- AdSpace site=sun_media&VChannel=winnipegsun&SubChannel=sports&position=button_2&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=winnipegsun&SubChannel=sports&position=button_2&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+</div>
+								
+				<br>
+<table width="110" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="d4d3d3">
+	<tr>
+		<td bgcolor="ffffff" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+	</tr>
+	<tr>
+		<td bgcolor="ffffff" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>		
+		<td width="108">
+			<div class="LeftNavMed">&nbsp;<img src="/Images/navtitle_services.jpg" alt="" width="65" height="14" vspace="4" border="0"><br></div>
+			<div class="LeftNavMed"><a href="/subscribe.html" class="LeftNavMed">Subscriptions</a></div>
+			<!--<div class="LeftNavMed"><a href="/subscription.html" class="LeftNavMed">Subscriptions</a></div>--> 
+			<div class="LeftNavMed"><a href="http://www.winnipegsunclassified.ca/" class="LeftNavMed">Classifieds</a></div>
+			<div class="LeftNavMed"><a href="/advertising.html" class="LeftNavMed">Advertising</a></div>
+			<div class="LeftNavMed"><a href="/library.html" class="LeftNavMed">News Research</a></div>
+			<div class="LeftNavMed"><a href="/about.html" class="LeftNavMed">About Us</a></div>
+			<div class="LeftNavMed"><a href="/contact.html" class="LeftNavMed">Contact Us</a></div>
+		</td>
+		<td bgcolor="929191" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>		
+	</tr>
+	<tr>
+		<td bgcolor="929191" colspan="3"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+	</tr>
+</table>
+<br>
+				
+				<!-- nav button 3 -->
+									<div align="center">
+<!-- AdSpace site=sun_media&VChannel=winnipegsun&SubChannel=sports&position=button_3&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=winnipegsun&SubChannel=sports&position=button_3&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+</div>
+
+<!-- popup -->
+<!-- AdSpace site=sun_media&VChannel=winnipegsun&SubChannel=sports&position=popup&HChannel=news -->
+<SCRIPT language='JavaScript1.1'SRC="http://ads5.canoe.ca/js.ng/site=sun_media&VChannel=winnipegsun&SubChannel=sports&position=popup&HChannel=news">
+</SCRIPT>
+<!-- /AdSpace -->
+								
+				<!-- this is the bottom of the menu -->
+			</td>
+			<!-- gutter -->
+			<td><img src="http://www.canoe.ca/images/clear.gif" width="7" height="1" alt=""></td>
+			<td width="618">
+				<!-- content begin -->
+				<!-- Section Header -->
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>						
+							<td   valign="top">							
+																	
+									<img src="/Images/Headers/section_sports.gif" border="0"><br>
+															</td>
+						</tr>
+					</table>
+								<!-- Section Header -->
+				<!-- Sectional BreadCrumb --->
+								<!-- story -->
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr valign="top">
+						<td width="450">
+							<!-- story starts here -->
+																	<div align="right">
+										<b>Mon, January 14, 2008</b><br>
+									</div>
+									
+																	<h5>Podium for Canuck</h5>
+																			<h3>Bronze medal picks up slack left by injured Hudec</h3>
+																	
+									<br>
+																
+								
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td>
+																							<b>By CP</B><br><br>
+																					</td>
+																					<td align="right">
+												<table>
+													<tr>
+														<td width=48 valign=top><a href="javascript:void(open('http://www.facebook.com/sharer.php?op=add&u=http://www.winnipegsun.com/Sports/OtherSports/2008/01/14/4771511-sun.html&t=Podium for Canuck','ToolbarPopUp','scrollbars=yes,resizable=yes,width=800,height=600'));" title="Add to Facebook"><img src="http://torsun.canoe.ca/Images/button_facebook.gif" alt="Add to Facebook" border="0" class="addTo" style="padding-bottom:4px; border:0" name="button0" /></a></td>
+														<td width=48 valign=top><A href="javascript:sendit();" ><img src="/Images/button_email.gif" width=48 height=46 border=0 NAME="button1"></a></td>
+														<td width=43 valign=top><A href="pf-4771511.html"><img src="/Images/button_print.gif" width=43 height=46 border=0 NAME="button2"></a></td>
+														<td width=44 valign=top><A href="http://rapids.canoe.ca/cgi-bin/reg/NR-cust_service.pl?MODE=CUSTOMER_SERVICE&LOOK=WINSUN"><img src="/Images/button_write.gif" width=44 height=46 border=0 NAME="button3"></a></td>
+														<td width=44 valign=top><A href="mailto:letters@wpgsun.com"><img src="/Images/button_editor.gif" width=42 height=42 border=0 NAME="button4"></a></td>
+													</tr>
+												</table>
+											</td>										
+											
+									</tr>
+								</table>		
+								
+																																																
+																		
+																
+																	
+									
+																		
+									
+									
+																			<p>WENGEN, Switzerland -- Manuel Osborne-Paradis gave Canada's national men's ski team a much-needed lift yesterday.
+																			<p> The Vancouver skier earned a bronze medal in a World Cup downhill event on the Lauberhorn.
+																			<p> The result comes after the national ski team learned it would have to go the rest of the season without Calgary's Jan Hudec, who had a win and third-place finish on the World Cup circuit this year.
+																			<p> Hudec tore ligaments in his right knee and broke a thumb after crashing in a training run.
+																			<p> 'IT HAPPENS'
+																		
+									<br clear="right">
+									<br clear="right">
+									
+
+									
+																																					
+																					<br clear="right">
+											<table align="right" cellpadding="2" border=0 >
+												<tr>
+													<td>
+<script type="text/javascript">
+     fctAdTag("bigbox",MyGenericTagVar,1);
+</script>														</td>
+												</tr>
+											</table>										
+											
+																		
+									
+																			<p> "It happens in this sport especially in downhill ... it's too bad," Osborne-Paradis said. "I think the hardest part now with Jan is that we've got a nice group of four and five guys here that all get along and all have figured out how to ski around each other.
+																			<p> "And now you're missing one link to the chain."
+																			<p> Osborne-Paradis said registering the medal-winning performance was a huge relief for him.
+																			<p> "It's just been Jan who's been on the podium so far this year," he said. "It was good after his injury to be able to show that the team is still here, we're still skiing fast and that we can pull through with injuries like that and come through with medals."
+																			<p> Osborne-Paradis earned the bronze despite catching his buckle on a safety bag.
+																			<p> "I went in pretty straight and wanted to take that line and I was wondering if I would get away with it," he said. "Definitely, I was racing to win so I tried a line that I hadn't necessarily tried the whole week.
+																			<p> "I just wasn't able to get away with it but mentally it didn't screw me up or anything. It's a long race and you're always making mistakes on the way down so you just kind of go with the flow. When you're halfway through the race you still have to stay focused on what you have to do on the bottom half."
+																			<p> Osborne-Paradis finished 1.3 seconds behind winner Bode Miller of the United States.
+																			<p> Miller, who repeated as champion, finished in a time of two minutes 30.40 seconds.
+																			<p> With the win, Miller tied the Phil Mahre's American record of 27 World Cup victories.
+																			<p> "It was extremely fun," he said. "It didn't feel that good in terms of the quality of the skiing but I was very aggressive. I kept really pushing forward the whole time. There was no braking."
+																			<p> Didier Cuche of Switzerland was second, 0.65 seconds back.
+																																				
+															
+								
+																
+								
+								
+								
+								
+								
+								<!-- Next and Previous stories -->
+								<br clear="all">
+															
+
+																										
+									
+																					<b>Previous story:</b> <a href="/Sports/OtherSports/2008/01/14/4771510-sun.html" >Sports Sunflashes</a><BR>
+																															<b>Next story:</b> <a href="/Sports/OtherSports/2008/01/13/4770108-sun.html" >Canadian ball players in 'no-win situation'</a><BR>
+																		
+									
+																																	
+								
+																	<br><br>
+									<a href="http://www.winnipegsun.com/circulation.html">Click to subscribe</a>
+									<br><br>
+									<a href="http://66.38.153.26/sunclub.asp" target="_blank">Click here to sign up for breaking news alerts</a>
+								
+							<!-- story end here -->
+						</td>
+						<td width="3"><img src="http://www.canoe.ca/images/clear.gif" width="3" height="1" alt="" /></td>
+												<td width="160" align="center">
+														
+															<SCRIPT LANGUAGE="JavaScript" src="http://scripts.canoe.ca/sondage/js/sondage.js"></SCRIPT>
+<table width="134" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td colspan="3"><img src="/Images/boxtitle_sunpoll.gif" width="134" height="18" alt="" border="0" /></td>
+	</tr>
+	<tr valign="top">
+		<td bgcolor="000000"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+		<td width="132">
+			<div style="margin:1px;">
+				
+				<table width=129 cellpadding=0 cellspacing=0 border=0>
+					<tr><td>
+						<FORM method="post" name="questionWINSUN_Sports" action="javascript:participerSondage(document.questionWINSUN_Sports, 'page html')" onSubmit="return responseIsEmpty('questionWINSUN_Sports', questionWINSUN_Sports, 'E', '22888')">
+						<INPUT TYPE="hidden" NAME="id_question" VALUE="22888">
+						<INPUT TYPE="hidden" NAME="url_result" VALUE="http://www.winnipegsun.com/Sports/poll_results.html">
+						<INPUT TYPE="hidden" NAME="url_merci" VALUE="">
+						<TABLE cellpadding="2" cellspacing="2">
+							<TR><TD colspan="2"><b>Which NFL team had the most disappointing playoff?</b></TD><TR>
+                            <TR><TD valign="top" align="left" width="8"><INPUT type=radio name="reponse" value="1"></TD><TD width="121">Dallas<BR></TD></TR>
+<TR><TD valign="top" align="left" width="8"><INPUT type=radio name="reponse" value="2"></TD><TD width="121">Indianapolis<BR></TD></TR>
+<TR><TD valign="top" align="left" width="8"><INPUT type=radio name="reponse" value="3"></TD><TD width="121">Pittsburgh<BR></TD></TR>
+<TR><TD valign="top" align="left" width="8"><INPUT type=radio name="reponse" value="4"></TD><TD width="121">Seattle<BR></TD></TR>
+
+							<TR><TD colspan="2"><INPUT TYPE="SUBMIT" VALUE="SUBMIT"></TD></TR>
+						</FORM>
+						</TABLE>						
+					</td></tr>
+				</table>
+				<br>
+				
+				
+			</div>
+		</td>
+		<td bgcolor="000000"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /></td>
+	</tr>
+	<tr>
+		<td colspan="3" bgcolor="000000"><a href="javascript:afficheResultats('http://www.winnipegsun.com/Sports/poll_results.html', 'page html')" class="leftnav2"><img src="/Images/button_results.gif" width="134" height="29" alt="view results" border="0" /></a></td>
+	</tr>
+</table>
+<br>
+<script type="text/javascript">
+     fctAdTag("skyscraper",MyGenericTagVar,1);
+</script>	
+<br><br>
+<script type="text/javascript" src="http://www.canoeklix.com/ads/js/encode?src=winsun:sports&n=5&ie=detect&oe=detect&lg=en&bw=1&hl=1&wh=160"></script>
+<br><br>
+	<table width="160" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td colspan="3" bgcolor="000000"><img src="/Images/boxtitle_advertisers.gif" width="160" height="31" alt="" border="0"><br></td>
+		</tr>
+		<tr valign="top">
+			<td bgcolor="000000" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+			<td bgcolor="ffffff" align="center" width="158">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="E9E9E7">
+				<tr><td colspan="2"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="4"></td></tr>
+				<script>
+					function encodeMyHtml(encodedHtml) {
+					     encodedHtml = escape(encodedHtml);
+					     encodedHtml = encodedHtml.replace(/\//g,"%2F");
+					     encodedHtml = encodedHtml.replace(/\?/g,"%3F");
+					     encodedHtml = encodedHtml.replace(/=/g,"%3D");
+					     encodedHtml = encodedHtml.replace(/&/g,"%26");
+					     encodedHtml = encodedHtml.replace(/@/g,"%40");
+						 encodedHtml = encodedHtml.replace(/'/g,"%27");
+						 encodedHtml = encodedHtml.replace(/"/g,"%22");
+						 encodedHtml = encodedHtml.replace(/;/g,"%3B");
+						 encodedHtml = encodedHtml.replace(/!/g,"%21");
+					     return encodedHtml;
+					} 
+				</script>
+				
+				<script language="JavaScript">				
+					<!--	
+							
+							var numArr = new Array();
+							
+															numArr[0] =  encodeMyHtml("<a href='http://www.winnipegsun.com/printads/CanadInns/' target='_blank'>Click here for the hottest concerts and events!</a>");
+															numArr[1] =  encodeMyHtml("<a href='http://www.rivercitysports.com' target='_blank'>Check out Rivercitysports.com for Winnipeg's largest selection of licensed team merchandise</a>");
+															numArr[2] =  encodeMyHtml("<a href='http://www.herzing.edu/campus.php?id=22' target='_blank'>1.877.903.9670 - Start Your Career Today! Herzing.edu</a>");
+															numArr[3] =  encodeMyHtml("<a href='http://www.winnipegsun.com/printads/BirchwoodPontiac/' target='_blank'>Less Time...Less Hassle...ApproveMeFirst.com</a>");
+															numArr[4] =  encodeMyHtml("<a href='http://www.autogalleryofwinnipeg.com/' target='_blank'>Winnipeg's Best Vehicles</a>");
+															numArr[5] =  encodeMyHtml("<a href='https://myinstantapproval.com/vickarmitsubishi_app/' target='_blank'>If you need credit, you need Vickar! Call Now: 1-888-743-6129</a>");
+														
+							
+							
+							var pickArr = new Array(); // The array that will be formed
+							var count=0;
+							var iterations=0;
+							var doFlag=false;
+							
+							function pickNums(nums){	
+								
+								//get random number
+								var currNum = Math.round((numArr.length-1)*Math.random());
+								//alert(currNum);
+								
+								if(count!=0){
+									//check if element is already in pickArr array
+									for(var i=0; i<pickArr.length; i++){
+										if(numArr[currNum]==pickArr[i]){
+											doFlag=true;
+											break;
+										}
+									}
+								}
+								
+								if(!doFlag){
+									pickArr[count]=numArr[currNum];
+									document.write('<tr><td bgcolor=D4D2D3>&nbsp;</td><td bgcolor=D4D2D3>' + unescape(numArr[currNum]) + '</td></tr><tr><td colspan="2"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="4"></td></tr>');
+									count+=1;
+								}	
+							
+								if((count<nums)){
+									//reset do flag just incase the for loop found a duplicate
+									doFlag = false;
+									pickNums(nums);
+								}
+							
+							}
+							
+							pickNums(5);
+								
+					-->
+				</script>
+				</table>
+			</td>
+			<td bgcolor="000000" width="1"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+		</tr>
+		<tr>
+			<td colspan="3" bgcolor="000000"><img src="http://www.canoe.ca/images/clear.gif" alt="" width="1" height="1" border="0"></td>
+		</tr>
+	</table><br>
+	
+													</td>
+												<td width="2"><img src="http://www.canoe.ca/images/clear.gif" width="2" height="1" alt="" /></td>
+					</tr>
+				</table>
+				<!-- content end -->
+			</td>
+		</tr>
+		<tr>
+			<td background="/Images/bg_footerlogo.gif"><a href="http://www.winnipegsun.com"><img src="/Images/logo_sun-footer.gif" alt="" border="0"/></a></td>
+			<!-- gutter -->
+			<td><img src="http://www.canoe.ca/images/clear.gif" width="7" height="1" alt=""></td>
+			<td>
+				<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+			<table border="0" cellspacing="2" cellpadding="3" style="border: 0px solid #000000">
+				<tr>
+					<td><img src="http://www.canoe.ca/Canoe/SunMedia/logo_sunmedia.gif" alt="Sun Media Corporation" border="0" vspace="3" /></td>
+					<form name="newspapers">
+					<td>
+						<img src="http://www.canoe.ca/images/clear.gif" width="1" height="3" alt="" /><br />
+						<SELECT name="navigator" onChange="window.location=document.newspapers.navigator.options[document.newspapers.navigator.selectedIndex].value">
+<OPTION SELECTED value="javascript:void(0)">Newspapers 
+<option value="http://www.torontosun.com/">- Toronto Sun 
+<option value="http://www.calgarysun.com/">- Calgary Sun
+<option value="http://www.ottawasun.com">- Ottawa Sun
+<option value="http://www.edmontonsun.com">- Edmonton Sun
+<option value="http://www.winnipegsun.com">- Winnipeg Sun
+<option value="http://www.lfpress.com/">- London Free Press
+<option value="http://toronto.24hrs.ca">- 24 Hours Toronto
+<option value="http://vancouver.24hrs.ca">- 24 Hours Vancouver
+<option value="http://montreal.24heures.ca/">- 24 Heures Montreal
+<option value="http://www.recorder.ca">- Brockville Recorder & Times
+<option value="http://www.fortmcmurraytoday.com/">- Fort McMurray Today
+<option value="http://www.dailyheraldtribune.com/">- Grande Prairie Daily Herald-Trib.
+<option value="http://www.kenoradailyminerandnews.com/">- Kenora Daily Miner & News
+<option value="http://www.portagedailygraphic.com/">- Portage la Prairie Daily Graphic
+<option value="http://www.stthomastimesjournal.com/">- St. Thomas Times Journal
+<option value="http://www.simcoereformer.ca/">- Simcoe Reformer
+<option value="http://www.stratfordbeaconherald.com">- Stratford Beacon Herald
+<option value="http://www.woodstocksentinelreview.com/">- Woodstock Sentinel-Review
+<OPTION VALUE="http://jobboomcc.canoe.ca/">- Jobboom Career Connection
+<OPTION value="javascript:void(0)">------------
+<option value="http://www.bowesnet.com">BOWES PUBLISHERS
+<option value="http://www2.bowesnet.com/results.php?prov=AB&action=website">- Alberta
+<option value="http://www2.bowesnet.com/results.php?prov=SK&action=website">- Saskatchewan
+<option value="http://www2.bowesnet.com/results.php?prov=MB&action=website">- Manitoba
+<option value="http://www2.bowesnet.com/results.php?prov=ON&action=website">- Ontario
+<option value="http://www2.bowesnet.com/results.php?prov=QC&action=website">- Quebec  									</select>										
+					</td>				
+					</form>		
+				</tr>
+			</table>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td class="CaptionFont">
+			This site is updated by 6:00 a.m. EST each day and includes stories and columns from the day's print edition of the Sun. 
+		</td>
+	</tr>
+</table>
+
+			</td>
+		</tr>
+	</table>
+	<img src="http://www.canoe.ca/images/clear.gif" width="1" height="1" alt="" /><br>
+	<table width="750" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td bgcolor="#EF0E20" align="right">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><a href="/subscribe.html"><img src="/Images/navfooter_subscribe.gif" width="53" height="20" alt="" border="0" /></a></td>
+<td><a href="http://winnipegsun.jobboom.com/mod-bin/prod/jbr_rep_offre_employeur.pl?no_grp_client=G238824"><img src="/Images/navfooter_employment.gif" width="67" height="20" alt="" border="0" /></a></td>
+					<td><a href="/library.html"><img src="/Images/navfooter_newsresearch.gif" width="110" height="20" alt="" border="0" /></a></td>
+					<td><a href="http://www.winnipegsunclassified.ca/"><img src="/Images/navfooter_classifieds.gif" width="60" height="20" alt="" border="0" /></a></td>
+					<td><a href="/advertising.html"><img src="/Images/navfooter_advertising.gif" width="64" height="20" alt="" border="0" /></a></td>
+				</tr>
+			</table>
+		</td>			
+	</tr>
+	<tr>
+		<td bgcolor="#000000"><img src="http://www.canoe.ca/images/clear.gif" width="1" height="20" alt="" /></td>
+	</tr>
+</table>
+
+
+<table width="750" border="0" cellspacing="2" cellpadding="2" bgcolor="ffffff">
+	<tr>
+		<td align="center">
+<a href="mailto:letters@wpgsun.com">Send a Letter to the Editor</a><br>
+			<a href="http://www.canoe.ca">CANOE</a> home | We welcome your <a href="http://www.canoe.ca/cgi-bin/reg/NR-cust_service.pl?MODE=CUSTOMER_SERVICE&LOOK=WINSUN">feedback.</a><br>
+			<a href="http://www.canoe.ca/Canoe/copyright.html" target="_blank">Copyright</a> &#169; 2007, <a href="http://www.canoe.com">Canoe Inc.</a> All rights reserved.	
+<a href="javascript:sIFR.rollback();"><font color=ffffff>Test</font></a>
+		</td>
+	</tr>
+</table>
+
+
+<!-- CODE TO SWAP TEXT WITH FLASH EMBEDDED TEXT --->
+<script type="text/javascript">
+//<![CDATA[
+/* Replacement calls. Please see documentation for more information. */
+
+if(typeof sIFR == "function"){
+
+// This is the preferred "named argument" syntax
+	sIFR.replaceElement(named({sSelector:"h1", sFlashSrc:"/Fonts/WINSUN.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#FFFFFF", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	sIFR.replaceElement(named({sSelector:"h2", sFlashSrc:"/Fonts/WINSUN.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#FFFFFF", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	sIFR.replaceElement(named({sSelector:"h3", sFlashSrc:"/Fonts/WINSUN.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#FFFFFF", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	sIFR.replaceElement(named({sSelector:"h4", sFlashSrc:"/Fonts/WINSUN.swf", sColor:"#ffffff", sLinkColor:"#ffffff", sBgColor:"#000000", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	sIFR.replaceElement(named({sSelector:"h5", sFlashSrc:"/Fonts/WINSUN.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#ffffff", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	sIFR.replaceElement(named({sSelector:"h6", sFlashSrc:"/Fonts/WINSUN.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#FFFFFF", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetTop=0", sWmode:"opaque"}));
+	//sIFR.replaceElement(named({sSelector:".LeftNav", sFlashSrc:"Fonts/helvetica_neue.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#E9E9E9", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetLeft=0"}));	
+
+//sIFR.replaceElement(named({sSelector:".SunshineGirl", sFlashSrc:"/Fonts/helvetica_neue.swf", sColor:"#000000", sLinkColor:"#000000", sBgColor:"#CECCCD", sHoverColor:"#EF0E20", nPaddingTop:0, nPaddingBottom:0, sFlashVars:"textalign=left&offsetLeft=0"}));	
+
+};
+//]]>
+</script>
+<!-- END / CODE TO SWAP TEXT WITH FLASH EMBEDDED TEXT --->
+<script type="text/javascript" src="/generix/omniture/TagOmnitureEngine.js"></script>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-423171-19";
+urchinTracker();
+</script>
+	
+	
+</div>
+
+</body>
+</html>

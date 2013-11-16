@@ -1,0 +1,1830 @@
+
+<!-- Signin Vars: 
+SITEREG_Name: YourGuide
+
+-->
+		
+
+<html>
+<head>
+<title>
+Carle sparks A-League interest - National - Sport - Blacktown Sun
+</title>
+<!-- START AC Nielsen PDF Tracking -->
+<script type="text/javascript">
+<!--
+function _nnClick(_nnClickDest)
+{
+	_nnCD = _nnClickDest;
+	_nnECD = escape(_nnClickDest);
+	_nnDelay = 500; /* click delay */
+	var _nnRD=0;
+	if (parseInt(navigator.appVersion)>=4)
+	{
+	_nnRD=(new Date()).getTime();
+	}
+	var _nnCI="ruralpressltd";
+	var _nnCG="link-click";
+	var _nnCC="au";
+	var _nnLP=location.protocol.indexOf('https')>-1?'https:':'http:';
+	var _nnRP=escape(window.location);
+	var _nnND=_nnLP+'//secure-' + _nnCC + '.imrworldwide.com/';
+	var _nnParams = "rnd=" + _nnRD + "&ci=" + _nnCI + "&cg=" + _nnCG;
+	var _nnRef = "&rp=" + _nnRP;
+	var _nnSI = "&si=" + _nnCI + "-ctgw-" + _nnECD;
+	var _nnPixel = new Image(1,1);
+	_nnPixel.src = _nnND + "cgi-bin/m?rnd=" + _nnParams + _nnSI + _nnRef;
+	
+	
+	// Original version - opens PDF in the same window.
+	setTimeout("window.location = _nnCD", _nnDelay);
+
+	//Modified version - opens PDF in new window.
+	//setTimeout("window.open('" + _nnCD + "', 'newwindow')", _nnDelay);
+}
+//-->
+</script>
+<!-- END AC Nielsen PDF Tracking -->
+
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<meta name='keywords' content='News, Newspaper, Rural'>
+<meta name='description' content='Ruralpress Limited Newspapers'>
+<meta name='copyright' content='&copy; 2000 Rural Press Ltd.'>
+
+
+<link href="/_includes/css/print.css" rel="stylesheet" type="text/css" media="print">
+<link rel="stylesheet" type="text/css" href="/_includes/css/yourguide.css">
+<link rel="stylesheet" type="text/css" href="/_shared/locationpopup/css/locationpopup.css"> 
+
+<script src="/_includes/js/validation.js" language="JavaScript"></script>
+<script src="/_shared/js/error_check.js" language="JavaScript"></script>
+<script src="/_shared/js/common_functions.js" language="JavaScript"></script>
+<script src="/_shared/js/browser_check.js" language="JavaScript"></script>
+<script src="/_shared/js/ff_assignalliframes.js" language="javascript"></script>
+<script src="/_shared/ffxcam/adSwap.js" language="JavaScript"></script>
+<script src="/_shared/locationpopup/js/locationpopup.js" language="JavaScript"></script>
+
+<script src="/_shared/js/Calendar/popcalendar.js?1" language="JavaScript"></script>
+
+
+
+<script language="JavaScript">
+	function SubmitPoll(check_field)
+	{
+		fCheck = true
+		AtLeastOneSelected(document.poll_form, check_field, "checkbox","Readers Poll: Please select an option");
+
+		if (fCheck)
+		{
+			return true;
+		}
+		else {
+			return false;	
+		}
+	}
+
+	function AtLeastOneSelected(which_form, element_name, check_mode, alert_message){
+		if (fCheck) {
+			fCheck = false;
+			with (window.document) {
+				for ( i=0; i < which_form.elements.length; i++ ) {
+					current_name = which_form.elements[i].name
+					if (current_name.substring(0,element_name.length) == element_name) {
+						if ((check_mode == "checkbox" && which_form.elements[i].checked == true) || (check_mode == "text_field" && which_form.elements[i].value != "")) {
+							fCheck = true;
+							break;
+						}
+					}
+				}
+			}
+			if (fCheck == false){
+				alert(alert_message);
+			}
+		}
+	}
+
+	/****************************************************************
+	* validateimage												*
+	*														*
+	* This function is triggered by the 'onerror' property of the front cover image	*
+	* tag. When no cover image file is available, this function hides the image cell	*
+	* altogether.												*
+	*														*
+	* Missing cover images are handled in this way because they are located on	*
+	* a different site. i.e. the presence of a filename in the yourguide database	*
+	* is assumed to be no guarantee that the image file is actually available.	*
+	****************************************************************/
+	function validateimage(strPubID) {
+		var strMyFrontCoverCellID = 'cell_frontcover' + strPubID;
+		var strMyFrontCoverDividerCellID = 'cell_frontcover_divider' + strPubID;
+		var MyCellObject;
+		MyCellObject = document.getElementById(strMyFrontCoverCellID);
+
+		// Hide the Front cover cell entirely.
+		if (MyCellObject) {
+			MyCellObject.innerHTML = '';
+		}
+
+		// Also hide the spacer cell beneath the front cover cell.
+		MyCellObject = document.getElementById(strMyFrontCoverDividerCellID);
+		if (MyCellObject) {
+			MyCellObject.innerHTML = '';
+		}
+	}
+
+	function setFocusToContent()
+	{
+		//var theContent = document.getElementById("mainContentPrint");
+		assignAllIframes();
+	}
+
+	function openmediawindow(media) {
+		var LeftPos = (screen.width / 2) - 300;
+		var TopPos = (screen.height / 2) - 200;
+		var windowstring1;
+		windowstring1 = "void window.open('/playmedia.asp?media=" + media + "', 'mywindow', 'status=0, toolbar=0, resizable=0, width=610,height=460, scrollbars=1, left=" + LeftPos + ", top=" + TopPos + "');";
+		eval(windowstring1);
+	}
+
+	function openslideshow(media) {
+		var LeftPos = (screen.width / 2) - 370;
+		var TopPos = (screen.height / 2) - 310;
+		var windowstring2;
+		windowstring2 = "void window.open('/playslide.asp?media=" + media + "', 'myslideshow', 'status=0, toolbar=0, resizable=0, width=850,height=610, scrollbars=1, left=" + LeftPos + ", top=" + TopPos + "');";
+		eval(windowstring2);
+	}
+</script>
+
+<script language="JavaScript1.2" type="text/javascript"> 
+	function CreateBookmarkLink() 
+	{ 
+		title = "Blacktown.yourguide"; 
+		url = "http://blacktown.yourguide.com.au/detail.asp?class=national&subclass=sport&story_id=1153868&category=sport&rewrite=1"; 
+
+		if (window.sidebar) { 
+			// Mozilla / Firefox/Netscape Bookmark 
+			window.sidebar.addPanel(title, url,""); 
+
+		} else if( window.external ) { 
+			// IE Favorite 
+			window.external.AddFavorite( url, title); 
+		} 
+
+		else if(window.opera && window.print) { 
+			// Opera Hotlist 
+			return true;
+		} 
+	}
+</script>
+</head>
+
+<body bgcolor="white" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" vlink="#666699" onload="javascript:setFocusToContent();" onclick="HideAllLocationLayers('state','','TopBannerAd', 'visible');">
+
+<table border="0" cellpadding="0" cellspacing="0" width="728px" align="center">
+<tr>
+	<td align="center">
+	</td>
+</tr>
+</table><img src="/images/general/space.gif" width="1px" height="5px" border="0"><BR>
+
+<!-- OVERALL TABLE -->
+<table id="mainTablePrint" border="0" cellpadding="0" cellspacing="0" width="938px" align="center">
+<tr>
+	<td colspan="3">
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" height="100%">
+		<tr>
+			<td></td>
+			<td>
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" height="89px" >
+				<tr>
+					<td colspan="2"><div id="MyRelativeDiv2" style="position:relative; left:0px; top:20px; height:0px; z-index:9999;" ><script language='JavaScript'>
+function closepopup(PopupName, AdName) {
+	var i;
+	var MyHideSelect;
+	MyPopup = document.getElementById(PopupName); 
+	if (MyPopup) {
+		MyPopup.style.visibility = 'hidden'; 
+	}
+
+	//Find and display ad that was hidden when popup was opened, if necessary.
+	if (AdName != '') {
+		MyAd = document.getElementById(AdName);
+		if (MyAd) {
+			MyAd.style.visibility = 'visible';
+		}
+	}
+
+	if (document.all)
+	{
+		// IE browsers.
+		var aDivCollection = document.all.tags("div");
+		var aSelectCollection = document.all.tags("select");
+	}
+	else
+	{
+		//Mozilla browsers.
+		var aDivCollection = document.getElementsByTagName("div"); 
+		var aSelectCollection = document.getElementsByTagName("select"); 
+	}
+
+	//Find and display all select tags on the page.
+	if (aSelectCollection!=null) {
+		for (i=0; i<aSelectCollection.length; i++) 
+		{
+			if (aSelectCollection[i].id) {
+				if (document.getElementById(aSelectCollection[i].id)) {
+					MyHideSelect = document.getElementById(aSelectCollection[i].id);
+					MyHideSelect.style.visibility = 'visible';
+				}
+			}
+		}
+	}
+	return false;
+}
+</script>
+
+
+
+<div id='state_ACT' style='position:absolute; left:0px; top:0px; height:0px; visibility:hidden; z-index: 0;' onmouseover='bOverMenu = true;' onmouseout='bOverMenu = false;'>
+<div  style="position:absolute; right:5px; top:8px; height:0px; "><a href="javascript: void closepopup('state_ACT','TopBannerAd');"><img src='/_shared/locationpopup/images/btn_close.gif' border='0' alt="Close this menu" title="Close this menu"></a></div><!--MENU START--><table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff'  style='border-right:1px #B9DCF0 solid; border-bottom:1px #B9DCF0 solid; border-top:1px #B9DCF0 solid; border-left:1px #B9DCF0 solid; background-color: #E8EFF4;'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff' width='100%' style='border-right:1px #DBDBDB solid; border-bottom:1px #DBDBDB solid;  border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid;' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='3' bgcolor='#ffffff' width='100%' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='1' cellpadding='0' width='100%' class='txt_RegionDetails'>
+<tr>
+<td><span class='txt_RegionHeader'>ACT</span></td>
+<td align='right'><!--was here--></td>
+</tr>
+<tr>
+<td height='7px'></td>
+</tr>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' class='txt_RegionDetails'>
+<tr>
+<td valign='top'>
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Canberra Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://canberra.yourguide.com.au/setup.asp?mast_id=133&src=' alt='' title=''>Canberra</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id='state_NSW' style='position:absolute; left:0px; top:0px; height:0px; visibility:hidden; z-index: 0;' onmouseover='bOverMenu = true;' onmouseout='bOverMenu = false;'>
+<div  style="position:absolute; right:5px; top:8px; height:0px; "><a href="javascript: void closepopup('state_NSW','TopBannerAd');"><img src='/_shared/locationpopup/images/btn_close.gif' border='0' alt="Close this menu" title="Close this menu"></a></div><!--MENU START--><table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff'  style='border-right:1px #B9DCF0 solid; border-bottom:1px #B9DCF0 solid; border-top:1px #B9DCF0 solid; border-left:1px #B9DCF0 solid; background-color: #E8EFF4;'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff' width='100%' style='border-right:1px #DBDBDB solid; border-bottom:1px #DBDBDB solid;  border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid;' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='3' bgcolor='#ffffff' width='100%' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='1' cellpadding='0' width='100%' class='txt_RegionDetails'>
+<tr>
+<td><span class='txt_RegionHeader'>NSW - Community</span></td>
+<td align='right'><!--was here--></td>
+</tr>
+<tr>
+<td height='7px'></td>
+</tr>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' class='txt_RegionDetails'>
+<tr>
+<td valign='top'>
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Blacktown Sun'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://blacktown.yourguide.com.au/setup.asp?mast_id=177&src=' alt='' title=''>Blacktown</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','South West Rural Advertiser'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bringelly.yourguide.com.au/setup.asp?mast_id=187&src=' alt='' title=''>Bringelly</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Camden Advertiser'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://Camden.yourguide.com.au/setup.asp?mast_id=178&src=' alt='' title=''>Camden</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Campbelltown - Macarthur Advertiser'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://campbelltown.yourguide.com.au/setup.asp?mast_id=179&src=' alt='' title=''>Campbelltown</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Hills News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://castlehill.yourguide.com.au/setup.asp?mast_id=182&src=' alt='' title=''>Castle Hill</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Fairfield Champion'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://fairfield.yourguide.com.au/setup.asp?mast_id=180&src=' alt='' title=''>Fairfield</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Hawkesbury Independent'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://hawkesburyindependent.yourguide.com.au/setup.asp?mast_id=181&src=' alt='' title=''>Hawkesbury</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Liverpool Champion'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://liverpool.yourguide.com.au/setup.asp?mast_id=183&src=' alt='' title=''>Liverpool</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Parramatta Sun'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://parramatta.yourguide.com.au/setup.asp?mast_id=185&src=' alt='' title=''>Parramatta</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Penrith Star'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://penrith.yourguide.com.au/setup.asp?mast_id=186&src=' alt='' title=''>Penrith</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Northern News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://rousehill.yourguide.com.au/setup.asp?mast_id=184&src=' alt='' title=''>Rouse Hill</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','St George & Sutherland Shire Leader'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://stgeorge.yourguide.com.au/setup.asp?mast_id=190&src=' alt='' title=''>St George</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','St Marys Star'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://stmarys.yourguide.com.au/setup.asp?mast_id=188&src=' alt='' title=''>St Marys</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','St George & Sutherland Shire Leader'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://sutherland.yourguide.com.au/setup.asp?mast_id=190&src=' alt='' title=''>Sutherland</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Wollondilly Advertiser'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://wollondilly.yourguide.com.au/setup.asp?mast_id=189&src=' alt='' title=''>Wollondilly</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><table border='0' cellspacing='0' cellpadding='3' bgcolor='#ffffff' width='100%' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='1' cellpadding='0' width='100%' class='txt_RegionDetails'>
+<tr>
+<td><span class='txt_RegionHeader'>NSW - Regional</span></td>
+<td align='right'><!--was here--></td>
+</tr>
+<tr>
+<td height='7px'></td>
+</tr>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' class='txt_RegionDetails'>
+<tr>
+<td valign='top'>
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Border Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bordermail.yourguide.com.au/setup.asp?mast_id=219&src=' alt='' title=''>Albury-Wodonga</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Armidale Express'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://armidale.yourguide.com.au/setup.asp?mast_id=31&src=' alt='' title=''>Armidale</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Gloucester Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://barringtontops.yourguide.com.au/setup.asp?mast_id=129&src=' alt='' title=''>Barrington Tops</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Bay Post/Moruya Examiner'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://batemansbay.yourguide.com.au/setup.asp?mast_id=86&src=' alt='' title=''>Batemans Bay</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Western Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bathurst.yourguide.com.au/setup.asp?mast_id=63&src=' alt='' title=''>Bathurst</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Bega District News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bega.yourguide.com.au/setup.asp?mast_id=88&src=' alt='' title=''>Bega</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Bellingen Courier Sun'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bellingen.yourguide.com.au/setup.asp?mast_id=161&src=' alt='' title=''>Bellingen</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Blayney Chronicle'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://blayney.yourguide.com.au/setup.asp?mast_id=76&src=' alt='' title=''>Blayney</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Blue Mountains Gazette'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bluemountains.yourguide.com.au/setup.asp?mast_id=53&src=' alt='' title=''>Blue Mountains</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Bombala Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bombala.yourguide.com.au/setup.asp?mast_id=91&src=' alt='' title=''>Bombala</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Boorowa News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://boorowa.yourguide.com.au/setup.asp?mast_id=66&src=' alt='' title=''>Boorowa</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Southern Highland News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bowral.yourguide.com.au/setup.asp?mast_id=81&src=' alt='' title=''>Bowral</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Braidwood Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://braidwood.yourguide.com.au/setup.asp?mast_id=139&src=' alt='' title=''>Braidwood</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Canowindra News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://canowindra.yourguide.com.au/setup.asp?mast_id=138&src=' alt='' title=''>Canowindra</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Advertiser'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://cessnock.yourguide.com.au/setup.asp?mast_id=49&src=' alt='' title=''>Cessnock</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Cobar Age'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://cobar.yourguide.com.au/setup.asp?mast_id=60&src=' alt='' title=''>Cobar</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Coffs Coast Independent'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://coffsharbour.yourguide.com.au/setup.asp?mast_id=170&src=' alt='' title=''>Coffs Harbour</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Observer'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://colypoint.yourguide.com.au/setup.asp?mast_id=224&src=' alt='' title=''>Coly Point</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Cooma Monaro Express'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://cooma.yourguide.com.au/setup.asp?mast_id=92&src=' alt='' title=''>Cooma</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Cootamundra Herald'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://cootamundra.yourguide.com.au/setup.asp?mast_id=65&src=' alt='' title=''>Cootamundra</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Cowra Guardian'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://cowra.yourguide.com.au/setup.asp?mast_id=70&src=' alt='' title=''>Cowra</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Crookwell Gazette'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://crookwell.yourguide.com.au/setup.asp?mast_id=79&src=' alt='' title=''>Crookwell</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Daily Liberal'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://dubbo.yourguide.com.au/setup.asp?mast_id=120&src=' alt='' title=''>Dubbo</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Gloucester Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://dungog.yourguide.com.au/setup.asp?mast_id=129&src=' alt='' title=''>Dungog</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Magnet'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://eden.yourguide.com.au/setup.asp?mast_id=89&src=' alt='' title=''>Eden</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Forbes Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://forbes.yourguide.com.au/setup.asp?mast_id=74&src=' alt='' title=''>Forbes</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Great Lakes Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://forster.yourguide.com.au/setup.asp?mast_id=45&src=' alt='' title=''>Forster</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Glen Innes Examiner'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://Gleninnes.yourguide.com.au/setup.asp?mast_id=37&src=' alt='' title=''>Glen Innes</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Gloucester Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://gloucester.yourguide.com.au/setup.asp?mast_id=129&src=' alt='' title=''>Gloucester</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Sun Weekly'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://gosford.yourguide.com.au/setup.asp?mast_id=226&src=' alt='' title=''>Gosford</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Goulburn Post'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://goulburn.yourguide.com.au/setup.asp?mast_id=77&src=' alt='' title=''>Goulburn</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Grenfell Record'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://grenfell.yourguide.com.au/setup.asp?mast_id=72&src=' alt='' title=''>Grenfell</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Area News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://griffith.yourguide.com.au/setup.asp?mast_id=225&src=' alt='' title=''>Griffith</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Guyra Argus'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://guyra.yourguide.com.au/setup.asp?mast_id=34&src=' alt='' title=''>Guyra</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Harden-Murrumburrah Express'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://harden.yourguide.com.au/setup.asp?mast_id=68&src=' alt='' title=''>Harden</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Hawkesbury Gazette'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://hawkesbury.yourguide.com.au/setup.asp?mast_id=54&src=' alt='' title=''>Hawkesbury</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Eastern Riverina Chronicle'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://holbrook.yourguide.com.au/setup.asp?mast_id=67&src=' alt='' title=''>Holbrook</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Illawarra Mercury'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://illawarra.yourguide.com.au/setup.asp?mast_id=191&src=' alt='' title=''>Illawarra</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Inverell Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://inverell.yourguide.com.au/setup.asp?mast_id=36&src=' alt='' title=''>Inverell</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Summit Sun'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://jindabyne.yourguide.com.au/setup.asp?mast_id=93&src=' alt='' title=''>Jindabyne</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Southern Cross'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://junee.yourguide.com.au/setup.asp?mast_id=223&src=' alt='' title=''>Junee</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Macleay Argus'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://Kempsey.yourguide.com.au/setup.asp?mast_id=40&src=' alt='' title=''>Kempsey</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Illawarra Mercury'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://illawarra.yourguide.com.au/setup.asp?mast_id=191&src=' alt='' title=''>Kiama</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Camden Haven Courier'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://laurieton.yourguide.com.au/setup.asp?mast_id=136&src=' alt='' title=''>Laurieton</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Irrigator'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://leeton.yourguide.com.au/setup.asp?mast_id=173&src=' alt='' title=''>Leeton</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Ridge News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://lightningridge.yourguide.com.au/setup.asp?mast_id=61&src=' alt='' title=''>Lightning Ridge</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Lithgow Mercury'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://lithgow.yourguide.com.au/setup.asp?mast_id=75&src=' alt='' title=''>Lithgow</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Maitland Mercury'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://maitland.yourguide.com.au/setup.asp?mast_id=48&src=' alt='' title=''>Maitland</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Merimbula News Weekly'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://merimbula.yourguide.com.au/setup.asp?mast_id=90&src=' alt='' title=''>Merimbula</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Milton Ulladulla Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://milton.yourguide.com.au/setup.asp?mast_id=84&src=' alt='' title=''>Milton</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Southern Highland News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://mittagong.yourguide.com.au/setup.asp?mast_id=81&src=' alt='' title=''>Mittagong</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Milton Ulladulla Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://mollymook.yourguide.com.au/setup.asp?mast_id=84&src=' alt='' title=''>Mollymook</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Moree Champion'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://moree.yourguide.com.au/setup.asp?mast_id=140&src=' alt='' title=''>Moree</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Lakes Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://morisset.yourguide.com.au/setup.asp?mast_id=228&src=' alt='' title=''>Morisset</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Bay Post/Moruya Examiner'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://moruya.yourguide.com.au/setup.asp?mast_id=86&src=' alt='' title=''>Moruya</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Mudgee Guardian'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://mudgee.yourguide.com.au/setup.asp?mast_id=62&src=' alt='' title=''>Mudgee</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Muswellbrook Chronicle'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://muswellbrook.yourguide.com.au/setup.asp?mast_id=51&src=' alt='' title=''>Muswellbrook</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Myall Coast'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://myallcoast.yourguide.com.au/setup.asp?mast_id=163&src=' alt='' title=''>Myall Coast</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Nambucca Guardian News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://nambucca.yourguide.com.au/setup.asp?mast_id=39&src=' alt='' title=''>Nambucca Heads</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Narooma News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://narooma.yourguide.com.au/setup.asp?mast_id=87&src=' alt='' title=''>Narooma</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Narromine News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://narromine.yourguide.com.au/setup.asp?mast_id=56&src=' alt='' title=''>Narromine</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: document.getElementById('state_Newcastle').style.visibility='visible';" onmouseout="javascript: document.getElementById('state_Newcastle').style.visibility='hidden';"><p class='MenuItem' alt='' title=''><a href='#' alt='' title=''>Newcastle</a></p>
+</td><th valign='top' ><div style='position:relative;'><div style='width:5px; height:14px; position:absolute; left:-10px;  background:transparent; border: 0px; margin:0px; padding: 0px; z-index:99999;'"><img src='/_shared/locationpopup/images/arrow_blue.gif' border='0' width='5px' height='14px' onmouseover="javascript: document.getElementById('state_Newcastle').style.visibility='visible';" onmouseout="javascript: document.getElementById('state_Newcastle').style.visibility='hidden';" /></div><div id='state_Newcastle' style='width:140px; position:absolute; left:-4px; margin:0px;  border: 1px solid #91BFD8; padding: 0px; overflow:hidden; visibility:hidden; z-index:999999;' class='txt_RegionDetails' onmouseover="javascript: document.getElementById('state_Newcastle').style.visibility='visible';" onmouseout="javascript: document.getElementById('state_Newcastle').style.visibility='hidden';" ><div class='PublicationMenuItemHeader'>Publications</div><p class='PublicationMenuItem' alt='' title=''><a href='http://newcastle.yourguide.com.au/setup.asp?mast_id=47&src=' alt='' title=''>Newcastle Star</a></p><p class='PublicationMenuItem' alt='' title=''><a href='http://theherald.yourguide.com.au/setup.asp?mast_id=192&src=' alt='' title=''>The Herald</a></p></div></div></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','South Coast Register'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://nowra.yourguide.com.au/setup.asp?mast_id=83&src=' alt='' title=''>Nowra</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Nyngan Observer'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://nyngan.yourguide.com.au/setup.asp?mast_id=58&src=' alt='' title=''>Nyngan</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Oberon Review'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://Oberon.yourguide.com.au/setup.asp?mast_id=169&src=' alt='' title=''>Oberon</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Central Western Daily'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://orange.yourguide.com.au/setup.asp?mast_id=64&src=' alt='' title=''>Orange</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Parkes Champion Post'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://parkes.yourguide.com.au/setup.asp?mast_id=73&src=' alt='' title=''>Parkes</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Port Macquarie News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://portmacquarie.yourguide.com.au/setup.asp?mast_id=41&src=' alt='' title=''>Port Macquarie</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Port Stephens Examiner'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://portstephens.yourguide.com.au/setup.asp?mast_id=227&src=' alt='' title=''>Port Stephens</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Queanbeyan Age'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://queanbeyan.yourguide.com.au/setup.asp?mast_id=30&src=' alt='' title=''>Queanbeyan</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Rural'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://therural.yourguide.com.au/setup.asp?mast_id=220&src=' alt='' title=''>Riverina</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Scone Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://scone.yourguide.com.au/setup.asp?mast_id=52&src=' alt='' title=''>Scone</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Illawarra Mercury'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://illawarra.yourguide.com.au/setup.asp?mast_id=191&src=' alt='' title=''>Shellharbour</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Singleton Argus'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://singleton.yourguide.com.au/setup.asp?mast_id=50&src=' alt='' title=''>Singleton</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Southern Highland News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://southernhighlands.yourguide.com.au/setup.asp?mast_id=81&src=' alt='' title=''>Southern Highlands</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Milton Ulladulla Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://sussexinlet.yourguide.com.au/setup.asp?mast_id=84&src=' alt='' title=''>Sussex Inlet</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Northern Daily Leader'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://tamworth.yourguide.com.au/setup.asp?mast_id=21&src=' alt='' title=''>Tamworth</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Manning River Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://taree.yourguide.com.au/setup.asp?mast_id=44&src=' alt='' title=''>Taree</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Tenterfield Star'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://tenterfield.yourguide.com.au/setup.asp?mast_id=35&src=' alt='' title=''>Tenterfield</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Milton Ulladulla Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://ulladulla.yourguide.com.au/setup.asp?mast_id=84&src=' alt='' title=''>Ulladulla</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: document.getElementById('state_Wagga Wagga').style.visibility='visible';" onmouseout="javascript: document.getElementById('state_Wagga Wagga').style.visibility='hidden';"><p class='MenuItem' alt='' title=''><a href='#' alt='' title=''>Wagga Wagga</a></p>
+</td><th valign='top' ><div style='position:relative;'><div style='width:5px; height:14px; position:absolute; left:-10px;  background:transparent; border: 0px; margin:0px; padding: 0px; z-index:99999;'"><img src='/_shared/locationpopup/images/arrow_blue.gif' border='0' width='5px' height='14px' onmouseover="javascript: document.getElementById('state_Wagga Wagga').style.visibility='visible';" onmouseout="javascript: document.getElementById('state_Wagga Wagga').style.visibility='hidden';" /></div><div id='state_Wagga Wagga' style='width:140px; position:absolute; left:-4px; margin:0px;  border: 1px solid #91BFD8; padding: 0px; overflow:hidden; visibility:hidden; z-index:999999;' class='txt_RegionDetails' onmouseover="javascript: document.getElementById('state_Wagga Wagga').style.visibility='visible';" onmouseout="javascript: document.getElementById('state_Wagga Wagga').style.visibility='hidden';" ><div class='PublicationMenuItemHeader'>Publications</div><p class='PublicationMenuItem' alt='' title=''><a href='http://WaggaWagga.yourguide.com.au/setup.asp?mast_id=166&src=' alt='' title=''>Southern Weekly</a></p><p class='PublicationMenuItem' alt='' title=''><a href='http://dailyadvertiser.yourguide.com.au/setup.asp?mast_id=176&src=' alt='' title=''>The Daily Advertiser</a></p><p class='PublicationMenuItem' alt='' title=''><a href='http://riverina.yourguide.com.au/setup.asp?mast_id=222&src=' alt='' title=''>The Riverina Leader</a></p></div></div></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Walcha News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://walcha.yourguide.com.au/setup.asp?mast_id=32&src=' alt='' title=''>Walcha</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Warren Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://warren.yourguide.com.au/setup.asp?mast_id=57&src=' alt='' title=''>Warren</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Wauchope Gazette'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://wauchope.yourguide.com.au/setup.asp?mast_id=43&src=' alt='' title=''>Wauchope</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Wellington Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://wellington.yourguide.com.au/setup.asp?mast_id=55&src=' alt='' title=''>Wellington</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Wingham Chronicle'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://wingham.yourguide.com.au/setup.asp?mast_id=46&src=' alt='' title=''>Wingham</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Illawarra Mercury'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://illawarra.yourguide.com.au/setup.asp?mast_id=191&src=' alt='' title=''>Wollongong</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Yass Tribune'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://Yass.yourguide.com.au/setup.asp?mast_id=78&src=' alt='' title=''>Yass</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Young Witness'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://young.yourguide.com.au/setup.asp?mast_id=71&src=' alt='' title=''>Young</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id='state_NT' style='position:absolute; left:0px; top:0px; height:0px; visibility:hidden; z-index: 0;' onmouseover='bOverMenu = true;' onmouseout='bOverMenu = false;'>
+<div  style="position:absolute; right:5px; top:8px; height:0px; "><a href="javascript: void closepopup('state_NT','TopBannerAd');"><img src='/_shared/locationpopup/images/btn_close.gif' border='0' alt="Close this menu" title="Close this menu"></a></div><!--MENU START--><table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff'  style='border-right:1px #B9DCF0 solid; border-bottom:1px #B9DCF0 solid; border-top:1px #B9DCF0 solid; border-left:1px #B9DCF0 solid; background-color: #E8EFF4;'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff' width='100%' style='border-right:1px #DBDBDB solid; border-bottom:1px #DBDBDB solid;  border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid;' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='3' bgcolor='#ffffff' width='100%' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='1' cellpadding='0' width='100%' class='txt_RegionDetails'>
+<tr>
+<td><span class='txt_RegionHeader'>NT</span></td>
+<td align='right'><!--was here--></td>
+</tr>
+<tr>
+<td height='7px'></td>
+</tr>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' class='txt_RegionDetails'>
+<tr>
+<td valign='top'>
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Tennant & District Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://tennantcreek.yourguide.com.au/setup.asp?mast_id=175&src=' alt='' title=''>Tennant Creek</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id='state_QLD' style='position:absolute; left:0px; top:0px; height:0px; visibility:hidden; z-index: 0;' onmouseover='bOverMenu = true;' onmouseout='bOverMenu = false;'>
+<div  style="position:absolute; right:5px; top:8px; height:0px; "><a href="javascript: void closepopup('state_QLD','TopBannerAd');"><img src='/_shared/locationpopup/images/btn_close.gif' border='0' alt="Close this menu" title="Close this menu"></a></div><!--MENU START--><table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff'  style='border-right:1px #B9DCF0 solid; border-bottom:1px #B9DCF0 solid; border-top:1px #B9DCF0 solid; border-left:1px #B9DCF0 solid; background-color: #E8EFF4;'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff' width='100%' style='border-right:1px #DBDBDB solid; border-bottom:1px #DBDBDB solid;  border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid;' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='3' bgcolor='#ffffff' width='100%' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='1' cellpadding='0' width='100%' class='txt_RegionDetails'>
+<tr>
+<td><span class='txt_RegionHeader'>QLD</span></td>
+<td align='right'><!--was here--></td>
+</tr>
+<tr>
+<td height='7px'></td>
+</tr>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' class='txt_RegionDetails'>
+<tr>
+<td valign='top'>
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Goondiwindi Argus'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://goondiwindi.yourguide.com.au/setup.asp?mast_id=158&src=' alt='' title=''>Goondiwindi</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','North West Star'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://mountisa.yourguide.com.au/setup.asp?mast_id=168&src=' alt='' title=''>Mount Isa</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Bayside Bulletin / The Redland Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://redland.yourguide.com.au/setup.asp?mast_id=20&src=' alt='' title=''>Redland</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id='state_SA' style='position:absolute; left:0px; top:0px; height:0px; visibility:hidden; z-index: 0;' onmouseover='bOverMenu = true;' onmouseout='bOverMenu = false;'>
+<div  style="position:absolute; right:5px; top:8px; height:0px; "><a href="javascript: void closepopup('state_SA','TopBannerAd');"><img src='/_shared/locationpopup/images/btn_close.gif' border='0' alt="Close this menu" title="Close this menu"></a></div><!--MENU START--><table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff'  style='border-right:1px #B9DCF0 solid; border-bottom:1px #B9DCF0 solid; border-top:1px #B9DCF0 solid; border-left:1px #B9DCF0 solid; background-color: #E8EFF4;'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff' width='100%' style='border-right:1px #DBDBDB solid; border-bottom:1px #DBDBDB solid;  border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid;' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='3' bgcolor='#ffffff' width='100%' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='1' cellpadding='0' width='100%' class='txt_RegionDetails'>
+<tr>
+<td><span class='txt_RegionHeader'>SA</span></td>
+<td align='right'><!--was here--></td>
+</tr>
+<tr>
+<td height='7px'></td>
+</tr>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' class='txt_RegionDetails'>
+<tr>
+<td valign='top'>
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Barossa & Light Herald'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://barossa.yourguide.com.au/setup.asp?mast_id=105&src=' alt='' title=''>Barossa</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','West Coast Sentinel'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://Ceduna.yourguide.com.au/setup.asp?mast_id=97&src=' alt='' title=''>Ceduna</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Northern Argus'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://clare.yourguide.com.au/setup.asp?mast_id=98&src=' alt='' title=''>Clare</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Eyre Peninsula Tribune'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://cleve.yourguide.com.au/setup.asp?mast_id=101&src=' alt='' title=''>Cleve</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Flinders News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://flindersranges.yourguide.com.au/setup.asp?mast_id=147&src=' alt='' title=''>Flinders Ranges</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Islander'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://kangarooisland.yourguide.com.au/setup.asp?mast_id=107&src=' alt='' title=''>Kangaroo Island</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Murray Valley Standard'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://murraybridge.yourguide.com.au/setup.asp?mast_id=99&src=' alt='' title=''>Murray Bridge</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Transcontinental'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://portaugusta.yourguide.com.au/setup.asp?mast_id=103&src=' alt='' title=''>Port Augusta</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Port Lincoln Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://portlincoln.yourguide.com.au/setup.asp?mast_id=100&src=' alt='' title=''>Port Lincoln</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Recorder'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://portpirie.yourguide.com.au/setup.asp?mast_id=104&src=' alt='' title=''>Port Pirie</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Roxby Downs Sun'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://roxbydowns.yourguide.com.au/setup.asp?mast_id=155&src=' alt='' title=''>Roxby Downs</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://victorharbor.yourguide.com.au/setup.asp?mast_id=106&src=' alt='' title=''>Victor Harbor</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Whyalla News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://Whyalla.yourguide.com.au/setup.asp?mast_id=102&src=' alt='' title=''>Whyalla</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id='state_TAS' style='position:absolute; left:0px; top:0px; height:0px; visibility:hidden; z-index: 0;' onmouseover='bOverMenu = true;' onmouseout='bOverMenu = false;'>
+<div  style="position:absolute; right:5px; top:8px; height:0px; "><a href="javascript: void closepopup('state_TAS','TopBannerAd');"><img src='/_shared/locationpopup/images/btn_close.gif' border='0' alt="Close this menu" title="Close this menu"></a></div><!--MENU START--><table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff'  style='border-right:1px #B9DCF0 solid; border-bottom:1px #B9DCF0 solid; border-top:1px #B9DCF0 solid; border-left:1px #B9DCF0 solid; background-color: #E8EFF4;'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff' width='100%' style='border-right:1px #DBDBDB solid; border-bottom:1px #DBDBDB solid;  border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid;' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='3' bgcolor='#ffffff' width='100%' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='1' cellpadding='0' width='100%' class='txt_RegionDetails'>
+<tr>
+<td><span class='txt_RegionHeader'>TAS</span></td>
+<td align='right'><!--was here--></td>
+</tr>
+<tr>
+<td height='7px'></td>
+</tr>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' class='txt_RegionDetails'>
+<tr>
+<td valign='top'>
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Launceston Advertiser'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://launceston.yourguide.com.au/setup.asp?mast_id=171&src=' alt='' title=''>Launceston</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Examiner Newspaper'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://northerntasmania.yourguide.com.au/setup.asp?mast_id=134&src=' alt='' title=''>Northern Tasmania</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://nwtasmania.yourguide.com.au/setup.asp?mast_id=167&src=' alt='' title=''>Northwest and West Tasmania</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id='state_VIC' style='position:absolute; left:0px; top:0px; height:0px; visibility:hidden; z-index: 0;' onmouseover='bOverMenu = true;' onmouseout='bOverMenu = false;'>
+<div  style="position:absolute; right:5px; top:8px; height:0px; "><a href="javascript: void closepopup('state_VIC','TopBannerAd');"><img src='/_shared/locationpopup/images/btn_close.gif' border='0' alt="Close this menu" title="Close this menu"></a></div><!--MENU START--><table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff'  style='border-right:1px #B9DCF0 solid; border-bottom:1px #B9DCF0 solid; border-top:1px #B9DCF0 solid; border-left:1px #B9DCF0 solid; background-color: #E8EFF4;'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff' width='100%' style='border-right:1px #DBDBDB solid; border-bottom:1px #DBDBDB solid;  border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid;' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='3' bgcolor='#ffffff' width='100%' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='1' cellpadding='0' width='100%' class='txt_RegionDetails'>
+<tr>
+<td><span class='txt_RegionHeader'>VIC - Community</span></td>
+<td align='right'><!--was here--></td>
+</tr>
+<tr>
+<td height='7px'></td>
+</tr>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' class='txt_RegionDetails'>
+<tr>
+<td valign='top'>
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Berwick and District Journal'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://berwick.yourguide.com.au/setup.asp?mast_id=195&src=' alt='' title=''>Berwick and District Journal</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Cranbourne Journal'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://cranbourne.yourguide.com.au/setup.asp?mast_id=198&src=' alt='' title=''>Cranbourne Journal</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Frankston Independent'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://frankston.yourguide.com.au/setup.asp?mast_id=200&src=' alt='' title=''>Frankston Independent</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Hume Weekly'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://hume.yourguide.com.au/setup.asp?mast_id=203&src=' alt='' title=''>Hume Weekly</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Knox Journal'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://knox.yourguide.com.au/setup.asp?mast_id=204&src=' alt='' title=''>Knox Journal</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Maroondah Journal'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://maroondah.yourguide.com.au/setup.asp?mast_id=206&src=' alt='' title=''>Maroondah Journal</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Monash Journal'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://monash.yourguide.com.au/setup.asp?mast_id=217&src=' alt='' title=''>Monash Journal</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Moonee Valley Community News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://moonee.yourguide.com.au/setup.asp?mast_id=218&src=' alt='' title=''>Moonee Valley Community News</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Mornington & South Peninsula Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://mornington.yourguide.com.au/setup.asp?mast_id=211&src=' alt='' title=''>Mornington & South Peninsula Mail</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://theadvocate.yourguide.com.au/setup.asp?mast_id=210&src=' alt='' title=''>The Advocate</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Journal'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://thejournal.yourguide.com.au/setup.asp?mast_id=209&src=' alt='' title=''>The Journal</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Werribee Banner'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://werribee.yourguide.com.au/setup.asp?mast_id=208&src=' alt='' title=''>Werribee Banner</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><table border='0' cellspacing='0' cellpadding='3' bgcolor='#ffffff' width='100%' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='1' cellpadding='0' width='100%' class='txt_RegionDetails'>
+<tr>
+<td><span class='txt_RegionHeader'>VIC - Regional</span></td>
+<td align='right'><!--was here--></td>
+</tr>
+<tr>
+<td height='7px'></td>
+</tr>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' class='txt_RegionDetails'>
+<tr>
+<td valign='top'>
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Border Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bordermail.yourguide.com.au/setup.asp?mast_id=219&src=' alt='' title=''>Albury - Wodonga</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Ararat Advertiser'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://ararat.yourguide.com.au/setup.asp?mast_id=95&src=' alt='' title=''>Ararat</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Courier'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://ballarat.yourguide.com.au/setup.asp?mast_id=94&src=' alt='' title=''>Ballarat</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Advertiser'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bendigo.yourguide.com.au/setup.asp?mast_id=154&src=' alt='' title=''>Bendigo</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://hepburn.yourguide.com.au/setup.asp?mast_id=159&src=' alt='' title=''>Hepburn</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Latrobe Valley Express'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://latrobevalley.yourguide.com.au/setup.asp?mast_id=124&src=' alt='' title=''>Latrobe Valley</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+<td valign='top' >
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Sunraysia Daily'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://mildura.yourguide.com.au/setup.asp?mast_id=174&src=' alt='' title=''>Mildura</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Gippsland Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://sale.yourguide.com.au/setup.asp?mast_id=127&src=' alt='' title=''>Sale</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Stawell Times News'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://stawell.yourguide.com.au/setup.asp?mast_id=96&src=' alt='' title=''>Stawell</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Warrnambool Standard'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://warrnambool.yourguide.com.au/setup.asp?mast_id=193&src=' alt='' title=''>Warrnambool</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Wimmera Mail Times'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://Wimmera.yourguide.com.au/setup.asp?mast_id=153&src=' alt='' title=''>Wimmera</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id='state_WA' style='position:absolute; left:0px; top:0px; height:0px; visibility:hidden; z-index: 0;' onmouseover='bOverMenu = true;' onmouseout='bOverMenu = false;'>
+<div  style="position:absolute; right:5px; top:8px; height:0px; "><a href="javascript: void closepopup('state_WA','TopBannerAd');"><img src='/_shared/locationpopup/images/btn_close.gif' border='0' alt="Close this menu" title="Close this menu"></a></div><!--MENU START--><table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff'  style='border-right:1px #B9DCF0 solid; border-bottom:1px #B9DCF0 solid; border-top:1px #B9DCF0 solid; border-left:1px #B9DCF0 solid; background-color: #E8EFF4;'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff' width='100%' style='border-right:1px #DBDBDB solid; border-bottom:1px #DBDBDB solid;  border-top:1px #FFFFFF solid; border-left:1px #FFFFFF solid;' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='3' bgcolor='#ffffff' width='100%' class='txt_RegionDetails'>
+<tr>
+<td>
+<table border='0' cellspacing='1' cellpadding='0' width='100%' class='txt_RegionDetails'>
+<tr>
+<td><span class='txt_RegionHeader'>WA</span></td>
+<td align='right'><!--was here--></td>
+</tr>
+<tr>
+<td height='7px'></td>
+</tr>
+<tr>
+<td>
+<table border='0' cellspacing='0' cellpadding='0' class='txt_RegionDetails'>
+<tr>
+<td valign='top'>
+<table border='0' cellspacing='0' cellpadding='0' width='120px' class='popupmenu'>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Albany Weekender'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://albany.yourguide.com.au/setup.asp?mast_id=151&src=' alt='' title=''>Albany</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Avon Valley Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://avonvalley.yourguide.com.au/setup.asp?mast_id=116&src=' alt='' title=''>Avon Valley</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Donnybrook - Bridgetown Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bridgetown.yourguide.com.au/setup.asp?mast_id=109&src=' alt='' title=''>Bridgetown</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Bunbury Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://bunbury.yourguide.com.au/setup.asp?mast_id=110&src=' alt='' title=''>Bunbury</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Busselton-Dunsborough Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://busselton.yourguide.com.au/setup.asp?mast_id=115&src=' alt='' title=''>Busselton</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Collie Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://collie.yourguide.com.au/setup.asp?mast_id=108&src=' alt='' title=''>Collie</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Donnybrook - Bridgetown Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://donnybrook.yourguide.com.au/setup.asp?mast_id=109&src=' alt='' title=''>Donnybrook</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Esperance Express'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://esperance.yourguide.com.au/setup.asp?mast_id=118&src=' alt='' title=''>Esperance</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','The Golden Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://kalgoorlie.yourguide.com.au/setup.asp?mast_id=150&src=' alt='' title=''>Kalgoorlie</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Mandurah Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://mandurah.yourguide.com.au/setup.asp?mast_id=111&src=' alt='' title=''>Mandurah</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Augusta Margaret River Mail'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://margaretriver.yourguide.com.au/setup.asp?mast_id=113&src=' alt='' title=''>Margaret River</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Merredin Wheatbelt Mercury'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://merredin.yourguide.com.au/setup.asp?mast_id=112&src=' alt='' title=''>Merredin</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Central Midlands & Coastal Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://moora.yourguide.com.au/setup.asp?mast_id=117&src=' alt='' title=''>Moora</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Avon Valley Advocate'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://northam.yourguide.com.au/setup.asp?mast_id=116&src=' alt='' title=''>Northam</a></p>
+</td><th valign='top' ></th></tr>
+<tr>
+<td onmouseover="javascript: ShowToolTip('Publication','Wagin Argus'); FollowCursor = setInterval('UpdateToolTip()',10);" onmouseout="javascript: HideToolTip(); clearInterval(FollowCursor);"><p class='MenuItem' alt='' title=''><a href='http://wagin.yourguide.com.au/setup.asp?mast_id=114&src=' alt='' title=''>Wagin</a></p>
+</td><th valign='top' ></th></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><!--MENU END-->
+</div>
+
+					</div></td>
+				</tr>
+				<tr>
+					<td class="MastBack_Left" valign="top" style="padding-left: 8px;"><br>
+					Blacktown news, classifieds and community.<BR><img src='/images/general/space.gif' width='1px' height='8px'><BR><a href='/home.asp'><img src='/images/masthead_location_logos/177-id.gif' border='0'></a>
+					</td>
+
+					<td width="528px">
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" >
+						<tr>
+							<td valign="top" height="19px">										
+								<table border="0" cellpadding="0" cellspacing="0" width="528px">
+								<tr>
+									<td valign="top"><a href="yourguide.asp"><img name="mastback_tabs4_r1_c1" src="/images/general_new/mastback_tabs4_r1_c1.jpg" width="83" height="19" border="0" alt="YourGuide Home" title="YourGuide Home" onMouseOver="self.status='YourGuide Home'; return true;"></a></td>
+
+									<td valign="top"><a href="javascript:showLocationLayer('ACT','state', '','TopBannerAd', 'hidden', '484');"><img name="mastback_tabs4_r1_c2" src="/images/general_new/mastback_tabs4_r1_c2.jpg" width="45" height="19" border="0" alt="YourGuide ACT" title="YourGuide ACT"  onMouseOver="self.status='YourGuide ACT'; return true;"></a></td>
+
+									<td valign="top"><a href="javascript:showLocationLayer('NSW','state', '','TopBannerAd', 'hidden', '90');"><img name="mastback_tabs4_r1_c3" src="/images/general_new/mastback_tabs4_r1_c3.jpg" width="45" height="19" border="0" alt="YourGuide NSW" title="YourGuide NSW"  onMouseOver="self.status='YourGuide NSW'; return true;"></a></td>
+
+									<td valign="top"><a href="javascript:showLocationLayer('NT','state', '','TopBannerAd', 'hidden', '574');"><img name="mastback_tabs4_r1_c4" src="/images/general_new/mastback_tabs4_r1_c4.jpg" width="45" height="19" border="0" alt="YourGuide NT" title="YourGuide NT"  onMouseOver="self.status='YourGuide NT'; return true;"></a></td>
+
+									<td valign="top"><a href="javascript:showLocationLayer('QLD','state', '','TopBannerAd', 'hidden', '619');"><img name="mastback_tabs4_r1_c5" src="/images/general_new/mastback_tabs4_r1_c5.jpg" width="45" height="19" border="0" alt="YourGuide QLD" title="YourGuide QLD"  onMouseOver="self.status='YourGuide QLD'; return true;"></a></td>
+
+									<td valign="top"><a href="javascript:showLocationLayer('SA','state', '','TopBannerAd', 'hidden', '664');"><img name="mastback_tabs4_r1_c6" src="/images/general_new/mastback_tabs4_r1_c6.jpg" width="45" height="19" border="0" alt="YourGuide SA" title="YourGuide SA" onMouseOver="self.status='YourGuide SA'; return true"></a></td>
+
+									<td valign="top"><a href="javascript:showLocationLayer('TAS','state', '','TopBannerAd', 'hidden', '709');"><img name="mastback_tabs4_r1_c7" src="/images/general_new/mastback_tabs4_r1_c7.jpg" width="45" height="19" border="0" alt="YourGuide TAS" title="YourGuide TAS" onMouseOver="self.status='YourGuide TAS'; return true"></a></td>
+
+									<td valign="top"><a href="javascript:showLocationLayer('VIC','state', '','TopBannerAd', 'hidden', '679');"><img name="mastback_tabs4_r1_c8" src="/images/general_new/mastback_tabs4_r1_c8.jpg" width="45" height="19" border="0" alt="YourGuide VIC" title="YourGuide VIC" onMouseOver="self.status='YourGuide VIC'; return true"></a></td>
+
+									<td valign="top"><a href="javascript:showLocationLayer('WA','state', '','TopBannerAd', 'hidden', '799');"><img name="mastback_tabs4_r1_c9" src="/images/general_new/mastback_tabs4_r1_c9.jpg" width="45" height="19" border="0" alt="YourGuide WA" title="YourGuide WA" onMouseOver="self.status='YourGuide WA'; return true"></a></td>
+
+									<td width="85" height="19" style="background-image:url(/images/general_new/mastback_tabs4_r1_c10.jpg);" align="center" valign="top"><a href="http://www.lifeislocal.com.au"><img name="Life Is Local" src="/images/general_new/ttl_lifeislocal.gif" width="65" height="19" border="0" alt="Life Is Local" title="Life Is Local" onMouseOver="self.status='Life Is Local'; return true;"></a></td>
+								</tr>	
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td class="MastBack_Right" valign="bottom" align="right">
+								<div id="TopBannerAd">
+								
+	<div id="adSpot-banner"></div>
+	
+								</div>
+							</td>
+						</tr>
+						</table>									
+					</td>
+				</tr>
+				</table>
+			</td>
+			<td></td>
+		</tr>
+		<tr>		
+			<td height="100%" width="5px" style="background:url(/images/general_new/bdr_left.gif) 0 0 repeat-y;"></td>
+			<td class="OverallBorder" height="100%" valign="top">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" class="MastBorder" height="100%">
+				<tr>
+					<td height="20px" valign="top" colspan="2">
+
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" class="DateBar">
+						<tr>
+							<td align="left" height="20px">&nbsp;&nbsp;&nbsp;Wednesday, 16 January 2008</td>
+							<td align="right" height="20px">
+							<!--
+							<script type="text/javascript">
+							
+							//CHECK BROWSER VERSION/TYPE - SAVE AS HOMEPAGE OR BOOKMARK.
+							var setHomepage = "http://blacktown.yourguide.com.au/detail.asp?class=national&subclass=sport&story_id=1153868&category=sport&rewrite=1";
+							var redirTo = "http://blacktown.yourguide.com.au/detail.asp?class=national&subclass=sport&story_id=1153868&category=sport&rewrite=1";
+							var ua=navigator.userAgent;
+							if ((ua.indexOf("Windows")!=-1) && (ua.indexOf("MSIE 5")!=-1 || ua.indexOf("MSIE 6")!=-1 || ua.indexOf("MSIE 7")!=-1) && ua.indexOf("Win")!=-1 && ua.indexOf("Opera")==-1) {
+								 document.write("<a href=\""+redirTo+"\" onClick=\"style.behavior='url(#default#homepage)';setHomePage('"+setHomepage+"');\">Make&nbsp;this&nbsp;My&nbsp;Homepage</a>&nbsp;|&nbsp;");
+							}
+							else if (ua.indexOf("Firefox")!=-1)  {
+							      document.write("<a href=\"javascript:CreateBookmarkLink();\">Bookmark&nbsp;this&nbsp;Page</a>&nbsp;|&nbsp;");
+							}
+
+							else if (ua.indexOf("Netscape")!=-1)  {
+							      document.write("<a href=\"javascript:CreateBookmarkLink();\">Add&nbsp;this&nbsp;Site&nbsp;to&nbsp;My&nbsp;Sidebar</a>&nbsp;|&nbsp;");
+							}
+
+							else {
+							      document.write("&nbsp;");
+							}
+							 
+							</script>
+							-->
+
+
+							<iframe width="600px" height="14px" frameborder='0' style='margin-top:3px; border-width: 0px' scrolling='no' src="/members/membershipbar.asp?return_url=http%3A%2F%2Fblacktown%2Eyourguide%2Ecom%2Eau%2Fdetail%2Easp%3Fclass%3Dnational%26subclass%3Dsport%26story%5Fid%3D1153868%26category%3Dsport%26rewrite%3D1"></iframe>
+							&nbsp;&nbsp;&nbsp;
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td height="1px" bgcolor="#F9F9F9" colspan="2"></td> <!--Shadow line -->
+				</tr>
+
+				<!-- LEFT NAV START -->
+				<tr>
+					<td valign="top"  height="100%" width="110px" style="border-right:1px solid #C9C7C7;" class="LeftNav">
+						
+						<table border="0" cellpadding="0" cellspacing="0" width="110px"  height="100%">
+						<tr width="100%" >
+							<td width="110px" valign="top">
+								<table border="0" cellpadding="5" cellspacing="0" width="100%" class="LeftNav">
+								<tr width="100%">
+									<td valign="top" width="100%" id="menu"><p class="MenuItem"><a href="/home.asp">Home</a></p></td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="/images/general_new/ttl_news.gif" width="110px" height="18px" border="0"></td>
+						</tr>
+						<tr width="100%">
+							<td width="110px" valign="top">
+									
+								<table border="0" cellpadding="5" cellspacing="0" width="100%" class="LeftNav">
+								<tr width="100%" >
+									<td valign="top" width="100%" id="menu">
+										<p class='MenuItem'><a href='/news/local/'>Local</a></p>
+<p class='MenuItem'><a href='/news/sport/'>Sport</a></p>
+<p class='MenuItem'><a href='/news/national/'>National</a></p>
+<p class='MenuItem'><a href='/news/world/'>World</a></p>
+<p class='MenuItem'><a href='/news/opinion/'>Editorial</a></p>
+<p class='MenuItem'><a href='/displaylifestyle.asp'>Lifestyle</a></p>
+<p class='MenuItem'><a href='/audiovideo.asp'>Audio & Video</a></p>
+<p class='MenuItem'><a href='/blogs/reader_comments.asp'>Readers' Comments</a></p>
+<p class='MenuItem'><a href='/blogs/'>Blogs</a></p>
+<p class='MenuItem'><a href='/search.asp'>Search</a></p>
+<p class='MenuItem'><a href='/weather.asp'>Weather</a></p>
+
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+
+						<tr width="100%"><td><img src="/images/general_new/ttl_marketplace.gif" width="110px" height="18px" border="0"></td></tr>
+						<tr>
+							<td width="110px" valign="top" class="LeftNav">
+								<table border="0" cellpadding="5" cellspacing="0" width="100%" class="LeftNav">
+								<tr width="100%">
+									<td valign="top" width="100%" id="menu">
+									<p class="MenuItem"><a href='/classies_submit.asp'>Place an Ad </a></p>
+<p class='MenuItem'><a href='http://www.domain.com.au/'>Property</a></p>
+<p class='MenuItem'><a href='http://www.mycareer.com.au/'>Careers</a></p>
+<p class='MenuItem'><a href='http://www.drive.com.au/'>Motoring</a></p>
+
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+					
+						<tr width="100%"><td><img src="/images/general_new/ttl_community.gif" width="110px" height="18px" border="0"></td></tr>
+						<tr>
+							<td width="110px" valign="top" class="LeftNav" >		
+								<table border="0" cellpadding="5" cellspacing="0" width="100%" class="LeftNav">
+								<tr width="100%">
+									<td valign="top" width="100%" id="menu">
+									<p class='MenuItem'><a href='/displayops.asp?class=your%20say'>Letters to the Editor</a></p>
+<p class='MenuItem'><a href='/dispcall.asp?month=1&year=2008&calclass=All'>Events</a></p>
+<p class='MenuItem'><a href='/displayclubs.asp'>Local Clubs</a></p>
+<p class='MenuItem'><a href='/dispcall.asp?month=1&year=2008&calclass=Entertainment'>Entertainment</a></p>
+
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						<tr width="100%"><td><img src="/images/general_new/ttl_contact.gif" width="110px" height="18px" border="0"></td></tr>
+						<tr>
+							<td width="110px" valign="top" class="LeftNav" >
+								<table border="0" cellpadding="5" cellspacing="0" width="100%" class="LeftNav">
+								<tr width="100%">
+									<td valign="top" width="100%" id="menu">
+									<p class="MenuItem"><a href='/submitmail_newstips.asp'>Send Us News</a></p>
+
+
+									<p class="MenuItem"><a href="/about.asp?department_id=1">Contact Us</a></p>
+									<p class="MenuItem"><a href="/about.asp?department_id=12">Subscribe</a></p>
+									<p class="MenuItem"><a href="/about.asp?department_id=2">Advertise</a></p>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						
+								<tr width="100%">
+									<td><img src="/images/general_new/ttl_locallinks.gif" width="110px" height="18px" border="0"></td>
+								</tr>
+								<tr>
+									<td width="110px" valign="top" class="LeftNav">
+										<table border="0" cellpadding="5" cellspacing="0" width="100%" class="LeftNav">
+											<tr width="100%">
+												<td valign="top" width="100%" id="menu">
+													<p class='MenuItem'><a href='http://www.blacktown.nsw.gov.au' target='_blank'>Blacktown City Council</a></p><p class='MenuItem'><a href='http://www.precedent.net/public/Forms/NSW_Home.aspx?ID=blackt' target='_blank'>Blacktown Local Business Awards</a></p><p class='MenuItem'><a href='http://www.myfamilymagazine.com.au' target='_blank'>My Family Magazine</a></p>
+													<p class="MenuItem"><a href="/links.asp">More Links</a></p>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							
+
+						<tr>
+							<td width="110px" valign="top" class="LeftNav">
+								<table border="0" cellpadding="5" cellspacing="0" width="100%" class="LeftNav">
+								<tr width="100%">
+									<td valign="top" width="100%" id="menu">
+										<p class="MenuDivider"></p>
+										<p class="MenuItem"><span class="MenuItemGrey"><a href="/privacy.asp">Privacy</a></span></p>
+										<p class="MenuItem"><span class="MenuItemGrey"><a href="/copyright.asp">Copyright</a></span></p>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+
+						
+						<tr>
+							<td width="110px" height="100%" valign="top" class="LeftNav"><img src="/images/general/space.gif" width="110px" height="100%" border="0"></td>
+						</tr>
+						</table>
+					</td>
+					<!-- LEFT NAV END -->
+
+					<td valign="top">
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" class="WhiteBack">
+						<tr>
+							<td width="8px" ><img src="/images/general/space.gif" width="8px" height="100%" border="0"></td>
+							<td id="mainContentPrint" width="620px" valign="top">
+							
+
+<table width="100%" cellpadding="5" border="0" cellspacing="0"><!--Outer border for padding-->
+<tr>
+	<td>
+		<table width="100%" cellpadding="0" border="0" cellspacing="0"><!--main container for content-->
+		<tr><td height="5px"></td></tr>
+		<tr>
+			<td>
+			<table border='0' cellpadding='0' cellspacing='0' width='100%' class='CategoryLinks'><tr><td width='100%' valign='top' class='StandardText'><a href='/news/national/'>NATIONAL</a>&nbsp;>&nbsp;<b><a href='/news/national/sport/'>Sport</a></b><img src='/images/general/space.gif' width='1' height='1'></td></tr></table>
+			</td>
+		</tr>
+
+		
+			<tr><td height="10px"></td></tr>
+			<tr>
+				<td>
+				
+					<table width="100%" border="0" cellspacing="0" cellpadding="5" class="StandardPageBox"><!--table for grey box-->
+					<tr><td>
+					
+					<table width="100%" border="0" cellspacing="0" cellpadding="0"><!--table to display the story-->
+					<tr><td><table width='100%' border='0' cellpadding='0' cellspacing='0'>
+<tr>
+<td>
+<table border='0' cellpadding='5' cellspacing='0' width='100%'>
+<tr>
+<td class='StandardText'>31 December 2007 - 4:41PM</td>
+<td class='StandardText' valign='top' align='right' nowrap><a href='/news/national/'>View all news</a>&nbsp;&nbsp;|
+&nbsp;<a href='/email_friend.asp?story_id=1153868'>Send to a friend</a>&nbsp;&nbsp;|
+&nbsp;<a href='/printerFriendlyPage.asp?story_id=1153868' target='_blank'>Print</a>
+</td>
+</tr>
+<tr><td height='8px' colspan='2'></td></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table border='0' cellpadding='5' cellspacing='0' width='100%'>
+<tr>
+<td valign='top'>
+<span class='StoryDetailsHeader'><strong>Carle sparks A-League interest</strong></span>
+<BR><span class='NewsStoriesByLine'>By Liam FitzGibbon</span>
+<BR><img src='/images/general/space.gif' width='1px' height='12px'><BR>
+<div style='float:right; clear:right; margin-left: 10px; margin-top: 0px; margin-bottom: 10px;'><table border='0' cellpadding='0' cellspacing='0' width='160px'>
+
+		<tr>
+			<td align='center' valign='top'>
+				<table border='0' cellpadding='0' cellspacing='0' class='StandardPageBox'>
+					<!--<tr>
+						<td class='StandardText' style='background-color:#EEEEEE;border-bottom:1px solid #DCDCDC;'><strong>Most Viewed Articles  Stories</strong></td>
+					</tr>-->
+					
+					<tr>
+						<td>
+							<table border="0" cellpadding="5"  cellspacing="0" width="100%" style="background-image:url(/images/general_new/ttl_beside_orange.gif);">
+								<tr>
+									<td style="font-family:arial; font-size:12px; color:#ffffff; padding:2px;">&nbsp;&nbsp;<strong>Most Viewed Articles</strong></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%" valign="top" class="WhiteBack">
+							<table cellpadding="5" cellspacing="0" border="0" width="100%" >
+								<tr>
+									<td class="StandardText" style="padding-bottom:1px;"><strong>Blacktown</strong></td>
+								</tr>		
+								
+									<tr>
+										<td class="StandardText" valign="top"><img src="/images/general_new/link_arrow_short.gif" border="0">&nbsp;<a href="/articles/1157962.html?src=topstories">Man hacked to death</td>
+									</tr>
+								
+									<tr>
+										<td class="StandardText" valign="top"><img src="/images/general_new/link_arrow_short.gif" border="0">&nbsp;<a href="/articles/1160745.html?src=topstories">The pain behind the princess myth                                                                                       </td>
+									</tr>
+								
+									<tr>
+										<td class="StandardText" valign="top"><img src="/images/general_new/link_arrow_short.gif" border="0">&nbsp;<a href="/articles/1162285.html?src=topstories">Nic's nipper taking shape                                                                                               </td>
+									</tr>
+								
+									<tr>
+										<td class="StandardText" valign="top"><img src="/images/general_new/link_arrow_short.gif" border="0">&nbsp;<a href="/articles/1062665.html?src=topstories">Seven Hills says not to Jim Beam Cup for 2008                                                                           </td>
+									</tr>
+								
+									<tr>
+										<td class="StandardText" valign="top"><img src="/images/general_new/link_arrow_short.gif" border="0">&nbsp;<a href="/articles/1072373.html?src=topstories">Ideas from the Pantry: Scallops and prawns with asparagus                                                               </td>
+									</tr>
+								
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td width="50%" valign="top" class="WhiteBack">
+							<table cellpadding="5" cellspacing="0" border="0" width="100%" >
+								<tr>
+									<td class="StandardText" style="padding-bottom:1px;"><strong>Life is Local</strong></td>
+								</tr>
+								
+									<tr>
+										<td class="StandardText" valign="top"><img src="/images/general_new/link_arrow_short.gif" border="0">&nbsp;<a href="/articles/1162285.html?src=topstories">Nic's nipper taking shape</a>&nbsp;<span class="StandardTextGreySmall">[Lifestyle]</span>
+										</td>
+									</tr>
+								
+									<tr>
+										<td class="StandardText" valign="top"><img src="/images/general_new/link_arrow_short.gif" border="0">&nbsp;<a href="http://illawarra.yourguide.com.au/articles/1161972.html?src=topstories">Beer saves man's life</a>&nbsp;<span class="StandardTextGreySmall">[Illawarra]</span>
+										</td>
+									</tr>
+								
+									<tr>
+										<td class="StandardText" valign="top"><img src="/images/general_new/link_arrow_short.gif" border="0">&nbsp;<a href="http://warrnambool.yourguide.com.au/articles/1162204.html?src=topstories">Hollywood heart-throb chows down in Port Fairy</a>&nbsp;<span class="StandardTextGreySmall">[Warrnambool]</span>
+										</td>
+									</tr>
+								
+									<tr>
+										<td class="StandardText" valign="top"><img src="/images/general_new/link_arrow_short.gif" border="0">&nbsp;<a href="/articles/1161785.html?src=topstories">Mosquito bite death rocks school community</a>&nbsp;<span class="StandardTextGreySmall">[National]</span>
+										</td>
+									</tr>
+								
+									<tr>
+										<td class="StandardText" valign="top"><img src="/images/general_new/link_arrow_short.gif" border="0">&nbsp;<a href="http://orange.yourguide.com.au/articles/1162147.html?src=topstories">Murder-suicide: names released</a>&nbsp;<span class="StandardTextGreySmall">[Orange]</span>
+										</td>
+									</tr>
+								
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	<tr><td valign='top' height='15px'></td>
+</tr>
+</table>
+</div><div style='clear:right; float:right;'><div style='padding-left:10px; padding-top:10px; padding-bottom:10px;'>
+<p>
+
+	<div id="adSpot-island"></div>
+	
+</p>
+</div></div><div class='NewsStoriesDetail'>
+<story><bodytext><p>Newcastle Jets would love to entice Nick Carle back to the A-League with Turkish club Genclerbirligi reportedly set to axe the Socceroos midfielder.</p><p>Carle joined the Superlig side from the Jets after taking out last season's A-League player of the year award, but has become unsettled despite initially impressing with some good performances.</p><p>Genclerbirligi, who finished fourth in the league last season, have slipped down the ladder and Carle, 26, is one of several players tipped to be shown the door during a host of changes in the January transfer window.</p><p>"Carle could not adapt to the team and our coach does not want him in the team," club chairman Ilhan Cacav said.</p><p>"We must follow our coach's wishes."</p><p>Carle's impending availability is likely to spark interest from several A-league clubs, none more-so than Newcastle, who have missed the playmaker's attacking flair in midfield this season.</p><p>Jets chief executive John Tsatsimas said while signing Carle this late in the season was out of the question, the club would "look at all avenues" for next season.</p><p>"Every A-League club would love to have Nicky Carle," Tsatsimas said.</p><p>"He's been a success at Newcastle, he's tried and tested with our club and our city so we'd love to have him, but obviously there are other factors involved.</p><p>"The majority of that involves dollars and cents.</p><p>"Having said that, if we could have Nicky Carle tomorrow we would certainly love to have him in the side, as would any Novocastrian."</p><p>Most A-League clubs would find it difficult to squeeze Carle under their salary cup, though the Jets could sign him as their marquee player for next season in place of Mario Jardel, whose A-League stint has been a failure.</p><p>But Tsatsimas said the biggest obstacle to bringing Carle back to the A-League could be the midfielder's desire to be a success in Europe.</p><p>"He's made a step abroad before and it didn't work out for him and I think he was a bit disappointed he didn't stay longer," Tsatsimas said.</p><p>"I think this time he's more of the opinion he'd stick it out a bit longer.</p><p>"I really don't think the A-League is an option at the moment for him  - but that may change."</p><p>Carle had intended to use his overseas move to enhance his Socceroos prospects.</p><p>But with the squads of several of next year's World Cup qualifiers likely to be picked largely from the A-League, playing in Australia could now be a more attractive option.</p><p>Adelaide coach Aurelio Vidmar said his club would explore the possibility of chasing Carle's signature if he became available.</p><p>"We're always interested in quality players and he certainly is that," Vidmar said.</p><p>Both Adelaide and Melbourne could offer Carle the added incentive of Asian Champions League football, starting in March, and there are no salary cap restrictions for the tournament.</p><p>The Victory and Sydney FC said they had not thought about the prospect of signing Carle but would not discount it.</p><p>Meanwhile, Sydney chief executive George Perry said he knew nothing of reports veteran midfielder Ufuk Talay was set to join former coach Pierre Littbarski and teammates Mark Rudan and Alvin Ceccoli at Japanese second division club Avispa Fukuoka.</p><p>Perry said the club was tabling a new contract offer for the former Galatasaray player.</p></bodytext></story><p>Brought to you by AAP<BR><img src='/images/general/space.gif' width='1px' height='3px'><BR>
+<a href='/copyright.asp#aap' border='0'><img border='0' src='/images/general/aap.gif' alt='AAP'></a><BR><img src='/images/general/space.gif' width='1px' height='3px'><BR>
+<a href='/copyright.asp#aap'>&copy;&nbsp;AAP&nbsp;2008</a></p></div>
+</td></tr><tr>
+<td class='StandardText' align='right'><a href='/news/national/'>View all news</a>&nbsp;&nbsp;|
+&nbsp;<a href='/email_friend.asp?story_id=1153868'>Send to a friend</a>&nbsp;&nbsp;|
+&nbsp;<a href='/printerFriendlyPage.asp?story_id=1153868' target='_blank'>Print</a>&nbsp;&nbsp;|
+&nbsp;<a href='#'>Back to top</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+					</table>
+					<img src="/beacon.asp?type=article&article=1153868" width="1" height="1" />
+					</td></tr>
+					</table>
+				
+				</td>
+			</tr>
+		
+
+		</table>
+		<BR>
+	</td>
+</tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" width="100%">
+	<tr>
+		<td align="center"><br>
+			
+		
+
+<div id="adSpot-19599"></div> <!-- Ad placeholder. Replace 19599 here and in function with appropriate ID -->
+
+<!-- AdSpace -->
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var fcam_segvars="isiframe=yes&domain=yourguide.com.au&site=yourguide&adspace=networkad";
+var bust = Math.floor(1000000*Math.random());
+ffx_swap("adSpot-19599", "<iframe width='300' height='250' name='nameid19599' id='nameid19599' marginwidth='0' marginheight='0' frameborder='0' scrolling='no' src='http://ffxcam.yourguide.com.au/html.ng/"+fcam_segvars+"?ord="+bust+"'><\/iframe>");
+/* //]]> */
+</script>
+
+<!-- /AdSpace -->
+
+		<br></td>
+	</tr>
+</table>
+
+
+											</td>
+											<td width='15px'><img src='/images/general/space.gif' width='5px' height='100%' border='0'></td>
+											<td width="5px" height="100%" style="background:url(/images/general_new/bdr_right.gif) 0 0 repeat-y;"></td>
+											<td valign="top" align="center" class="AdColumn">
+												<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+												
+												
+
+												<tr>
+													<td width="100%" height="1px" valign="top" align="center" >
+													<img src="/images/general/space.gif" width="1px" height="2px"><BR>
+													
+	<table border="0" cellpadding="0" cellspacing="0"  height="0px" width="170px" >
+
+	
+			<tr>
+				<td width="100%" valign="top"><a href="http://www.mycareer.com.au"><img src="/_shared/sitelinks/images/btn_careers.gif" width="170px" height="27px" border="0" alt="Visit MyCareer.com.au" title="Visit MyCareer.com.au"></td>
+			</tr>
+		
+				<tr>
+					<td width="100%" valign="top"><a href="http://www.domain.com.au"><img src="/_shared/sitelinks/images/btn_property.gif" width="170px" height="27px" border="0" alt="Visit Domain.com.au" title="Visit Domain.com.au"></a></td>
+				</tr>
+			
+		<tr>
+			<td width="100%" valign="top"><a href="http://www.drive.com.au" ><img src="/_shared/sitelinks/images/btn_motoring.gif" width="170px" height="27px" border="0" alt="Visit Drive.com.au" title="Visit Drive.com.au"></a></td>
+		</tr>
+		<tr>
+			<td width="100%" valign="top"><a href="http://www.rsvp.com.au"><img src="/_shared/sitelinks/images/btn_dating.gif" width="170px" height="27px" border="0" alt="Visit RSVP.com.au" title="Visit RSVP.com.au"></a></td>
+		</tr>
+		<tr>
+			<td width="100%" valign="top"><a href="http://www.stayz.com.au"><img src="/_shared/sitelinks/images/btn_holidays.gif" width="170px" height="27px" border="0" alt="Visit Stayz.com.au" title="Visit Stayz.com.au"></a></td>
+		</tr>
+		
+		<!--
+			<tr>
+				<td width="100%" valign="top"><a href="http://www.farmonline.com.au/index.asp"><img src="/_shared/sitelinks/images/btn_farmonline.gif" width="170px" height="27px" border="0" alt="Visit Farmonline.com.au" title="Visit Farmonline.com.au"></a></td>
+			</tr>
+		-->
+		
+
+	</table>
+
+													</td>
+												</tr>
+												<tr>
+													<td width="100%" valign="top" align="center">
+													<img src="/images/general/space.gif" width="1px" height="10px"><BR>
+													
+	<div id="adSpot-skyscraper"></div>
+	
+														<img src="/images/general/space.gif" width="1px" height="12px"><BR> 
+													<span style='border:1px solid #DCDCDC;'><a href="http://ads.ruralpress.com/adserv_redir.asp?ad_id=11328&s=35&schedule_id=1683" target="_self"><img src="http://ads.ruralpress.com/_upload/ads/328/11328.jpg" border="0" alt="Tasmanian Travelways"></a><div style="position:absolute;top:1;left:-100;"><img src="http://ads.ruralpress.com/beacon.asp?beacon=4799&cb=0.5553247"></div></span><br><img src="/images/general/space.gif" width="1px" height="10px" border="0"><br/><span style='border:1px solid #DCDCDC;'><a href="http://ads.ruralpress.com/adserv_redir.asp?ad_id=11268&s=35&schedule_id=1626" target="_self"><img src="http://ads.ruralpress.com/_upload/ads/268/11268.gif" border="0" alt="Blue Mountains Wonderland"></a><div style="position:absolute;top:1;left:-100;"><img src="http://ads.ruralpress.com/beacon.asp?beacon=5081&cb=0.9059674"></div></span><br><img src="/images/general/space.gif" width="1px" height="10px" border="0"><br/>
+														<img src="/images/general/space.gif" width="1px" height="10px">
+
+														<script type="text/javascript"><!--
+														google_ad_client = "pub-7617671539297056";
+														google_ad_width = 160;
+														google_ad_height = 600;
+														google_ad_format = "160x600_as";
+														google_ad_type = "text";
+														google_ad_channel = "";
+														google_color_border = "003366";
+														google_color_bg = "FFFFFF";
+														google_color_link = "003366";
+														google_color_text = "000000";
+														google_color_url = "003366";
+														google_ui_features = "rc:0";
+														//-->
+														</script>
+														<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+														<BR><img src="/images/general/space.gif" width="1px" height="10px"><BR>
+													
+													</td>
+												</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>	
+					</td>
+					<td width="5px" height="100%" style="background:url(/images/general_new/bdr_right.gif) 0 0 repeat-y;"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>	<!-- Bottom -->
+		<td width="5px" height="5px"><img alt="" src='/images/general_new/cnr_bottomleft.gif' width='5px' height='5px' border='0'></td>
+		<td width="928px" height="5px" style="background:url(/images/general_new/bdr_bottom.gif) 0 0 repeat-x;"></td>
+		<td width="5px" height="5px"><img alt="" src='/images/general_new/cnr_bottomright.gif' width='5px' height='5px' border='0'></td>
+	</tr>
+</table>
+<!-- END OVERALL TABLE -->
+
+<table cellpadding="5" cellspacing="0" border="0" align="center">
+<tr>
+	<td align="center">
+
+	
+	<div id="adSpot-footerboard"></div>
+	
+
+	<img src="/images/general/space.gif" width="1px" height="10px"><BR>
+
+	<script type="text/javascript">
+	<!--
+		google_ad_client = "pub-7617671539297056";
+		google_ad_width = 728;
+		google_ad_height = 90;
+		google_ad_format = "728x90_as";
+		google_ad_type = "text_image";
+		google_ad_channel ="";
+		google_color_border = "003366";
+		google_color_bg = "FFFFFF";
+		google_color_link = "003366";
+		google_color_text = "000000";
+		google_color_url = "003366";
+	//-->
+	</script>
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	</td>
+</tr>
+<tr>
+	
+	
+	<td class="StandardTextSmall" align="center">Copyright © 2008. Fairfax Digital<br/><font color="white">1594.238 ms - 16/01/2008&nbsp;1:11:15 AM</font></td>
+</tr>
+</table>
+<!-- START Nielsen//NetRatings SiteCensus V5.1 -->
+<!-- COPYRIGHT 2005 Nielsen//NetRatings -->
+<script src="/_shared/js/acnielsen.js" language="JavaScript" type="text/javascript"></script>
+<noscript>
+	<img src="http://secure-au.imrworldwide.com/cgi-bin/m?ci=ruralpressltd&amp;cg=0" alt="">
+</noscript>
+<!-- END Nielsen//NetRatings SiteCensus V5.1 -->
+<script type="text/javascript">
+document.write('<img width="1px" height="1px" src="/_shared/rpiwebstats/tracker.asp?mode=2&site=11&cb=0.2522023"/>')
+</script>
+<noscript>
+<img width="1px" height="1px" src="/_shared/rpiwebstats/tracker.asp?mode=1&site=11&cb=0.3496363"/>
+</noscript>
+
+<script src="/_shared/ffxcam/adSwap.js" language="JavaScript"></script>
+<script>
+document.domain="yourguide.com.au"
+</script>
+
+<script>var fcam_segvars="isiframe=yes&domain=yourguide.com.au&site=yourguide&adspace=468x60&locale=nsw&ctype=article";var bust = Math.floor(1000000*Math.random());ffx_swap("adSpot-banner", "<iframe width=468 height=60 name=nameidadSpot-banner id=nameidadSpot-banner marginwidth=0 marginheight=0 hspace=0 VSPACE=0 frameborder=0 scrolling=no bordercolor='#000000' src='http://ffxcam.yourguide.com.au/html.ng/"+fcam_segvars+"?ord="+bust+"'><\/iframe>");</script><script>var fcam_segvars="isiframe=yes&domain=yourguide.com.au&site=yourguide&adspace=160x600&locale=nsw&ctype=article";var bust = Math.floor(1000000*Math.random());ffx_swap("adSpot-skyscraper", "<iframe width=160 height=600 name=nameidadSpot-skyscraper id=nameidadSpot-skyscraper marginwidth=0 marginheight=0 hspace=0 VSPACE=0 frameborder=0 scrolling=no bordercolor='#000000' src='http://ffxcam.yourguide.com.au/html.ng/"+fcam_segvars+"?ord="+bust+"'><\/iframe>");</script><script>var fcam_segvars="isiframe=yes&domain=yourguide.com.au&site=yourguide&adspace=300x250&locale=nsw&ctype=article";var bust = Math.floor(1000000*Math.random());ffx_swap("adSpot-island", "<iframe width=300 height=250 name=nameidadSpot-island id=nameidadSpot-island marginwidth=0 marginheight=0 hspace=0 VSPACE=0 frameborder=0 scrolling=no bordercolor='#000000' src='http://ffxcam.yourguide.com.au/html.ng/"+fcam_segvars+"?ord="+bust+"'><\/iframe>");</script><script>var fcam_segvars="isiframe=yes&domain=yourguide.com.au&site=yourguide&adspace=728x90&loc=2&locale=nsw&ctype=article";var bust = Math.floor(1000000*Math.random());ffx_swap("adSpot-footerboard", "<iframe width=728 height=90 name=nameidadSpot-footerboard id=nameidadSpot-footerboard marginwidth=0 marginheight=0 hspace=0 VSPACE=0 frameborder=0 scrolling=no bordercolor='#000000' src='http://ffxcam.yourguide.com.au/html.ng/"+fcam_segvars+"?ord="+bust+"'><\/iframe>");</script>
+
+<script src="/_shared/js/media_popup.js" language="JavaScript"></script>
+
+<script language="javascript">
+var OMNI_organisation_division = "fcn nsw".toLowerCase()
+var OMNI_organisation_type = (OMNI_organisation_division == "fcn regional" ? "FRCN" : (OMNI_organisation_division == "rpl regional" ? "RPL" : "FCN")) // FRCN / RPL
+var OMNI_organisation_state = "NSW"
+var OMNI_publication_name = "Blacktown Sun"
+var OMNI_section = "national news".toLowerCase()
+var OMNI_subsection = "sport".toLowerCase()
+var OMNI_page_type = "".toLowerCase()
+var OMNI_page_type_refined = "".toLowerCase()
+var OMNI_page_type_refined_further = "".toLowerCase()
+var OMNI_domain_name = "blacktown.yourguide.com.au"
+
+var OMNI_days_old = 16 // // need to get the article date if it is an article page and calculate how many days old it is.
+
+
+// need a page title as well
+var OMNI_page_title = "Carle sparks A-League interest".toLowerCase() // will be like article name maybe?
+
+
+// The actual vars used for recording stats are just combindations of the above
+var s_prop1 = OMNI_organisation_type
+var s_prop2 = OMNI_organisation_state
+var s_prop3 = OMNI_publication_name
+var s_prop4 = OMNI_section
+var s_prop5 = OMNI_subsection
+var s_prop6 = OMNI_page_type
+var s_prop7 = OMNI_page_type_refined
+var s_prop8 = OMNI_page_type_refined_further
+var s_prop9 = OMNI_domain_name
+var s_prop10 = OMNI_days_old
+
+var s_hier1 = "Community News, " 
+	+ OMNI_organisation_state + ", " 
+	+ OMNI_organisation_type + ", " 
+	+ OMNI_publication_name + ", " 
+	+ OMNI_section + ", " 
+	+ OMNI_subsection + ", " 
+	+ OMNI_page_type + ", " 
+	+ OMNI_page_type_refined + ", "
+	+ OMNI_page_type_refined_further
+
+var s_hier2 = "Community News, " 
+	+ OMNI_organisation_type + ", " 
+	+ OMNI_organisation_state + ", " 
+	+ OMNI_publication_name + ", " 
+	+ OMNI_section + ", " 
+	+ OMNI_subsection + ", " 
+	+ OMNI_page_type + ", " 
+	+ OMNI_page_type_refined + ", "
+	+ OMNI_page_type_refined_further
+
+var s_hier3 = "Community News, " 
+	+ OMNI_organisation_state + ", " 
+	+ OMNI_organisation_type + ", " 
+	+ OMNI_publication_name + ", " 
+	+ OMNI_page_type + ", " 
+	+ OMNI_page_type_refined + ", "
+	+ OMNI_page_type_refined_further + ", "
+	+ OMNI_section + ", " 
+	+ OMNI_subsection
+
+var s_channel = OMNI_section
+
+// only include subsection if available
+var s_pageName = OMNI_publication_name + " | "
+	+ OMNI_section + " | "
+	+ (OMNI_subsection != "" ? OMNI_subsection + " | " : "")
+	+ OMNI_page_title
+
+var s_server = OMNI_domain_name
+
+</script>
+
+
+<script src="/_shared/omniture/s_code_remote.js" type="text/javascript"></script>
+</BODY>
+</html>
