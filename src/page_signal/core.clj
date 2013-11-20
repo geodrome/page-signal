@@ -9,8 +9,11 @@
 
 (set! *warn-on-reflection* true)
 
-;;; Tree-processing
+;;; Web pages are fetched with Enlive libraries' html-resource function, 
+;;; which returns a nested data structure representing the HTML 
+;;; The following functions will facilitate further transformation on this data structure
 
+; Currently unused but could be handy
 (defn map-nodes
   "Returns root with function f applied to every node starting at root and proceeding via depth first traversal. If f returns nil for any tag node, its descendants are lost. f must return a proper node.f should expect a map or a color-theme-gandalfstring."
   [f root]
@@ -48,6 +51,7 @@
       root)))
 
 (defn map-blocks
+ "Returns root with function f applied to all :block tags." 
  [f root]
  (map-tag f :block root))
 
@@ -58,6 +62,7 @@
     node
     (flatten (map seq-blocks content))))
 
+;; Unused
 (defn seq-tags
   [node]
   (tree-seq map? :content node))
@@ -102,6 +107,7 @@
 
 ;;; Identifying Atomic Text Blocks
 
+;; These are currently unused, but here to help me think
 (def enclosing-tag? #{:h1 :h2 :h3 :h4 :h5 :h6 :p :div})
 
 
@@ -114,15 +120,14 @@
                           :ul :dl :ol :table :address :hr :img :script})
 (def gap-avoiding-tags #{:a :b :br :em :font :i :s
                          :span :strong :sub :sup :u :tt})
+;;;;;;;;;;;;;;;;;;;
 
 ;; img? - its own block since not always content when mixed with text?
 ;; excluding :img creates lots of "|" blocks -> img | img | img
 ;; may need to filter out :img from inside anchor tags
-;; empty a tags and other tags
 ;; div and h3 inside a tag - produces :content ()
 ;; test for content nil and ()?
 ;; hr?
-;; html comments?
 ;should li be a block-tag?
 
 (def block-tag? #{:b :big :i :small :tt :abbr :acronym :cite :code :dfn :em
@@ -232,6 +237,7 @@
   (map-blocks mark-link-word-count* root))
 
 ;;; Mark Link Density
+
 
 (defn mark-link-density*
   [{:keys [total-words link-words] :as block}]
@@ -363,7 +369,7 @@
     (mapcat n-frags
             (map inc (range (count frags)))
             (repeat frags)
-            (repeat seps))))
+           (repeat seps))))
 
 ;; when two matches of decen length attmept further logic (e.g.
 ;; location - proximity to main text, enclosing tag)

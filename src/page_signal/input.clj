@@ -31,8 +31,8 @@
   (doseq [x (.getTextBlocks td)] (println x)))
 
 ;;; Creating Nodes For Clojure lib
+;; TODO can write function nodes that will do dispatch, but try clojure polymorphism
 (defn url->nodes
-  ;; can use h/html-resouce directly
   [url]
   (h/html-resource (java.net.URL. url)))
 
