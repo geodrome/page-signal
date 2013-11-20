@@ -67,13 +67,13 @@
   (let [n (count file-names)
         h-retriv (map (fn [fname]
                         {:file fname
-                         :headline (headline (orig-nodes fname))}) file-names)      
+                         :headline (headline (orig-nodes fname))}) file-names)
         res (map (fn [{head-r :headline file-r :file} {head-a :headline file-a :file}]
                    (let [match (if (or (map? head-r) ; exception in head-r
                                        (= :not-annotated head-a)
                                        (= :span-but-no-headline head-a))
                                  :na
-                                 (= head-r head-a))] 
+                                 (= head-r head-a))]
                      {:file file-r :head-r head-r :head-a head-a :match match}))
                  h-retriv
                  h-annot)
@@ -121,7 +121,7 @@
                 :size n :replacement false))
 
 (defn files-from-dir
-  "Takes a seq of files and returns a seq of files with the same name from dir directory."
+  "Takes a seq of File objects (files) and returns a seq of files with the same name from dir directory."
   [dir files]
   (map (fn [^java.io.File f]
          (File. (str dir (.getName f))))
@@ -132,6 +132,7 @@
 (defn seq->lower [s] (map s/lower-case s))
 
 (defn text->array
+  ""
   [text]
   (-> text
       u/clean-string
@@ -144,7 +145,7 @@
   (-> f
       in/file->nodes
       (get-span #{(:headline annotations)
-                  (:full-text annotations)}) 
+                  (:full-text annotations)})
       u/text))
 
 (defn full-text
@@ -155,14 +156,14 @@
   (println "orign: " file-orig)
   (println "annot: " file-annot)
   (let [retrieved (text->array (full-text file-orig)) ;; write full-text
-        relevant (text->array (annot-full-text file-annot))
+        relevant (text->array (annot-full-text file-annot)) ;;; #### THIS STEP SHOULDNT BE REPEATED ALL THE TIME
         ret-count (count retrieved)
         rel-count (count relevant)
         match-count (u/count-matches retrieved relevant)
         res {:file (.getName file-orig)}]
     (cond
      (and (zero? ret-count) (zero? rel-count))
-     (assoc res :precision :inf :recall :inf :f1 :nan) 
+     (assoc res :precision :inf :recall :inf :f1 :nan)
 
      (zero? ret-count)
      (assoc res :precision :inf :recall 0 :f1 :nan)

@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :jvm-opts ["-Xmx1g"]
   :java-source-paths ["src/java"]
-  :dependencies [[org.clojure/clojure "1.4.0"]
+  :dependencies [[org.clojure/clojure "1.5.1"]
                  [enlive "1.1.1"]
                  [criterium "0.3.1"]
                  [incanter "1.4.1"]

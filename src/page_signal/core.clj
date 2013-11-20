@@ -188,6 +188,7 @@
 
 ;;; Mark Total Word Count
 
+
 (defn mark-word-count*
   "Handle HR tag"
   [{:keys [content] :as block}]
@@ -354,7 +355,7 @@
   (map s/trim (map s/join (n-frags* n frags seps []))))
 
 (defn potential-titles
-  "Given title tag text (title), return substrings of title likely to be the page title."
+  "Given title tag text, return substrings of title likely to be the page title."
   [title]
   (let [sep-re #"[:|\-»,/]"
         frags (s/split title sep-re)
@@ -378,31 +379,13 @@
 
 (defn mark-title-match
   [root title]
-  (let [titles (potential-titles title)]
+  (let [titles ( title)]
     (map-blocks (fn [block]
                   (let [title-text (title-match block titles)]
                     (assoc block :title-text title-text)))
                 root)))
 
 ; get from meta tag
-;link density - 447 -> 442
-(defn headline-block
-  "Return block most likely to contain the headline."
-  [nodes]
-  (let [candidates (filter #(:title-text %)
-                           (seq-blocks nodes))
-        num-cand (count candidates)]
-    (cond
-     (zero? num-cand)
-     (let [r {:title-text (non-title-tag-title (z/xml-zip nodes))}]
-       r)
-
-     (= 1 num-cand)
-     (first candidates)
-
-     :else
-     (best-matching-block candidates))))
-
 (defn headline-block
   "Return block most likely to contain the headline."
   [nodes]
@@ -428,8 +411,8 @@
 
 ;;; Testing
 
-(def dummy (in/file->nodes "test.html"))
-(def obama (in/file->nodes "obama.html"))
+;(def dummy (in/file->nodes "test.html"))
+;(def obama (in/file->nodes "obama.html"))
 
 (defn process
   [nodes]
