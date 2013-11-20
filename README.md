@@ -7,4 +7,4 @@ The authors' marked up the web page into atomic blocks, annotated the blocks wit
 
 One of the authors wrote an open source Java library called Boilerpipe based on the paper. My original intention was to reimplement the algorithm in Clojure and then use the power of Clojure to experiment with additional ad hoc rules to enahance the basic algorithm. I no longer have a need for this functionality, but I am leaving this here in case anybody wants to pickup where I left off. 
 
-This code is full of holes, but the foundation is there. The library also attempts to pickout the headline, but this functionality doesn't work as well.
+This is alpha, but the foundation is there. The library also attempts to pickout the headline, but this functionality doesn't work as well.
