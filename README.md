@@ -1,6 +1,6 @@
 # page-signal
 
-Originally intened as a Clojure library designed to extract article text from web pages presumed to be articles/blog posts etc. There are many approaches to this problem. This solution is based on this paper:
+Originally intended as a Clojure library designed to extract article text from web pages presumed to be articles/blog posts etc. There are many approaches to this problem. This solution is based on this paper:
 http://www.l3s.de/~kohlschuetter/boilerplate/
 
 The authors' marked up the web page into atomic blocks, annotated the blocks with features, and classified each block as either boilerplate or content based on its features. Machine learning techniques were used to determine the most predictive features. The algorithm was learned on a dataset from 2008, so it may now be outdated. I found it still works surprisingly well, though not perfectly.
