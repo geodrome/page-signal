@@ -1,6 +1,9 @@
 (ns page-signal.test
   (:use [page-signal.core]))
 
+;;; The code in this namespace is experimentat and probably suboptimal.
+;;; Feel free to discard.
+
 ;;; BLOCK IDENTIFICATION AND ANALYSIS WITHOUT DOM RETENTION
 
 (defn merge-text
@@ -15,12 +18,12 @@
   "Processes node and returns altered blocks."
   [blocks node]
   (if (string? node)
-    (let [text (s/replace node "\n" "") 
+    (let [text (s/replace node "\n" "")
           block (peek blocks)]
       (if (s/blank? text)
         blocks ; return unchanged
         (conj (pop blocks) (merge-with merge-text block {:text text}))))
-    
+
     (let [tag (:tag node)]
       (cond
         (ignorable-tag? tag)
@@ -35,7 +38,7 @@
             (conj (pop blocks) {:text (merge-text (:text block) anchor-text)
                                 :link-words (+ link-words
                                                (count-words anchor-text))})))
-        
+
         :else
         (if-let [content (:content node)]
           (if (= (peek blocks) {}) ;; {} signifies a 'fresh' block
@@ -155,7 +158,7 @@ any character sequence not interrupted by an HTML tag, except the A tag."
          (if (s/blank? text) ;; allow whitespace?
            (process-loc (remove loc))
            (process-loc (process-block-tag text))))
-       
+
        (block-tag? node)
        (process-loc (process-block-tag loc node))
 
@@ -429,7 +432,7 @@ any character sequence not interrupted by an HTML tag, except the A tag."
                                        (= :not-annotated head-a)
                                        (= :span-but-no-headline head-a))
                                  :na
-                                 (= head-r head-a))] 
+                                 (= head-r head-a))]
                      {:file file-r :head-r head-r :head-a head-a :match match}))
                  h-retriv
                  h-annot)

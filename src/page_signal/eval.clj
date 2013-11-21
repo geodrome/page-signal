@@ -9,15 +9,20 @@
             [incanter.stats :as stats])
   (:import [java.io File]))
 
+;; These are the directories where original and annotated
+;; pages of the dataset are located
 (def orig-dir "L3S-GN1-20100130203947-00001/original/")
 (def annot-dir "L3S-GN1-20100130203947-00001/annotated/")
 
+;; Pages are annotated by wrapping sections
+;; with :span tags of different classes
 (def annotations {:not-content :span.x-nc-sel0
                   :headline :span.x-nc-sel1
                   :full-text :span.x-nc-sel2
                   :supplemental :span.x-nc-sel3
                   :related-content :span.x-nc-sel4
                   :comments :span.x-nc-sel5})
+
 
 (def orig-files (.listFiles (File. orig-dir)))
 (def orig-nodes (zipmap (map #(.getName %) orig-files)
@@ -152,7 +157,7 @@
   [] "")
 
 (defn score
-  [^java.io.File file-orig ^java.io.File file-annot]
+  [file-orig file-annot]
   (println "orign: " file-orig)
   (println "annot: " file-annot)
   (let [retrieved (text->array (full-text file-orig)) ;; write full-text
@@ -188,7 +193,7 @@
 (defn eval-full-text
   [n f-out]
   "n is the number of files to evaluate against."
-  (let [orig (get-sample orig-dir n false)
+  (let [orig (get-sample orig-dir n)
         annot (files-from-dir annot-dir orig)
         results (map score orig annot)
         results-clean (filter #(number? (:f1 %)) results)

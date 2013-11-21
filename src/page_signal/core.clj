@@ -9,8 +9,8 @@
 
 (set! *warn-on-reflection* true)
 
-;;; Web pages are fetched with Enlive libraries' html-resource function, 
-;;; which returns a nested data structure representing the HTML 
+;;; Web pages are fetched with Enlive libraries' html-resource function,
+;;; which returns a nested data structure representing the HTML
 ;;; The following functions will facilitate further transformation on this data structure
 
 ; Currently unused but could be handy
@@ -51,7 +51,7 @@
       root)))
 
 (defn map-blocks
- "Returns root with function f applied to all :block tags." 
+ "Returns root with function f applied to all :block tags."
  [f root]
  (map-tag f :block root))
 
@@ -193,7 +193,6 @@
 
 ;;; Mark Total Word Count
 
-
 (defn mark-word-count*
   "Handle HR tag"
   [{:keys [content] :as block}]
@@ -237,7 +236,6 @@
   (map-blocks mark-link-word-count* root))
 
 ;;; Mark Link Density
-
 
 (defn mark-link-density*
   [{:keys [total-words link-words] :as block}]
@@ -288,10 +286,8 @@
 
 ;;; Extract Article Title
 
-;; getting non-title-tag title
-
 (defn headline-class?
-  [^String class]
+  [class]
   (let [hclass #{"title" "headline"}]
     (when (and class
                (reduce #(or %1 (.contains class %2)) false hclass)) ; short-circuit
