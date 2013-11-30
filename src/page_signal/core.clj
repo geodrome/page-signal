@@ -7,7 +7,6 @@
             [clojure.zip :as z])
   (:import [com.github.geodrome.wordmatcher WordMatcher]))
 
-(set! *warn-on-reflection* true)
 
 ;;; Web pages are fetched with Enlive libraries' html-resource function,
 ;;; which returns a nested data structure representing the HTML
@@ -15,7 +14,9 @@
 
 ; Currently unused but could be handy
 (defn map-nodes
-  "Returns root with function f applied to every node starting at root and proceeding via depth first traversal. If f returns nil for any tag node, its descendants are lost. f must return a proper node.f should expect a map or a color-theme-gandalfstring."
+  "Returns root with function f applied to every node starting at root and
+  proceeding via depth first traversal. If f returns nil for any tag node, its descendants
+  are lost. f must return a proper node.f should expect a map or a color-theme-gandalfstring."
   [f root]
   (if-let [{:keys [content] :as froot} (f root)]
     (if content
@@ -62,7 +63,7 @@
     node
     (flatten (map seq-blocks content))))
 
-;; Unused
+;; Unused, but could be handy
 (defn seq-tags
   [node]
   (tree-seq map? :content node))
@@ -191,19 +192,10 @@
   [nodes]
   (first (h/at (h/select nodes [:html]) [:title] nil)))
 
-;;; Mark Total Word Count
+((->
+            (h/select (in/file->nodes "nytimes.html") [:body])))
 
-(defn mark-word-count*
-  "Handle HR tag"
-  [{:keys [content] :as block}]
-  (reduce (fn [block node] ;; assumes node is a string or anchor tag - WRONG
-            (if (string? node)
-              (merge-with + block {:total-words (u/count-words node)
-                                   :link-words 0})
-              (let [word-count (u/count-words (u/text node))]
-                (merge-with + block {:total-words word-count
-                                     :link-words word-count}))))
-          block content))
+;;; Mark Total Word Count
 
 (defn mark-word-count*
   [block]
@@ -235,12 +227,13 @@
   [root]
   (map-blocks mark-link-word-count* root))
 
+
 ;;; Mark Link Density
 
 (defn mark-link-density*
   [{:keys [total-words link-words] :as block}]
   (if (zero? total-words)
-    (assoc block :link-density :na) ;; reconsider this later
+    (assoc block :link-density 0.0)
     (assoc block :link-density
                  (double (/ link-words total-words)))))
 
@@ -284,153 +277,95 @@
   [root]
   (map-blocks mark-text-density* root))
 
-;;; Extract Article Title
+;;;; Let's put it all together...
+;;; we can start with get-html or get-body and we can optionally pass the tree
+;;; trough remove-ignorable-tags
 
-(defn headline-class?
-  [class]
-  (let [hclass #{"title" "headline"}]
-    (when (and class
-               (reduce #(or %1 (.contains class %2)) false hclass)) ; short-circuit
-      true)))
-
-(defn cand?
-  [loc]
-  (let [node (z/node loc)]
-    (when (and (map? node)
-               (or (#{:h1 :h2 :h3 :HEADLINE} (:tag node))
-                   (headline-class? (-> node :attrs :class))
-                   (headline-class? (-> node :attrs :id))))
-      true)))
-
-(defn find-cands*
-  [loc cands]
-  (cond
-   (z/end? loc) cands
-   (cand? loc) (recur (z/next loc) (conj cands loc))
-   :else (recur (z/next loc) cands)))
-
-(defn find-cands [loc] (find-cands* loc nil))
-
-(defn see-cands [cands]
-  (pprint (map #(z/node %) cands)))
-
-(defn non-title-tag-title
-  [loc]
-  (let [cand-locs (filter #(zero? (count-link-words (z/node %)))
-                      (find-cands loc))
-        titles (remove s/blank? (map #(u/text (z/node %)) cand-locs))]
-    (first titles))) ;; for now
-
-;; getting title tag matching titles
-
-(defn matching-title
-  "more than one match is rare, so returning first is okay"
-  [^String titles ^String s]
-  (first (remove nil? (map #(when (.equals s %) s) titles))))
-
-(defn longer-string
-  [^String s1 ^String s2]
-  (if (> (.length s2) (.length s1)) s2 s1))
-
-(defn title-match
-  "Checks every string in a block and returns an exact match from among titiles."
-  [block titles]
-  (let [match (reduce
-                  longer-string
-                  ""
-                  (remove nil? (map (partial matching-title titles)
-                                    (seq-strings block))))]
-    (when-not (= "" match) match)))
-
-(defn n-frags*
-  [n frags seps res]
-  (if (>= (count frags) n)
-    (let [word-group (take n frags)
-          sep (take n (cycle (concat seps [""])))]
-      (recur n (rest frags) (rest seps)
-             (conj res (butlast (interleave word-group sep)))))
-    res))
-
-(defn n-frags
-  "Return a seq of all strings that are combinations of n fragments interleaved with corresponding separators."
-  [n frags seps]
-  (map s/trim (map s/join (n-frags* n frags seps []))))
-
-(defn potential-titles
-  "Given title tag text, return substrings of title likely to be the page title."
-  [title]
-  (let [sep-re #"[:|\-»,/]"
-        frags (s/split title sep-re)
-        seps (re-seq sep-re title)]
-    (mapcat n-frags
-            (map inc (range (count frags)))
-            (repeat frags)
-           (repeat seps))))
-
-;; when two matches of decen length attmept further logic (e.g.
-;; location - proximity to main text, enclosing tag)
-(defn best-matching-block
-  "Return the block from candidates most likely to contain the page title."
-  [candidates]
-  (reduce (fn [b1 b2]
-            (if (> (.length (:title-text b2))
-                   (.length (:title-text b1)))
-              b2
-              b1))
-          candidates))
-
-(defn mark-title-match
-  [root title]
-  (let [titles ( title)]
-    (map-blocks (fn [block]
-                  (let [title-text (title-match block titles)]
-                    (assoc block :title-text title-text)))
-                root)))
-
-; get from meta tag
-(defn headline-block
-  "Return block most likely to contain the headline."
+(defn annotate
+  "Annotates dom tree."
   [nodes]
-  (let [candidates (filter #(:title-text %)
-                           (seq-blocks nodes))
-        num-cand (count candidates)
-        r {:title-text (non-title-tag-title (z/xml-zip nodes))}]
-    (cond
-     (zero? num-cand)
-     r
+  (-> nodes
+      get-html
+      ;get-body
+      remove-ignorable-tags
+      remove-whitespace-strings
+      mark-blocks
+      mark-word-count
+      mark-link-word-count
+      mark-link-density
+      mark-text-density))
 
-     (= 1 num-cand)
-     (if r
-       r
-       (first candidates))
+(pprint (in/file->nodes "nytimes.html"))
 
-     :else
-     (best-matching-block candidates))))
+;;; Now that everything has been annotated we can use the annotations
+;;; to make decisions about what's content and what's boileplate
 
-(defn doc-title-text
-  [nodes]
-  (u/text (first (h/select nodes [:title]))))
+(defn boiler?
+  "Takes current block, previous block, and next block. Returns true if current block is deemed boilerplate."
+  [{curr-words :total-words curr-ldens :link-density}
+   {prev-words :total-words prev-ldens :link-density}
+   {next-words :total-words next-ldens :link-density}]
+  ;(println curr-words prev-words next-words curr-ldens prev-ldens
+                                        ;next-ldens)
+  ; throw excpetions when certain map keys missing?
+  (when (or (> curr-ldens 0.333333)
+            (and (<= prev-ldens 0.555556)
+                 (<= curr-words 16)
+                 (<= next-words 15)
+                 (<= prev-words 4))
+            (and (<= curr-words 40)
+                 (<= next-words 17)))
+    true))
 
-;;; Testing
+(defn mark-boiler
+  "Takes a seq of blocks and marks each annotated block as boilerplate or content."
+  [blocks]
+  (map (fn [curr prev next]
+         (if (boiler? curr prev next)
+           (assoc curr :boiler true)
+           (assoc curr :boiler false)))
+       blocks
+       (conj blocks {:text "" :total-words 0 :link-words 0 :link-density 0.0})
+       (concat blocks [{:text "" :total-words 0 :link-words 0 :link-density 0.0}])))
 
-;(def dummy (in/file->nodes "test.html"))
-;(def obama (in/file->nodes "obama.html"))
+;;; WHAT'S THIS?
+(defn get-full-text
+  "Takes text blocks that have been annotated and marked for boilerplate.
+  Returns full text as a string."
+  [blocks]
+  (let [content (filter #(not (:boiler %)) blocks)]
+    (reduce str (map :text content))))
 
-(defn process
-  [nodes]
-  (let [title (doc-title-text nodes)]
-    (-> nodes
-        get-html
-        ;get-body
-        ;remove-ignorable-tags
-        remove-whitespace-strings
-        mark-blocks
-        mark-word-count
-        mark-link-word-count
-        mark-link-density
-        mark-text-density
-        (mark-title-match title))))
+(defn remove-boiler
+  [blocks]
+  (remove #(:boiler %) blocks))
 
-(defn see
-  [nodes]
-  (pprint (process nodes)))
+(defn extract-text
+  [blocks]
+  (apply str (map u/text blocks)))
+
+;;; Now Try It!
+
+(defn get-content [nodes]
+  (-> nodes
+      annotate
+      ;seq-blocks
+      ;mark-boiler
+      ;remove-boiler
+      ;extract-text
+      ))
+
+(defn get-content-url [url]
+  (get-content (in/url->nodes url)))
+
+(defn get-content-file [file]
+  (get-content (in/file->nodes file)))
+
+(pprint (get-content-file "nytimes.html"))
+
+(def urls {:a "http://www.scientificamerican.com/article.cfm?id=bacteria-discovered-spacecraft-clean-rooms&WT.mc_id=SA_sharetool_Twitter"
+           :b "http://citusdata.com/blog/72-linux-memory-manager-and-your-big-data"
+           :c "http://mortoray.com/2013/11/27/the-string-type-is-broken/"
+           :d "http://www.nytimes.com/2013/11/28/us/politics/years-delay-expected-in-major-element-of-health-law.html?_r=0"})
+
+(pprint (get-content-url (:d urls)))

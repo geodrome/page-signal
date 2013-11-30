@@ -4,8 +4,23 @@
            [java.io.ByteArrayInputStream]
            [org.xml.sax.InputSource]))
 
-;;; Text docs from Java Boilerpipe lib
+;;; Creating Nodes For Clojure lib
+(defn url->nodes
+  [url]
+  (h/html-resource (java.net.URL. url)))
 
+(defn str->nodes
+  [s]
+  (h/html-resource (java.io.StringReader. s)))
+
+(defn file->nodes [f]
+  ;; can use h/html-resouce directly
+  (-> f
+      slurp
+      str->nodes))
+
+;;; Text docs from Java Boilerpipe lib
+;;; This was helpful when comparing output with Boilerpipe lib, but otherwise can be discarded
 (defn str->text-doc
   [s]
   (.getTextDocument
@@ -29,19 +44,3 @@
 (defn print-text-doc
   [td]
   (doseq [x (.getTextBlocks td)] (println x)))
-
-;;; Creating Nodes For Clojure lib
-;; TODO can write function nodes that will do dispatch, but try clojure polymorphism
-(defn url->nodes
-  [url]
-  (h/html-resource (java.net.URL. url)))
-
-(defn str->nodes
-  [s]
-  (h/html-resource (java.io.StringReader. s)))
-
-(defn file->nodes [f]
-  ;; can use h/html-resouce directly
-  (-> f
-      slurp
-      str->nodes))

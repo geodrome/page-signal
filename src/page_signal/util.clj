@@ -34,8 +34,8 @@
      (s/join sep (flatten (text* root)))))
 
 ; q tag should encapsulate in quotation marks, pre tag doesn't ignore whitespace
-(defn replace-tags
-  "Replaces tags with appropriate whitespace characters."
+(defn convert-break-tags
+  "Replaces line breaking tags with newline strings."
   [{:keys [tag] :as node}]
   (cond
    (#{:br} tag) "\n"
@@ -44,16 +44,17 @@
 
 ; doesn't work for block level elements
 (defn text
-  "Performs depth first traversal of root and returns a lazy seq of all decendants of root that are strings. Consider storing :full-text as block attribute. Eliminate spacing when dealing with inline elements? Separates with sep"
+  "Performs depth first traversal of root and returns a lazy seq of all decendants of root that are strings. Consider storing :full-text as block attribute. Eliminate spacing when dealing with inline elements? "
   [node]
   (cond
    (string? node) node
    (map? node) (->> node
                     :content
-                    (map replace-tags)
-                    (map text)
-                    (filter #(not (empty? %)))
-                    (apply str))
+                    (map convert-break-tags ,,,)
+                    (map text ,,,)
+                    (remove empty? ,,,) ;; necessary?
+                    (apply str ,,,)
+                    )
    :else ""))
 
 (defn clean-string
@@ -64,8 +65,7 @@
       (s/trim txt))))
 
 ;(re-seq #"\w+" "Obama Signals He'd Let Cuts Stand to Avoid U.S. Shutdown - NYTimes.com")
-; #"[a-zA-Z_0-9|.|']+" 
+; #"[a-zA-Z_0-9|.|']+"
 (defn words [s] (re-seq #"\w+" s))
 
 (defn count-words [s] (count (words s)))
-

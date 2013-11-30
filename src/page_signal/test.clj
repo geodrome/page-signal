@@ -77,39 +77,7 @@ any character sequence not interrupted by an HTML tag, except the A tag."
                 assoc-word-count)]
     (map f blocks)))
 
-(defn boiler?
-  "Takes current block, previous block, and next block. Returns true if current block is deemed boilerplate."
-  [{curr-words :total-words curr-ldens :link-density}
-   {prev-words :total-words prev-ldens :link-density}
-   {next-words :total-words next-ldens :link-density}]
-  ;(println curr-words prev-words next-words curr-ldens prev-ldens
-                                        ;next-ldens)
-  ; throw excpetions when certain map keys missing?
-  (when (or (> curr-ldens 0.333333)
-            (and (<= prev-ldens 0.555556)
-                 (<= curr-words 16)
-                 (<= next-words 15)
-                 (<= prev-words 4))
-            (and (<= curr-words 40)
-                 (<= next-words 17)))
-    true))
 
-(defn mark-boiler
-  "Marks each annotated block in blocks as boilerplate or content."
-  [blocks]
-  (map (fn [curr prev next]
-         (if (boiler? curr prev next)
-          (assoc curr :boiler true)
-          (assoc curr :boiler false)))
-       blocks
-       (conj blocks {:text "" :total-words 0 :link-words 0 :link-density 0.0})
-       (concat blocks [{:text "" :total-words 0 :link-words 0 :link-density 0.0}])))
-
-(defn get-full-text
-  "Takes text blocks that have been annotated and marked for boilerplate. Returns full text as a string."
-  [blocks]
-  (let [content (filter #(not (:boiler %)) blocks)]
-    (reduce str (map :text content))))
 
 (defn file->full-text
   [f]
@@ -342,6 +310,18 @@ any character sequence not interrupted by an HTML tag, except the A tag."
       (first title-class-nodes)
       (let [htag-nodes (filter #(zero? (:link-density %)) (get-htags nodes))]))))
 
+(defn mark-word-count*
+  "Handle HR tag"
+  [{:keys [content] :as block}]
+  (reduce (fn [block node] ;; assumes node is a string or anchor tag - WRONG
+            (if (string? node)
+              (merge-with + block {:total-words (u/count-words node)
+                                   :link-words 0})
+              (let [word-count (u/count-words (u/text node))]
+                (merge-with + block {:total-words word-count
+                                     :link-words word-count}))))
+          block content))
+
 ; old title matching
 (defn match-score
   [s1 s2]
@@ -470,3 +450,131 @@ any character sequence not interrupted by an HTML tag, except the A tag."
     (doseq [r span-but-no-headline]
       (spit f-out (str r "\n") :append true))
     (println (count successes) " out of " (- n (count match-na)))))
+
+
+;;; Extract Article Title
+
+(defn headline-class?
+  [class]
+  (let [hclass #{"title" "headline"}]
+    (when (and class
+               (reduce #(or %1 (.contains class %2)) false hclass)) ; short-circuit
+      true)))
+
+(defn cand?
+  [loc]
+  (let [node (z/node loc)]
+    (when (and (map? node)
+               (or (#{:h1 :h2 :h3 :HEADLINE} (:tag node))
+                   (headline-class? (-> node :attrs :class))
+                   (headline-class? (-> node :attrs :id))))
+      true)))
+
+(defn find-cands*
+  [loc cands]
+  (cond
+   (z/end? loc) cands
+   (cand? loc) (recur (z/next loc) (conj cands loc))
+   :else (recur (z/next loc) cands)))
+
+(defn find-cands [loc] (find-cands* loc nil))
+
+(defn see-cands [cands]
+  (pprint (map #(z/node %) cands)))
+
+(defn non-title-tag-title
+  [loc]
+  (let [cand-locs (filter #(zero? (count-link-words (z/node %)))
+                      (find-cands loc))
+        titles (remove s/blank? (map #(u/text (z/node %)) cand-locs))]
+    (first titles))) ;; for now
+
+;; getting title tag matching titles
+
+(defn matching-title
+  "more than one match is rare, so returning first is okay"
+  [^String titles ^String s]
+  (first (remove nil? (map #(when (.equals s %) s) titles))))
+
+(defn longer-string
+  [^String s1 ^String s2]
+  (if (> (.length s2) (.length s1)) s2 s1))
+
+(defn title-match
+  "Checks every string in a block and returns an exact match from among titiles."
+  [block titles]
+  (let [match (reduce
+                  longer-string
+                  ""
+                  (remove nil? (map (partial matching-title titles)
+                                    (seq-strings block))))]
+    (when-not (= "" match) match)))
+
+(defn n-frags*
+  [n frags seps res]
+  (if (>= (count frags) n)
+    (let [word-group (take n frags)
+          sep (take n (cycle (concat seps [""])))]
+      (recur n (rest frags) (rest seps)
+             (conj res (butlast (interleave word-group sep)))))
+    res))
+
+(defn n-frags
+  "Return a seq of all strings that are combinations of n fragments interleaved with corresponding separators."
+  [n frags seps]
+  (map s/trim (map s/join (n-frags* n frags seps []))))
+
+(defn potential-titles
+  "Given title tag text, return substrings of title likely to be the page title."
+  [title]
+  (let [sep-re #"[:|\-»,/]"
+        frags (s/split title sep-re)
+        seps (re-seq sep-re title)]
+    (mapcat n-frags
+            (map inc (range (count frags)))
+            (repeat frags)
+           (repeat seps))))
+
+;; when two matches of decen length attmept further logic (e.g.
+;; location - proximity to main text, enclosing tag)
+(defn best-matching-block
+  "Return the block from candidates most likely to contain the page title."
+  [candidates]
+  (reduce (fn [b1 b2]
+            (if (> (.length (:title-text b2))
+                   (.length (:title-text b1)))
+              b2
+              b1))
+          candidates))
+
+(defn mark-title-match
+  [root title]
+  (let [titles (potential-titles title)]
+    (map-blocks (fn [block]
+                  (let [title-text (title-match block titles)]
+                    (assoc block :title-text title-text)))
+                root)))
+
+; get from meta tag
+(defn headline-block
+  "Return block most likely to contain the headline."
+  [nodes]
+  (let [candidates (filter #(:title-text %)
+                           (seq-blocks nodes))
+        num-cand (count candidates)
+        r {:title-text (non-title-tag-title (z/xml-zip nodes))}]
+    (cond
+     (zero? num-cand)
+     r
+
+     (= 1 num-cand)
+     (if r
+       r
+       (first candidates))
+
+     :else
+     (best-matching-block candidates))))
+
+(defn doc-title-text
+  [nodes]
+  (u/text (first (h/select nodes [:title]))))
