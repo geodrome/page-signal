@@ -1,8 +1,11 @@
-(ns page-signal.test
+(ns page-signal.experimental
   (:use [page-signal.core]))
 
-;;; The code in this namespace is experimentat and probably suboptimal.
-;;; Feel free to discard.
+;;; The code in this namespace is experimental and not fully coherent
+;;; I include it here just in case. It explores various ideas borrowed from the Java
+;;; Boilerpipe libaray as well as early versions of readability.js combined with
+;;; my own ideas. These ideas were meant to be enhancements to the fundamental algo
+;;; implemented in page-signal.core
 
 ;;; BLOCK IDENTIFICATION AND ANALYSIS WITHOUT DOM RETENTION
 
@@ -76,17 +79,6 @@ any character sequence not interrupted by an HTML tag, except the A tag."
   (let [f (comp assoc-link-density
                 assoc-word-count)]
     (map f blocks)))
-
-
-
-(defn file->full-text
-  [f]
-  (-> f
-      file->nodes
-      text-blocks
-      annotate-blocks
-      mark-boiler
-      get-full-text))
 
 ;;;; DOM LEVEL BLOCK IDENTIFICATION WITH ZIPPERS
 
@@ -166,16 +158,9 @@ any character sequence not interrupted by an HTML tag, except the A tag."
                                  remove-nils)))
       root)))
 
-;;; Testing Word Matchin Performance
-
-(def pool "ABC")
-(defn get-random-id [n] (apply str (repeatedly n #(rand-nth pool))))
-(def a1 (into-array (take 10000 (repeatedly #(get-random-id 5)))))
-(def a2 (into-array (take 10000 (repeatedly #(get-random-id 5)))))
-
 ;;; Block Fusion
 
-;; recalculate text-density when blocks fused?
+;; Recalculate text-density when blocks fused?
 
 (defn slope-delta
   [den1 den2]
@@ -206,11 +191,6 @@ any character sequence not interrupted by an HTML tag, except the A tag."
     ;; need a short-circuiting version?
     (reduce #(or %1 %2)
             (map #(.startsWith text %) starts-with))))
-
-;; short-circuiting
-(for [x starts-with
-      :while (not (.startsWith "comment" x))]
-  x)
 
 (defn ignore-blocks-after-content
   "Marks all blocks that occure after :end-of-text as :boiler"
@@ -372,9 +352,6 @@ any character sequence not interrupted by an HTML tag, except the A tag."
                                         ; (434 vs 396)
 
 ;;; OLD HEADLINE EVALUATION
-
-
-
 (defn annot-headline
   [f]
   (let [span (-> f
@@ -578,3 +555,80 @@ any character sequence not interrupted by an HTML tag, except the A tag."
 (defn doc-title-text
   [nodes]
   (u/text (first (h/select nodes [:title]))))
+
+;;; Evaluate Headline
+
+(defn annot-headline
+  [nodes]
+  (let [span (-> nodes
+                 first
+                 (h/select nodes [:body #{(:headline annotations)}])
+                 first)
+        headline (u/clean-string (u/text span))]
+    (if span
+      (if headline
+        headline
+        :span-but-no-headline)
+      :not-annotated)))
+
+(defn headline
+  [nodes]
+  (try (-> nodes
+           c/process
+           c/headline-block
+           :title-text)
+       (catch Exception e {:exception (.getMessage e)})))
+
+(def h-annot (map (fn [fname]
+                       {:file fname
+                        :headline (annot-headline (annot-nodes fname))}) file-names))
+
+(defn eval-headline
+  [f-out]
+  (let [n (count file-names)
+        h-retriv (map (fn [fname]
+                        {:file fname
+                         :headline (headline (orig-nodes fname))}) file-names)
+        res (map (fn [{head-r :headline file-r :file} {head-a :headline file-a :file}]
+                   (let [match (if (or (map? head-r) ; exception in head-r
+                                       (= :not-annotated head-a)
+                                       (= :span-but-no-headline head-a))
+                                 :na
+                                 (= head-r head-a))]
+                     {:file file-r :head-r head-r :head-a head-a :match match}))
+                 h-retriv
+                 h-annot)
+        no-headline-ret (filter #(and (false? (:match %)) (nil? (:head-r %))) res)
+        headline-mismatch (filter #(and (false? (:match %)) (not (nil? (:head-r %)))) res)
+        successes (filter #(true? (:match %)) res)
+        exceptions (filter #(map? (:head-r %)) res)
+        match-na (filter #(= :na (:match %)) res)
+        not-annotated (filter #(= :not-annotated (:headline %)) h-annot)
+        span-but-no-headline (filter #(= :span-but-no-headline (:headline %)) h-annot)]
+    (spit f-out (str "REPORT: " (count successes) " out of " (- n (count match-na)) "\n\n"))
+    (spit f-out (str (count no-headline-ret) " FAILURES -- NO HEADLINE RETRIEVED: \n")
+          :append true)
+    (doseq [r no-headline-ret]
+      (spit f-out (str r "\n") :append true))
+    (spit f-out (str "\n\n" (count headline-mismatch) " FAILURES -- MISMATCH: \n")
+          :append true)
+    (doseq [r headline-mismatch]
+      (spit f-out (str r "\n") :append true))
+    (spit f-out (str "\n\n" (count successes) " SUCCESSES: \n") :append true)
+    (doseq [r successes]
+      (spit f-out (str r "\n") :append true))
+    (spit f-out (str "\n\n" (count exceptions) " EXCEPTIONS: \n") :append true)
+    (doseq [r exceptions]
+      (spit f-out (str r "\n") :append true))
+    (spit f-out (str "\n\n" (count match-na) " MATCH N/A: \n") :append true)
+    (doseq [r match-na]
+      (spit f-out (str r "\n") :append true))
+    (spit f-out (str "\n\n" (count not-annotated) " NOT ANNOTATED: \n")
+          :append true)
+    (doseq [r not-annotated]
+      (spit f-out (str r "\n") :append true))
+    (spit f-out (str "\n\n" (count span-but-no-headline) " SPAN BUT NO HEADLINE: \n")
+          :append true)
+    (doseq [r span-but-no-headline]
+      (spit f-out (str r "\n") :append true))
+    (println (count successes) " out of " (- n (count match-na)))))

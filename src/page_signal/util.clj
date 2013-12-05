@@ -8,7 +8,9 @@
 (defn count-matches
   "a1 and a2 should be arrays of strings. Returns the number of matching strings... per algo"
   [^objects a1 ^objects a2]
-  (if (or (zero? (alength a1))
+  (if (or (nil? a1)
+          (nil? a2)
+          (zero? (alength a1))
           (zero? (alength a2)))
     0
     (WordMatcher/count a1 a2)))
@@ -69,3 +71,10 @@
 (defn words [s] (re-seq #"\w+" s))
 
 (defn count-words [s] (count (words s)))
+
+;;; Testing Word Matchin Performance
+
+(def pool "ABC")
+(defn get-random-id [n] (apply str (repeatedly n #(rand-nth pool))))
+(def a1 (into-array (take 10000 (repeatedly #(get-random-id 5)))))
+(def a2 (into-array (take 10000 (repeatedly #(get-random-id 5)))))

@@ -15,8 +15,7 @@
 ; Currently unused but could be handy
 (defn map-nodes
   "Returns root with function f applied to every node starting at root and
-  proceeding via depth first traversal. If f returns nil for any tag node, its descendants
-  are lost. f must return a proper node.f should expect a map or a color-theme-gandalfstring."
+  proceeding via depth first traversal. If f returns nil for any tag node, its descendants are lost. f must return a proper node."
   [f root]
   (if-let [{:keys [content] :as froot} (f root)]
     (if content
@@ -192,9 +191,6 @@
   [nodes]
   (first (h/at (h/select nodes [:html]) [:title] nil)))
 
-((->
-            (h/select (in/file->nodes "nytimes.html") [:body])))
-
 ;;; Mark Total Word Count
 
 (defn mark-word-count*
@@ -285,15 +281,14 @@
   "Annotates dom tree."
   [nodes]
   (-> nodes
-      get-html
-      ;get-body
+      ;get-html
+      get-body
       remove-ignorable-tags
       remove-whitespace-strings
       mark-blocks
       mark-word-count
       mark-link-word-count
-      mark-link-density
-      mark-text-density))
+      mark-link-density))
 
 (pprint (in/file->nodes "nytimes.html"))
 
@@ -301,13 +296,13 @@
 ;;; to make decisions about what's content and what's boileplate
 
 (defn boiler?
-  "Takes current block, previous block, and next block. Returns true if current block is deemed boilerplate."
+  "Takes current block, previous block, and next block. Returns true if
+current block is deemed boilerplate. The algorithm is described in the
+paper metioned in README."
   [{curr-words :total-words curr-ldens :link-density}
    {prev-words :total-words prev-ldens :link-density}
    {next-words :total-words next-ldens :link-density}]
-  ;(println curr-words prev-words next-words curr-ldens prev-ldens
-                                        ;next-ldens)
-  ; throw excpetions when certain map keys missing?
+  ;(println curr-words prev-words next-words curr-ldens prev-ldens next-ldens)
   (when (or (> curr-ldens 0.333333)
             (and (<= prev-ldens 0.555556)
                  (<= curr-words 16)
@@ -328,14 +323,6 @@
        (conj blocks {:text "" :total-words 0 :link-words 0 :link-density 0.0})
        (concat blocks [{:text "" :total-words 0 :link-words 0 :link-density 0.0}])))
 
-;;; WHAT'S THIS?
-(defn get-full-text
-  "Takes text blocks that have been annotated and marked for boilerplate.
-  Returns full text as a string."
-  [blocks]
-  (let [content (filter #(not (:boiler %)) blocks)]
-    (reduce str (map :text content))))
-
 (defn remove-boiler
   [blocks]
   (remove #(:boiler %) blocks))
@@ -344,28 +331,32 @@
   [blocks]
   (apply str (map u/text blocks)))
 
-;;; Now Try It!
-
-(defn get-content [nodes]
+(defn get-content
+  "Takes text blocks that have been annotated and marked for boilerplate.
+  Returns full text as a string."
+  [nodes]
   (-> nodes
       annotate
-      ;seq-blocks
-      ;mark-boiler
-      ;remove-boiler
-      ;extract-text
-      ))
+      seq-blocks
+      mark-boiler
+      remove-boiler
+      extract-text))
 
-(defn get-content-url [url]
+(defn get-url-content [url]
   (get-content (in/url->nodes url)))
 
-(defn get-content-file [file]
+(defn get-file-content [file]
   (get-content (in/file->nodes file)))
 
-(pprint (get-content-file "nytimes.html"))
+
+;;; Now Try It!
 
 (def urls {:a "http://www.scientificamerican.com/article.cfm?id=bacteria-discovered-spacecraft-clean-rooms&WT.mc_id=SA_sharetool_Twitter"
            :b "http://citusdata.com/blog/72-linux-memory-manager-and-your-big-data"
            :c "http://mortoray.com/2013/11/27/the-string-type-is-broken/"
            :d "http://www.nytimes.com/2013/11/28/us/politics/years-delay-expected-in-major-element-of-health-law.html?_r=0"})
 
-(pprint (get-content-url (:d urls)))
+
+(def nyt (in/file->nodes "nytimes.html"))
+
+(pprint (get-url-content (:d urls)))
