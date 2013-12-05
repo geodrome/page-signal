@@ -6,4 +6,6 @@ The authors' marked up the web page into atomic blocks, annotated the blocks wit
 
 One of the authors wrote an open source Java library called Boilerpipe based on the paper. My original intention was to reimplement the algorithm in Clojure and then use the power of Clojure to experiment with additional ad hoc rules to enhance the basic algorithm. I no longer have a need for this functionality, but I am leaving this here in case anybody wants to pickup where I left off.
 
+The algorithm was evaluated for precision and recall. More here: http://tomazkovacic.com/blog/74/evaluation-metrics-for-text-extraction-algorithms/
+
 This is alpha, but the foundation is there. There is also code that attempts to pick out the headline, but it is still experimental and doesn't work consistently.

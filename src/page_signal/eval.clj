@@ -16,10 +16,10 @@
 ;;;; Evaluate Full Text
 
 (defn get-sample
-  "Returns a sample of n files, as a lazy seq, from dir with or without replacement."
+  "Returns a sample of n files from dir."
   [dir n]
-  (stats/sample (.listFiles (File. dir))
-                :size n :replacement false))
+  (map #(.getName %) (stats/sample (.listFiles (File. dir))
+                                   :size n :replacement false)))
 
 
 (defn text->array
@@ -27,30 +27,29 @@
   [text]
   (when-not (empty? text)
     (-> text
-       u/clean-string
-       (#(re-seq #"\w+" %))
-       (#(map s/lower-case %))
-       into-array)))
+        u/clean-string
+        (#(re-seq #"\w+" %))
+        (#(map s/lower-case %))
+        into-array)))
 
 
 (defn score
-  "Calculates precision, recall, and f1 score. file-orig and file-annot are File objects"
-  [file-orig file-annot]
-  (println "orign: " file-orig)
-  (println "annot: " file-annot)
-  (let [retrieved (-> (get orig-nodes (.getName file-orig))
+  "Calculates precision, recall, and f1 score."
+  [file-name]
+  (println "Scoring: " file-name)
+  (let [retrieved (-> (get orig-nodes file-name)
                       c/get-content
                       text->array)
-        relevant (-> (get annot-nodes (.getName file-annot))
-                     (#(h/select % [:body #{(:headline annotations)
-                                            (:full-text annotations)}]))
+        relevant (-> (get annot-nodes file-name)
+                     ;(#(h/select % [:body #{(:headline annotations)
+                      ;                      (:full-text annotations)}]))
+                     (#(h/select % [:body #{(:full-text annotations)}]))
                      (#(apply str (map (fn [x] (first (:content x))) %)))
                      text->array)
         ret-count (count retrieved)
         rel-count (count relevant)
         match-count (u/count-matches retrieved relevant)
-        res {:file (.getName file-orig)}]
-    (println "here")
+        res {:file file-name}]
     (cond
      (and (zero? ret-count) (zero? rel-count))
      (assoc res :precision :inf :recall :inf :f1 :nan)
@@ -77,10 +76,9 @@
 
 (defn eval-full-text
   [n f-out]
-  "n is the number of files evaluation sample. f-out is the output file name"
-  (let [orig-files (get-sample orig-dir n)
-        annot-files (map #(File. (str annot-dir (.getName %))) orig-files)
-        results (map score orig-files annot-files)
+  "Evaluates the algorithm on a sample of n files and writes the results to f-out."
+  (let [files (get-sample orig-dir n)
+        results (map score files)
         results-clean (filter #(number? (:f1 %)) results)
         results-special (filter #(keyword? (:f1 %)) results)
         f1s  (map :f1 results-clean)

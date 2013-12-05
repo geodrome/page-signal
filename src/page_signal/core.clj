@@ -157,39 +157,21 @@
                                flatten)))
     root))
 
-(defn most-content
-  [{cont1 :content :as node1}
-   {cont2 :content :as node2}]
-  (when (and cont1 cont2)
-    (if (> (count cont1) (count cont2))
-      node1
-      node2)))
-
-(defn get-body
-  "Takes nodes produced by enlive/html-resource and extracts the body. Consider adding body, if doesn't exist in doc."
-  [nodes]
-  (let [body-tags (h/select nodes [:body])
-        bt-count (count body-tags)]
-    (cond
-     (zero? bt-count)
-     (throw (Exception. "There is no body tag!"))
-
-     (= 1 bt-count)
-     (first body-tags)
-
-     (> 1 bt-count) ; never get to the else on purpose
-     (throw (Exception. "More than one body tag!"))
-
-     :else
-     (let [body (reduce most-content body-tags)]
-       (if body
-         body
-         (throw (Exception. "There is no content in any body tag!")))))))
 
 (defn get-html
   "Critical to remove title tag in order for headline extraction to work properly."
   [nodes]
   (first (h/at (h/select nodes [:html]) [:title] nil)))
+
+
+(defn get-body
+  "Takes nodes produced by enlive/html-resource and extracts the body. Consider adding body, if doesn't exist in doc."
+  [nodes]
+  (let [body-tags (h/select nodes [:body])]
+    (if (= 1 (count body-tags))
+     (first body-tags)
+     (get-html nodes))))
+
 
 ;;; Mark Total Word Count
 

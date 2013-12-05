@@ -66,8 +66,6 @@
     (when-not (s/blank? txt)
       (s/trim txt))))
 
-;(re-seq #"\w+" "Obama Signals He'd Let Cuts Stand to Avoid U.S. Shutdown - NYTimes.com")
-; #"[a-zA-Z_0-9|.|']+"
 (defn words [s] (re-seq #"\w+" s))
 
 (defn count-words [s] (count (words s)))
