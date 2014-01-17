@@ -4,7 +4,7 @@
            [java.io.ByteArrayInputStream]
            [org.xml.sax.InputSource]))
 
-;;; Creating Nodes For Clojure lib
+;;; Creating Nodes
 (defn url->nodes
   [url]
   (h/html-resource (java.net.URL. url)))
@@ -14,13 +14,10 @@
   (h/html-resource (java.io.StringReader. s)))
 
 (defn file->nodes [f]
-  ;; can use h/html-resouce directly
-  (-> f
-      slurp
-      str->nodes))
+  (str->nodes (slurp f)))
 
 ;;; Text docs from Java Boilerpipe lib
-;;; This was helpful when comparing output with Boilerpipe lib, but otherwise can be discarded
+;;; This was helpful when examining Boilerpipe lib, but otherwise can be discarded
 (defn str->text-doc
   [s]
   (.getTextDocument

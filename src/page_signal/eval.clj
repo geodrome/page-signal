@@ -10,8 +10,6 @@
             [incanter.stats :as stats])
   (:import [java.io File]))
 
-;;; to improve precision only retrieve relevant text
-;;; to improve recall don't miss any of the relevant text
 
 ;;;; Evaluate Full Text
 
@@ -28,7 +26,7 @@
   (when-not (empty? text)
     (-> text
         u/clean-string
-        (#(re-seq #"\w+" %))
+        (#(re-seq #"\w+" %)) ; split into words
         (#(map s/lower-case %))
         into-array)))
 
@@ -81,13 +79,21 @@
         results (map score files)
         results-clean (filter #(number? (:f1 %)) results)
         results-special (filter #(keyword? (:f1 %)) results)
-        f1s  (map :f1 results-clean)
-        avg (/ (reduce + f1s) (count f1s))]
-    (spit f-out (str "Evaluated " n " files.\nMEAN F1 SCORE: " (format "%.2f" avg) "\n===============================================\n"))
+        f1-scores  (map :f1 results-clean)
+        precision-scores (map :precision results-clean)
+        recall-scores (map :recall results-clean)
+        avg-f1 (/ (reduce + f1-scores) (count f1-scores))
+        avg-precision (/ (reduce + precision-scores) (count precision-scores))
+        avg-recall (/ (reduce + recall-scores) (count recall-scores))]
+    (spit f-out (str "Evaluated " n " files.\n"))
+    (spit f-out (str "Mean F1 score: " (format "%.3f" avg-f1) "\n"))
+    (spit f-out (str "Mean Precision score: " (format "%.3f" avg-precision) "\n"))
+    (spit f-out (str "Mean Recall score: " (format "%.3f" avg-recall) "\n"))
+    (spit f-out "===============================================\n")
     (doseq [r results-clean]
-      (spit f-out (str "F1: " (format "%.2f" (:f1 r))
-                       " Precision: " (format "%.2f" (:precision r))
-                       " Recall: " (format "%.2f" (:recall r))
+      (spit f-out (str "F1: " (format "%.3f" (:f1 r))
+                       " Precision: " (format "%.3f" (:precision r))
+                       " Recall: " (format "%.3f" (:recall r))
                        " File: " (:file r) "\n")
             :append true))
     (doseq [r results-special]
@@ -96,4 +102,6 @@
                        " Recall: " (:recall r)
                        " File: " (:file r) "\n")
             :append true))
-    (println "MEAN: " (format "%.2f" avg))))
+    (println "Mean F1: " (format "%.3f" avg-f1))
+    (println "Mean Precision: " (format "%.3f" avg-precision))
+    (println "Mean Recall: " (format "%.3f" avg-recall))))

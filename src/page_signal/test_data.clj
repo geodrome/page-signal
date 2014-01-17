@@ -19,8 +19,7 @@
 
 (def file-names (map #(.getName %) orig-files))
 
-;; Pages are annotated by wrapping sections
-;; with :span tags of different classes
+;; Pages are annotated by wrapping with :span tags of different classes
 (def annotations {:not-content :span.x-nc-sel0
                   :headline :span.x-nc-sel1
                   :full-text :span.x-nc-sel2

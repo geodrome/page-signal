@@ -28,13 +28,6 @@
             []
             children)))
 
-(defn text
-  "Performs depth first traversal of root and returns a lazy seq of all decendants of root that are strings. Consider storing :full-text as block attribute. Eliminate spacing when dealing with inline elements? Separates with sep"
-  ([root]
-     (text root " "))
-  ([root sep]
-     (s/join sep (flatten (text* root)))))
-
 ; q tag should encapsulate in quotation marks, pre tag doesn't ignore whitespace
 (defn convert-break-tags
   "Replaces line breaking tags with newline strings."
@@ -44,7 +37,6 @@
    (#{:img :map :hr} tag) "\n\n"
    :else node))
 
-; doesn't work for block level elements
 (defn text
   "Performs depth first traversal of root and returns a lazy seq of all decendants of root that are strings. Consider storing :full-text as block attribute. Eliminate spacing when dealing with inline elements? "
   [node]
@@ -60,8 +52,7 @@
    :else ""))
 
 (defn clean-string
-  "is trim correct? i think it is - how the browser seems to do it"
-  [st]
+ [st]
   (let [txt (s/replace st #"[ \t\n\x0B\f\r]+" " ")]
     (when-not (s/blank? txt)
       (s/trim txt))))

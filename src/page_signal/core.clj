@@ -83,6 +83,17 @@
                        (assoc node :content clean))))
              root))
 
+;;; Get the body tag
+
+(defn get-body
+  "Extracts the body tag from nodes."
+  [nodes]
+  (let [body-tags (h/select nodes [:body])]
+    (if (= 1 (count body-tags))
+     (first body-tags)
+     (first (h/select nodes [:html])))))
+
+
 ;;; Remove ignorable tags
 
 (def ignorable-tag? #{:style :script :noscript :object :embed :applet :link :form :input
@@ -105,22 +116,7 @@
        (map-string-nodes u/clean-string)
        prune-nils))
 
-;;; Identifying Atomic Text Blocks
-
-;; These are currently unused, but here to help me think
-(def enclosing-tag? #{:h1 :h2 :h3 :h4 :h5 :h6 :p :div})
-
-
-(def inline-tag? #{:b :big :i :small :tt :abbr :acronym :cite :code :dfn :em
-                    :kbd :strong :samp :var :a :bdo :br :img :map :object :q
-                    :span :sub :sup :button :input :label :select :textarea :font
-                    :strike :u :s})
-
-(def gap-enforcing-tags #{:h1 :h2 :h3 :h4 :h5 :h6
-                          :ul :dl :ol :table :address :hr :img :script})
-(def gap-avoiding-tags #{:a :b :br :em :font :i :s
-                         :span :strong :sub :sup :u :tt})
-;;;;;;;;;;;;;;;;;;;
+;;; Identify atomic text blocks
 
 ;; img? - its own block since not always content when mixed with text?
 ;; excluding :img creates lots of "|" blocks -> img | img | img
@@ -142,7 +138,7 @@
 (declare mark-blocks)
 
 (defn process-part
-  "p is a seq of nodes that are expected to either all be block nodes or all be non-block nodes. Seqs of atomic blocks are cleaned up and wrapped in a block tag. Seqs of non-block nodes are recursively processed by partition-and-process."
+  "p is a seq of nodes that are expected to either all be block nodes or all be non-block nodes. seqs of atomic blocks are cleaned up and wrapped in a block tag. seqs of non-block nodes are recursively processed by partition-and-process."
   [etag p]
   (if (block-item? (first p))
     {:tag :block :enclosing-tag etag :content p}
@@ -158,29 +154,14 @@
     root))
 
 
-(defn get-html
-  "Critical to remove title tag in order for headline extraction to work properly."
-  [nodes]
-  (first (h/at (h/select nodes [:html]) [:title] nil)))
-
-
-(defn get-body
-  "Takes nodes produced by enlive/html-resource and extracts the body. Consider adding body, if doesn't exist in doc."
-  [nodes]
-  (let [body-tags (h/select nodes [:body])]
-    (if (= 1 (count body-tags))
-     (first body-tags)
-     (get-html nodes))))
-
-
-;;; Mark Total Word Count
+;;; Mark total word count
 
 (defn mark-word-count*
   [block]
   (merge block {:total-words (u/count-words (u/text block))}))
 
 (defn mark-word-count
-  "For each block counts total number of words and number of words in anchor text and stores these values under :total-words and :link-words respectively."
+  "for each block counts total number of words and number of words in anchor text and stores these values under :total-words and :link-words respectively."
   [root]
   (map-blocks mark-word-count* root))
 
@@ -255,15 +236,12 @@
   [root]
   (map-blocks mark-text-density* root))
 
-;;;; Let's put it all together...
-;;; we can start with get-html or get-body and we can optionally pass the tree
-;;; trough remove-ignorable-tags
+;;;; Let's put it all together to annotate the nodes
 
 (defn annotate
   "Annotates dom tree."
   [nodes]
   (-> nodes
-      ;get-html
       get-body
       remove-ignorable-tags
       remove-whitespace-strings
@@ -271,8 +249,6 @@
       mark-word-count
       mark-link-word-count
       mark-link-density))
-
-(pprint (in/file->nodes "nytimes.html"))
 
 ;;; Now that everything has been annotated we can use the annotations
 ;;; to make decisions about what's content and what's boileplate
@@ -305,6 +281,8 @@ paper metioned in README."
        (conj blocks {:text "" :total-words 0 :link-words 0 :link-density 0.0})
        (concat blocks [{:text "" :total-words 0 :link-words 0 :link-density 0.0}])))
 
+;;; Finally let's extract the text that is content
+
 (defn remove-boiler
   [blocks]
   (remove #(:boiler %) blocks))
@@ -331,14 +309,10 @@ paper metioned in README."
   (get-content (in/file->nodes file)))
 
 
-;;; Now Try It!
+;;;; Now Try It!
 
 (def urls {:a "http://www.scientificamerican.com/article.cfm?id=bacteria-discovered-spacecraft-clean-rooms&WT.mc_id=SA_sharetool_Twitter"
            :b "http://citusdata.com/blog/72-linux-memory-manager-and-your-big-data"
-           :c "http://mortoray.com/2013/11/27/the-string-type-is-broken/"
-           :d "http://www.nytimes.com/2013/11/28/us/politics/years-delay-expected-in-major-element-of-health-law.html?_r=0"})
+           :c "http://mortoray.com/2013/11/27/the-string-type-is-broken/"})
 
-
-(def nyt (in/file->nodes "nytimes.html"))
-
-(pprint (get-url-content (:d urls)))
+;(pprint (get-url-content (:a urls)))

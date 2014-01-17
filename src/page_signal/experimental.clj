@@ -632,3 +632,18 @@ any character sequence not interrupted by an HTML tag, except the A tag."
     (doseq [r span-but-no-headline]
       (spit f-out (str r "\n") :append true))
     (println (count successes) " out of " (- n (count match-na)))))
+
+
+;; these are currently unused, but here to help me think
+(def enclosing-tag? #{:h1 :h2 :h3 :h4 :h5 :h6 :p :div})
+
+
+(def inline-tag? #{:b :big :i :small :tt :abbr :acronym :cite :code :dfn :em
+                    :kbd :strong :samp :var :a :bdo :br :img :map :object :q
+                    :span :sub :sup :button :input :label :select :textarea :font
+                    :strike :u :s})
+
+(def gap-enforcing-tags #{:h1 :h2 :h3 :h4 :h5 :h6
+                          :ul :dl :ol :table :address :hr :img :script})
+(def gap-avoiding-tags #{:a :b :br :em :font :i :s
+                         :span :strong :sub :sup :u :tt})
